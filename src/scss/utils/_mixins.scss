@@ -7,7 +7,20 @@
   align-items: $align_items;
 }
 
-@mixin button($padding: 'basic', $type: 'primary', $color: '', $text: white) {
+@mixin hover($color) {
+  &:hover {
+    background-color: $color;
+  }
+}
+
+@mixin focus($color, $text: white) {
+  &:focus {
+    outline: none;
+    background-color: $color;
+  }
+}
+
+@mixin button($padding: 'basic', $type: 'primary', $disabled: '', $color: '', $text: white) {
   @include display(flex, unset, center, center);
   cursor: pointer;
   transition: 0.3s;
@@ -15,20 +28,32 @@
   user-select: none !important;
 
   @if ($type == 'primary') {
-    background-color: $primary;
+    background-color: $brown-500;
+    @include hover($brown-600); 
+    @include focus($brown-600);
+
+    @if ($disabled == 'disabled') {
+      background-color: $brown-350;
+    }
   }
 
   @if ($type == 'secondary') {
-    
-  }
-
-  @if ($type == 'disabled') {
-  }
-
-  @if ($type == 'transparent') {
+    color: $gray-500;
     background-color: transparent;
-    border: 1px solid black;
+    border: 1px solid $gray-500;
+    @include hover($background); 
+    @include focus($brown-500);
+
+    @if ($disabled == 'disabled') {
+      color: $gray-300;
+      border: 1px solid $gray-300;
+    }
   }
+
+  // @if ($type == 'transparent') {
+  //   color: $gray-500;
+  //   background-color: transparent;
+  // }
 
   @if ($type == 'custom') {
     background-color: $color;
