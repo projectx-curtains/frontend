@@ -1,16 +1,18 @@
-import Button from "./components/Button";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Redirect } from 'react-router-dom';
 
 
 function App() {
   return (
     <div className="app">
-      <Button
-        className="main__btn"
-        onClick={() => console.log('hiii')}>
-        <span className="main__btn__text">
-            Каталог
-        </span>
-      </Button>
+      <Router>
+        <Header>
+        <Routes>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/register" component={Register} />
+        </Routes>
+        <Footer />
+      </Router>
     </div>
   );
 }
