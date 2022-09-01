@@ -1,0 +1,47 @@
+
+.Card {
+    cursor: pointer;
+    width: 240px;
+    height: 400px;
+    background-color: $background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //@include cardBorder($brown-200);
+    opacity: 0.5;
+    &:hover {
+        opacity: 1;
+        border: 1px solid $brown-200;
+        transition: 0.5s;
+    }
+    
+
+    &__img{
+        width: 208px;
+        height: 266px;
+        background-color: $brown-200;
+        margin: 16px;
+    }
+
+    &__indexName {
+        @include body-18-light;
+        color: $gray-500;
+        width: 210px;
+        height: 52px;
+        margin: 0px 15px 12px;
+
+    }
+
+    &__priceAmount {
+        @include body-20-medium;
+        color: $brown-500;
+        width: 210px;
+        height: 20px;
+        padding: 0px;
+        margin: 0px;
+        
+    }
+
+
+
+}
