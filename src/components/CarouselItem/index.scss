@@ -1,0 +1,18 @@
+@import "../../scss/utils/variables";
+@import "../../scss/utils/typography";
+.index__slide__container {
+    display: inline-block;
+    .wrapper {
+        display: flex;
+    }
+    .current__slide,
+    .slides__length {
+        @include heading-24-medium;
+        color: $brown-400;
+        display: flex;
+        align-items: flex-end;
+    }
+    .slides__length {
+        font-size: 20px;
+    }
+}

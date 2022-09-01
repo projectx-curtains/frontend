@@ -1,0 +1,5 @@
+@import "../../scss/utils/typography";
+.heading {
+    @include heading-40-medium;
+    margin: 144px 0 32px 80px;
+}

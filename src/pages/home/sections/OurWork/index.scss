@@ -1,0 +1,28 @@
+@import "../../../../scss/utils/typography";
+@import "../../../../scss/utils/variables";
+@import "../../../../scss/utils/mixins";
+.our__works {
+    .slider__container {
+        background-color: $gray-100;
+    }
+    position: relative;
+    &__content__container {
+        display: flex !important;
+        .description__container {
+            position: relative;
+            padding: 80px 80px 35px 80px;
+            &__btn {
+                // @include button("basic", "primary");
+            }
+            .description {
+                @include body-24-regular;
+            }
+            .index__slide__container {
+                display: flex;
+                position: absolute;
+                right: 80px;
+                bottom: 38px;
+            }
+        }
+    }
+}

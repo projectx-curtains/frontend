@@ -1,11 +1,11 @@
 .app {
-  background-color: $background;
-  min-height: 100vh;
-  overflow-y: hidden;
+    background-color: $background;
+    max-width: 1600px;
+    min-height: 100vh;
+    overflow-y: hidden;
 }
 
 //Import pages
-@import './pages/Home';
-
+@import "./pages/Home";
 //Import conponents
-@import './components/Card';
+@import "./components/Card";

@@ -1,0 +1,43 @@
+@import "../../../../scss/utils/variables";
+@import "../../../../scss/utils/typography";
+.reviews {
+    .reviews__content__container {
+        height: 513px;
+        display: flex !important;
+        .description__container {
+            color: $white;
+            background-color: $brown-500;
+            padding: 64px 80px;
+            div {
+                display: flex;
+                justify-content: space-between;
+                img {
+                    margin: 0;
+                }
+                .index__slide__container {
+                    color: $brown-350;
+                    align-items: flex-start;
+                    .current__slide {
+                        font-size: 34px;
+                    }
+                    .slides__length {
+                        font-size: 30px;
+                    }
+                }
+            }
+            .user {
+                @include heading-40-medium;
+                margin: 27px 0 12px;
+            }
+            .location {
+                @include body-24-regular;
+                font-weight: 300;
+                margin-bottom: 12px;
+            }
+            .description {
+                @include body-24-regular;
+                font-style: italic;
+            }
+        }
+    }
+}
