@@ -10,7 +10,8 @@ const Button = ({ children, type, onClick, className, style }) => {
             type={type}
             style={{ ...button, ...style }}
             className={`${className}`}
-            onClick={onClick}>
+            onClick={onClick}
+            >
             {children}
         </button>
     );
