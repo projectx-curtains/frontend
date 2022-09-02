@@ -2,18 +2,21 @@
 @import "../../../../scss/utils/variables";
 @import "../../../../scss/utils/mixins";
 .our__works {
+    .heading {
+        margin-left: 80px;
+    }
     .slider__container {
         background-color: $gray-100;
+        margin: 32px 0 166px;
     }
     position: relative;
     &__content__container {
         display: flex !important;
         .description__container {
+            width: 950px;
             position: relative;
             padding: 80px 80px 35px 80px;
-            &__btn {
-                // @include button("basic", "primary");
-            }
+            &__btn {}
             .description {
                 @include body-24-regular;
             }

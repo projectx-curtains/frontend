@@ -1,42 +1,21 @@
-import Button from "./components/Button";
-
+import OurWork from './pages/home/sections/OurWork';
+import Reviews from './pages/home/sections/Reviews';
+import NewProducts from "./pages/home/sections/NewProducts";
+import Popular from "./pages/home/sections/Popular/Popular";
+import {NewProductData} from './stuff/NewProductData';
 
 function App() {
-  return (
-    <div className="app">
-      <OurWork descriptionText={descriptionTextWork} />
-      <Reviews descriptionText={descriptionTextReviews} user={user} location={location} />
-      <Button
-        className="main__btn"
-        onClick={() => console.log('hiii')}>
-        <span className="main__btn__text">
-            Каталог
-        </span>
-      </Button>
 
-        <Card
-        index={'#000'}
-        setName={'КОМПЛЕКТ'}
-        setPrice={'ОТ 250 BYN'}
-        onClick={() => console.log('card click')}
-        />
-
-        <XLc
-        setText={'TEXT'}
-        onClick={() => console.log('XL click')}
-        />
-
-        <Mc
-        setText={'TEXT'}
-        onClick={() => console.log('M click')}
-        />
-
-      <Sc
-        setText={'TEXT'}
-        onClick={() => console.log('M click')}
-        />
-    </div>
-  );
+    const descriptionTextWork = '';
+    const descriptionTextReviews = '';
+    const user = '';
+    const location = '';
+    return (<div className="app">
+        <NewProducts newProductData={NewProductData}/>
+        <Popular popularData={NewProductData}/>
+        <OurWork descriptionText={descriptionTextWork}/>
+        <Reviews descriptionText={descriptionTextReviews} user={user} location={location}/>
+    </div>);
 }
 
 export default App;

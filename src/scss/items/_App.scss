@@ -2,10 +2,11 @@
   background-color: $background;
   min-height: 100vh;
   overflow-y: hidden;
+  max-width: 1600px;
 }
 
 //Import pages
 @import './pages/Home';
 
 //Import conponents
-@import './components/Card';
+@import './components/itemCard';

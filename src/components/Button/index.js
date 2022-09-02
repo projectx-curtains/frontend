@@ -1,7 +1,7 @@
 import React from 'react';
 
 const button = {
-  cursor: 'pointer',
+    cursor: 'pointer',
 };
 
 const Button = ({ children, type, onClick, className, style }) => {

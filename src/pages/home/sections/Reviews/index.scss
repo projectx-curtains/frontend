@@ -1,10 +1,17 @@
 @import "../../../../scss/utils/variables";
 @import "../../../../scss/utils/typography";
 .reviews {
+    .heading {
+        margin-left: 80px;
+    }
+    .slider__container {
+        margin: 32px 0 144px;
+    }
     .reviews__content__container {
         height: 513px;
         display: flex !important;
         .description__container {
+            width: 950px;
             color: $white;
             background-color: $brown-500;
             padding: 64px 80px;

@@ -1,0 +1,15 @@
+.gallery {
+    .container {
+        width: 1440px;
+        margin: 0 auto;
+        .header__container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 32px;
+        }
+        .gallery__content__container {
+            display: flex;
+            margin: 36px 0 132px;
+        }
+    }
+}

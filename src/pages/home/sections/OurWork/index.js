@@ -21,7 +21,8 @@ const OurWork = ({ descriptionText }) => {
                                 <Button
                                     type='primary'
                                     className='our__works__btn'
-                                ><span>Консультация</span></Button>
+                                >
+                                    <span>Консультация</span></Button>
                                 <CarouselItem
                                     currentIndex={i + 1}
                                     length={arr.length}
