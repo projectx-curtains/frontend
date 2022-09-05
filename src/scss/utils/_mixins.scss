@@ -108,7 +108,6 @@
     @include maxDimensions_Card(720px, 190px);
   }
     display: flex;
-    position: absolute;
     flex-direction:row;
     justify-content: space-between;
     align-items: flex-end;
