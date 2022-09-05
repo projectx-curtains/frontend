@@ -1,0 +1,113 @@
+.customButton {
+    transition: 0.3s;
+    outline: none;
+    box-sizing: border-box;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    span {
+        margin: 0 16px;
+    }
+
+    &_primary {
+        max-height: 72px;
+        background: $brown-500;
+        padding: 24px 48px;
+        color: $white;
+        @include body-18-medium;
+
+        &:hover {
+            background: $brown-600;
+        }
+
+        &:disabled {
+            background: $brown-350;
+        }
+
+        .arrow {
+            path {
+                fill: $white;
+            }
+        }
+
+    }
+
+    &_secondary {
+        max-height: 48px;
+        border: 1px solid $brown-500;
+        padding: 12px 42px;
+        color: $gray-500;
+        @include body-18-medium;
+
+        &:hover {
+            background: $gray-100;
+        }
+
+        &:disabled {
+            color: $gray-300;
+
+            .arrow {
+                path {
+                    fill: $gray-300;
+                }
+            }
+        }
+
+        &:active {
+            background: $brown-500;
+            border: 1px solid $brown-400;
+            color: $gray-100;
+
+            .arrow {
+                path {
+                    fill: $gray-100;
+                }
+            }
+        }
+
+        .arrow {
+            path {
+                fill: $gray-500;
+            }
+        }
+    }
+
+    &_transparent {
+        max-height: 48px;
+        padding: 12px 42px;
+        color: $gray-500;
+        @include body-18-medium;
+
+        &:disabled {
+            color: $gray-300;
+
+            .arrow {
+                path {
+                    fill: $gray-300;
+                }
+            }
+        }
+
+        &:active {
+            color: $gray-400;
+
+            .arrow {
+                path {
+                    fill: $gray-400;
+                }
+            }
+        }
+
+        .arrow {
+            path {
+                fill: $gray-500;
+            }
+        }
+    }
+
+    &__arrowRight {
+        transform: rotate(180deg);
+    }
+}
