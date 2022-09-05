@@ -1,0 +1,89 @@
+
+.large-card {   
+    cursor: pointer;
+
+    &__container{
+        display: flex;
+        @include card_type('large');
+        
+        
+        &__img{
+            @include card_type('large');
+            background-image: url(../Assets/Images/curtainsSq.jpeg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            
+        }
+
+        &__wrapper{
+            @include display_Card('large');
+            @include card_type('large');
+
+            &__name{
+                padding:0px 0px 32px 32px;
+            }
+
+            &__arrow{
+                padding:0px 32px 32px 0px;
+            }
+        }
+    }
+}
+
+
+
+.medium-card {   
+    cursor: pointer;
+
+    &__container{
+        display: flex;
+
+        &__img{
+            @include card_type('medium');
+            background-image: url(../Assets/Images/curtainsSq.jpeg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        &__wrapper{
+            @include display_Card('medium');
+            @include card_type('medium');
+
+            &__name{
+                padding:0px 0px 32px 32px;
+            }
+
+            &__arrow{
+                padding:0px 32px 32px 0px;
+            }
+        }
+    }
+}
+
+.small-card {   
+    cursor: pointer;
+
+    &__container{
+        display: flex;
+
+        &__img{
+            @include card_type('small');
+            background-image: url(../Assets/Images/curtainsSq.jpeg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        &__wrapper{
+            @include display_Card('small');
+            @include card_type('small');
+
+            &__name{
+                padding:0px 0px 32px 32px;
+            }
+
+            &__arrow{
+                padding:0px 32px 32px 0px;
+            }
+        }
+    }
+}

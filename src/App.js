@@ -1,8 +1,7 @@
+import { type } from "@testing-library/user-event/dist/type";
 import Button from "./components/Button";
 import Card from "./components/Card/itemCard";
-import XLc from "./components/Catalog/XL_c";
-import Mc from "./components/Catalog/M_c";
-import Sc from "./components/Catalog/S_c";
+import CatalogCard from "./components/Catalog/Card";
 
 function App() {
   return (
@@ -15,27 +14,37 @@ function App() {
         </span>
       </Button>
 
-        <Card
+      <Card
         index={'#000'}
         setName={'КОМПЛЕКТ'}
         setPrice={'ОТ 250 BYN'}
         onClick={() => console.log('card click')}
-        />
+      />
 
-        <XLc
-        setText={'TEXT'}
-        onClick={() => console.log('XL click')}      
-        />
+      <CatalogCard
+      type={'large'}
+      setText={'TEXT'}
+      onClick={
+        ()=> console.log(`YOU CLICKED ON A ${type} CARD, YAY`)
+      }      
+      />
 
-        <Mc
-        setText={'TEXT'}
-        onClick={() => console.log('M click')}  
-        />
+      <CatalogCard
+      type={'medium'}
+      setText={'TEXT'}
+      onClick={
+        ()=> console.log(`YOU CLICKED ON A ${type} CARD, YAY`)
+      }      
+      />
 
-      <Sc
-        setText={'TEXT'}
-        onClick={() => console.log('M click')}  
-        />
+
+      <CatalogCard
+      type={'small'}
+      setText={'TEXT'}
+      onClick={
+        ()=> console.log(`YOU CLICKED ON A ${type} CARD, YAY`)
+      }      
+      />
     </div>
   );
 }
