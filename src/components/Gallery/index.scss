@@ -1,13 +1,16 @@
 .gallery {
-    .container {
+    &__container {
         width: 1440px;
         margin: 0 auto;
-        .header__container {
+
+        &__header {
             display: flex;
+            align-items: center;
             justify-content: space-between;
             margin-bottom: 32px;
         }
-        .gallery__content__container {
+
+        &__content {
             display: flex;
             margin: 36px 0 132px;
         }

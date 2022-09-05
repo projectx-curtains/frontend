@@ -1,27 +1,12 @@
 import React from 'react'
-import Gallery from '../../../../components/Gallery';
-import Card from '../../../../components/Card';
+import Gallery from '../../../../components/Gallery'
 
-const NewProducts = ({newProductData}) => {
+const NewProducts = ({ galleryItems }) => {
     return (
-        <Gallery
-            headerText='Новинки'
-            newProductData={newProductData}
-        >
-            {newProductData.map((item, i)=>{
-                return(
-                    <Card
-                        key={i}
-                        image={item.image}
-                        index={item.index}
-                        setName={item.setName}
-                        setPrice={`ОТ ${item.setPrice} BYN`}
-                        onClick={() => console.log('card click')}
-                    />
-                )
-            })}
-
-        </Gallery>
+      <Gallery
+        headerText="Новинки"
+        items={galleryItems}
+      />
     )
 }
-export default NewProducts;
+export default NewProducts

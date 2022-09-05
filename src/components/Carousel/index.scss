@@ -1,32 +1,30 @@
-@import "../../scss/utils/variables";
-.container {
-    // padding: 40px;
-}
+.slider {
+    .slick-slide img {
+        margin: auto;
+    }
 
-.slick-slide img {
-    margin: auto;
-}
+    .slick-dots {
+        margin-bottom: -32px;
+    }
 
-.slick-dots {
-    margin-bottom: -32px;
-}
+    .slick-dots li {
+        width: 220px !important;
+        height: 6px !important;
+        margin: 0 12px !important;
+        background: $brown-200;
+    }
 
-.slick-dots li {
-    width: 220px !important;
-    height: 6px !important;
-    margin: 0 12px !important;
-    background: $brown-200;
-}
+    .slick-dots li button {
+        width: 220px !important;
+        height: 6px !important;
+    }
 
-.slick-dots li button {
-    width: 220px !important;
-    height: 6px !important;
-}
+    .slick-dots li button::before {
+        display: none;
+    }
 
-.slick-dots li button::before {
-    display: none;
-}
+    .slick-dots .slick-active {
+        background: $brown-400 !important;
+    }
 
-.slick-dots .slick-active {
-    background: $brown-400 !important;
 }

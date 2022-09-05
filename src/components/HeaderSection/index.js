@@ -1,9 +1,8 @@
-import React from 'react';
-import './index.scss';
+import React from 'react'
 
 const HeaderSection = ({ headerText }) => {
     return (
-        <div className='heading'>{headerText}</div>
+      <div className="heading">{headerText}</div>
     )
 }
-export default HeaderSection;
+export default HeaderSection

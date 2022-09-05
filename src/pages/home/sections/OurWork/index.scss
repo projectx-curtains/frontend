@@ -1,27 +1,27 @@
-@import "../../../../scss/utils/typography";
-@import "../../../../scss/utils/variables";
-@import "../../../../scss/utils/mixins";
-.our__works {
+.our-work {
     .heading {
         margin-left: 80px;
     }
-    .slider__container {
+
+    .slider {
         background-color: $gray-100;
         margin: 32px 0 166px;
     }
-    position: relative;
-    &__content__container {
+
+    &__content {
         display: flex !important;
-        .description__container {
+
+        &__description-container {
             width: 950px;
             position: relative;
             padding: 80px 80px 35px 80px;
-            &__btn {}
-            .description {
+
+            &__description {
                 @include body-24-regular;
+                margin-bottom: 60px;
             }
-            .index__slide__container {
-                display: flex;
+
+            .index-slide {
                 position: absolute;
                 right: 80px;
                 bottom: 38px;

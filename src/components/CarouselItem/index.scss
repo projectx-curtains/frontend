@@ -1,18 +1,17 @@
-@import "../../scss/utils/variables";
-@import "../../scss/utils/typography";
-.index__slide__container {
-    display: inline-block;
-    .wrapper {
+.index-slide {
+    &__wrapper {
         display: flex;
-    }
-    .current__slide,
-    .slides__length {
-        @include heading-24-medium;
-        color: $brown-400;
-        display: flex;
-        align-items: flex-end;
-    }
-    .slides__length {
-        font-size: 20px;
+
+        &__current-slide,
+        &__slides-length {
+            @include heading-24-medium;
+            color: $brown-400;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        &__slides-length {
+            font-size: 20px;
+        }
     }
 }

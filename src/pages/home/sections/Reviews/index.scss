@@ -1,47 +1,56 @@
-@import "../../../../scss/utils/variables";
-@import "../../../../scss/utils/typography";
 .reviews {
     .heading {
         margin-left: 80px;
     }
-    .slider__container {
+
+    .slider {
         margin: 32px 0 144px;
     }
-    .reviews__content__container {
+
+    &__content {
         height: 513px;
         display: flex !important;
-        .description__container {
+
+        &__description {
             width: 950px;
             color: $white;
             background-color: $brown-500;
             padding: 64px 80px;
+
             div {
                 display: flex;
                 justify-content: space-between;
+
                 img {
                     margin: 0;
                 }
-                .index__slide__container {
+
+                .index-slide {
                     color: $brown-350;
                     align-items: flex-start;
-                    .current__slide {
+
+                    .current-slide {
                         font-size: 34px;
                     }
-                    .slides__length {
+
+                    .slides-length {
                         font-size: 30px;
                     }
                 }
             }
-            .user {
+
+            &__user {
                 @include heading-40-medium;
                 margin: 27px 0 12px;
             }
-            .location {
+
+            &__location {
                 @include body-24-regular;
                 font-weight: 300;
                 margin-bottom: 12px;
             }
-            .description {
+
+            &__description {
                 @include body-24-regular;
                 font-style: italic;
             }
