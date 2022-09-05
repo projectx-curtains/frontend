@@ -1,12 +1,22 @@
 .app {
-  background-color: $background;
-  min-height: 100vh;
-  overflow-y: hidden;
-  max-width: 1600px;
+    margin: 0 auto;
+    background-color: $background;
+    min-height: 100vh;
+    overflow-y: hidden;
+    max-width: 1600px;
 }
 
 //Import pages
 @import './pages/Home';
 
-//Import conponents
+//Import components
 @import './components/itemCard';
+@import '../../components/Carousel';
+@import "../../components/CarouselItem";
+@import "../../components/HeaderSection";
+@import "../../components/Gallery";
+@import "../../components/Button";
+
+//Import sections
+@import "../../pages/home/sections/OurWork";
+@import "../../pages/home/sections/Reviews";
