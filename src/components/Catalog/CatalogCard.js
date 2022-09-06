@@ -13,9 +13,9 @@ const CatalogCard = ({type, setText, onClick,}) => {
         {/*<div className= {`${type}-card__inner-img`}></div>*/}
             
         <div className = {`${type}-card__container`}>
-            <div className={`${type}-card__container__wrapper`}>
-                <h2 className = {`${type}-card__container__wrapper__name`}>{`${setText}`}</h2>
-                <FaArrowUp className={`${type}-card__container__wrapper__arrow`}></FaArrowUp>
+            <div className={`${type}-card__wrapper`}>
+                <h2 className = {`${type}-card__name`}>{`${setText}`}</h2>
+                <FaArrowUp className={`${type}-card__arrow`}></FaArrowUp>
             </div>
         </div>
     </a>

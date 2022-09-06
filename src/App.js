@@ -1,7 +1,8 @@
 import { type } from "@testing-library/user-event/dist/type";
 import Button from "./components/Button";
 import Card from "./components/Card/itemCard";
-import CatalogCard from "./components/Catalog/Card";
+import CatalogCard from "./components/Catalog/CatalogCard";
+
 
 function App() {
   return (
@@ -20,30 +21,17 @@ function App() {
         setPrice={'ОТ 250 BYN'}
         onClick={() => console.log('card click')}
       />
-
       <CatalogCard
       type={'large'}
       setText={'TEXT'}
-      onClick={
-        ()=> console.log(`YOU CLICKED ON A ${type} CARD, YAY`)
-      }      
       />
-
       <CatalogCard
       type={'medium'}
       setText={'TEXT'}
-      onClick={
-        ()=> console.log(`YOU CLICKED ON A ${type} CARD, YAY`)
-      }      
       />
-
-
       <CatalogCard
       type={'small'}
       setText={'TEXT'}
-      onClick={
-        ()=> console.log(`YOU CLICKED ON A ${type} CARD, YAY`)
-      }      
       />
     </div>
   );
