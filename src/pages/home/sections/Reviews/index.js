@@ -13,14 +13,14 @@ const Reviews = ({ user, location, descriptionText }) => {
       <Carousel>
         {CarouselSliderData.map((e, i, arr) => {
           return (
-            <div key={i} className="reviews__content">
+            <div key={i} className="reviews-content">
               <img
                 src={e.image}
                 alt="our work"
                 width="650px"
                 height="513px"
               />
-              <div className="reviews__content__description">
+              <div className="description">
                 <div>
                   <img src={formatQuote} alt="review" />
                   <CarouselItem
@@ -28,9 +28,9 @@ const Reviews = ({ user, location, descriptionText }) => {
                     length={arr.length}
                   />
                 </div>
-                <div className="reviews__content__description__user">{user}</div>
-                <div className="reviews__content__description__location">{location}</div>
-                <div className="reviews__content__description__description">{descriptionText}</div>
+                <div className="description__user">{user}</div>
+                <div className="description__location">{location}</div>
+                <div className="description__description">{descriptionText}</div>
               </div>
             </div>
           )

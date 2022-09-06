@@ -14,9 +14,9 @@ const OurWork = ({ descriptionText }) => {
       <Carousel>
         {CarouselSliderData.map((e, i, arr) => {
           return (
-            <div key={i} className="our-work__content">
-              <div className="our-work__content__description-container">
-                <div className="our-work__content__description-container__description">{descriptionText}</div>
+            <div key={i} className="work-content">
+              <div className="description-container">
+                <div className="description-container__description">{descriptionText}</div>
                 <Button type="primary"><span>Консультация</span></Button>
                 <CarouselItem
                   currentIndex={i + 1}

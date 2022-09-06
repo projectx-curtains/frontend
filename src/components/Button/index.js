@@ -9,12 +9,12 @@ const Arrow = ({ className, color = '' }) => (
 const Button = ({ children, type = '', onClick, className = '', arrowLeft, arrowRight }) => {
   return (
     <button
-      className={`customButton customButton_${type} ${className}`}
+      className={`button button--${type} ${className}`}
       onClick={onClick}
     >
-      {arrowLeft && <Arrow className="arrow" />}
+      {arrowLeft && <Arrow className="button-arrow" />}
       {children}
-      {arrowRight && <Arrow className="arrow customButton__arrowRight" />}
+      {arrowRight && <Arrow className="button-arrow button__arrow-right" />}
     </button>
   )
 }

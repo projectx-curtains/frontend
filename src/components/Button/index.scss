@@ -1,4 +1,4 @@
-.customButton {
+.button {
     transition: 0.3s;
     outline: none;
     box-sizing: border-box;
@@ -11,7 +11,7 @@
         margin: 0 16px;
     }
 
-    &_primary {
+    &--primary {
         max-height: 72px;
         background: $brown-500;
         padding: 24px 48px;
@@ -26,7 +26,7 @@
             background: $brown-350;
         }
 
-        .arrow {
+        .button-arrow {
             path {
                 fill: $white;
             }
@@ -34,7 +34,7 @@
 
     }
 
-    &_secondary {
+    &--secondary {
         max-height: 48px;
         border: 1px solid $brown-500;
         padding: 12px 42px;
@@ -48,7 +48,7 @@
         &:disabled {
             color: $gray-300;
 
-            .arrow {
+            .button-arrow {
                 path {
                     fill: $gray-300;
                 }
@@ -60,21 +60,21 @@
             border: 1px solid $brown-400;
             color: $gray-100;
 
-            .arrow {
+            .button-arrow {
                 path {
                     fill: $gray-100;
                 }
             }
         }
 
-        .arrow {
+        .button-arrow {
             path {
                 fill: $gray-500;
             }
         }
     }
 
-    &_transparent {
+    &--transparent {
         max-height: 48px;
         padding: 12px 42px;
         color: $gray-500;
@@ -83,7 +83,7 @@
         &:disabled {
             color: $gray-300;
 
-            .arrow {
+            .button-arrow {
                 path {
                     fill: $gray-300;
                 }
@@ -93,21 +93,21 @@
         &:active {
             color: $gray-400;
 
-            .arrow {
+            .button-arrow {
                 path {
                     fill: $gray-400;
                 }
             }
         }
 
-        .arrow {
+        .button-arrow {
             path {
                 fill: $gray-500;
             }
         }
     }
 
-    &__arrowRight {
+    &__arrow-right {
         transform: rotate(180deg);
     }
 }

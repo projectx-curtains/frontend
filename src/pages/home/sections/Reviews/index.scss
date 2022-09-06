@@ -7,11 +7,11 @@
         margin: 32px 0 144px;
     }
 
-    &__content {
+    .reviews-content {
         height: 513px;
         display: flex !important;
 
-        &__description {
+        .description {
             width: 950px;
             color: $white;
             background-color: $brown-500;
@@ -22,7 +22,7 @@
                 justify-content: space-between;
 
                 img {
-                    margin: 0;
+                    margin: 0 !important;
                 }
 
                 .index-slide {
