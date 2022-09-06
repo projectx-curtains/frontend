@@ -3,7 +3,7 @@ import Carousel from '../../../../components/Carousel'
 import CarouselItem from '../../../../components/CarouselItem'
 import { CarouselSliderData } from '../../../../mockData/CarouselSliderData'
 import HeaderSection from '../../../../components/HeaderSection'
-import formatQuote from '../../../../img/format_quote.svg'
+import formatQuote from '../../../../assets/img/format_quote.svg'
 
 const Reviews = ({ user, location, descriptionText }) => {
 

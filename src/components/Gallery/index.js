@@ -6,12 +6,12 @@ import Card from '../Card'
 const Gallery = ({ items, headerText }) => {
   return (
     <section className="gallery">
-      <div className="container">
-        <div className="container__header">
+      <div className="gallery-container">
+        <div className="gallery-container__header">
           <HeaderSection headerText={headerText} />
           <Button type="secondary"  arrowRight><span>Смотреть все</span></Button>
         </div>
-        <div className="container__content">
+        <div className="gallery-container__content">
           {items && items.map((item, i) => {
             return (
               <Card
