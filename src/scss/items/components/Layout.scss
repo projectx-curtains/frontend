@@ -1,0 +1,19 @@
+.catalog-layout{
+    display: flex;
+    flex-wrap: wrap;
+    &__top-left-cards{
+       flex-direction: column;
+    }
+    &__center-card{
+        justify-content: center;
+        
+    }
+    &__top-right-cards{
+        flex-direction: column;
+       
+    }
+    //&__bottom-cards{
+     //   flex-direction: row;
+        
+    //}
+}
