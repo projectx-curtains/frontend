@@ -1,0 +1,20 @@
+.why-we-are {
+    display: flex;
+
+    .why-we-are-container {
+        width: 1440px;
+        margin: 0 auto;
+
+        .heading {
+            margin-bottom: 48px;
+        }
+
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            margin-bottom: 128px;
+        }
+
+    }
+}
