@@ -1,5 +1,7 @@
 .main {
   &__btn {
-    @include button('basic', 'primary');
+    @include button('basic', 'secondary');
+    width: 336px;
+    height: 68px;
   } 
 }

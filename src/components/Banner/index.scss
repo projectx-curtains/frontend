@@ -1,0 +1,33 @@
+.banner{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background: url(../../assets/img/ImageStartScreen.png);
+    width: 100vw;
+    height: 841px;
+    object-fit: cover;
+    justify-content: center;
+
+    &__headline{
+        margin-bottom: 16px;
+        color:$white;
+        @include heading-80-display-semi-bold;
+    }
+    &__subtitle{
+        @include body-24-regular;
+        color: $white;
+    }
+
+
+
+}
+
+
+.btn{
+    margin-top: 32px;
+    margin-right: 0px;
+    @include button('basic', 'secondary');
+    width: 336px;
+    height: 68px;
+    } 

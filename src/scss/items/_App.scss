@@ -8,6 +8,7 @@
 @import './pages/Home';
 
 //Import components
-@import './components/itemCard.scss';
-@import './components/CatalogCard.scss';
-@import './components/Layout.scss';
+@import '../../components/Card';
+@import '../../components/Catalog';
+@import '../../components/Catalog/CatalogLayout';
+@import '../../components/Banner';

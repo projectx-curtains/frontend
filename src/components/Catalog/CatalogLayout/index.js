@@ -1,5 +1,5 @@
 import React from 'react';
-import CatalogCard from './CatalogCard';
+import CatalogCard from '../index';
 
 function Layout() {
   return (
@@ -7,14 +7,14 @@ function Layout() {
     <div className='catalog-layout__top-left-cards'>
     <CatalogCard
       type={'medium'}
-      setText={'TEXT'}
+      setText={'Покрывала'}
       onClick={
         ()=> console.log(`YOU CLICKED ON A CARD, YAY`)
       }      
     />
     <CatalogCard
       type={'medium'}
-      setText={'TEXT'}
+      setText={'Подушки'}
       onClick={
         ()=> console.log(`YOU CLICKED ON A CARD, YAY`)
       }      
@@ -23,7 +23,7 @@ function Layout() {
     <div className='catalog-layout__center-card'>
     <CatalogCard
       type={'large'}
-      setText={'TEXT'}
+      setText={'Шторы'}
       onClick={
         ()=> console.log(`YOU CLICKED ON A CARD, YAY`)
       }      
@@ -32,14 +32,14 @@ function Layout() {
     <div className='catalog-layout__top-right-cards'>
     <CatalogCard
       type={'medium'}
-      setText={'TEXT'}
+      setText={'Ткани'}
       onClick={
         ()=> console.log(`YOU CLICKED ON A CARD, YAY`)
       }      
     />
     <CatalogCard
       type={'medium'}
-      setText={'TEXT'}
+      setText={'Фурнитура'}
       onClick={
         ()=> console.log(`YOU CLICKED ON A CARD, YAY`)
       }      
@@ -48,14 +48,14 @@ function Layout() {
     
     <CatalogCard
       type={'small'}
-      setText={'TEXT'}
+      setText={'Ламбрекены'}
       onClick={
         ()=> console.log(`YOU CLICKED ON A CARD, YAY`)
       }      
     />
     <CatalogCard
       type={'small'}
-      setText={'TEXT'}
+      setText={'Распродажа %'}
       onClick={
         ()=> console.log(`YOU CLICKED ON A CARD, YAY`)
       }      
