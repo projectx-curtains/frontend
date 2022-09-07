@@ -5,8 +5,9 @@ import CarouselItem from '../../../../components/CarouselItem'
 import { CarouselSliderData } from '../../../../mockData/CarouselSliderData'
 import HeaderSection from '../../../../components/HeaderSection'
 
+const descriptionText = 'Фото с комплектом "Кармен": в уютной квартире семьи Сергея и Татьяны не хватало акцентного элемента, который одновременно подчеркивал бы характер хозяев, а также украшал интерьер. В реализации идеи были использованы такие материалы как канвас и тюль сетка, а цвета подобраны под смелый запрос хозяев – красный и молочный.'
 
-const OurWork = ({ descriptionText }) => {
+const OurWork = () => {
 
   return (
     <section className="our-work">

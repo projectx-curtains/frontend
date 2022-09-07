@@ -5,7 +5,12 @@ import { CarouselSliderData } from '../../../../mockData/CarouselSliderData'
 import HeaderSection from '../../../../components/HeaderSection'
 import formatQuote from '../../../../assets/img/format_quote.svg'
 
-const Reviews = ({ user, location, descriptionText }) => {
+
+const descriptionText = '“Если хочется почувствовать себя дизайнером, то вам определенно в «Зашторим»! Уникальность конструктора штор поражает и убирает неудобства, вызванные при заказе стандартных готовых штор: не подошел цвет, высота и ширина, крепление к карнизу и пр. В общем, всем рекомендую!”'
+const user = 'Галина'
+const location = 'г.Могилев, Беларусь'
+
+const Reviews = () => {
 
   return (
     <section className="reviews">
