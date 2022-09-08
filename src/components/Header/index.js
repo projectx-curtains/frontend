@@ -83,7 +83,9 @@ const Header = ({ footerSection }) => {
                         </li>
                     </ul>
                 </nav>
-                <MdOutlineLocalMall className="header__basket"/>
+                <Link to="/shopping-cart" className="header__basket">
+                    <MdOutlineLocalMall/>
+                </Link>
             </div>
         </header>
     );
