@@ -23,8 +23,8 @@ a {
 }
 
 //Import pages
-@import './pages/Home';
 
+//Import components
 @import '../components/Header';
 @import '../components/Header/CataloguePopup';
 @import '../components/Header/SearchBar';
