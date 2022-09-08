@@ -14,12 +14,11 @@ a {
 }
 
 .container {
-  padding-right: 80px;
-  padding-left: 80px;
+  max-width: 1440px;
+  margin: 0 auto;
 
   @media (max-width: $screen-xl) {
-    padding-right: 19px;
-    padding-left: 19px;
+    //max-width: add for mobiles
   }
 }
 
