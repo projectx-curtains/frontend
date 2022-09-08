@@ -1,36 +1,30 @@
 import React from 'react'
 import HeaderSection from '../../../../components/HeaderSection'
 import WhyWeAreItem from '../../../../components/WhyWeAreItem'
-import viewInArNew from '../../../../assets/icons/WhyWeAreIcons/view_in_ar_new.svg'
-import alarmOn from '../../../../assets/icons/WhyWeAreIcons/alarm_on.svg'
-import volunteerActivism from '../../../../assets/icons/WhyWeAreIcons/volunteer_activism.svg'
-import savings from '../../../../assets/icons/WhyWeAreIcons/savings.svg'
-import headsetMic from '../../../../assets/icons/WhyWeAreIcons/headset_mic.svg'
-import publishedWithChanges from '../../../../assets/icons/WhyWeAreIcons/published_with_changes.svg'
 
 const items = [
   {
-    image: viewInArNew,
+    image: 'view_in_ar_new.svg',
     text: 'Уникальное воплощение Ваших идей',
   },
   {
-    image: alarmOn,
+    image: 'alarm_on.svg',
     text: 'Выполнение заказа в течение 7 дней',
   },
   {
-    image: volunteerActivism,
+    image: 'volunteer_activism.svg',
     text: 'Следование новым тенденциям',
   },
   {
-    image: savings,
+    image: 'savings.svg',
     text: 'Предлагаем выгодные цены',
   },
   {
-    image: headsetMic,
+    image: 'headset_mic.svg',
     text: 'Бесплатная косультация дизайнера',
   },
   {
-    image: publishedWithChanges,
+    image: 'published_with_changes.svg',
     text: 'Есть вариант обмена/возврата',
   },
 ]
@@ -38,9 +32,9 @@ const items = [
 const WhyWeAre = () => {
   return (
     <section className="why-we-are">
-      <div className="why-we-are-container">
+      <div className="why-we-are__container">
         <HeaderSection headerText="Почему мы"></HeaderSection>
-        <div className="content-container">
+        <div className="why-we-are__content">
           {items && items.map((item, i) => {
             return (
               <WhyWeAreItem

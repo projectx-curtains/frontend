@@ -5,7 +5,7 @@ const WhyWeAreItem = ({ image, text }) => {
     <div className="why-we-are-item">
       <div className="why-we-are-item__image">
         <img
-          src={image}
+          src={require(`../../assets/icons/WhyWeAreIcons/${image}`)}
           width="66pх"
           height="66px"
           alt="why we" />
