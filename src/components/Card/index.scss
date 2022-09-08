@@ -6,7 +6,6 @@
     background-color: $background;
     display: flex;
     flex-direction: column;
-    align-items: center;
     //@include cardBorder($brown-200);
     opacity: 0.5;
     &:hover {
@@ -15,15 +14,15 @@
         transition: 0.5s;
     }
     
-
     &__img{
         width: 208px;
         height: 266px;
         background-color: $brown-200;
         margin: 16px;
+        background-image: url('../../assets/img/curtainsSq.jpeg')
     }
 
-    &__indexName {
+    &__name {
         @include body-18-light;
         color: $gray-500;
         width: 210px;
@@ -32,16 +31,27 @@
 
     }
 
-    &__priceAmount {
+    &__price-amount {
         @include body-20-medium;
         color: $brown-500;
         width: 210px;
         height: 20px;
         padding: 0px;
-        margin: 0px;
+        margin: 0px 15px 15px;
         
     }
 
+}
 
-
+.label{
+    display: flex;
+    width: 105px;
+    background-color: #5DC99B;
+    align-items: flex-start;
+    margin-top: 24px;
+    margin-left: 8px;
+    padding: 6px 0 6px 25px;
+    color: $white;
+    text-align: center;
+    position: absolute;
 }

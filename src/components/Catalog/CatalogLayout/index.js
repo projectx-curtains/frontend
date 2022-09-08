@@ -6,14 +6,14 @@ function Layout() {
     <div className='catalog-layout'>
     <div className='catalog-layout__top-left-cards'>
     <CatalogCard
-      type={'medium'}
+      type={'blankets'}
       setText={'Покрывала'}
       onClick={
         ()=> console.log(`YOU CLICKED ON A CARD, YAY`)
       }      
     />
     <CatalogCard
-      type={'medium'}
+      type={'pillows'}
       setText={'Подушки'}
       onClick={
         ()=> console.log(`YOU CLICKED ON A CARD, YAY`)
@@ -22,7 +22,7 @@ function Layout() {
     </div>
     <div className='catalog-layout__center-card'>
     <CatalogCard
-      type={'large'}
+      type={'curtains'}
       setText={'Шторы'}
       onClick={
         ()=> console.log(`YOU CLICKED ON A CARD, YAY`)
@@ -31,14 +31,14 @@ function Layout() {
     </div>
     <div className='catalog-layout__top-right-cards'>
     <CatalogCard
-      type={'medium'}
+      type={'fabrics'}
       setText={'Ткани'}
       onClick={
         ()=> console.log(`YOU CLICKED ON A CARD, YAY`)
       }      
     />
     <CatalogCard
-      type={'medium'}
+      type={'fittings'}
       setText={'Фурнитура'}
       onClick={
         ()=> console.log(`YOU CLICKED ON A CARD, YAY`)
@@ -47,14 +47,14 @@ function Layout() {
     </div>
     
     <CatalogCard
-      type={'small'}
+      type={'lambrequins'}
       setText={'Ламбрекены'}
       onClick={
         ()=> console.log(`YOU CLICKED ON A CARD, YAY`)
       }      
     />
     <CatalogCard
-      type={'small'}
+      type={'sale'}
       setText={'Распродажа %'}
       onClick={
         ()=> console.log(`YOU CLICKED ON A CARD, YAY`)

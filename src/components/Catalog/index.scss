@@ -1,6 +1,6 @@
-//LARGE CARD//
+//CURTAINS CARD//
 
-.large-card {   
+.curtains-card {   
     cursor: pointer;
 
     &__container{
@@ -36,9 +36,9 @@
 }
 
 
-//MEDIUM CARD
+//BLANKETS CARD//
 
-.medium-card {   
+.blankets-card {   
     cursor: pointer;
 
     &__container{
@@ -54,7 +54,7 @@
         text-decoration:none;
         width: 516px;
         height: 200px;
-        background: no-repeat url(../../assets/img/Catalog-pics/Catalog_card-pillows.png);
+        background: no-repeat url(../../assets/img/Catalog-pics/Catalog_card_blankets.png);
         color: white;
         filter: brightness(65%);
         &:hover{
@@ -72,9 +72,114 @@
         padding:0px 32px 32px 0px;
     }
 }
-//SMALL CARD
+//PILLOWS CARD
+.pillows-card {   
+    cursor: pointer;
 
-.small-card {   
+    &__container{
+        display: flex;
+        width: 516px;
+        height: 200px;
+    }
+    &__description{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items: flex-end;
+        text-decoration:none;
+        width: 516px;
+        height: 200px;
+        background: no-repeat url(../../assets/img/Catalog-pics/Catalog_card_pillows.png);
+        color: white;
+        filter: brightness(65%);
+        &:hover{
+            filter: brightness(100%);
+            transition: 0.4s;
+
+        }
+    }
+    &__name{
+        padding:0px 0px 32px 32px;
+        @include heading-24-medium;
+    }
+
+    &__arrow{
+        padding:0px 32px 32px 0px;
+    }
+}
+//FABRICS CARD
+.fabrics-card {   
+    cursor: pointer;
+
+    &__container{
+        display: flex;
+        width: 516px;
+        height: 200px;
+    }
+    &__description{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items: flex-end;
+        text-decoration:none;
+        width: 516px;
+        height: 200px;
+        background: no-repeat url(../../assets/img/Catalog-pics/Catalog_card_fabrics.png);
+        color: white;
+        filter: brightness(65%);
+        &:hover{
+            filter: brightness(100%);
+            transition: 0.4s;
+
+        }
+    }
+    &__name{
+        padding:0px 0px 32px 32px;
+        @include heading-24-medium;
+    }
+
+    &__arrow{
+        padding:0px 32px 32px 0px;
+    }
+}
+//FITTINGS CARD
+.fittings-card {   
+    cursor: pointer;
+
+    &__container{
+        display: flex;
+        width: 516px;
+        height: 200px;
+    }
+    &__description{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items: flex-end;
+        text-decoration:none;
+        width: 516px;
+        height: 200px;
+        background: no-repeat url(../../assets/img/Catalog-pics/Catalog_card_fittings.png);
+        color: white;
+        filter: brightness(65%);
+        &:hover{
+            filter: brightness(100%);
+            transition: 0.4s;
+
+        }
+    }
+    &__name{
+        padding:0px 0px 32px 32px;
+        @include heading-24-medium;
+    }
+
+    &__arrow{
+        padding:0px 32px 32px 0px;
+    }
+}
+//LAMBREQUINS CARD
+
+.lambrequins-card {   
     cursor: pointer;
 
     &__container{
@@ -109,3 +214,47 @@
         padding:0px 32px 32px 0px;
     }
 }
+//SALE CARD
+.sale-card {   
+    cursor: pointer;
+
+    &__container{
+        display: flex;
+        width: 720px;
+        height: 190px;
+    }
+    &__description{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items: flex-end;
+        text-decoration:none;
+        width: 720px;
+        height: 190px;
+        background-size: 100%;
+        background: no-repeat url(../../assets/img/Catalog-pics/Catalog_card_sale.png);
+        color: white;
+        filter: brightness(65%);
+        &:hover{
+            filter: brightness(100%);
+            transition: 0.4s;
+
+        }
+    }
+    &__name{
+        padding:0px 0px 32px 32px;
+        @include heading-24-medium;
+    }
+
+    &__arrow{
+        padding:0px 32px 32px 0px;
+    }
+}
+
+// curtains
+// pillows
+// lambrequins
+// blankets
+// fabrics
+// fittings
+// sale
