@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const Card = ({index, setName, setPrice, onClick,label}) => {
     return (
       <div           
@@ -16,3 +15,4 @@ const Card = ({index, setName, setPrice, onClick,label}) => {
   }
 
   export default Card;
+  

@@ -1,17 +1,12 @@
 import React from "react";
 import { FaArrowUp } from "react-icons/fa";
 
-
-
 const CatalogCard = ({type, setText, onClick}) => {
     return (
     <a           
         onClick={onClick}
-        className= {`${type}-card`} //small,medium,large
+        className= {`${type}-card`}
         >
-
-        {/*<div className= {`${type}-card__inner-img`}></div>*/}
-            
         <div className = {`${type}-card__container`}>
             <div className={`${type}-card__description`}>
                 <h2 className = {`${type}-card__name`}>{`${setText}`}</h2>
@@ -23,3 +18,4 @@ const CatalogCard = ({type, setText, onClick}) => {
   }
 
   export default CatalogCard;
+  

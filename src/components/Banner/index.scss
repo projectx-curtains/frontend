@@ -14,15 +14,12 @@
         color:$white;
         @include heading-80-display-semi-bold;
     }
+    
     &__subtitle{
         @include body-24-regular;
         color: $white;
     }
-
-
-
 }
-
 
 .btn{
     margin-top: 32px;
@@ -30,4 +27,5 @@
     @include button('basic', 'secondary');
     width: 336px;
     height: 68px;
-    } 
+    }
+    
