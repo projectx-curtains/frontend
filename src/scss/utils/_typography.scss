@@ -88,3 +88,11 @@
     font-size: 18px;
     line-height: 100%;
 }
+
+@mixin body-14-regular {
+    font-family: "Noto Sans Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+}

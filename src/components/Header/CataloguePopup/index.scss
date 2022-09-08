@@ -1,0 +1,49 @@
+#catalogue-nav {
+  padding: 34px 0;
+}
+
+#catalogue-nav:hover~.catalog-popup {
+  @include display(flex, unset, space-between, center);
+}
+
+.catalog-popup {
+  top: 94px;
+  left: 0;
+  max-width: 1600px;
+  position: fixed;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: none;
+  background-color: $background;
+  z-index: 100;
+
+  &:hover {
+    @include display(flex, unset, space-between, center);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -12px;
+    right: 50vw;
+    width: 24px;
+    height: 24px;
+    transform: rotate(45deg);
+    background-color: $background;
+  }
+
+  &__item {
+    height: 38vh;
+    padding: 1rem;
+  }
+
+  &__img {
+    width: 100%;
+    padding-bottom: 12px;
+  }
+
+  &__name {
+    @include heading-24-medium();
+    color: $gray-500
+  }
+}

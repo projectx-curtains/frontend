@@ -1,0 +1,62 @@
+.footer {
+  height: 305px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  @include body-18-regular();
+  color: $gray-500;
+  background-color: $gray-100;
+
+  &__logo {
+    padding-right: 290px;
+  }
+
+  .nav {
+    display: flex;
+    column-gap: 180px;
+
+    &__list {
+      width: max-content;
+      list-style: none;
+    }
+  
+    &__item {
+      padding-bottom: 16px;
+    }
+  
+    &__link:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .contacts {
+    padding-left: 180px;
+
+    &__heading {
+      padding-bottom: 16px;
+      @include body-18-semi-bold();
+
+      &:not(:first-child) {
+        padding-top: 64px;
+      }
+    }
+
+    &__wrapper {
+      display: flex;
+      padding-bottom: 16px;
+    }
+
+    &__icon {
+      padding-right: 10px;
+      font-size: 24px;
+
+      &--place {
+        font-size: 40px;
+      }
+    }
+
+    &__instagram:hover {
+      text-decoration: underline;
+    }
+  }
+}

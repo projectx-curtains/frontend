@@ -1,0 +1,50 @@
+.search {
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease all;
+
+  // INPUT
+  &__input {
+    display: none;
+    width: 126px;
+    @include body-14-regular();
+    background: transparent;
+    border: none;   
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &--transparent-theme &__input {
+    color: $white;
+    border-bottom: 1px solid $white;
+  }
+
+  &--white-theme &__input {
+    color: $gray-500;
+    border-bottom: 1px solid $gray-500;
+  }
+
+  &:focus-within  &__input {
+    display: block
+  }
+
+  // BUTTON
+  &__button {
+    padding: 0;
+    padding-right: 4px;
+    font-size: 25px;
+    background: transparent;
+  }
+
+  &--transparent-theme &__button {
+    color: $white;
+  }
+
+  &--white-theme &__button {
+    color: $gray-500;
+  }
+
+}
+

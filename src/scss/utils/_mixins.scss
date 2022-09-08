@@ -1,5 +1,18 @@
 // Mixins for reusing layouts, buttons and etc.
 
+@mixin container($padding: 'basic') {
+  @if ($padding == 'basic') {
+    padding: 0 80px;
+  } @else {
+    padding: $padding;
+  }
+}
+
+@mixin resetLink() {
+  text-decoration: none;
+  color: inherit;
+}
+
 @mixin display($display: flex, $direction: unset, $justify_content: unset, $align_items: unset) {
   display: $display;
   flex-direction: $direction;
