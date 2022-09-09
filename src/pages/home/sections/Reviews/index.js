@@ -1,14 +1,10 @@
 import React from 'react'
 import Carousel from '../../../../components/Carousel'
 import CarouselItem from '../../../../components/CarouselItem'
-import { CarouselSliderData } from '../../../../mockData/CarouselSliderData'
+import { CarouselSlider_mockData } from '../../../../mockData/carouselSlider_mockData'
 import HeaderSection from '../../../../components/HeaderSection'
 import formatQuote from '../../../../assets/img/format_quote.svg'
-
-
-const descriptionText = '“Если хочется почувствовать себя дизайнером, то вам определенно в «Зашторим»! Уникальность конструктора штор поражает и убирает неудобства, вызванные при заказе стандартных готовых штор: не подошел цвет, высота и ширина, крепление к карнизу и пр. В общем, всем рекомендую!”'
-const user = 'Галина'
-const location = 'г.Могилев, Беларусь'
+import { app_mockData } from '../../../../mockData/app_mockData'
 
 const Reviews = () => {
 
@@ -16,7 +12,7 @@ const Reviews = () => {
     <section className="reviews">
       <HeaderSection headerText="Отзывы" />
       <Carousel>
-        {CarouselSliderData.map((e, i, arr) => {
+        {CarouselSlider_mockData.map((e, i, arr) => {
           return (
             <div key={i} className="reviews-content">
               <img
@@ -33,9 +29,9 @@ const Reviews = () => {
                     length={arr.length}
                   />
                 </div>
-                <div className="description__user">{user}</div>
-                <div className="description__location">{location}</div>
-                <div className="description__description">{descriptionText}</div>
+                <div className="description__user">{app_mockData.reviews.user}</div>
+                <div className="description__location">{app_mockData.reviews.location}</div>
+                <div className="description__description">{app_mockData.reviews.descriptionText}</div>
               </div>
             </div>
           )

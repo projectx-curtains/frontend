@@ -2,10 +2,10 @@ import React from 'react'
 import Button from '../../../../components/Button/index'
 import Carousel from '../../../../components/Carousel'
 import CarouselItem from '../../../../components/CarouselItem'
-import { CarouselSliderData } from '../../../../mockData/CarouselSliderData'
+import { CarouselSlider_mockData } from '../../../../mockData/carouselSlider_mockData'
 import HeaderSection from '../../../../components/HeaderSection'
+import { app_mockData } from '../../../../mockData/app_mockData'
 
-const descriptionText = 'Фото с комплектом "Кармен": в уютной квартире семьи Сергея и Татьяны не хватало акцентного элемента, который одновременно подчеркивал бы характер хозяев, а также украшал интерьер. В реализации идеи были использованы такие материалы как канвас и тюль сетка, а цвета подобраны под смелый запрос хозяев – красный и молочный.'
 
 const OurWork = () => {
 
@@ -13,11 +13,11 @@ const OurWork = () => {
     <section className="our-work">
       <HeaderSection headerText="Наши работы" />
       <Carousel>
-        {CarouselSliderData.map((e, i, arr) => {
+        {CarouselSlider_mockData.map((e, i, arr) => {
           return (
             <div key={i} className="work-content">
               <div className="description-container">
-                <div className="description-container__description">{descriptionText}</div>
+                <div className="description-container__description">{app_mockData.ourWork.descriptionText}</div>
                 <Button type="primary"><span>Консультация</span></Button>
                 <CarouselItem
                   currentIndex={i + 1}
