@@ -1,0 +1,111 @@
+//LARGE CARD//
+
+.large-card {   
+    cursor: pointer;
+
+    &__container{
+        display: flex;
+        width: 408px;
+        height: 400px;
+        background-color: black;
+    }
+    &__wrapper{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items: flex-end;
+        text-decoration:none;
+        width: 408px;
+        height: 400px;
+        background: no-repeat url(../../../assets/img/curtainsSq.jpeg);
+        color: white;
+        opacity: 0.8;
+        &:hover{
+            opacity: 1;
+            transition: 0.3s;
+
+        }
+    }
+    &__name{
+        padding:0px 0px 32px 32px;
+    }
+
+    &__arrow{
+        padding:0px 32px 32px 0px;
+    }
+}
+
+
+//MEDIUM CARD
+
+.medium-card {   
+    cursor: pointer;
+
+    &__container{
+        display: flex;
+        width: 516px;
+        height: 200px;
+        background-color: black;
+    }
+    &__wrapper{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items: flex-end;
+        text-decoration:none;
+        width: 516px;
+        height: 200px;
+        background: no-repeat url(../../../assets/img/curtainsSq.jpeg);
+        color: white;
+        opacity: 0.8;
+        &:hover{
+            opacity: 1;
+            transition: 0.3s;
+
+        }
+    }
+    &__name{
+        padding:0px 0px 32px 32px;
+    }
+
+    &__arrow{
+        padding:0px 32px 32px 0px;
+    }
+}
+//SMALL CARD
+
+.small-card {   
+    cursor: pointer;
+
+    &__container{
+        display: flex;
+        width: 720px;
+        height: 190px;
+        background-color: black;
+    }
+    &__wrapper{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items: flex-end;
+        text-decoration:none;
+        width: 720px;
+        height: 190px;
+        background: no-repeat url(../../../assets/img/curtainsSq.jpeg);
+        background-size: 100%;
+        color: white;
+        opacity: 0.8;
+        &:hover{
+            opacity: 1;
+            transition: 0.3s;
+
+        }
+    }
+    &__name{
+        padding:0px 0px 32px 32px;
+    }
+
+    &__arrow{
+        padding:0px 32px 32px 0px;
+    }
+}

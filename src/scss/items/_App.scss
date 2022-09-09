@@ -1,20 +1,15 @@
 .app {
-    margin: 0 auto;
-    background-color: $background;
-    min-height: 100vh;
-    overflow-y: hidden;
-
-    .container {
-        max-width: 1600px;
-        margin: 0 auto;
-    }
+  background-color: $background;
+  min-height: 100vh;
+  overflow-y: hidden;
 }
-
 
 //Import pages
 @import './pages/Home';
 
 //Import components
+@import './components/itemCard.scss';
+@import './components/CatalogCard.scss';
 @import './components/itemCard';
 @import '../../components/Carousel';
 @import "../../components/CarouselItem";
