@@ -1,0 +1,19 @@
+.why-we-are-item {
+    width: 190px;
+    height: 271px;
+    
+    &__image {
+        width: 124px;
+        height: 124px;
+        background: $brown-600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 24px;
+    }
+
+    &__text {
+        @include body-24-regular;
+        color: $brown-600;
+    }
+}
