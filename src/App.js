@@ -9,11 +9,13 @@ function App()
 {
   return (
     <div className="app">
-      <NewProducts galleryItems={NewProduct_mockData} />
-      <Popular popularData={NewProduct_mockData} />
-      <OurWork />
-      <WhyWeAre />
-      <Reviews />
+      <div className="container">
+        <NewProducts galleryItems={NewProduct_mockData} />
+        <Popular popularData={NewProduct_mockData} />
+        <OurWork />
+        <WhyWeAre />
+        <Reviews />
+      </div>
     </div>)
 }
 
