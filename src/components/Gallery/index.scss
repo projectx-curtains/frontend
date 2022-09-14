@@ -16,6 +16,7 @@
 
         &__content {
             display: flex;
+            overflow-x: auto;
             margin: 36px 0 132px;
         }
     }
@@ -42,7 +43,6 @@
             }
 
             &__content {
-                overflow-x: auto;
                 margin: 32px 0 88px;
             }
         }
