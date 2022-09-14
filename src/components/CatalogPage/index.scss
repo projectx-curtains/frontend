@@ -1,0 +1,22 @@
+.catalogPage {  
+  @include display(flex, column, unset, unset);
+  width: 100%;
+  margin-left: 80px; 
+
+  &__linkStructure {    
+    @include display(flex, row, flex-start, center);   
+    
+    .linkStructure__home {
+      @include body-18-regular;
+      text-decoration-line: underline;
+      color: $gray-500;
+    }
+
+    .linkStructure__current{
+      @include body-18-regular;
+      color: $gray-400;      
+    }
+  }  
+}
+
+@import './Сategories/index.scss'
