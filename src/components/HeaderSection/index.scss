@@ -1,3 +1,9 @@
 .heading {
     @include heading-40-medium;
 }
+
+@media (max-width: 480px) {
+    .heading {
+        @include heading-24-medium;
+    }
+}

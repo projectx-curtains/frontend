@@ -1,6 +1,6 @@
 .gallery {
     .gallery-container {
-        width: 1440px;
+        width: 90%;
         margin: 0 auto;
 
         &__header {
@@ -8,11 +8,43 @@
             align-items: center;
             justify-content: space-between;
             margin-bottom: 32px;
+
+            .button--transparent {
+                display: none;
+            }
         }
 
         &__content {
             display: flex;
             margin: 36px 0 132px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        .gallery-container {
+            &__header {
+                .button--secondary {
+                    display: none;
+                }
+
+                .button--transparent {
+                    padding: 8px;
+                    display: flex;
+
+                    .button-arrow {
+                        width: 8px;
+                        height: 12px;
+                    }
+                }
+
+            }
+
+            &__content {
+                overflow-x: auto;
+                margin: 32px 0 88px;
+            }
         }
     }
 }

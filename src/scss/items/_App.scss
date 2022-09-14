@@ -1,8 +1,39 @@
-.app {
-  background-color: $background;
-  min-height: 100vh;
-  overflow-y: hidden;
+* {
+    box-sizing: border-box;
 }
+
+.app {
+    background-color: $background;
+    min-height: 100vh;
+    overflow-y: hidden;
+    margin: 0 auto;
+
+    .container {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1200px) {
+    .app {
+
+        .container {
+            max-width: 90%;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .app {
+        padding: 16px;
+
+        .container {
+            max-width: 480px;
+
+        }
+    }
+}
+
 
 //Import pages
 @import './pages/Home';
