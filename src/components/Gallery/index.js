@@ -9,7 +9,8 @@ const Gallery = ({ items, headerText }) => {
       <div className="gallery-container">
         <div className="gallery-container__header">
           <HeaderSection headerText={headerText} />
-          <Button type="secondary"  arrowRight><span>Смотреть все</span></Button>
+          <Button type="secondary" arrowRight><span>Смотреть все</span></Button>
+          <Button type="transparent" arrowRight><span>Все</span></Button>
         </div>
         <div className="gallery-container__content">
           {items && items.map((item, i) => {

@@ -19,6 +19,7 @@ const OurWork = () => {
               <div className="description-container">
                 <div className="description-container__description">{app_mockData.ourWork.descriptionText}</div>
                 <Button type="primary"><span>Консультация</span></Button>
+                <Button type="secondary"><span>Консультация</span></Button>
                 <CarouselItem
                   currentIndex={i + 1}
                   length={arr.length}
@@ -27,8 +28,6 @@ const OurWork = () => {
               <img
                 src={e.image}
                 alt="our work"
-                width="650px"
-                height="490px"
               />
             </div>
           )
