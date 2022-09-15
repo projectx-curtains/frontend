@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../../../../components/Button/index'
+import UsedButton from '../../../../components/UsedButton'
 import Carousel from '../../../../components/Carousel'
 import CarouselItem from '../../../../components/CarouselItem'
 import { CarouselSlider_mockData } from '../../../../mockData/carouselSlider_mockData'
@@ -18,8 +18,12 @@ const OurWork = () => {
             <div key={i} className="work-content">
               <div className="description-container">
                 <div className="description-container__description">{app_mockData.ourWork.descriptionText}</div>
-                <Button type="primary"><span>Консультация</span></Button>
-                <Button type="secondary"><span>Консультация</span></Button>
+                <UsedButton
+                  firstButton="primary"
+                  firstButtonText="Консультация"
+                  secondButton="secondary"
+                  secondButtonText="Консультация"
+                />
                 <CarouselItem
                   currentIndex={i + 1}
                   length={arr.length}
