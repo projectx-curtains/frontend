@@ -15,7 +15,7 @@ const UsedButton = ({
                       secondArrowLeft,
                     }) => {
 
-  const [ isDesktop, setDesktop ] = useState(window.innerWidth > 1450)
+  const [ isDesktop, setDesktop ] = useState(window.innerWidth > 767)
 
   const updateMedia = () => {
     setDesktop(window.innerWidth > 767)
