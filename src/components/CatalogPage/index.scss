@@ -11,6 +11,9 @@
       text-decoration-line: underline;
       color: $gray-500;
     }
+    .linkStructure__arrowForward {
+      margin: 0 8px;
+    }
 
     .linkStructure__current{
       @include body-18-regular;
