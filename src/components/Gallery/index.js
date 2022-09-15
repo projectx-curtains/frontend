@@ -1,7 +1,7 @@
 import React from 'react'
 import HeaderSection from '../HeaderSection'
-import Button from '../Button/index'
 import Card from '../Card'
+import UsedButton from '../UsedButton'
 
 const Gallery = ({ items, headerText }) => {
   return (
@@ -9,8 +9,14 @@ const Gallery = ({ items, headerText }) => {
       <div className="gallery-container">
         <div className="gallery-container__header">
           <HeaderSection headerText={headerText} />
-          <Button type="secondary" arrowRight><span>Смотреть все</span></Button>
-          <Button type="transparent" arrowRight><span>Все</span></Button>
+          <UsedButton
+            firstButton="secondary"
+            firstButtonText="Смотреть все"
+            firstArrowRight
+            secondButton="transparent"
+            secondButtonText="Все"
+            secondArrowRight
+          />
         </div>
         <div className="gallery-container__content">
           {items && items.map((item, i) => {
