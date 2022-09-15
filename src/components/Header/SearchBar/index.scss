@@ -14,6 +14,15 @@
     &:focus {
       outline: none;
     }
+
+    &--menu-open {
+      display: block;
+      width: 85vw;
+      height: 42px;
+      margin-bottom: 34px;
+      padding-top: 6px;
+      padding-left: 27px;
+    }
   }
 
   &--transparent-theme &__input {
@@ -27,7 +36,7 @@
   }
 
   &:focus-within  &__input {
-    display: block
+    display: block;
   }
 
   // BUTTON
@@ -36,6 +45,12 @@
     padding-right: 4px;
     font-size: 25px;
     background: transparent;
+
+    &--menu-open  {
+      right: 93%;
+      bottom: 10px;
+      position: relative;
+    }
   }
 
   &--transparent-theme &__button {
@@ -45,6 +60,5 @@
   &--white-theme &__button {
     color: $gray-500;
   }
-
 }
 

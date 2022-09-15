@@ -18,16 +18,19 @@ a {
   margin: 0 auto;
 
   @media (max-width: $screen-xl) {
-    //max-width: add for mobiles
+    margin: 0 16px;
   }
 }
+
+//Import common
+@import "./common/logo.scss";
+@import "./common/contacts.scss";
 
 //Import pages
 
 //Import components
-@import '../components/Header';
-@import '../components/Header/CataloguePopup';
-@import '../components/Header/SearchBar';
+@import "../components/Header";
+@import "../components/Header/CataloguePopup";
+@import "../components/Header/SearchBar";
 
-@import '../components/Footer';
-
+@import "../components/Footer";
