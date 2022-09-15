@@ -1,6 +1,7 @@
 .reviews {
     .heading {
-        margin-left: 80px;
+        width: 90%;
+        margin: 0 auto;
     }
 
     .slider {
@@ -8,22 +9,24 @@
     }
 
     .reviews-content {
-        height: 513px;
         display: flex !important;
+        background-color: $brown-500;
+
+        .image-container {
+            display: flex;
+
+            .user {
+                display: none;
+            }
+        }
 
         .description {
-            width: 950px;
             color: $white;
-            background-color: $brown-500;
             padding: 64px 80px;
 
-            div {
+            .description-container {
                 display: flex;
                 justify-content: space-between;
-
-                img {
-                    margin: 0 !important;
-                }
 
                 .index-slide {
                     color: $brown-350;
@@ -39,21 +42,145 @@
                 }
             }
 
-            &__user {
-                @include heading-40-medium;
-                margin: 27px 0 12px;
-            }
+            .user {
 
-            &__location {
-                @include body-24-regular;
-                font-weight: 300;
-                margin-bottom: 12px;
+                &__name {
+                    @include heading-40-medium;
+                    margin: 27px 0 12px;
+                }
+
+                &__location {
+                    @include body-18-light;
+                    font-size: 24px;
+                    font-weight: 300;
+                    margin-bottom: 12px;
+                }
             }
 
             &__description {
                 @include body-24-regular;
                 font-style: italic;
             }
+        }
+    }
+
+    .button-scroll-up {
+        display: none;
+    }
+}
+
+@media(max-width: 1599px) {
+    .reviews {
+        .slider {
+            .image-container {
+                flex: 2;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .slick-dots {
+                bottom: 13px;
+            }
+        }
+
+        .reviews-content {
+            .description {
+                padding: 5%;
+                flex: 1;
+
+                .description-container {
+                    img {
+                        width: 35px;
+                        height: 27px;
+                        margin: 16px 0 8px;
+                    }
+                }
+
+                &__description {
+                    font-size: 14px !important;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .reviews {
+        .slider {
+            margin: 16px 0 51px;
+
+            .slick-dots {
+                bottom: 13px;
+            }
+        }
+
+        .reviews-content {
+            position: relative;
+            flex-direction: column;
+            padding: 16px;
+
+            .image-container {
+                img {
+                    width: 106px;
+                    height: 106px;
+                }
+
+                .user {
+                    color: $white;
+                    display: block;
+                    margin-left: 24px;
+
+                    &__name {
+                        @include body-20-medium;
+                        margin-bottom: 6px;
+                    }
+
+                    &__location {
+                        @include body-18-light;
+                        font-size: 14px;
+                    }
+
+                }
+            }
+
+            .description {
+                margin-bottom: 41px;
+                width: auto;
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+
+                .description-container {
+                    .index-slide {
+                        position: absolute;
+                        right: 16px;
+                        bottom: 16px;
+                    }
+                }
+
+                .user {
+                    display: none;
+
+                    &__name {
+                        margin: 27px 0 12px;
+                    }
+
+                    &__location {
+                        @include body-24-regular;
+                        font-weight: 300;
+                        margin-bottom: 12px;
+                    }
+                }
+
+
+            }
+        }
+
+        .button-scroll-up {
+            display: flex;
+            justify-content: right;
         }
     }
 }

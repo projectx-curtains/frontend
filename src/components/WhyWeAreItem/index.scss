@@ -1,7 +1,7 @@
 .why-we-are-item {
     width: 190px;
     height: 271px;
-    
+
     &__image {
         width: 124px;
         height: 124px;
@@ -15,5 +15,21 @@
     &__text {
         @include body-24-regular;
         color: $brown-600;
+    }
+}
+
+@media (max-width: 400px) {
+    .why-we-are-item {
+        width: 152px;
+        height: 218px;
+
+        &__image {
+            width: 96px;
+            height: 96px;
+        }
+
+        &__text {
+            font-size: 16px;
+        }
     }
 }

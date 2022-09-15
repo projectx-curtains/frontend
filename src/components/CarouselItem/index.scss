@@ -15,3 +15,17 @@
         }
     }
 }
+
+@media(max-width: 768px) {
+    .index-slide {
+        .index-slide-wrapper {
+            &__current-slide {
+                font-size: 18px;
+            }
+
+            &__slides-length {
+                font-size: 14px;
+            }
+        }
+    }
+}
