@@ -3,7 +3,7 @@
   width: 1440px;
   border-bottom: 1px solid $gray-250;
 }
-.categoriesList {
+.categories-list {
   @include display(flex, row, flex-start, center);
   list-style-type: none;
   &__item {
