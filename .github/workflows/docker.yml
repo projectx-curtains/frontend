@@ -1,0 +1,23 @@
+name: Build app and CodeQL analyze
+
+on:
+  push:
+    branches: [ main, develop, devops ]
+
+
+jobs:
+  prepare:
+    name: Init repository
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout repo
+      uses: actions/checkout@v2
+      
+
+    - name: download artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: frontend-app
+        
+    - name: Display structure of downloaded files
+      run: ls -R
