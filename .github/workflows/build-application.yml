@@ -5,9 +5,16 @@ on:
     branches: [ main, develop, devops ]
   pull_request:
     branches: [ main, develop, devops ]
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
+    environment:
+      name: github-pages
+      url: ${{ steps.build.outputs.page_url }}
 
     runs-on: ubuntu-latest
 
