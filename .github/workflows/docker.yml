@@ -1,12 +1,9 @@
 name: Create docker container
 
 on:
-  workflow_run:
-    workflows: ["build-application.yml"]
+  push:
     branches: [ main, develop, devops ]
-    types: 
-      - completed
-   
+
 jobs:
   prepare:
     name: Init repository
@@ -14,12 +11,16 @@ jobs:
     steps:
     - name: checkout repo
       uses: actions/checkout@v2
-      
-
-    - name: download artifacts
-      uses: actions/download-artifact@v3
-      with:
-        name: frontend-app
-        
-    - name: Display structure of downloaded files
-      run: ls -R
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 14.x ]
+    steps:
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run build --if-present
