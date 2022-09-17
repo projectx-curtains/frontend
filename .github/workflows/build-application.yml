@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Build app and CodeQL analyze
 
 on:
   push:
@@ -12,11 +12,15 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
+      fail-fast: false
       matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x]
+        language: [ java ]
+        node-version: [12.x, 14.x, 15.x]
 
     steps:
       - uses: actions/checkout@v3
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
@@ -24,6 +28,10 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run build --if-present
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
+        with:
+          category: "/language:${{matrix.language}}"
       - uses: actions/upload-artifact@v3
         with:
           name: frontend-app
