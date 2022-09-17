@@ -2,7 +2,7 @@ name: Create docker container
 
 on:
   workflow_run:
-    workflows: ["Build app"]
+    workflows: ["build-application.yml"]
     branches: [ main, develop, devops ]
     types: 
       - completed
