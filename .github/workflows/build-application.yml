@@ -1,0 +1,31 @@
+name: Build app
+
+on:
+  push:
+    branches: [ main, develop, devops ]
+  pull_request:
+    branches: [ main, develop, devops ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [ 14.x ]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run build --if-present
+      - uses: actions/upload-artifact@v3
+        with:
+          name: frontend-app
+          path: build/ # or path/to/artifact
+      
