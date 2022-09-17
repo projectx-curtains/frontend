@@ -1,4 +1,4 @@
-name: Build app and CodeQL analyze
+name: Build app
 
 on:
   push:
