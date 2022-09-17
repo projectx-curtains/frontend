@@ -1,4 +1,4 @@
-name: Build app and CodeQL analyze
+name: Create docker container
 
 on:
   push:
