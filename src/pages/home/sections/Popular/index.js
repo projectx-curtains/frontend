@@ -1,7 +1,7 @@
 import React from 'react'
 import Gallery from '../../../../components/Gallery'
 
-const Index = ({ popularData }) => {
+const Popular = ({ popularData }) => {
   return (
     <section className="popular">
       <Gallery
@@ -11,4 +11,4 @@ const Index = ({ popularData }) => {
     </section>
   )
 }
-export default Index
+export default Popular
