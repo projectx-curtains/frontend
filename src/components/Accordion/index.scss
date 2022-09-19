@@ -1,0 +1,21 @@
+.accordion {
+  &__button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+  }
+
+  &__icon {
+    transition: transform 0.6s ease;
+  }
+
+  &__content {
+    overflow: auto;
+  }
+}
+
+.rotate {
+  transform: rotate(90deg);
+}

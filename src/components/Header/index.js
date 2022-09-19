@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from "react";
-import {
-  MdClose,
-  MdOutlineLocalMall,
-  MdOutlineNotes,
-  MdOutlinePhone,
-} from "react-icons/md";
-import { IoLogoInstagram } from "react-icons/io";
+import { MdClose, MdOutlineLocalMall, MdOutlineNotes } from "react-icons/md";
+import { ReactComponent as InstagramIcon } from "../../assets/svg/insta.svg";
+import { ReactComponent as PhoneIcon } from "../../assets/svg/phone.svg";
 import { scrollDown } from "../../utils/utils";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
@@ -103,11 +99,11 @@ const Header = ({ footerSection }) => {
               </li>
               <li className="nav__item contacts">
                 <div className="contacts__wrapper">
-                  <MdOutlinePhone className="contacts__icon" />
+                  <PhoneIcon className="contacts__icon" />
                   <p className="contacts__phone">+375 (29) 644 87 47</p>
                 </div>
                 <div className="contacts__wrapper">
-                  <MdOutlinePhone className="contacts__icon" />
+                  <PhoneIcon className="contacts__icon" />
                   <p className="contacts__phone">+375 (29) 745 87 47</p>
                 </div>
                 <a
@@ -116,7 +112,7 @@ const Header = ({ footerSection }) => {
                   rel="noopener noreferrer"
                   className="contacts__wrapper contacts__wrapper--insta"
                 >
-                  <IoLogoInstagram className="contacts__icon" />
+                  <InstagramIcon className="contacts__icon" />
                   <p className="contacts__instagram">Instagram</p>
                 </a>
               </li>
