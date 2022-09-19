@@ -1,10 +1,13 @@
-import React from 'react';
+import LinkStructure from "./LinkStructure";
+import Categories from "./Сategories";
 
-const Catalogue = (props) => {
-
+const Catalogue = () => {
   return (
-    <h1>Каталог</h1>
-  )
+    <div className="catalogue">
+      <LinkStructure />
+      <Categories />
+    </div>
+  );
 };
 
 export default Catalogue;

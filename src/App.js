@@ -7,7 +7,6 @@ import Catalogue from "./pages/Catalogue";
 import CurtainBuilder from "./pages/CurtainBuilder";
 import Consultation from "./pages/Consultation";
 import ShoppingCart from "./pages/ShoppingCart";
-import Catalog from "./components/Catalog";
 
 function App() {
   const footerRef = useRef(null);
@@ -24,7 +23,6 @@ function App() {
           <Route path="/shopping-cart" element={<ShoppingCart />} exact />
         </Routes>
         <Footer ref={footerRef} />
-        <Catalog />
       </Router>
     </div>
   );
