@@ -8,20 +8,7 @@
             align-items: center;
             justify-content: space-between;
             margin-bottom: 32px;
-        }
-
-        &__content {
-            display: flex;
-            overflow-x: auto;
-            margin: 36px 0 132px;
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .gallery {
-        .gallery-container {
-            &__header {
+            @media (max-width: $screen-md) {
                 .button--transparent {
                     padding: 8px;
                     display: flex;
@@ -32,8 +19,13 @@
                     }
                 }
             }
+        }
 
-            &__content {
+        &__content {
+            display: flex;
+            overflow-x: auto;
+            margin: 36px 0 132px;
+            @media (max-width: $screen-md) {
                 margin: 32px 0 88px;
             }
         }

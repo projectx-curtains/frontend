@@ -1,7 +1,7 @@
 .why-we-are-item {
     width: 190px;
     height: 271px;
-    
+
     &__image {
         width: 124px;
         height: 124px;
@@ -10,6 +10,11 @@
         justify-content: center;
         align-items: center;
         margin: 0 auto 24px;
+
+        .icon {
+            width: 66px;
+            height: 66px;
+        }
     }
 
     &__text {
