@@ -22,11 +22,15 @@
       &:nth-child(1){
         margin-left: 0;
       }
-      &:hover {
-        background: $brown-600;      
-        color: $white;
-      }
-    }        
+      // &:hover {
+      //   background: $brown-600;      
+      //   color: $white;
+      // }
+    }
+    .selected {
+      background: $brown-600;      
+      color: $white;
+    }       
   }
 }
 
