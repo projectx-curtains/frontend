@@ -13,7 +13,7 @@ const Button = ({ children, type = '', onClick, className = '', arrowLeft, arrow
       onClick={onClick}
     >
       {arrowLeft && <Arrow className="button-arrow" />}
-      {children}
+      <span>{children}</span>
       {arrowRight && <Arrow className="button-arrow button__arrow-right" />}
     </button>
   )

@@ -6,7 +6,7 @@ import Card from '../Card'
 
 const Gallery = ({ items, headerText }) => {
 
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' })
+  const isTabletOrMobile = useMediaQuery('(max-width: 768px)')
 
   return (
     <section className="gallery">
@@ -14,8 +14,8 @@ const Gallery = ({ items, headerText }) => {
         <div className="gallery-container__header">
           <HeaderSection headerText={headerText} />
           {isTabletOrMobile ?
-            <Button type="transparent" arrowRight><span>Все</span></Button> :
-            <Button type="secondary" arrowRight><span>Смотреть все</span></Button>
+            <Button type="transparent" arrowRight>Все</Button> :
+            <Button type="secondary" arrowRight>Смотреть все</Button>
           }
         </div>
         <div className="gallery-container__content">
