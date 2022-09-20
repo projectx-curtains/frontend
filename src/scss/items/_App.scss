@@ -43,11 +43,11 @@
 @import './components/CatalogCard.scss';
 @import './components/itemCard';
 @import '../../components/Carousel';
-@import "../../components/CarouselItem";
+@import "../../components/Carousel/CarouselItem";
 @import "../../components/HeaderSection";
 @import "../../components/Gallery";
 @import "../../components/Button";
-@import "../../components/WhyWeAreItem";
+@import "../../pages/home/sections/WhyWeAre/WhyWeAreItem";
 
 //Import sections
 @import "../../pages/home/sections/OurWork";

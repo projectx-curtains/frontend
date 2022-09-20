@@ -6,7 +6,7 @@ const WhyWeAreItem = ({ image, text }) => {
       <div className="why-we-are-item__image">
         <img
           className="icon"
-          src={require(`../../assets/icons/WhyWeAreIcons/${image}`)}
+          src={require(`../../../../../assets/icons/WhyWeAreIcons/${image}`)}
           alt="why we"
         />
       </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import HeaderSection from '../../../../components/HeaderSection'
-import WhyWeAreItem from '../../../../components/WhyWeAreItem'
+import WhyWeAreItem from './WhyWeAreItem'
 import { app_mockData } from '../../../../mockData/app_mockData'
 
 const WhyWeAre = () => {

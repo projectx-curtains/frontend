@@ -1,7 +1,7 @@
 import React from 'react'
 import { useMediaQuery } from 'usehooks-ts'
 import Carousel from '../../../../components/Carousel'
-import CarouselItem from '../../../../components/CarouselItem'
+import CarouselItem from '../../../../components/Carousel/CarouselItem'
 import HeaderSection from '../../../../components/HeaderSection'
 import { CarouselSlider_mockData } from '../../../../mockData/carouselSlider_mockData'
 import { app_mockData } from '../../../../mockData/app_mockData'
