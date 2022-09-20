@@ -1,8 +1,33 @@
 .catalogue {  
   @include display(flex, column, unset, unset);
   width: 100%;
-  margin-left: 80px;  
+  margin-left: 80px; 
+  
+  .categories {
+    margin-top: 36px;
+    width: 1440px;
+    border-bottom: 1px solid $gray-250;
+
+    &__list {
+      @include display(flex, row, flex-start, center);
+      list-style-type: none;
+    }
+    &__item {
+      @include display(flex, column, center, center);    
+      padding: 4px 16px;    
+      height: 36px;
+      background: $gray-100;
+      cursor: pointer;
+      margin-left: 2px;
+      &:nth-child(1){
+        margin-left: 0;
+      }
+      &:hover {
+        background: $brown-600;      
+        color: $white;
+      }
+    }        
+  }
 }
 
-@import './LinkStructure/index.scss';
-@import './Сategories/index.scss';
+@import '../../components/Catalogue/LinkStructure/index.scss';

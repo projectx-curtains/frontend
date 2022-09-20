@@ -11,10 +11,10 @@ const Categories = () => {
   const categorySelection = () => {};
   return (
     <div className="categories">
-      <ul className="categories-list">
+      <ul className="categories__list">
         {titleItems.map((el) => {
           return (
-            <li className="categories-list__item" onClick={categorySelection}>
+            <li className="categories__item" onClick={categorySelection}>
               {el}
             </li>
           );

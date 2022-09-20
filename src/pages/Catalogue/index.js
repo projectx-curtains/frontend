@@ -1,4 +1,4 @@
-import LinkStructure from "./LinkStructure";
+import LinkStructure from "../../components/Catalogue/LinkStructure";
 import Categories from "./Сategories";
 
 const Catalogue = () => {
