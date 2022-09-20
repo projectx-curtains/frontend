@@ -1,5 +1,6 @@
 import React from 'react'
-import UsedButton from '../../../../components/UsedButton'
+import { useMediaQuery } from 'usehooks-ts'
+import Button from '../../../../components/Button'
 import Carousel from '../../../../components/Carousel'
 import CarouselItem from '../../../../components/CarouselItem'
 import { CarouselSlider_mockData } from '../../../../mockData/carouselSlider_mockData'
@@ -8,6 +9,8 @@ import { app_mockData } from '../../../../mockData/app_mockData'
 
 
 const OurWork = () => {
+
+  const isTabletOrMobile = useMediaQuery('(max-width: 768px)')
 
   return (
     <section className="our-work">
@@ -18,12 +21,10 @@ const OurWork = () => {
             <div key={i} className="work-content">
               <div className="description-container">
                 <div className="description-container__description">{app_mockData.ourWork.descriptionText}</div>
-                <UsedButton
-                  firstButton="primary"
-                  firstButtonText="Консультация"
-                  secondButton="secondary"
-                  secondButtonText="Консультация"
-                />
+                {isTabletOrMobile ?
+                  <Button type="secondary">Консультация</Button> :
+                  <Button type="primary">Консультация</Button>
+                }
                 <CarouselItem
                   currentIndex={i + 1}
                   length={arr.length}

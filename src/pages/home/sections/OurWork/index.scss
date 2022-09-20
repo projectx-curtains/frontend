@@ -7,96 +7,63 @@
     .slider {
         background-color: $gray-100;
         margin: 32px 0 166px;
+        @media(max-width: $screen-xxl) {
+            margin: 32px 0 91px;
+            .slick-dots {
+                bottom: 13px;
+            }
+        }
 
         img {
             width: 650px;
             height: 490px;
-        }
-
-        .work-content {
-            display: flex !important;
-
-            .description-container {
-                position: relative;
-                padding: 80px 80px 35px 80px;
-
-                &__description {
-                    @include body-24-regular;
-                    margin-bottom: 60px;
-                }
-
-
-                .index-slide {
-                    position: absolute;
-                    right: 80px;
-                    bottom: 38px;
-                }
-            }
-        }
-    }
-
-
-}
-
-@media(max-width: 1599px) {
-    .our-work {
-
-        .slider {
-            margin: 32px 0 91px;
-
-            .slick-dots {
-                bottom: 13px;
-            }
-
-            img {
+            @media(max-width: $screen-xxl) {
                 width: 45%;
                 height: 45%;
                 order: 1;
                 margin: 0 auto;
             }
-
-            .work-content {
-                .description-container {
-                    padding: 5%;
-
-                    &__description {
-                        font-size: 14px;
-
-                    }
-
-                    .index-slide {
-                        right: 5%;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media(max-width: 767px) {
-    .our-work {
-        .slider {
-
-            img {
+            @media(max-width: $screen-md) {
                 width: 70%;
                 height: 70%;
             }
+            @media(max-width: $screen-sm) {
+                width: 311px;
+                height: 178px;
+            }
+        }
 
-            .work-content {
+        .work-content {
+            display: flex !important;
+            @media(max-width: $screen-md) {
                 padding: 16px;
                 flex-direction: column;
                 height: auto;
+            }
 
-                .description-container {
+            .description-container {
+                position: relative;
+                padding: 80px 80px 35px 80px;
+                @media(max-width: $screen-xxl) {
+                    padding: 5%;
+                }
+                @media(max-width: $screen-md) {
                     flex-direction: column;
                     width: auto;
                     padding: 0;
                     order: 2;
+                }
 
-                    &__description {
+                &__description {
+                    @include body-24-regular;
+                    margin-bottom: 60px;
+                    @media(max-width: $screen-md) {
                         margin: 16px 0 24px;
+                        font-size: 14px;
                     }
+                }
 
+                @media(max-width: $screen-md) {
                     .button--secondary {
                         display: flex;
                         width: 100%;
@@ -106,8 +73,16 @@
                             margin: 0 auto;
                         }
                     }
-
-                    .index-slide {
+                }
+                
+                .index-slide {
+                    position: absolute;
+                    right: 80px;
+                    bottom: 38px;
+                    @media(max-width: $screen-xxl) {
+                        right: 5%;
+                    }
+                    @media(max-width: $screen-md) {
                         right: 0;
                         bottom: 0;
 
@@ -124,17 +99,6 @@
                         }
                     }
                 }
-            }
-        }
-    }
-}
-
-@media(max-width: 480px) {
-    .our-work {
-        .slider {
-            img {
-                width: 311px;
-                height: 178px;
             }
         }
     }

@@ -1,9 +1,6 @@
 .heading {
     @include heading-40-medium;
-}
-
-@media (max-width: 480px) {
-    .heading {
+    @media (max-width: $screen-sm) {
         @include heading-24-medium;
     }
 }
