@@ -2,9 +2,9 @@ name: Build app
 
 on:
   push:
-    branches: [ main, develop, devops ]
+    branches: [ main, dev, devops ]
   pull_request:
-    branches: [ main, develop, devops ]
+    branches: [ main, dev, devops ]
 
 jobs:
   build:
