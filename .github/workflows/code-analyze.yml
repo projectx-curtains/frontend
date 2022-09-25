@@ -2,10 +2,10 @@ name: "Code analyze with CodeQL"
 
 on:
   push:
-    branches: [ "master", "develop", "devops" ]
+    branches: [ "master", "dev", "devops" ]
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ "master", "develop", "devops" ]
+    branches: [ "master", "dev", "devops" ]
   schedule:
     - cron: '21 2 * * 6'
 

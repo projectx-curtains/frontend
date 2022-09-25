@@ -2,7 +2,7 @@ name: Create docker container
 
 on:
   push:
-    branches: [ main, develop, devops ]
+    branches: [ main, dev, devops ]
 
    
 jobs:
