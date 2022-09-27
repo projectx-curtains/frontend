@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Arrow = ({ className, color = "" }) => (
   <svg
@@ -21,10 +22,17 @@ const Button = ({
   type = "",
   onClick,
   className = "",
+  link,
   arrowLeft,
   arrowRight,
 }) => {
-  return (
+  return link ? (
+    <Link to={link} className={`button button--${type} ${className}`}>
+      {arrowLeft && <Arrow className="button-arrow" />}
+      {children}
+      {arrowRight && <Arrow className="button-arrow button__arrow-right" />}
+    </Link>
+  ) : (
     <button className={`button button--${type} ${className}`} onClick={onClick}>
       {arrowLeft && <Arrow className="button-arrow" />}
       {children}

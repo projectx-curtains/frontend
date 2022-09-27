@@ -9,7 +9,7 @@
     width: 126px;
     @include body-14-regular();
     background: transparent;
-    border: none;   
+    border: none;
 
     &:focus {
       outline: none;
@@ -35,18 +35,19 @@
     border-bottom: 1px solid $gray-500;
   }
 
-  &:focus-within  &__input {
+  &:focus-within &__input {
     display: block;
   }
 
   // BUTTON
   &__button {
+    cursor: pointer;
     padding: 0;
     padding-right: 4px;
     font-size: 25px;
     background: transparent;
 
-    &--menu-open  {
+    &--menu-open {
       right: 93%;
       bottom: 10px;
       position: relative;
@@ -61,4 +62,3 @@
     color: $gray-500;
   }
 }
-

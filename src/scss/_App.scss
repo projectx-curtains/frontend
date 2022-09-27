@@ -23,10 +23,11 @@ a {
 }
 
 //Import common
-@import "./common/logo.scss";
-@import "./common/contacts.scss";
+@import "./common/logo";
+@import "./common/contacts";
 
 //Import pages
+@import "../pages/Home";
 
 //Import components
 @import "../components/Header";

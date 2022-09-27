@@ -1,37 +1,37 @@
 export const catalogueData = [
   {
-    name: 'Шторы',
-    img: '1.jpg',
-    path: 'curtains'
+    name: "Шторы",
+    position: "center",
+    type: "curtains",
   },
   {
-    name: 'Покрывала',
-    img: '2.jpg',
-    path: 'bedspreads'
+    name: "Покрывала",
+    position: "top-left",
+    type: "bedspreads",
   },
   {
-    name: 'Подушки',
-    img: '3.jpg',
-    path: 'pillow'
+    name: "Подушки",
+    position: "center-left",
+    type: "pillows",
   },
   {
-    name: 'Ткани',
-    img: '4.jpg',
-    path: 'fabrics'
+    name: "Ткани",
+    position: "top-right",
+    type: "fabrics",
   },
   {
-    name: 'Ламбрекены',
-    img: '5.jpg',
-    path: 'lambrequins'
+    name: "Фурнитура",
+    position: "center-right",
+    type: "accessories",
   },
   {
-    name: 'Фурнитура',
-    img: '6.jpg',
-    path: 'accessories'
+    name: "Ламбрекены",
+    position: "bottom-left",
+    type: "lambrequins",
   },
   {
-    name: 'Распродажа %',
-    img: '7.jpg',
-    path: 'sale'
+    name: "Распродажа %",
+    position: "bottom-right",
+    type: "sale",
   },
-]
+];

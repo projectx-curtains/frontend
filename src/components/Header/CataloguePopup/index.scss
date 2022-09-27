@@ -2,7 +2,7 @@
   padding: 34px 0;
 }
 
-#catalogue-nav:hover~.catalog-popup {
+#catalogue-nav:hover ~ .catalog-popup {
   @include display(flex, unset, space-between, center);
 }
 
@@ -33,6 +33,7 @@
   }
 
   &__item {
+    cursor: pointer;
     height: 38vh;
     padding: 1rem;
   }
@@ -40,10 +41,15 @@
   &__img {
     width: 100%;
     padding-bottom: 12px;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   &__name {
     @include heading-24-medium();
-    color: $gray-500
+    color: $gray-500;
   }
 }

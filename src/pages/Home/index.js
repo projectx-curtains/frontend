@@ -1,25 +1,14 @@
-import React from 'react';
+import React from "react";
+import Banner from "./Banner";
+import Categories from "./Categories";
 
 const Home = (props) => {
-
   return (
     <main className="home">
-      <section className="home__start">
-        <div className="home__start__banner">
-          <h1 className="home__start__banner__heading">
-            Стиль и уют в каждой детали 
-          </h1>
-          <p className="home__start__banner__description">
-            Создай свой дизайн-проект штор от идеи до реализации
-          </p>
-        </div>
-        <div className="home__start__categories">
-
-        </div>
-      </section>
-      
+      <Banner />
+      <Categories />
     </main>
-  )
-}
+  );
+};
 
 export default Home;
