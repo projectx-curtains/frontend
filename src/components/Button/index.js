@@ -1,21 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-const Arrow = ({ className, color = "" }) => (
-  <svg
-    className={className}
-    width="13"
-    height="20"
-    viewBox="0 0 13 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M12.5098 1.8701L10.7298 0.100098L0.839844 10.0001L10.7398 19.9001L12.5098 18.1301L4.37984 10.0001L12.5098 1.8701Z"
-      fill={color}
-    />
-  </svg>
-);
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
 const Button = ({
   children,
@@ -27,16 +12,24 @@ const Button = ({
   arrowRight,
 }) => {
   return link ? (
-    <Link to={link} className={`button button--${type} ${className}`}>
-      {arrowLeft && <Arrow className="button-arrow" />}
+    <Link to={link} className={`button ${className}`} onClick={onClick}>
+      {arrowLeft && (
+        <MdKeyboardArrowLeft className="button__icon button__icon--left" />
+      )}
       {children}
-      {arrowRight && <Arrow className="button-arrow button__arrow-right" />}
+      {arrowRight && (
+        <MdKeyboardArrowRight className="button__icon button__icon--right" />
+      )}
     </Link>
   ) : (
-    <button className={`button button--${type} ${className}`} onClick={onClick}>
-      {arrowLeft && <Arrow className="button-arrow" />}
+    <button type={type} className={`button ${className}`} onClick={onClick}>
+      {arrowLeft && (
+        <MdKeyboardArrowLeft className="button__icon button__icon--left" />
+      )}
       {children}
-      {arrowRight && <Arrow className="button-arrow button__arrow-right" />}
+      {arrowRight && (
+        <MdKeyboardArrowRight className="button__icon button__icon--right" />
+      )}
     </button>
   );
 };

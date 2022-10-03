@@ -4,11 +4,21 @@
   box-sizing: border-box;
   background: none;
   cursor: pointer;
+  width: min-content;
   display: flex;
   align-items: center;
 
-  span {
-    margin: 0 16px;
+  &__icon {
+    color: inherit;
+    transform: translateY(1px) scale(1.8);
+
+    &--left {
+      padding-right: 12px;
+    }
+
+    &--right {
+      padding-left: 12px;
+    }
   }
 
   &--primary {
@@ -25,12 +35,6 @@
     &:disabled {
       background: $brown-350;
     }
-
-    .button-arrow {
-      path {
-        fill: $white;
-      }
-    }
   }
 
   &--secondary {
@@ -46,30 +50,12 @@
 
     &:disabled {
       color: $gray-300;
-
-      .button-arrow {
-        path {
-          fill: $gray-300;
-        }
-      }
     }
 
     &:active {
       background: $brown-500;
       border: 1px solid $brown-400;
       color: $gray-100;
-
-      .button-arrow {
-        path {
-          fill: $gray-100;
-        }
-      }
-    }
-
-    .button-arrow {
-      path {
-        fill: $gray-500;
-      }
     }
   }
 
@@ -81,32 +67,10 @@
 
     &:disabled {
       color: $gray-300;
-
-      .button-arrow {
-        path {
-          fill: $gray-300;
-        }
-      }
     }
 
     &:active {
       color: $gray-400;
-
-      .button-arrow {
-        path {
-          fill: $gray-400;
-        }
-      }
     }
-
-    .button-arrow {
-      path {
-        fill: $gray-500;
-      }
-    }
-  }
-
-  &__arrow-right {
-    transform: rotate(180deg);
   }
 }
