@@ -64,20 +64,7 @@
     }
     &__checkbox:checked::after {
       opacity: 1;
-    }    
-
-    &__colors {  
-      @include display(flex, column, flex-start, center);    
-      width: 24px;
-      height: 24px;
-      border: 3px solid $gray-500;
-      border-radius: 3px;
-      margin-left: 33px;
-    }
-    .color-top, .color-mid, .color-bot {
-      width: 24px;
-      height: 8px;
-    }
+    }   
 
     &__name {
       font-family: 'Noto Sans';
