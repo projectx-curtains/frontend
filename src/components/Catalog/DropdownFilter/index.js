@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ItemFilter from "./ItemFilter";
+import ItemFilter from "../ItemFilter";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 const DropdownFilter = ({ data }) => {
