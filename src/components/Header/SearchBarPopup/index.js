@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../../Button";
 import { data } from "./data/data";
 
 const SearchBarPopup = ({ searchInput, setIsActivePopup }) => {
-  const [list, setList] = useState([]);
-
   return (
     <div className="search-popup">
       <div className="container">
