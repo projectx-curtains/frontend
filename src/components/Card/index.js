@@ -1,20 +1,14 @@
-import React from 'react';
-import './index.scss';
-import { FaArrowUp } from "react-icons/fa";
+import React from "react";
+import { Link } from "react-router-dom";
 
-const Category = ({setText, type, onClick,}) => {
-
+const Card = ({ image, index, name, price, link }) => {
   return (
-    <a           
-        onClick={onClick}
-        className= {`${type}-category`}
-        >
-        <div className = {`${type}-category__text-wrapper`}>
-            <h2 className = {`${type}-category__text`}>{`${setText}`}</h2>
-            <FaArrowUp/>
-        </div>
-    </a>
-  )
-}
+    <Link to="#" className="card">
+      <img className="card__img" src={image} alt={name} />
+      <p className="card__name">{`${index} ${name}`}</p>
+      <p className="card__price">От {price} BYN</p>
+    </Link>
+  );
+};
 
-export default Category;
+export default Card;

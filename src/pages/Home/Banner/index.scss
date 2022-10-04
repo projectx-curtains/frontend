@@ -49,23 +49,28 @@
     margin-top: 32px;
     margin-right: 0px;
     padding: 24px 48px;
-    background: $gray-100;
+    background: transparent;
+    border: 1px solid $white;
+
+    &:hover {
+      background: $gray-100;
+      border: none;
+    }
 
     @media (max-width: $screen-md) {
       margin-top: 64px;
-      width: 100%;
+      width: 100% !important;
       padding: 10px 0;
-      background: transparent;
-      border: 1px solid $white;
+      justify-content: center;
     }
   }
 
   &__button-text {
     @include body-18-regular();
-    color: $gray-500;
+    color: $white;
 
-    @media (max-width: $screen-md) {
-      color: $white;
+    &:hover {
+      color: $gray-500;
     }
   }
 

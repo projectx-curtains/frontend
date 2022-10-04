@@ -1,5 +1,5 @@
 @mixin heading-80-display-semi-bold {
-  font-family: "Noto Serif Regular";
+  font-family: "Noto Serif Regular Display";
   font-style: normal;
   font-weight: 500;
   font-size: 80px;
@@ -9,7 +9,7 @@
 }
 
 @mixin heading-48-medium {
-  font-family: "Noto Sans Medium";
+  font-family: "Noto Sans";
   font-style: normal;
   font-weight: 500;
   font-size: 48px;
@@ -17,7 +17,7 @@
 }
 
 @mixin heading-40-medium {
-  font-family: "Noto Sans Medium";
+  font-family: "Noto Serif Regular";
   font-style: normal;
   font-weight: 500;
   font-size: 40px;

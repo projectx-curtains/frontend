@@ -5,7 +5,7 @@
   background: transparent;
   border-bottom: 1px solid $white;
   transition: 0.3s ease all;
-  z-index: 100;
+  z-index: 1000;
 
   &--transparent-theme {
     color: $white;

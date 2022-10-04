@@ -10,12 +10,16 @@ a {
 .app {
   background-color: $background;
   min-height: 100vh;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .container {
   max-width: 1440px;
   margin: 0 auto;
+
+  @media (max-width: 1559px) {
+    max-width: 90%;
+  }
 
   @media (max-width: $screen-xl) {
     margin: 0 16px;
@@ -38,5 +42,13 @@ a {
 @import "../components/Accordion";
 
 @import "../components/Button";
+
+@import "../components/Card";
+
+@import "../components/Carousel";
+@import "../components/Carousel/CarouselItem";
+
+@import "../components/Title";
+@import "../components/ProductGallery";
 
 @import "../components/Footer";

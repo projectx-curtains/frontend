@@ -1,0 +1,31 @@
+.index-slide {
+    .index-slide-wrapper {
+        display: flex;
+
+        &__current-slide,
+        &__slides-length {
+            @include heading-24-medium;
+            color: $brown-400;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        &__slides-length {
+            font-size: 20px;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .index-slide {
+        .index-slide-wrapper {
+            &__current-slide {
+                font-size: 18px;
+            }
+
+            &__slides-length {
+                font-size: 14px;
+            }
+        }
+    }
+}

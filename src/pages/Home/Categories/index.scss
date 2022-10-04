@@ -1,7 +1,8 @@
 .catalog-layout {
-  transform: translateY(-200px);
+  margin-top: -200px;
+  margin-bottom: 128px;
   display: grid;
-  grid-template-columns: 516px 204px 204px 516px;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
   grid-template-rows: 200px 200px 190px;
   gap: 0px 0px;
   grid-template-areas:
