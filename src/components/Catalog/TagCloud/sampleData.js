@@ -1,4 +1,4 @@
-export const sampleData = [
+export const sampleDataTags = [
   { id: 1, name: "Бамбук" },
   { id: 2, name: "Синий", colorTheSquare: true, color: "#750dca" },
   { id: 3, name: "Распродажа" },

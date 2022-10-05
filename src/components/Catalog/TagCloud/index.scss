@@ -30,6 +30,9 @@
     cursor: pointer;
     padding: 9px 17px 9px 0;    
   }
+  &__item-button-cross svg {
+    fill: $gray-300;    
+  }
 
   .remove-tag {
     background: $gray-250;
@@ -37,7 +40,7 @@
     .tag-cloud__item-name {
       text-decoration: line-through;
     }
-    .tag-cloud__item-button-cross path {
+    .tag-cloud__item-button-cross svg {
       fill: $gray-350;
     }
   }

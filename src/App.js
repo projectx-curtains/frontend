@@ -8,7 +8,7 @@ import CurtainBuilder from "./pages/CurtainBuilder";
 import Consultation from "./pages/Consultation";
 import ShoppingCart from "./pages/ShoppingCart";
 import TagCloud from "./components/Catalog/TagCloud";
-import { sampleData } from "./components/Catalog/TagCloud/sampleData";
+import { sampleDataTags } from "./components/Catalog/TagCloud/sampleData";
 
 function App() {
   const footerRef = useRef(null);
@@ -25,7 +25,7 @@ function App() {
           <Route path="/shopping-cart" element={<ShoppingCart />} exact />
         </Routes>
         <Footer ref={footerRef} />
-        <TagCloud data={sampleData} />
+        <TagCloud tagsData={sampleDataTags} />
       </Router>
     </div>
   );

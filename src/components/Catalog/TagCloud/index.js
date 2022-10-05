@@ -1,51 +1,50 @@
 import { useState } from "react";
-import Cross from "./Cross";
+import { MdClose } from "react-icons/md";
 
-const TagCloud = ({ data }) => {
-  const [arrayData, setArrayData] = useState([...data]);
+const TagCloud = ({ tagsData }) => {
+  const [arrayTagsData, setArrayData] = useState([...tagsData]);
 
   const clickOnButtonCross = (id) => {
     setArrayData(
-      arrayData.map((obj) =>
-        obj.id === id ? { ...obj, removeTag: true } : obj
+      arrayTagsData.map((tagData) =>
+        tagData.id === id ? { ...tagData, removeTag: true } : tagData
       )
     );
     setTimeout(
-      () => setArrayData(arrayData.filter((obj) => obj.id !== id)),
+      () => setArrayData(arrayTagsData.filter((tagData) => tagData.id !== id)),
       400
     );
   };
 
   return (
     <div className="tag-cloud">
-      {arrayData.map((obj) => {
+      {arrayTagsData.map((tagData) => {
         return (
           <div
-            className={
-              obj.removeTag ? "tag-cloud__item remove-tag" : "tag-cloud__item"
-            }
+            className={`tag-cloud__item
+              ${tagData.removeTag ? "remove-tag" : ""}`}
           >
-            {obj.colorTheSquare && (
+            {tagData.colorTheSquare && (
               <span
                 className="tag-cloud__item-color-the-square"
-                style={{ background: obj.color }}
+                style={{ background: tagData.color }}
               ></span>
             )}
             <p
               className="tag-cloud__item-name"
               style={
-                obj.colorTheSquare
+                tagData.colorTheSquare
                   ? { paddingLeft: "6px" }
                   : { paddingLeft: "12px" }
               }
             >
-              {obj.name}
+              {tagData.name}
             </p>
             <div
               className="tag-cloud__item-button-cross"
-              onClick={() => clickOnButtonCross(obj.id)}
+              onClick={() => clickOnButtonCross(tagData.id)}
             >
-              <Cross />
+              <MdClose />
             </div>
           </div>
         );
