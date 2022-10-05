@@ -1,106 +1,110 @@
 .our-work {
-  .heading {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .slider {
-    background-color: $gray-100;
-    margin: 32px 0 166px;
-    @media (max-width: $screen-xl) {
-      margin: 16px 16px 91px;
-      .slick-dots {
-        bottom: 13px;
-      }
+    .container {
+        max-width: 1600px;
     }
 
-    img {
-      width: 650px;
-      height: 490px;
-      @media (max-width: $screen-xl) {
-        width: 45%;
-        height: 45%;
-        order: 1;
+    .heading {
+        width: 90%;
         margin: 0 auto;
-      }
-      @media (max-width: $screen-md) {
-        width: 70%;
-        height: 70%;
-      }
-      @media (max-width: $screen-sm) {
-        width: 311px;
-        height: 178px;
-      }
     }
 
-    .work-content {
-      display: flex !important;
-      @media (max-width: $screen-md) {
-        padding: 16px;
-        flex-direction: column;
-        width: auto !important;
-        height: auto;
-      }
-
-      .description-container {
-        position: relative;
-        padding: 80px 80px 35px 80px;
+    .slider {
+        background-color: $gray-100;
+        margin: 32px 0 166px;
         @media (max-width: $screen-xl) {
-          padding: 5%;
-        }
-        @media (max-width: $screen-md) {
-          flex-direction: column;
-          width: auto;
-          padding: 0;
-          order: 2;
-        }
-
-        &__description {
-          @include body-24-regular;
-          margin-bottom: 60px;
-          color: $gray-500;
-
-          @media (max-width: $screen-md) {
-            margin: 16px 0 24px;
-            height: 180px;
-            font-size: 14px;
-          }
-        }
-
-        @media (max-width: $screen-md) {
-          .button--secondary {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            margin: 24px 0 65px;
-          }
-        }
-
-        .index-slide {
-          position: absolute;
-          right: 80px;
-          bottom: 38px;
-          @media (max-width: $screen-xl) {
-            right: 5%;
-          }
-          @media (max-width: $screen-md) {
-            right: 0;
-            bottom: 0;
-
-            .index-slide-wrapper {
-              &__current-slide {
-                font-size: 18px;
-                font-weight: 400;
-              }
-
-              &__slides-length {
-                font-size: 14px;
-                font-weight: 400;
-              }
+            margin: 16px 16px 91px;
+            .slick-dots {
+                bottom: 13px;
             }
-          }
         }
-      }
+
+        img {
+            width: 650px;
+            height: 490px;
+            @media (max-width: $screen-xl) {
+                width: 45%;
+                height: 45%;
+                order: 1;
+                margin: 0 auto;
+            }
+            @media (max-width: $screen-md) {
+                width: 70%;
+                height: 70%;
+            }
+            @media (max-width: $screen-sm) {
+                width: 311px;
+                height: 178px;
+            }
+        }
+
+        .work-content {
+            display: flex !important;
+            @media (max-width: $screen-md) {
+                padding: 16px;
+                flex-direction: column;
+                width: auto !important;
+                height: auto;
+            }
+
+            .description-container {
+                position: relative;
+                padding: 80px 80px 35px 80px;
+                @media (max-width: $screen-xl) {
+                    padding: 5%;
+                }
+                @media (max-width: $screen-md) {
+                    flex-direction: column;
+                    width: auto;
+                    padding: 0;
+                    order: 2;
+                }
+
+                &__description {
+                    @include body-24-regular;
+                    margin-bottom: 60px;
+                    color: $gray-500;
+
+                    @media (max-width: $screen-md) {
+                        margin: 16px 0 24px;
+                        height: 180px;
+                        font-size: 14px;
+                    }
+                }
+
+                @media (max-width: $screen-md) {
+                    .button--secondary {
+                        display: flex;
+                        justify-content: center;
+                        width: 100%;
+                        margin: 24px 0 65px;
+                    }
+                }
+
+                .index-slide {
+                    position: absolute;
+                    right: 80px;
+                    bottom: 38px;
+                    @media (max-width: $screen-xl) {
+                        right: 5%;
+                    }
+                    @media (max-width: $screen-md) {
+                        right: 0;
+                        bottom: 0;
+
+                        .index-slide-wrapper {
+                            &__current-slide {
+                                font-size: 18px;
+                                font-weight: 400;
+                            }
+
+                            &__slides-length {
+                                font-size: 14px;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
 }
