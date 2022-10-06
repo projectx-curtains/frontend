@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import Catalogue from "./pages/Catalogue";
@@ -10,12 +10,10 @@ import Home from "./pages/Home";
 import ShoppingCart from "./pages/ShoppingCart";
 
 function App() {
-  const footerRef = useRef(null);
-
   return (
     <div className="app">
       <Router>
-        <Header footerSection={footerRef} />
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} exact />
           <Route path="/catalogue">
@@ -26,7 +24,7 @@ function App() {
           <Route path="/consultation" element={<Consultation />} exact />
           <Route path="/shopping-cart" element={<ShoppingCart />} exact />
         </Routes>
-        <Footer ref={footerRef} />
+        <Footer />
       </Router>
     </div>
   );

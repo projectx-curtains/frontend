@@ -1,26 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
+
 import CataloguePopup from "./CataloguePopup";
 import SearchBar from "./SearchBar";
-import { scrollDown } from "../../utils/utils";
+
 import { catalogueData } from "../../assets/data/catalogue";
 import { MdClose, MdOutlineLocalMall, MdOutlineNotes } from "react-icons/md";
 import { ReactComponent as InstagramIcon } from "../../assets/svg/insta.svg";
 import { ReactComponent as PhoneIcon } from "../../assets/svg/phone.svg";
 
-const Header = ({ footerSection }) => {
+const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [headerColor, setHeaderColor] = useState("transparent-theme");
 
   const menuToggleHandler = () => {
     setMenuOpen((p) => !p);
     setHeaderColor(menuOpen ? "transparent-theme" : "white-theme");
-  };
-
-  const contactHandler = () => {
-    scrollDown(footerSection);
-    menuToggleHandler();
   };
 
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1200px)" });
@@ -151,13 +147,9 @@ const Header = ({ footerSection }) => {
                 </Link>
               </li>
               <li className="nav__item">
-                <Link
-                  to="#footer"
-                  className="nav__link"
-                  onClick={contactHandler}
-                >
+                <a href="#footer" className="nav__link">
                   Контакты
-                </Link>
+                </a>
               </li>
               <li className="nav__item">
                 <SearchBar theme={headerColor} />
