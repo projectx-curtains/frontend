@@ -3,8 +3,8 @@ import { useMediaQuery } from "react-responsive";
 import Button from "../../../components/Button";
 import Carousel from "../../../components/Carousel";
 import CarouselItem from "../../../components/Carousel/CarouselItem";
-import { CarouselSlider_mockData } from "../../../assets/data/carouselSlider_mockData";
 import Title from "../../../components/Title";
+import { CarouselSlider_mockData } from "../../../assets/data/carouselSlider_mockData";
 import { app_mockData } from "../../../assets/data/app_mockData";
 
 const OurWork = () => {

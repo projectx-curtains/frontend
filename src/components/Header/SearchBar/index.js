@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "../../Button";
-import { MdSearch } from "react-icons/md";
 import SearchBarPopup from "../SearchBarPopup";
+import { MdSearch } from "react-icons/md";
 
 const SearchBar = ({ theme, menuOpen }) => {
   const [searchInput, setSearchInput] = useState("");

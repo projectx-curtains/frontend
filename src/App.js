@@ -1,11 +1,12 @@
 import React, { useRef } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Home from "./pages/Home";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
 import Catalogue from "./pages/Catalogue";
-import CurtainBuilder from "./pages/CurtainBuilder";
 import Consultation from "./pages/Consultation";
+import CurtainBuilder from "./pages/CurtainBuilder";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Home from "./pages/Home";
 import ShoppingCart from "./pages/ShoppingCart";
 
 function App() {

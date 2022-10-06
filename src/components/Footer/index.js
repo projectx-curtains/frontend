@@ -1,9 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Accordion from "../Accordion";
 import { ReactComponent as LocationIcon } from "../../assets/svg/location.svg";
 import { ReactComponent as InstagramIcon } from "../../assets/svg/insta.svg";
 import { ReactComponent as PhoneIcon } from "../../assets/svg/phone.svg";
-import { Link } from "react-router-dom";
-import Accordion from "../Accordion";
 
 const Footer = () => {
   return (

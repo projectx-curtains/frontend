@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { MdClose, MdOutlineLocalMall, MdOutlineNotes } from "react-icons/md";
-import { ReactComponent as InstagramIcon } from "../../assets/svg/insta.svg";
-import { ReactComponent as PhoneIcon } from "../../assets/svg/phone.svg";
-import { scrollDown } from "../../utils/utils";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 import CataloguePopup from "./CataloguePopup";
 import SearchBar from "./SearchBar";
+import { scrollDown } from "../../utils/utils";
 import { catalogueData } from "../../assets/data/catalogue";
+import { MdClose, MdOutlineLocalMall, MdOutlineNotes } from "react-icons/md";
+import { ReactComponent as InstagramIcon } from "../../assets/svg/insta.svg";
+import { ReactComponent as PhoneIcon } from "../../assets/svg/phone.svg";
 
 const Header = ({ footerSection }) => {
   const [menuOpen, setMenuOpen] = useState(false);
