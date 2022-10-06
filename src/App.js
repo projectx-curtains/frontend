@@ -27,6 +27,8 @@ function App() {
           <Route path="/shopping-cart" element={<ShoppingCart />} exact />
         </Routes>
         <Footer ref={footerRef} />
+
+        {/* -- Эти блоки для наглядности -- */}
         <div>
           {sampleColorFiltersData.map((obj) => {
             return <DropdownColorFilter colorFilterData={obj} />;
@@ -37,6 +39,7 @@ function App() {
             return <DropdownFilter dropdownFilterData={obj} />;
           })}
         </div>
+        {/* ---- */}
       </Router>
     </div>
   );

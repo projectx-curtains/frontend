@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
+import { MdArrowDropDown, MdArrowDropUp } from "react-icons/md";
 import ItemColorFilter from "./ItemColorFilter";
 
 const DropdownColorFilter = ({ colorFilterData }) => {
@@ -26,7 +26,7 @@ const DropdownColorFilter = ({ colorFilterData }) => {
         <span className="dropdown-color-filter__name-title">
           {colorFilterData.nameTitle}
         </span>
-        {isOpen ? <IoMdArrowDropup /> : <IoMdArrowDropdown />}
+        {isOpen ? <MdArrowDropUp /> : <MdArrowDropDown />}
       </div>
       {isOpen && (
         <div className="dropdown-color-filter__scrolling-block">

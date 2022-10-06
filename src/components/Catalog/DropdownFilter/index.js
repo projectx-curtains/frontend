@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ItemFilter from "./ItemFilter";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { MdExpandLess, MdExpandMore } from "react-icons/md";
 
 const DropdownFilter = ({ dropdownFilterData }) => {
   const [isOpen, setOpen] = useState(false);
@@ -12,14 +12,11 @@ const DropdownFilter = ({ dropdownFilterData }) => {
         <span className="dropdown-filter__name-title">
           {dropdownFilterData.nameTitle}
         </span>
-        {isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
+        {isOpen ? <MdExpandLess /> : <MdExpandMore />}
       </div>
       {isOpen && (
         <div className="dropdown-filter__scrolling-block">
-          <ItemFilter
-            className="rr"
-            itemsFilter={dropdownFilterData.itemsFilter}
-          />
+          <ItemFilter itemsFilter={dropdownFilterData.itemsFilter} />
         </div>
       )}
     </div>
