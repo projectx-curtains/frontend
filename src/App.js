@@ -8,7 +8,9 @@ import CurtainBuilder from "./pages/CurtainBuilder";
 import Consultation from "./pages/Consultation";
 import ShoppingCart from "./pages/ShoppingCart";
 import DropdownColorFilter from "./components/Catalog/DropdownColorFilter";
-import { sampleData } from "./components/Catalog/DropdownColorFilter/sampleData";
+import { sampleColorFiltersData } from "./components/Catalog/DropdownColorFilter/sampleColorFiltersData";
+import { sampleDropdownFiltersData } from "./components/Catalog/DropdownFilter/sampleDropdownFiltersData";
+import DropdownFilter from "./components/Catalog/DropdownFilter";
 
 function App() {
   const footerRef = useRef(null);
@@ -25,9 +27,14 @@ function App() {
           <Route path="/shopping-cart" element={<ShoppingCart />} exact />
         </Routes>
         <Footer ref={footerRef} />
-        <div className="www">
-          {sampleData.map((obj) => {
-            return <DropdownColorFilter data={obj} />;
+        <div>
+          {sampleColorFiltersData.map((obj) => {
+            return <DropdownColorFilter colorFilterData={obj} />;
+          })}
+        </div>
+        <div>
+          {sampleDropdownFiltersData.map((obj) => {
+            return <DropdownFilter dropdownFilterData={obj} />;
           })}
         </div>
       </Router>

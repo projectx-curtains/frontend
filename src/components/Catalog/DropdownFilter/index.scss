@@ -1,6 +1,6 @@
 .dropdown-filter {  
-  width: 272px;
-  height: 20px; 
+  width: 272px;  
+  margin-top: 32px;
   &__title-list {
     @include display(flex, row, space-between, center);
     cursor: pointer;
@@ -11,8 +11,8 @@
   }
 
   &__scrolling-block {  // настройка скролла
-    width: 272px;
-    height: 186px;
+    width: 272px;    
+    max-height: 186px;
     overflow-y: scroll;    
   }
   &__scrolling-block::-webkit-scrollbar {
@@ -22,8 +22,7 @@
     background: #D9D9D9;
     border-radius: 5px;
     height: 100px;
-  }
-
+  }   
   .item-filter {
     @include display(flex, row, flex-start, center);
     margin-top: 12px; 
@@ -76,5 +75,8 @@
       color: $gray-500;
       cursor: pointer;
     }    
+  }
+  .item-filter:last-child {
+    margin-bottom: 5px;
   }
 }

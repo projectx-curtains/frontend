@@ -1,4 +1,4 @@
-export const sampleData = [
+export const sampleColorFiltersData = [
   {
     id: 11,
     nameTitle: "Красный/розовый",

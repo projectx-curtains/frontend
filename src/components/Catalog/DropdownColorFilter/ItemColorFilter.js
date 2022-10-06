@@ -1,18 +1,18 @@
-const ItemColorFilter = ({ data }) => {
-  return data.dropdownFilterColor.map((obj) => {
+const ItemColorFilter = ({ itemFilterData }) => {
+  return itemFilterData.dropdownFilterColor.map((filterСolor) => {
     return (
       <div className="item-color-filter">
         <input
           className="item-color-filter__checkbox"
           type="checkbox"
-          id={obj.id}
+          id={filterСolor.id}
         ></input>
         <div
           className="item-color-filter__color"
-          style={{ background: obj.color }}
+          style={{ background: filterСolor.color }}
         ></div>
-        <label className="item-color-filter__name" for={obj.id}>
-          {obj.nameFilter}
+        <label className="item-color-filter__name" for={filterСolor.id}>
+          {filterСolor.nameFilter}
         </label>
       </div>
     );

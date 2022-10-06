@@ -2,7 +2,7 @@ import { useState } from "react";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import ItemColorFilter from "./ItemColorFilter";
 
-const DropdownColorFilter = ({ data }) => {
+const DropdownColorFilter = ({ colorFilterData }) => {
   const [isOpen, setOpen] = useState(false);
 
   const handleOpen = () => setOpen(!isOpen);
@@ -12,25 +12,25 @@ const DropdownColorFilter = ({ data }) => {
         <div className="dropdown-color-filter__gradient-colors">
           <span
             className="color-top"
-            style={{ backgroundColor: data.gradientColorTop }}
+            style={{ backgroundColor: colorFilterData.gradientColorTop }}
           ></span>
           <span
             className="color-mid"
-            style={{ backgroundColor: data.gradientColorMid }}
+            style={{ backgroundColor: colorFilterData.gradientColorMid }}
           ></span>
           <span
             className="color-bot"
-            style={{ backgroundColor: data.gradientColorBot }}
+            style={{ backgroundColor: colorFilterData.gradientColorBot }}
           ></span>
         </div>
         <span className="dropdown-color-filter__name-title">
-          {data.nameTitle}
+          {colorFilterData.nameTitle}
         </span>
         {isOpen ? <IoMdArrowDropup /> : <IoMdArrowDropdown />}
       </div>
       {isOpen && (
         <div className="dropdown-color-filter__scrolling-block">
-          <ItemColorFilter data={data} />;
+          <ItemColorFilter itemFilterData={colorFilterData} />;
         </div>
       )}
     </div>

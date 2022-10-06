@@ -1,6 +1,5 @@
 .dropdown-color-filter {  
-  width: 272px;
-  height: 20px;
+  width: 272px;  
   margin-top: 13px; 
   &__title-list {
     @include display(flex, row, space-between, center);
@@ -26,7 +25,7 @@
 
   &__scrolling-block {  // настройка скролла    
     width: 272px;
-    height: 186px;
+    max-height: 186px;
     overflow-y: scroll;    
   }
   &__scrolling-block::-webkit-scrollbar {
@@ -101,9 +100,7 @@
       cursor: pointer;
     }    
   }
-}
-.www{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  .item-color-filter:last-child {
+    margin-bottom: 5px;
+  }
 }
