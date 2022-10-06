@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { ROUTES } from "../../../utils/routes";
 import Button from "../../Button";
 import { data } from "./data/data";
 
@@ -38,7 +39,7 @@ const SearchBarPopup = ({ searchInput, setIsActivePopup }) => {
         </p>
         <Button
           className="button--secondary search-popup__button"
-          link="/catalogue"
+          link={ROUTES.catalogue}
           arrowRight={true}
           onClick={() => {
             setIsActivePopup((p) => !p);

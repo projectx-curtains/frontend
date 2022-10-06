@@ -4,6 +4,7 @@ import Button from "../../../components/Button";
 import Carousel from "../../../components/Carousel";
 import CarouselItem from "../../../components/Carousel/CarouselItem";
 import Title from "../../../components/Title";
+import { ROUTES } from "../../../utils/routes";
 import { CarouselSlider_mockData } from "../../../assets/data/carouselSlider_mockData";
 import { app_mockData } from "../../../assets/data/app_mockData";
 
@@ -11,7 +12,7 @@ const OurWork = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1200px)" });
 
   return (
-    <section className="our-work">
+    <section className="our-work" id="our-works">
       <Title text="Наши работы" />
       <Carousel>
         {CarouselSlider_mockData.map((e, i, arr) => {
@@ -25,7 +26,7 @@ const OurWork = () => {
                   className={`button--${
                     isTabletOrMobile ? "secondary" : "primary"
                   } `}
-                  link="/consultation"
+                  link={ROUTES.consultation}
                 >
                   Консультация
                 </Button>

@@ -3,6 +3,7 @@ import { useMediaQuery } from "react-responsive";
 import Button from "../Button";
 import Title from "../Title";
 import Card from "../Card";
+import { ROUTES } from "../../utils/routes";
 
 const ProductGallery = ({ items, titleText }) => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1200px)" });
@@ -15,7 +16,7 @@ const ProductGallery = ({ items, titleText }) => {
           {isTabletOrMobile ? (
             <Button
               className="button--transparent"
-              link="/catalogue"
+              link={ROUTES.catalogue}
               arrowRight={true}
             >
               Все
@@ -23,7 +24,7 @@ const ProductGallery = ({ items, titleText }) => {
           ) : (
             <Button
               className="button--secondary"
-              link="/catalogue"
+              link={ROUTES.catalogue}
               arrowRight={true}
             >
               Смотреть все

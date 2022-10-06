@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Accordion from "../Accordion";
+import { ROUTES } from "../../utils/routes";
 import { ReactComponent as LocationIcon } from "../../assets/svg/location.svg";
 import { ReactComponent as InstagramIcon } from "../../assets/svg/insta.svg";
 import { ReactComponent as PhoneIcon } from "../../assets/svg/phone.svg";
@@ -19,24 +20,24 @@ const Footer = () => {
           >
             <ul className="nav__list">
               <li className="nav__item">
-                <Link to="/catalogue" className="nav__link">
+                <Link to={ROUTES.catalogue} className="nav__link">
                   Каталог
                 </Link>
               </li>
               <li className="nav__item">
-                <Link to="/curtain-builder" className="nav__link">
+                <Link to={ROUTES.curtainBuilder} className="nav__link">
                   Конструктор
                 </Link>
               </li>
               <li className="nav__item">
-                <Link to="/consultation" className="nav__link">
+                <Link to={ROUTES.consultation} className="nav__link">
                   Консультация
                 </Link>
               </li>
               <li className="nav__item">
-                <Link to="/our-works" className="nav__link">
+                <a href="#our-works" className="nav__link">
                   Наши работы
-                </Link>
+                </a>
               </li>
             </ul>
           </Accordion>
@@ -47,27 +48,27 @@ const Footer = () => {
           >
             <ul className="nav__list">
               <li className="nav__item">
-                <Link to="/consultation" className="nav__link">
+                <Link to={ROUTES.consultation} className="nav__link">
                   Оплата
                 </Link>
               </li>
               <li className="nav__item">
-                <Link to="/consultation" className="nav__link">
+                <Link to={ROUTES.consultation} className="nav__link">
                   Доставка
                 </Link>
               </li>
               <li className="nav__item">
-                <Link to="/consultation" className="nav__link">
+                <Link to={ROUTES.consultation} className="nav__link">
                   Возврат
                 </Link>
               </li>
               <li className="nav__item">
-                <Link to="/consultation" className="nav__link">
+                <Link to={ROUTES.consultation} className="nav__link">
                   Как сделать заказ
                 </Link>
               </li>
               <li className="nav__item">
-                <Link to="/consultation" className="nav__link">
+                <Link to={ROUTES.consultation} className="nav__link">
                   Как выбрать шторы
                 </Link>
               </li>

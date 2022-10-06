@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../../../components/Button";
 import { MdSouth } from "react-icons/md";
+import { ROUTES } from "../../../utils/routes";
 
 function Banner() {
   return (
@@ -12,7 +13,7 @@ function Banner() {
         <h2 className="banner__subtitle">
           Создай свой дизайн-проект штор от идеи до реализации
         </h2>
-        <Button className="banner__button" link={"/curtain-builder"}>
+        <Button className="banner__button" link={ROUTES.curtainBuilder}>
           <span className="banner__button-text">Создать свой проект штор</span>
         </Button>
         <MdSouth className="banner__arrow" />

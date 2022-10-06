@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 import CataloguePopup from "./CataloguePopup";
 import SearchBar from "./SearchBar";
-
-import { catalogueData } from "../../assets/data/catalogue";
+import { ROUTES } from "../../utils/routes";
+import { CATALOGUE } from "../../assets/data/catalogue";
 import { MdClose, MdOutlineLocalMall, MdOutlineNotes } from "react-icons/md";
 import { ReactComponent as InstagramIcon } from "../../assets/svg/insta.svg";
 import { ReactComponent as PhoneIcon } from "../../assets/svg/phone.svg";
@@ -55,20 +55,16 @@ const Header = () => {
               </li>
               <li className="nav__item">
                 <Link
-                  to="/catalogue"
+                  to={ROUTES.catalogue}
                   className="nav__link nav__link--heading"
                   onClick={menuToggleHandler}
                 >
                   Каталог
                 </Link>
                 <ul className="container nav__list nav__sublist">
-                  {catalogueData.map(({ name, path }, el) => (
+                  {CATALOGUE.map(({ name, path }) => (
                     <li className="nav__item">
-                      <Link
-                        key={el}
-                        to={`/catalogue/${path}`}
-                        className="nav__link"
-                      >
+                      <Link key={name} to={path} className="nav__link">
                         {name}
                       </Link>
                     </li>
@@ -77,7 +73,7 @@ const Header = () => {
               </li>
               <li className="nav__item">
                 <Link
-                  to="/curtain-builder"
+                  to={ROUTES.curtainBuilder}
                   className="nav__link nav__link--heading"
                   onClick={menuToggleHandler}
                 >
@@ -86,7 +82,7 @@ const Header = () => {
               </li>
               <li className="nav__item">
                 <Link
-                  to="/consultation"
+                  to={ROUTES.consultation}
                   className="nav__link nav__link--heading"
                   onClick={menuToggleHandler}
                 >
@@ -119,7 +115,7 @@ const Header = () => {
             <ul className={`nav__list `}>
               <li className="nav__item">
                 <Link
-                  to="/catalogue"
+                  to={ROUTES.catalogue}
                   id="catalogue-nav"
                   className="nav__link"
                   onClick={menuToggleHandler}
@@ -130,7 +126,7 @@ const Header = () => {
               </li>
               <li className="nav__item">
                 <Link
-                  to="/curtain-builder"
+                  to={ROUTES.curtainBuilder}
                   className="nav__link"
                   onClick={menuToggleHandler}
                 >
@@ -139,7 +135,7 @@ const Header = () => {
               </li>
               <li className="nav__item">
                 <Link
-                  to="/consultation"
+                  to={ROUTES.consultation}
                   className="nav__link"
                   onClick={menuToggleHandler}
                 >

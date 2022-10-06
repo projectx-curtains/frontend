@@ -1,12 +1,13 @@
 import React from "react";
 import CategoryCard from "./CategoryCard";
-import { catalogueData } from "../../../assets/data/catalogue";
+import { CATALOGUE } from "../../../assets/data/catalogue";
 
 function Categories() {
   return (
     <section className="container catalog-layout">
-      {catalogueData.map(({ type, name, position }) => (
+      {CATALOGUE.map(({ type, name, position, path }) => (
         <CategoryCard
+          path={path}
           type={type}
           text={name}
           className={`catalog-layout__${position}`}

@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import ShoppingCart from "./pages/ShoppingCart";
+import { ROUTES } from "./utils/routes.js";
 
 function App() {
   return (
@@ -15,14 +16,25 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} exact />
-          <Route path="/catalogue">
+          <Route path={ROUTES.home} element={<Home />} exact />
+          <Route path={ROUTES.catalogue}>
             <Route index element={<Catalogue />} />
-            <Route path=":id" element={<Catalogue />} />
+            <Route path={ROUTES.catalogue} element={<Catalogue />} />
+            {/* TO DO: change to the different components Curtains, Baedspeads and etc.  */}
+            <Route path={ROUTES.catalogueCurtains} element={<Catalogue />} />
+            <Route path={ROUTES.catalogueBedspreads} element={<Catalogue />} />
+            <Route path={ROUTES.cataloguePillows} element={<Catalogue />} />
+            <Route path={ROUTES.catalogueFabrics} element={<Catalogue />} />
+            <Route path={ROUTES.catalogueAccesorries} element={<Catalogue />} />
+            <Route path={ROUTES.catalogueLambrequins} element={<Catalogue />} />
           </Route>
-          <Route path="/curtain-builder" element={<CurtainBuilder />} exact />
-          <Route path="/consultation" element={<Consultation />} exact />
-          <Route path="/shopping-cart" element={<ShoppingCart />} exact />
+          <Route
+            path={ROUTES.curtainBuilder}
+            element={<CurtainBuilder />}
+            exact
+          />
+          <Route path={ROUTES.consultation} element={<Consultation />} exact />
+          <Route path={ROUTES.shoppingCart} element={<ShoppingCart />} exact />
         </Routes>
         <Footer />
       </Router>
