@@ -1,26 +1,15 @@
-import React, { useState, useRef } from "react";
-import { useMediaQuery } from "react-responsive";
+import React, { useState } from "react";
+
 import Button from "../Button";
 import { MdChevronRight } from "react-icons/md";
+import { useMediaQuery } from "react-responsive";
+
+var classNames = require("classnames");
 
 function Accordion({ children, title, onlyForMobile = false, className }) {
-  const [setActive, setActiveState] = useState("");
-  const [setHeight, setHeightState] = useState("0px");
-  const [setRotate, setRotateState] = useState("accordion__icon");
-
-  const content = useRef(null);
+  const [isActive, setIsActive] = useState(false);
 
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-
-  function toggleAccordion() {
-    setActiveState(setActive === "" ? "active" : "");
-    setHeightState(
-      setActive === "active" ? "0px" : `${content.current.scrollHeight}px`
-    );
-    setRotateState(
-      setActive === "active" ? "accordion__icon" : "accordion__icon rotate"
-    );
-  }
 
   return (
     <div className={`accordion ${className}`}>
@@ -29,16 +18,20 @@ function Accordion({ children, title, onlyForMobile = false, className }) {
       ) : (
         <>
           <Button
-            className={`accordion__button ${setActive}`}
-            onClick={toggleAccordion}
+            className="accordion__button"
+            onClick={() => setIsActive((isActive) => !isActive)}
           >
             <p className="accordion__title">{title}</p>
-            <MdChevronRight className={`${setRotate}`} />
+            <MdChevronRight
+              className={classNames("accordion__icon", {
+                "accordion__icon--rotate": isActive,
+              })}
+            />
           </Button>
           <div
-            ref={content}
-            style={{ maxHeight: `${setHeight}` }}
-            className="accordion__content"
+            className={classNames("accordion__content", {
+              "accordion__content--active": isActive,
+            })}
           >
             {children}
           </div>
