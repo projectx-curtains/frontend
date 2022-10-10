@@ -14,7 +14,7 @@ function Banner() {
           Создай свой дизайн-проект штор от идеи до реализации
         </h2>
         <LinkButton className="banner__button" link={ROUTES.curtainBuilder}>
-          <span className="banner__button-text">Создать свой проект штор</span>
+          Создать свой проект штор
         </LinkButton>
         <MdSouth className="banner__arrow" />
       </div>

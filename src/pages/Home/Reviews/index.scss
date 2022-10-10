@@ -53,7 +53,7 @@
             display: none;
           }
 
-          @media (max-width: $screen-xl) {
+          @media (max-width: $screen-md) {
             color: $white;
             margin-left: 24px;
 
@@ -134,7 +134,7 @@
         }
 
         .user {
-          @media (max-width: $screen-xl) {
+          @media (max-width: $screen-md) {
             &--desktop {
               display: none;
             }

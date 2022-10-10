@@ -20,7 +20,7 @@
   }
 
   &__logo {
-    padding-right: 217px;
+    padding-right: 8vw;
 
     @media (max-width: $screen-md) {
       margin: 0 auto;
@@ -32,7 +32,7 @@
 
   .nav {
     display: flex;
-    column-gap: 180px;
+    column-gap: 7vw;
 
     @media (max-width: $screen-md) {
       order: 1;
@@ -81,7 +81,7 @@
   }
 
   .contacts {
-    padding-left: 150px;
+    padding-left: 6vw;
 
     @media (max-width: $screen-md) {
       order: 3;
