@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ItemFilter from "./ItemFilter";
-import { MdExpandLess, MdExpandMore } from "react-icons/md";
+import { MdExpandMore } from "react-icons/md";
 
 const DropdownFilter = ({ dropdownFilterData }) => {
   const [isOpen, setOpen] = useState(false);
@@ -12,7 +12,13 @@ const DropdownFilter = ({ dropdownFilterData }) => {
         <span className="dropdown-filter__name-title">
           {dropdownFilterData.nameTitle}
         </span>
-        {isOpen ? <MdExpandLess /> : <MdExpandMore />}
+        <MdExpandMore
+          className={
+            isOpen
+              ? "dropdown-filter__icon rotate-icon"
+              : "dropdown-filter__icon"
+          }
+        />
       </div>
       {isOpen && (
         <div className="dropdown-filter__scrolling-block">

@@ -10,6 +10,13 @@
     color: $gray-500;
   }
 
+  &__icon {
+    transition: transform 0.5s ease;
+  }
+  .rotate-icon {
+    transform: rotate(180deg);
+  }
+
   &__scrolling-block {  // настройка скролла
     width: 272px;    
     max-height: 186px;

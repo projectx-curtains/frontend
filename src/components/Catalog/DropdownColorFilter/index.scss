@@ -22,6 +22,12 @@
     margin-right: auto;
     margin-left: 12px;    
   }
+  &__icon {
+    transition: transform 0.5s ease;
+  }
+  .rotate-icon {
+    transform: rotate(180deg);
+  }
 
   &__scrolling-block {  // настройка скролла    
     width: 272px;
