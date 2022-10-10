@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LinkButton from "../../LinkButton";
 import { ROUTES } from "../../../utils/routes";
-import Button from "../../Button";
 import { data } from "./data/data";
 
 const SearchBarPopup = ({ searchInput, setIsActivePopup }) => {
@@ -9,12 +9,12 @@ const SearchBarPopup = ({ searchInput, setIsActivePopup }) => {
     <div className="search-popup">
       <div className="container">
         <ul className="search-popup__list">
-          {data.items.map(({ img, title }, el) => (
+          {data.items.map(({ img, title }) => (
             <li
-              key={el}
+              key={title}
               className="search-popup__item"
               onClick={() => {
-                setIsActivePopup((p) => !p);
+                setIsActivePopup((isActive) => isActive);
               }}
             >
               <Link to="#" className="search-popup__link">
@@ -37,16 +37,16 @@ const SearchBarPopup = ({ searchInput, setIsActivePopup }) => {
             {data.num} товаров
           </span>
         </p>
-        <Button
+        <LinkButton
           className="button--secondary search-popup__button"
           link={ROUTES.catalogue}
           arrowRight={true}
           onClick={() => {
-            setIsActivePopup((p) => !p);
+            setIsActivePopup((isActive) => !isActive);
           }}
         >
           <span className="search-popup__button-text">Смотреть все товары</span>
-        </Button>
+        </LinkButton>
       </div>
     </div>
   );

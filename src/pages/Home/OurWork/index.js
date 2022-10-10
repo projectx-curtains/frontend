@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../../components/Button";
+import LinkButton from "../../../components/LinkButton";
 import Carousel from "../../../components/Carousel";
 import CarouselItem from "../../../components/Carousel/CarouselItem";
 import Title from "../../../components/Title";
@@ -19,12 +19,12 @@ const OurWork = () => {
                 <div className="description-container__description">
                   {app_mockData.ourWork.descriptionText}
                 </div>
-                <Button
+                <LinkButton
                   className="description-container__button"
                   link={ROUTES.consultation}
                 >
                   Консультация
-                </Button>
+                </LinkButton>
                 <CarouselItem
                   currentIndex={sliderIndex + 1}
                   length={sliderArr.length}

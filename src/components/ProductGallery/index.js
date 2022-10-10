@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Button";
+import LinkButton from "../LinkButton";
 import Title from "../Title";
 import Card from "../Card";
 import { ROUTES } from "../../utils/routes";
@@ -10,20 +10,20 @@ const ProductGallery = ({ items, titleText }) => {
       <div className="container">
         <div className="gallery-container__header">
           <Title text={titleText} />
-          <Button
+          <LinkButton
             className="button--transparent gallery-container__button--mobile"
             link={ROUTES.catalogue}
             arrowRight={true}
           >
             Все
-          </Button>
-          <Button
+          </LinkButton>
+          <LinkButton
             className="button--secondary gallery-container__button--desktop"
             link={ROUTES.catalogue}
             arrowRight={true}
           >
             Смотреть все
-          </Button>
+          </LinkButton>
         </div>
         <div className="gallery-container__content">
           {items.map((productItem) => {

@@ -1,16 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
-const Button = ({
+const LinkButton = ({
   children,
-  type = "",
   onClick,
   className = "",
+  link,
   arrowLeft,
   arrowRight,
 }) => {
   return (
-    <button type={type} className={`button ${className}`} onClick={onClick}>
+    <Link to={link} className={`button ${className}`} onClick={onClick}>
       {arrowLeft && (
         <MdKeyboardArrowLeft className="button__icon button__icon--left" />
       )}
@@ -18,8 +19,8 @@ const Button = ({
       {arrowRight && (
         <MdKeyboardArrowRight className="button__icon button__icon--right" />
       )}
-    </button>
+    </Link>
   );
 };
 
-export default Button;
+export default LinkButton;
