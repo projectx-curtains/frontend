@@ -1,4 +1,4 @@
-import { ROUTES } from "../../utils/routes";
+import { ROUTES } from "../../constants/routes";
 
 export const CATALOGUE = [
   {
@@ -29,7 +29,7 @@ export const CATALOGUE = [
     name: "Фурнитура",
     position: "center-right",
     type: "accessories",
-    path: ROUTES.catalogueAccesorries,
+    path: ROUTES.catalogueAccessories,
   },
   {
     name: "Ламбрекены",

@@ -16,13 +16,12 @@ import { MdClose, MdOutlineLocalMall, MdOutlineNotes } from "react-icons/md";
 
 const Header = () => {
   const colorSwitchPosition = 10;
-  const currentScrollPosition = window.scrollY;
   const [menuOpen, setMenuOpen] = useState(false);
   const [headerTheme, setHeaderTheme] = useState(HEADER_THEME.transparent);
 
   const menuToggleHandler = () => {
     setMenuOpen((isOpen) => !isOpen);
-    if (currentScrollPosition < colorSwitchPosition) {
+    if (window.scrollY < colorSwitchPosition) {
       const currentTheme = menuOpen
         ? HEADER_THEME.transparent
         : HEADER_THEME.white;
@@ -32,7 +31,7 @@ const Header = () => {
 
   const pageScrollHandler = () => {
     const currentTheme =
-      currentScrollPosition > colorSwitchPosition
+      window.scrollY > colorSwitchPosition
         ? HEADER_THEME.white
         : HEADER_THEME.transparent;
     setHeaderTheme(currentTheme);

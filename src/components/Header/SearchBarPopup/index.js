@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import LinkButton from "../../LinkButton";
-import { ROUTES } from "../../../utils/routes";
+import { ROUTES } from "../../../constants/routes";
 import { data } from "./data/data";
 
 const SearchBarPopup = ({ searchInput, setIsActivePopup }) => {

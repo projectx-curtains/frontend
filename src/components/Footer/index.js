@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Accordion from "../Accordion";
-import { ROUTES } from "../../utils/routes";
+import { ROUTES } from "../../constants/routes";
 import { CONTACTS } from "../../assets/data/contacts";
 import { ReactComponent as LocationIcon } from "../../assets/svg/location.svg";
 import { ReactComponent as InstagramIcon } from "../../assets/svg/insta.svg";

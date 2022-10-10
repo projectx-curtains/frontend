@@ -2,7 +2,7 @@ import React from "react";
 import LinkButton from "../LinkButton";
 import Title from "../Title";
 import Card from "../Card";
-import { ROUTES } from "../../utils/routes";
+import { ROUTES } from "../../constants/routes";
 
 const ProductGallery = ({ items, titleText }) => {
   return (

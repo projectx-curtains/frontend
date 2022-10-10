@@ -1,6 +1,6 @@
 import React from "react";
 import LinkButton from "../../../components/LinkButton";
-import { ROUTES } from "../../../utils/routes";
+import { ROUTES } from "../../../constants/routes";
 import { MdSouth } from "react-icons/md";
 
 function Banner() {

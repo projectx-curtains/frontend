@@ -3,7 +3,7 @@ import LinkButton from "../../../components/LinkButton";
 import Carousel from "../../../components/Carousel";
 import CarouselItem from "../../../components/Carousel/CarouselItem";
 import Title from "../../../components/Title";
-import { ROUTES } from "../../../utils/routes";
+import { ROUTES } from "../../../constants/routes";
 import { CarouselSlider_mockData } from "../../../assets/data/carouselSlider_mockData";
 import { app_mockData } from "../../../assets/data/app_mockData";
 
