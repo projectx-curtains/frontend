@@ -1,45 +1,39 @@
 import React from "react";
-import { useMediaQuery } from "react-responsive";
 import Button from "../Button";
 import Title from "../Title";
 import Card from "../Card";
 import { ROUTES } from "../../utils/routes";
 
 const ProductGallery = ({ items, titleText }) => {
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1200px)" });
-
   return (
     <section className="gallery">
       <div className="container">
         <div className="gallery-container__header">
           <Title text={titleText} />
-          {isTabletOrMobile ? (
-            <Button
-              className="button--transparent"
-              link={ROUTES.catalogue}
-              arrowRight={true}
-            >
-              Все
-            </Button>
-          ) : (
-            <Button
-              className="button--secondary"
-              link={ROUTES.catalogue}
-              arrowRight={true}
-            >
-              Смотреть все
-            </Button>
-          )}
+          <Button
+            className="button--transparent gallery-container__button--mobile"
+            link={ROUTES.catalogue}
+            arrowRight={true}
+          >
+            Все
+          </Button>
+          <Button
+            className="button--secondary gallery-container__button--desktop"
+            link={ROUTES.catalogue}
+            arrowRight={true}
+          >
+            Смотреть все
+          </Button>
         </div>
         <div className="gallery-container__content">
-          {items.map((item, i) => {
+          {items.map((productItem) => {
             return (
               <Card
-                key={i}
-                image={item.image}
-                index={item.index}
-                name={item.setName}
-                price={item.setPrice}
+                key={productItem.setName}
+                image={productItem.image}
+                index={productItem.index}
+                name={productItem.setName}
+                price={productItem.setPrice}
               />
             );
           })}

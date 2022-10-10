@@ -1,10 +1,14 @@
 .accordion {
   &__button {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: none;
     background: none;
+
+    @media (max-width: $screen-md) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 
   &__icon {
@@ -16,11 +20,15 @@
   }
 
   &__content {
-    max-height: 0px;
+    max-height: max-content;
     overflow: auto;
 
-    &--active {
-      max-height: max-content;
+    @media (max-width: $screen-md) {
+      max-height: 0px;
+
+      &--active {
+        max-height: max-content;
+      }
     }
   }
 }

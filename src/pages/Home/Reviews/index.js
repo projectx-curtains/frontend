@@ -1,5 +1,4 @@
 import React from "react";
-import { useMediaQuery } from "react-responsive";
 import Carousel from "../../../components/Carousel";
 import CarouselItem from "../../../components/Carousel/CarouselItem";
 import Title from "../../../components/Title";
@@ -7,8 +6,6 @@ import { CarouselSlider_mockData } from "../../../assets/data/carouselSlider_moc
 import { app_mockData } from "../../../assets/data/app_mockData";
 
 const Reviews = () => {
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1200px)" });
-
   const handlerScrollUp = () => {
     window.scrollTo({
       top: 0,
@@ -21,27 +18,17 @@ const Reviews = () => {
     <section className="reviews">
       <Title text="Отзывы" />
       <Carousel>
-        {CarouselSlider_mockData.map((e, i, arr) => {
+        {CarouselSlider_mockData.map((sliderItem, sliderIndex, sliderArr) => {
           return (
-            <div key={i} className="reviews-content">
+            <div key={sliderIndex} className="reviews-content">
               <div className="image-container">
-                <img
-                  className="image"
-                  src={e.image}
-                  alt="our work"
-                  width="650px"
-                  height="513px"
-                />
-                {isTabletOrMobile && (
-                  <div className="user">
-                    <div className="user__name">
-                      {app_mockData.reviews.user}
-                    </div>
-                    <div className="user__location">
-                      {app_mockData.reviews.location}
-                    </div>
+                <img className="image" src={sliderItem.image} alt="our work" />
+                <div className="user user--mobile">
+                  <div className="user__name">{app_mockData.reviews.user}</div>
+                  <div className="user__location">
+                    {app_mockData.reviews.location}
                   </div>
-                )}
+                </div>
               </div>
               <div className="description-container">
                 <div className="description">
@@ -51,18 +38,17 @@ const Reviews = () => {
                     }
                     alt="review"
                   />
-                  <CarouselItem currentIndex={i + 1} length={arr.length} />
+                  <CarouselItem
+                    currentIndex={sliderIndex + 1}
+                    length={sliderArr.length}
+                  />
                 </div>
-                {!isTabletOrMobile && (
-                  <div className="user">
-                    <div className="user__name">
-                      {app_mockData.reviews.user}
-                    </div>
-                    <div className="user__location">
-                      {app_mockData.reviews.location}
-                    </div>
+                <div className="user user--desktop">
+                  <div className="user__name">{app_mockData.reviews.user}</div>
+                  <div className="user__location">
+                    {app_mockData.reviews.location}
                   </div>
-                )}
+                </div>
                 <div className="description__text">
                   {app_mockData.reviews.descriptionText}
                 </div>
@@ -71,15 +57,13 @@ const Reviews = () => {
           );
         })}
       </Carousel>
-      {isTabletOrMobile && (
-        <div className="button-scroll-up">
-          <img
-            src={require("../../../assets/svg/UpArrow.svg").default}
-            alt="button-up"
-            onClick={handlerScrollUp}
-          />
-        </div>
-      )}
+      <div className="button-scroll-up">
+        <img
+          src={require("../../../assets/svg/UpArrow.svg").default}
+          alt="button-up"
+          onClick={handlerScrollUp}
+        />
+      </div>
     </section>
   );
 };

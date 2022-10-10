@@ -1,28 +1,30 @@
-import React, { useState, useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
-import { Link } from "react-router-dom";
-
-import CataloguePopup from "./CataloguePopup";
-import SearchBar from "./SearchBar";
-import { ROUTES } from "../../utils/routes";
-import { CATALOGUE } from "../../assets/data/catalogue";
 import { MdClose, MdOutlineLocalMall, MdOutlineNotes } from "react-icons/md";
+import React, { useEffect, useState } from "react";
+
+import { CATALOGUE } from "../../assets/data/catalogue";
+import CataloguePopup from "./CataloguePopup";
 import { ReactComponent as InstagramIcon } from "../../assets/svg/insta.svg";
+import { Link } from "react-router-dom";
 import { ReactComponent as PhoneIcon } from "../../assets/svg/phone.svg";
+import { ROUTES } from "../../utils/routes";
+import SearchBar from "./SearchBar";
+
+var classNames = require("classnames");
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [headerColor, setHeaderColor] = useState("transparent-theme");
+  const switchColorPositionY = 10;
 
   const menuToggleHandler = () => {
-    setMenuOpen((p) => !p);
-    setHeaderColor(menuOpen ? "transparent-theme" : "white-theme");
+    setMenuOpen((isOpen) => !isOpen);
+    if (window.scrollY < switchColorPositionY) {
+      setHeaderColor(menuOpen ? "transparent-theme" : "white-theme");
+    }
   };
 
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1200px)" });
-
   const listenScrollEvent = () => {
-    window.scrollY > 10
+    window.scrollY > switchColorPositionY
       ? setHeaderColor("white-theme")
       : setHeaderColor("transparent-theme");
   };
@@ -43,11 +45,11 @@ const Header = () => {
         </div>
         <Link
           to="/"
-          className={`header__logo logo ${
-            menuOpen && isTabletOrMobile ? "logo--dark" : ""
-          }`}
+          className={classNames("header__logo", "logo", {
+            "logo--dark": menuOpen,
+          })}
         ></Link>
-        {menuOpen && isTabletOrMobile ? (
+        {menuOpen ? (
           <nav className="nav nav--open">
             <ul className="container nav__list">
               <li className="nav__item">

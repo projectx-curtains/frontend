@@ -67,12 +67,45 @@
           }
         }
 
-        @media (max-width: $screen-md) {
-          .button--secondary {
+        &__button {
+          max-height: 72px;
+          background: $brown-500;
+          padding: 24px 48px;
+          color: $white;
+          @include body-18-medium;
+
+          &:hover {
+            background: $brown-600;
+          }
+
+          &:disabled {
+            background: $brown-350;
+          }
+
+          @media (max-width: $screen-md) {
             display: flex;
             justify-content: center;
             width: 100%;
             margin: 24px 0 65px;
+            max-height: 48px;
+            border: 1px solid $brown-500;
+            background: transparent;
+            padding: 12px 42px;
+            color: $gray-500;
+
+            &:hover {
+              background: $gray-100;
+            }
+
+            &:disabled {
+              color: $gray-300;
+            }
+
+            &:active {
+              background: $brown-500;
+              border: 1px solid $brown-400;
+              color: $gray-100;
+            }
           }
         }
 

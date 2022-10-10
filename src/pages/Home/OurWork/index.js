@@ -1,5 +1,4 @@
 import React from "react";
-import { useMediaQuery } from "react-responsive";
 import Button from "../../../components/Button";
 import Carousel from "../../../components/Carousel";
 import CarouselItem from "../../../components/Carousel/CarouselItem";
@@ -9,30 +8,29 @@ import { CarouselSlider_mockData } from "../../../assets/data/carouselSlider_moc
 import { app_mockData } from "../../../assets/data/app_mockData";
 
 const OurWork = () => {
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1200px)" });
-
   return (
     <section className="our-work" id="our-works">
       <Title text="Наши работы" />
       <Carousel>
-        {CarouselSlider_mockData.map((e, i, arr) => {
+        {CarouselSlider_mockData.map((sliderItem, sliderIndex, sliderArr) => {
           return (
-            <div key={i} className="work-content">
+            <div key={sliderIndex} className="work-content">
               <div className="description-container">
                 <div className="description-container__description">
                   {app_mockData.ourWork.descriptionText}
                 </div>
                 <Button
-                  className={`button--${
-                    isTabletOrMobile ? "secondary" : "primary"
-                  } `}
+                  className="description-container__button"
                   link={ROUTES.consultation}
                 >
                   Консультация
                 </Button>
-                <CarouselItem currentIndex={i + 1} length={arr.length} />
+                <CarouselItem
+                  currentIndex={sliderIndex + 1}
+                  length={sliderArr.length}
+                />
               </div>
-              <img src={e.image} alt="our work" />
+              <img src={sliderItem.image} alt="our work" />
             </div>
           );
         })}

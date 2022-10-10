@@ -28,6 +28,12 @@
 
       .image-container {
         display: flex;
+
+        img {
+          width: 650px;
+          height: 513px;
+        }
+
         @media (max-width: $screen-xl) {
           flex: 2;
           img {
@@ -43,9 +49,17 @@
         }
 
         .user {
+          &--mobile {
+            display: none;
+          }
+
           @media (max-width: $screen-xl) {
             color: $white;
             margin-left: 24px;
+
+            &--mobile {
+              display: block;
+            }
 
             &__name {
               @include body-20-medium;
@@ -120,6 +134,12 @@
         }
 
         .user {
+          @media (max-width: $screen-xl) {
+            &--desktop {
+              display: none;
+            }
+          }
+
           &__name {
             @include heading-48-medium();
             margin: 27px 0 12px;
