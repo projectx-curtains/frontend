@@ -1,13 +1,13 @@
-import { MdClose, MdOutlineLocalMall, MdOutlineNotes } from "react-icons/md";
 import React, { useEffect, useState } from "react";
-
-import { CATALOGUE } from "../../assets/data/catalogue";
-import CataloguePopup from "./CataloguePopup";
-import { ReactComponent as InstagramIcon } from "../../assets/svg/insta.svg";
 import { Link } from "react-router-dom";
-import { ReactComponent as PhoneIcon } from "../../assets/svg/phone.svg";
-import { ROUTES } from "../../utils/routes";
+import CataloguePopup from "./CataloguePopup";
 import SearchBar from "./SearchBar";
+import { ROUTES } from "../../utils/routes";
+import { CATALOGUE } from "../../assets/data/catalogue";
+import { CONTACTS } from "../../assets/data/contacts";
+import { ReactComponent as InstagramIcon } from "../../assets/svg/insta.svg";
+import { ReactComponent as PhoneIcon } from "../../assets/svg/phone.svg";
+import { MdClose, MdOutlineLocalMall, MdOutlineNotes } from "react-icons/md";
 
 var classNames = require("classnames");
 
@@ -92,16 +92,14 @@ const Header = () => {
                 </Link>
               </li>
               <li className="nav__item contacts">
-                <div className="contacts__wrapper">
-                  <PhoneIcon className="contacts__icon" />
-                  <p className="contacts__phone">+375 (29) 644 87 47</p>
-                </div>
-                <div className="contacts__wrapper">
-                  <PhoneIcon className="contacts__icon" />
-                  <p className="contacts__phone">+375 (29) 745 87 47</p>
-                </div>
+                {CONTACTS.phones.map((phone) => (
+                  <div className="contacts__wrapper">
+                    <PhoneIcon className="contacts__icon" />
+                    <p className="contacts__phone">{phone}</p>
+                  </div>
+                ))}
                 <a
-                  href="https://instagram.com/zashtorim.by?igshid=YmMyMTA2M2Y="
+                  href={CONTACTS.insta}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="contacts__wrapper contacts__wrapper--insta"

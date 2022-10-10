@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Accordion from "../Accordion";
 import { ROUTES } from "../../utils/routes";
+import { CONTACTS } from "../../assets/data/contacts";
 import { ReactComponent as LocationIcon } from "../../assets/svg/location.svg";
 import { ReactComponent as InstagramIcon } from "../../assets/svg/insta.svg";
 import { ReactComponent as PhoneIcon } from "../../assets/svg/phone.svg";
@@ -81,30 +82,25 @@ const Footer = () => {
           <div className="contacts__wrapper">
             <LocationIcon className="contacts__icon contacts__icon--place" />
             <a
-              href="https://yandex.by/maps/-/CCUVqWsOKA"
+              href={CONTACTS.addressLink}
               target="_blank"
               rel="noopener noreferrer"
               className="contacts__text contacts__place"
             >
-              г. Могилёв, ул. Быховская 6, пав.256 (Могилёвский рынок)
+              {CONTACTS.address}
             </a>
           </div>
-          <div className="contacts__wrapper">
-            <PhoneIcon className="contacts__icon" />
-            <p className="contacts__text contacts__phone">
-              +375 (29) 644 87 47
-            </p>
-          </div>
-          <div className="contacts__wrapper">
-            <PhoneIcon className="contacts__icon" />
-            <p className="contacts__text contacts__phone">
-              +375 (29) 745 87 47
-            </p>
-          </div>
+
+          {CONTACTS.phones.map((phone) => (
+            <div className="contacts__wrapper">
+              <PhoneIcon className="contacts__icon" />
+              <p className="contacts__text contacts__phone">{phone}</p>
+            </div>
+          ))}
 
           <p className="contacts__heading">Подписывайтесь на нас!</p>
           <a
-            href="https://instagram.com/zashtorim.by?igshid=YmMyMTA2M2Y="
+            href={CONTACTS.insta}
             target="_blank"
             rel="noopener noreferrer"
             className="contacts__wrapper"
