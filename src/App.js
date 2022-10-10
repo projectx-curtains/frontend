@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import ShoppingCart from "./pages/ShoppingCart";
-import { ROUTES } from "./utils/routes.js";
+import { ROUTES } from "./constants/routes";
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
             <Route path={ROUTES.catalogueBedspreads} element={<Catalogue />} />
             <Route path={ROUTES.cataloguePillows} element={<Catalogue />} />
             <Route path={ROUTES.catalogueFabrics} element={<Catalogue />} />
-            <Route path={ROUTES.catalogueAccesorries} element={<Catalogue />} />
+            <Route path={ROUTES.catalogueAccessories} element={<Catalogue />} />
             <Route path={ROUTES.catalogueLambrequins} element={<Catalogue />} />
           </Route>
           <Route

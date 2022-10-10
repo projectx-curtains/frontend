@@ -1,40 +1,49 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import classNames from "classnames";
+
 import CataloguePopup from "./CataloguePopup";
 import SearchBar from "./SearchBar";
-import { ROUTES } from "../../utils/routes";
+
+import { HEADER_THEME } from "../../constants";
+import { ROUTES } from "../../constants/routes";
 import { CATALOGUE } from "../../assets/data/catalogue";
 import { CONTACTS } from "../../assets/data/contacts";
+
 import { ReactComponent as InstagramIcon } from "../../assets/svg/insta.svg";
 import { ReactComponent as PhoneIcon } from "../../assets/svg/phone.svg";
 import { MdClose, MdOutlineLocalMall, MdOutlineNotes } from "react-icons/md";
 
-var classNames = require("classnames");
-
 const Header = () => {
+  const colorSwitchPosition = 10;
+  const currentScrollPosition = window.scrollY;
   const [menuOpen, setMenuOpen] = useState(false);
-  const [headerColor, setHeaderColor] = useState("transparent-theme");
-  const switchColorPositionY = 10;
+  const [headerTheme, setHeaderTheme] = useState(HEADER_THEME.transparent);
 
   const menuToggleHandler = () => {
     setMenuOpen((isOpen) => !isOpen);
-    if (window.scrollY < switchColorPositionY) {
-      setHeaderColor(menuOpen ? "transparent-theme" : "white-theme");
+    if (currentScrollPosition < colorSwitchPosition) {
+      const currentTheme = menuOpen
+        ? HEADER_THEME.transparent
+        : HEADER_THEME.white;
+      setHeaderTheme(currentTheme);
     }
   };
 
-  const listenScrollEvent = () => {
-    window.scrollY > switchColorPositionY
-      ? setHeaderColor("white-theme")
-      : setHeaderColor("transparent-theme");
+  const pageScrollHandler = () => {
+    const currentTheme =
+      currentScrollPosition > colorSwitchPosition
+        ? HEADER_THEME.white
+        : HEADER_THEME.transparent;
+    setHeaderTheme(currentTheme);
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", listenScrollEvent);
+    window.addEventListener("scroll", pageScrollHandler);
   });
 
   return (
-    <header className={`header header--${headerColor}`}>
+    <header className={classNames("header", ` header--${headerTheme}`)}>
       <div className="container header__content">
         <div className="header__toggle">
           {!menuOpen ? (
@@ -44,7 +53,7 @@ const Header = () => {
           )}
         </div>
         <Link
-          to="/"
+          to={ROUTES.home}
           className={classNames("header__logo", "logo", {
             "logo--dark": menuOpen,
           })}
@@ -53,7 +62,7 @@ const Header = () => {
           <nav className="nav nav--open">
             <ul className="container nav__list">
               <li className="nav__item">
-                <SearchBar theme={headerColor} menuOpen={menuOpen} />
+                <SearchBar theme={headerTheme} menuOpen={menuOpen} />
               </li>
               <li className="nav__item">
                 <Link
@@ -112,7 +121,7 @@ const Header = () => {
           </nav>
         ) : (
           <nav className="nav">
-            <ul className={`nav__list `}>
+            <ul className={"nav__list "}>
               <li className="nav__item">
                 <Link
                   to={ROUTES.catalogue}
@@ -148,12 +157,12 @@ const Header = () => {
                 </a>
               </li>
               <li className="nav__item">
-                <SearchBar theme={headerColor} />
+                <SearchBar theme={headerTheme} />
               </li>
             </ul>
           </nav>
         )}
-        <Link to="/shopping-cart" className="header__basket">
+        <Link to={ROUTES.shoppingCart} className="header__basket">
           <MdOutlineLocalMall />
         </Link>
       </div>

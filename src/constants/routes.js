@@ -6,7 +6,7 @@ export const ROUTES = {
   catalogueBedspreads: "/catalogue/:bedspreads",
   cataloguePillows: "/catalogue/:pillows",
   catalogueFabrics: "/catalogue/:fabrics",
-  catalogueAccesorries: "/catalogue/:accesorries",
+  catalogueAccessories: "/catalogue/:accessories",
   catalogueLambrequins: "/catalogue/:lambrequins",
 
   curtainBuilder: "/curtain-builder",
