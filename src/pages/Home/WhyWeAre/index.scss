@@ -1,20 +1,21 @@
 .why-we-are {
-    display: flex;
 
     &__container {
-        width: 90%;
+        max-width: 1600px;
         margin: 0 auto;
 
         .heading {
-            margin-bottom: 48px;
+            width: 90%;
+            margin: 0 auto 48px;
         }
     }
 
     &__content {
+        width: 90%;
         display: flex;
         justify-content: space-between;
         text-align: center;
-        margin-bottom: 128px;
+        margin: 0 auto 128px;
         flex-wrap: wrap;
     }
 }

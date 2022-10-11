@@ -1,168 +1,172 @@
 .reviews {
-  .heading {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .slider {
-    margin: 32px 0 144px;
-    @media (max-width: 767px) {
-      margin: 16px 16px 51px;
+    .container {
+        max-width: 1600px;
     }
 
-    @media (max-width: $screen-xl) {
-      .slick-dots {
-        bottom: 13px;
-      }
+    .heading {
+        width: 90%;
+        margin: 0 auto;
     }
 
-    .reviews-content {
-      display: flex !important;
-      background-color: $brown-500;
-      @media (max-width: 767px) {
-        position: relative;
-        flex-direction: column;
-        padding: 16px;
-        width: auto !important;
-      }
+    .slider {
+        margin: 32px 0 144px;
+        @media (max-width: 767px) {
+            margin: 16px 16px 51px;
+        }
 
-      .image-container {
+        @media (max-width: $screen-xl) {
+            .slick-dots {
+                bottom: 13px;
+            }
+        }
+
+        .reviews-content {
+            display: flex !important;
+            background-color: $brown-500;
+            @media (max-width: 767px) {
+                position: relative;
+                flex-direction: column;
+                padding: 16px;
+                width: auto !important;
+            }
+
+            .image-container {
+                display: flex;
+
+                img {
+                    width: 650px;
+                    height: 513px;
+                }
+
+                @media (max-width: $screen-xl) {
+                    flex: 2;
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                @media (max-width: $screen-md) {
+                    img {
+                        width: 106px;
+                        height: 106px;
+                    }
+                }
+
+                .user {
+                    &--mobile {
+                        display: none;
+                    }
+
+                    @media (max-width: $screen-md) {
+                        color: $white;
+                        margin-left: 24px;
+
+                        &--mobile {
+                            display: block;
+                        }
+
+                        &__name {
+                            @include body-20-medium;
+                            @media (max-width: $screen-md) {
+                                margin-bottom: 6px;
+                            }
+                        }
+
+                        &__location {
+                            @include body-14-regular;
+                            @media (max-width: $screen-md) {
+                                font-weight: regular;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .description-container {
+                color: $white;
+                padding: 64px 80px;
+                @media (max-width: $screen-xl) {
+                    padding: 5%;
+                    flex: 1;
+                }
+                @media (max-width: $screen-md) {
+                    margin-bottom: 41px;
+                    width: auto;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0;
+                }
+
+                .description {
+                    display: flex;
+                    justify-content: space-between;
+
+                    &__text {
+                        @include body-24-regular;
+                        font-style: italic;
+                    }
+
+                    @media (max-width: $screen-md) {
+                        img {
+                            width: 35px;
+                            height: 27px;
+                            margin: 16px 0 8px;
+                        }
+                        &__text {
+                            @include body-14-regular;
+                            font-style: italic;
+                        }
+                    }
+
+                    .index-slide {
+                        color: $brown-350;
+                        align-items: flex-start;
+                        @media (max-width: $screen-xl) {
+                            position: absolute;
+                            right: 16px;
+                            bottom: 16px;
+                        }
+
+                        .current-slide {
+                            font-size: 34px;
+                        }
+
+                        .slides-length {
+                            font-size: 30px;
+                        }
+                    }
+                }
+
+                .user {
+                    @media (max-width: $screen-md) {
+                        &--desktop {
+                            display: none;
+                        }
+                    }
+
+                    &__name {
+                        @include heading-48-medium();
+                        margin: 27px 0 12px;
+                    }
+
+                    &__location {
+                        @include body-18-light;
+                        font-size: 24px;
+                        font-weight: 300;
+                        margin-bottom: 12px;
+                    }
+                }
+
+                &__description {
+                    @include body-24-regular;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+
+    .button-scroll-up {
         display: flex;
-
-        img {
-          width: 650px;
-          height: 513px;
-        }
-
-        @media (max-width: $screen-xl) {
-          flex: 2;
-          img {
-            width: 100%;
-            object-fit: cover;
-          }
-        }
-        @media (max-width: $screen-md) {
-          img {
-            width: 106px;
-            height: 106px;
-          }
-        }
-
-        .user {
-          &--mobile {
-            display: none;
-          }
-
-          @media (max-width: $screen-md) {
-            color: $white;
-            margin-left: 24px;
-
-            &--mobile {
-              display: block;
-            }
-
-            &__name {
-              @include body-20-medium;
-              @media (max-width: $screen-md) {
-                margin-bottom: 6px;
-              }
-            }
-
-            &__location {
-              @include body-14-regular;
-              @media (max-width: $screen-md) {
-                font-weight: regular;
-              }
-            }
-          }
-        }
-      }
-
-      .description-container {
-        color: $white;
-        padding: 64px 80px;
-        @media (max-width: $screen-xl) {
-          padding: 5%;
-          flex: 1;
-        }
-        @media (max-width: $screen-md) {
-          margin-bottom: 41px;
-          width: auto;
-          display: flex;
-          flex-direction: column;
-          padding: 0;
-        }
-
-        .description {
-          display: flex;
-          justify-content: space-between;
-
-          &__text {
-            @include body-24-regular;
-            font-style: italic;
-          }
-
-          @media (max-width: $screen-md) {
-            img {
-              width: 35px;
-              height: 27px;
-              margin: 16px 0 8px;
-            }
-            &__text {
-              @include body-14-regular;
-              font-style: italic;
-            }
-          }
-
-          .index-slide {
-            color: $brown-350;
-            align-items: flex-start;
-            @media (max-width: $screen-xl) {
-              position: absolute;
-              right: 16px;
-              bottom: 16px;
-            }
-
-            .current-slide {
-              font-size: 34px;
-            }
-
-            .slides-length {
-              font-size: 30px;
-            }
-          }
-        }
-
-        .user {
-          @media (max-width: $screen-md) {
-            &--desktop {
-              display: none;
-            }
-          }
-
-          &__name {
-            @include heading-48-medium();
-            margin: 27px 0 12px;
-          }
-
-          &__location {
-            @include body-18-light;
-            font-size: 24px;
-            font-weight: 300;
-            margin-bottom: 12px;
-          }
-        }
-
-        &__description {
-          @include body-24-regular;
-          font-style: italic;
-        }
-      }
+        justify-content: right;
     }
-  }
-
-  .button-scroll-up {
-    display: flex;
-    justify-content: right;
-  }
 }
