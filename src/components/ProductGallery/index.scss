@@ -1,0 +1,51 @@
+.gallery {
+  .gallery-container {
+    width: 90%;
+    margin: 0 auto;
+
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      @media (max-width: $screen-md) {
+        .button--transparent {
+          padding: 8px;
+          display: flex;
+
+          .button-arrow {
+            width: 8px;
+            height: 12px;
+          }
+        }
+      }
+    }
+
+    &__content {
+      display: flex;
+      margin: 36px 0 132px;
+      @media (max-width: $screen-md) {
+        overflow-x: auto;
+        margin: 32px 0 88px;
+      }
+    }
+
+    &__button {
+      &--mobile {
+        display: none;
+
+        @media (max-width: $screen-xl) {
+          display: block;
+        }
+      }
+
+      &--desktop {
+        display: block;
+
+        @media (max-width: $screen-xl) {
+          display: none;
+        }
+      }
+    }
+  }
+}

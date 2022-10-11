@@ -1,0 +1,8 @@
+.heading {
+  @include heading-40-medium();
+  color: $gray-500;
+
+  @media (max-width: $screen-sm) {
+    @include heading-24-medium();
+  }
+}

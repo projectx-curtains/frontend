@@ -1,0 +1,54 @@
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app {
+  background-color: $background;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media (max-width: 1559px) {
+    max-width: 90%;
+  }
+
+  @media (max-width: $screen-xl) {
+    margin: 0 16px;
+  }
+}
+
+//Import common
+@import "./common/logo";
+@import "./common/contacts";
+
+//Import pages
+@import "../pages/Home";
+
+//Import components
+@import "../components/Header";
+@import "../components/Header/CataloguePopup";
+@import "../components/Header/SearchBar";
+@import "../components/Header/SearchBarPopup";
+
+@import "../components/Accordion";
+
+@import "../components/Button";
+
+@import "../components/Card";
+
+@import "../components/Carousel";
+@import "../components/Carousel/CarouselItem";
+
+@import "../components/Title";
+@import "../components/ProductGallery";
+
+@import "../components/Footer";

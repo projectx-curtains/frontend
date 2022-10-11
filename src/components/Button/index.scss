@@ -1,0 +1,77 @@
+.button {
+  transition: 0.3s;
+  outline: none;
+  box-sizing: border-box;
+  background: none;
+  cursor: pointer;
+  width: min-content;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+
+  &__icon {
+    color: inherit;
+    transform: translateY(1px) scale(1.8);
+
+    &--left {
+      padding-right: 12px;
+    }
+
+    &--right {
+      padding-left: 12px;
+    }
+  }
+
+  &--primary {
+    max-height: 72px;
+    background: $brown-500;
+    padding: 24px 48px;
+    color: $white;
+    @include body-18-medium;
+
+    &:hover {
+      background: $brown-600;
+    }
+
+    &:disabled {
+      background: $brown-350;
+    }
+  }
+
+  &--secondary {
+    max-height: 48px;
+    border: 1px solid $brown-500;
+    padding: 12px 42px;
+    color: $gray-500;
+    @include body-18-medium;
+
+    &:hover {
+      background: $gray-100;
+    }
+
+    &:disabled {
+      color: $gray-300;
+    }
+
+    &:active {
+      background: $brown-500;
+      border: 1px solid $brown-400;
+      color: $gray-100;
+    }
+  }
+
+  &--transparent {
+    max-height: 48px;
+    padding: 12px 42px;
+    color: $gray-500;
+    @include body-18-medium;
+
+    &:disabled {
+      color: $gray-300;
+    }
+
+    &:active {
+      color: $gray-400;
+    }
+  }
+}

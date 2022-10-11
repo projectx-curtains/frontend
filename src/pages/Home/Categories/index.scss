@@ -1,0 +1,45 @@
+.catalog-layout {
+  margin-top: -200px;
+  margin-bottom: 128px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  grid-template-rows: 200px 200px 190px;
+  gap: 0px 0px;
+  grid-template-areas:
+    "top-left center center top-right"
+    "center-left center center center-right"
+    "bottom-left bottom-left bottom-right bottom-right";
+
+  &__center {
+    grid-area: center;
+  }
+  &__top-left {
+    grid-area: top-left;
+  }
+  &__center-left {
+    grid-area: center-left;
+  }
+  &__bottom-left {
+    grid-area: bottom-left;
+  }
+  &__top-right {
+    grid-area: top-right;
+  }
+  &__center-right {
+    grid-area: center-right;
+  }
+  &__bottom-right {
+    grid-area: bottom-right;
+  }
+
+  @media (max-width: $screen-xl) {
+    margin-top: 72px;
+    transform: translateY(0px);
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    row-gap: 12px;
+  }
+}
+
+@import "./CategoryCard";
