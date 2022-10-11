@@ -6,13 +6,7 @@ import { CarouselSlider_mockData } from '../../../assets/data/carouselSlider_moc
 import { app_mockData } from '../../../assets/data/app_mockData'
 
 const Reviews = () => {
-  const handlerScrollUp = () => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth',
-    })
-  }
+
 
   return (
     <section className="reviews">
@@ -58,13 +52,6 @@ const Reviews = () => {
             )
           })}
         </Carousel>
-      </div>
-      <div className="button-scroll-up">
-        <img
-          src={require('../../../assets/svg/UpArrow.svg').default}
-          alt="button-up"
-          onClick={handlerScrollUp}
-        />
       </div>
     </section>
   )
