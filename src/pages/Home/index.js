@@ -8,6 +8,9 @@ import WhyWeAre from './WhyWeAre'
 import Reviews from './Reviews'
 import { NewProduct_mockData } from '../../assets/data/newProduct_mockData'
 
+
+const SCROLLED_VALUE = 1450
+
 const Home = (props) => {
   return (
     <main className="home">
@@ -18,7 +21,7 @@ const Home = (props) => {
       <OurWork />
       <WhyWeAre />
       <Reviews />
-      <ButtonScrollUp scrolledValue="1450" />
+      <ButtonScrollUp scrolledValue={SCROLLED_VALUE} />
     </main>
   )
 }
