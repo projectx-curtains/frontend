@@ -7,10 +7,7 @@ import Catalogue from "./pages/Catalogue";
 import CurtainBuilder from "./pages/CurtainBuilder";
 import Consultation from "./pages/Consultation";
 import ShoppingCart from "./pages/ShoppingCart";
-import DropdownColorFilter from "./components/Catalog/DropdownColorFilter";
-import { sampleColorFiltersData } from "./components/Catalog/DropdownColorFilter/sampleColorFiltersData";
-import { sampleDropdownFiltersData } from "./components/Catalog/DropdownFilter/sampleDropdownFiltersData";
-import DropdownFilter from "./components/Catalog/DropdownFilter";
+import PriceRangeFilter from "./components/Catalog/PriceRangeFilter";
 
 function App() {
   const footerRef = useRef(null);
@@ -27,19 +24,11 @@ function App() {
           <Route path="/shopping-cart" element={<ShoppingCart />} exact />
         </Routes>
         <Footer ref={footerRef} />
-
-        {/* -- Эти блоки для наглядности -- */}
-        <div>
-          {sampleColorFiltersData.map((obj) => {
-            return <DropdownColorFilter colorFilterData={obj} />;
-          })}
-        </div>
-        <div>
-          {sampleDropdownFiltersData.map((obj) => {
-            return <DropdownFilter dropdownFilterData={obj} />;
-          })}
-        </div>
-        {/* ---- */}
+        <PriceRangeFilter
+          minPrice={0}
+          maxPrice={2000}
+          minPriceDifference={50}
+        />
       </Router>
     </div>
   );
