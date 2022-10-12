@@ -1,6 +1,6 @@
-export const scrollDown = (ref) => {
+export const scrollToTop = () => {
   window.scrollTo({
-    top: ref.current.offsetTop,
-    behavior: 'smooth',
+    top: 0,
+    behavior: "smooth",
   });
 };
