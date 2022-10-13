@@ -1,8 +1,17 @@
 import { Slider } from "@mui/material";
 import { useState } from "react";
 
-const PriceRangeFilter = ({ minPrice, maxPrice, minPriceDifference }) => {
-  const [values, setValues] = useState([25, 1000]);
+const PriceRangeFilter = ({
+  minPrice,
+  maxPrice,
+  minPriceDifference,
+  minPriceOnTheScreen,
+  maxPriceOnTheScreen,
+}) => {
+  const [values, setValues] = useState([
+    minPriceOnTheScreen,
+    maxPriceOnTheScreen,
+  ]);
 
   const handleChange = (event, newValue, activeThumb) => {
     if (!Array.isArray(newValue)) {

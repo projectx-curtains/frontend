@@ -28,6 +28,8 @@ function App() {
           minPrice={0}
           maxPrice={2000}
           minPriceDifference={50}
+          minPriceOnTheScreen={25}
+          maxPriceOnTheScreen={1000}
         />
       </Router>
     </div>
