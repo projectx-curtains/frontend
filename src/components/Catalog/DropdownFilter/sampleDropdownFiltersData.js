@@ -1,6 +1,6 @@
 export const sampleDropdownFiltersData = [
   {
-    id: 11,
+    id: Math.random(),
     nameTitle: "Тип штор",
     itemsFilter: [
       { id: 1, nameFilter: "Подъемные" },
@@ -9,7 +9,7 @@ export const sampleDropdownFiltersData = [
     ],
   },
   {
-    id: 12,
+    id: Math.random(),
     nameTitle: "Вид штор",
     itemsFilter: [
       { id: 1, nameFilter: "Австрийские" },
