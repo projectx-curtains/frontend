@@ -1,0 +1,73 @@
+import React from "react";
+import classNames from "classnames";
+
+import Link from "next/link";
+import Image from "next/future/image";
+import Button from "@mui/material/Button";
+import { ROUTES } from "../../../constants/routes";
+import { data } from "../data/data";
+import style from "../styles/searchBarPopup.module.scss";
+
+interface Props {
+  searchInput: string;
+  setIsActivePopup: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const SearchBarPopup = ({ searchInput, setIsActivePopup }: Props) => {
+  return (
+    <div className={style["search-popup"]}>
+      <div className="container">
+        <ul className={style["search-popup__list"]}>
+          {data.items.map(({ img, title }) => (
+            <li
+              key={title}
+              className={style["search-popup__item"]}
+              onClick={() => {
+                setIsActivePopup((isActive) => !isActive);
+              }}
+            >
+              <Link href="/" className={style["search-popup__link"]}>
+                <>
+                  <Image
+                    className={style["search-popup__img"]}
+                    src={require(`../data/${img}`)}
+                    alt={title}
+                  />
+                  <div className={style["search-popup__text-wrapper"]}>
+                    <p className={style["search-popup__heading"]}>{title}</p>
+                    <p className={style["search-popup__subheading"]}>
+                      {data.category}
+                    </p>
+                  </div>
+                </>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <p className={style["search-popup__category"]}>
+          {data.category}
+          <span className={style["search-popup__category-quantity"]}>
+            {data.num} товаров
+          </span>
+        </p>
+        <Link href={ROUTES.catalogue}>
+          <Button
+            className={classNames(
+              "button--secondary",
+              style["search-popup__button"]
+            )}
+            onClick={() => {
+              setIsActivePopup((isActive) => !isActive);
+            }}
+          >
+            <span className={style["search-popup__button-text"]}>
+              Смотреть все товары
+            </span>
+          </Button>
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+export default SearchBarPopup;

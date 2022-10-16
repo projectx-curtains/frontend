@@ -1,0 +1,17 @@
+.logo {
+  cursor: pointer;
+  width: 205px;
+  height: 46px;
+  background: no-repeat url("../../assets/svg/logo-big.svg");
+
+  &--dark {
+    filter: invert(82%) sepia(25%) saturate(43%) hue-rotate(189deg)
+      brightness(70%) contrast(80%);
+  }
+
+  @media (max-width: $screen-xl) {
+    height: 24px;
+    width: 102px;
+    background: no-repeat url("../../assets/svg/logo-small.svg");
+  }
+}

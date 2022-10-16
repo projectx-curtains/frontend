@@ -1,0 +1,69 @@
+@import "../../../../styles/App";
+
+.search {
+  transition: 0.3s ease all;
+
+  &__form {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    display: none;
+    width: 126px;
+    @include body-14-regular();
+    background: transparent;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &--menu-open {
+      display: block;
+      width: 85vw;
+      height: 42px;
+      margin-bottom: 34px;
+      padding-top: 6px;
+      padding-left: 27px;
+    }
+  }
+
+  &--transparent-theme &__input {
+    color: $white;
+    border-bottom: 1px solid $white;
+  }
+
+  &--white-theme &__input {
+    color: $gray-500;
+    border-bottom: 1px solid $gray-500;
+  }
+
+  &:focus-within &__input,
+  &:focus-within .search-popup {
+    display: block;
+  }
+
+  // BUTTON
+  &__button {
+    cursor: pointer;
+    padding: 0;
+    padding-right: 4px;
+    font-size: 25px;
+    background: transparent;
+
+    &--menu-open {
+      right: 93%;
+      bottom: 10px;
+      position: relative;
+    }
+  }
+
+  &--transparent-theme &__button {
+    color: $white;
+  }
+
+  &--white-theme &__button {
+    color: $gray-500;
+  }
+}

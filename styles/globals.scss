@@ -1,0 +1,115 @@
+@import "./App";
+@import "./utils/reset";
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: $background;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media (max-width: 1559px) {
+    max-width: 90%;
+  }
+
+  @media (max-width: $screen-xl) {
+    margin: 0 16px;
+  }
+}
+
+.heading {
+  @include heading-40-medium();
+  color: $gray-500;
+
+  @media (max-width: $screen-sm) {
+    @include heading-24-medium();
+  }
+}
+
+.MuiButton-root {
+  letter-spacing: 0;
+  border-radius: 0px;
+  text-transform: none;
+}
+
+.button {
+  border-radius: 0px;
+
+  &__icon {
+    color: inherit;
+    transform: translateY(1px) scale(1.8);
+
+    &--left {
+      padding-right: 12px;
+    }
+
+    &--right {
+      padding-left: 12px;
+    }
+  }
+
+  &--primary {
+    max-height: 72px;
+    background: $brown-500;
+    padding: 24px 48px;
+    color: $white;
+    @include body-18-medium;
+
+    &:hover {
+      background: $brown-600;
+    }
+
+    &:disabled {
+      background: $brown-350;
+    }
+  }
+
+  &--secondary {
+    max-height: 48px;
+    border: 1px solid $brown-500;
+    padding: 12px 42px;
+    color: $gray-500;
+    @include body-18-medium;
+
+    &:hover {
+      background: $gray-100;
+    }
+
+    &:disabled {
+      color: $gray-300;
+    }
+
+    &:active {
+      background: $brown-500;
+      border: 1px solid $brown-400;
+      color: $gray-100;
+    }
+  }
+
+  &--transparent {
+    max-height: 48px;
+    padding: 12px 42px;
+    color: $gray-500;
+    @include body-18-medium;
+
+    &:disabled {
+      color: $gray-300;
+    }
+
+    &:active {
+      color: $gray-400;
+    }
+  }
+}
