@@ -1,0 +1,63 @@
+import { useState } from "react";
+import { MdClose } from "react-icons/md";
+
+interface Props {
+  id: number,
+  name: string,
+  colorTheSquare? : string,
+  removeTag? : boolean,
+}
+
+const TagCloud = ( tagsData: Array<Props> ) => {
+  const [arrayTagsData, setArrayData] = useState([...tagsData]);
+
+  const clickOnButtonCross = (id: number) => {
+    setArrayData(
+      arrayTagsData.map((tagData) =>
+        tagData.id === id ? { ...tagData, removeTag: true } : tagData
+      )
+    );
+    setTimeout(
+      () => setArrayData(arrayTagsData.filter((tagData) => tagData.id !== id)),
+      400
+    );
+  };
+
+  return (
+    <div className="tag-cloud">
+      {arrayTagsData.map((tagData) => {
+        return (
+          <div
+            key={tagData.id}
+            className={`tag-cloud__item
+              ${tagData.removeTag ? "remove-tag" : ""}`}
+          >
+            {tagData.colorTheSquare && (
+              <span
+                className="tag-cloud__item-color-the-square"
+                style={{ background: tagData.colorTheSquare }}
+              ></span>
+            )}
+            <p
+              className="tag-cloud__item-name"
+              style={
+                tagData.colorTheSquare
+                  ? { paddingLeft: "6px" }
+                  : { paddingLeft: "12px" }
+              }
+            >
+              {tagData.name}
+            </p>
+            <div
+              className="tag-cloud__item-button-cross"
+              onClick={() => clickOnButtonCross(tagData.id)}
+            >
+              <MdClose />
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+export default TagCloud;
