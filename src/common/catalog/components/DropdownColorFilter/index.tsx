@@ -1,17 +1,11 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { MdArrowDropDown } from "react-icons/md";
 import ItemColorFilter from "./ItemColorFilter";
+import { IColorDropdownFilterProps } from "./interfaces";
 
-interface Props {
-  id: number,
-  nameTitle: string, 
-  gradientColorTop: string, 
-  gradientColorMid: string, 
-  gradientColorBot: string,
-  dropdownFilterColor: Array<object>,  
-}
-
-const DropdownColorFilter = ( colorFilterData: Props) => {
+const DropdownColorFilter: React.FC<IColorDropdownFilterProps> = (
+  colorFilterData
+) => {
   const [isOpen, setOpen] = useState(false);
 
   const handleOpen = () => setOpen(!isOpen);
@@ -45,7 +39,10 @@ const DropdownColorFilter = ( colorFilterData: Props) => {
       </div>
       {isOpen && (
         <div className="dropdown-color-filter__scrolling-block">
-          <ItemColorFilter itemFilterData={colorFilterData.dropdownFilterColor}/>;
+          <ItemColorFilter
+            itemFilterData={colorFilterData.dropdownFilterColor}
+          />
+          ;
         </div>
       )}
     </div>

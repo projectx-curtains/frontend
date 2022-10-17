@@ -1,33 +1,27 @@
-import { FC } from "react";
+import React from "react";
 
-type FilterData {
-  id: string,
-  nameFilter: string,
-  color: string,
-}
+import { IColorFilterProps } from "./interfaces";
 
-interface Props {
-  itemFilterData: Array<FilterData>
-}
-
-const ItemColorFilter: FC<Props> = ( itemFilterData ) => {
-  return itemFilterData.map((filterСolor) => {
-    return (
-      <div className="item-color-filter" key={filterСolor.id}>
-        <input
-          className="item-color-filter__checkbox"
-          type="checkbox"
-          id={filterСolor.id}
-        ></input>
-        <div
-          className="item-color-filter__color"
-          style={{ background: filterСolor.color }}
-        ></div>
-        <label className="item-color-filter__name" htmlFor={filterСolor.id}>
-          {filterСolor.nameFilter}
-        </label>
-      </div>
-    );
-  });
+const ItemColorFilter: React.FC<IColorFilterProps> = ({ itemFilterData }) => {
+  return (
+    <>
+      {itemFilterData.map((filterСolor) => (
+        <div className="item-color-filter" key={filterСolor.id}>
+          <input
+            className="item-color-filter__checkbox"
+            type="checkbox"
+            id={filterСolor.id}
+          ></input>
+          <div
+            className="item-color-filter__color"
+            style={{ background: filterСolor.color }}
+          ></div>
+          <label className="item-color-filter__name" htmlFor={filterСolor.id}>
+            {filterСolor.nameFilter}
+          </label>
+        </div>
+      ))}
+    </>
+  );
 };
 export default ItemColorFilter;
