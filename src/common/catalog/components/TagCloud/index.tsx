@@ -1,19 +1,13 @@
 import { useState } from "react";
 import { MdClose } from "react-icons/md";
+import { tagData } from "./interfaces";
 
-interface Props {
-  id: number,
-  name: string,
-  colorTheSquare? : string,
-  removeTag? : boolean,
-}
-
-const TagCloud = ( tagsData: Array<Props> ) => {
-  const [arrayTagsData, setArrayData] = useState([...tagsData]);
+const TagCloud: React.FC<tagData> = ( {id, name, colorTheSquare, color, removeTag }) => {
+  const [arrayTagsData, setArrayData] = useState([...[{id, name, colorTheSquare, color, removeTag}]]);
 
   const clickOnButtonCross = (id: number) => {
     setArrayData(
-      arrayTagsData.map((tagData) =>
+      arrayTagsData.map((tagData) => 
         tagData.id === id ? { ...tagData, removeTag: true } : tagData
       )
     );
@@ -24,9 +18,9 @@ const TagCloud = ( tagsData: Array<Props> ) => {
   };
 
   return (
-    <div className="tag-cloud">
-      {arrayTagsData.map((tagData) => {
-        return (
+    <>
+      <div className="tag-cloud">
+      {arrayTagsData.map((tagData) =>(
           <div
             key={tagData.id}
             className={`tag-cloud__item
@@ -35,7 +29,7 @@ const TagCloud = ( tagsData: Array<Props> ) => {
             {tagData.colorTheSquare && (
               <span
                 className="tag-cloud__item-color-the-square"
-                style={{ background: tagData.colorTheSquare }}
+                style={{ background: tagData.color }}
               ></span>
             )}
             <p
@@ -55,9 +49,11 @@ const TagCloud = ( tagsData: Array<Props> ) => {
               <MdClose />
             </div>
           </div>
-        );
-      })}
+        )
+      )}
     </div>
+    </>
+    
   );
 };
 export default TagCloud;

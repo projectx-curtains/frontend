@@ -1,14 +1,9 @@
 import { useState } from "react";
 import ItemFilter from "./ItemFilter";
 import { MdExpandMore } from "react-icons/md";
+import { IDropdownFilterProps } from "./interfaces";
 
-interface Props {
-  id: number,
-  nameTitle: string,
-  itemsFilter: Array<{id:number, nameFilter: string}>
-}
-
-const DropdownFilter = ( dropdownFilterData: Props) => {
+const DropdownFilter: React.FC<IDropdownFilterProps> = ( {nameTitle, itemsFilter}) => {
   const [isOpen, setOpen] = useState<boolean>(false);
 
   const handleOpen = () => setOpen(!isOpen);
@@ -16,7 +11,7 @@ const DropdownFilter = ( dropdownFilterData: Props) => {
     <div className="dropdown-filter">
       <div className="dropdown-filter__title-list" onClick={handleOpen}>
         <span className="dropdown-filter__name-title">
-          {dropdownFilterData.nameTitle}
+          {nameTitle}
         </span>
         <MdExpandMore
           className={
@@ -28,7 +23,7 @@ const DropdownFilter = ( dropdownFilterData: Props) => {
       </div>
       {isOpen && (
         <div className="dropdown-filter__scrolling-block">
-          <ItemFilter itemsFilter={dropdownFilterData.itemsFilter} />
+          <ItemFilter itemsFilter={itemsFilter} />
         </div>
       )}
     </div>

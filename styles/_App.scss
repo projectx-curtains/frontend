@@ -2,3 +2,9 @@
 @import "./utils/mixins";
 @import "./utils/fonts";
 @import "./utils/typography";
+@import "../src/common/catalog/components/DropdownColorFilter/styles/index.scss";
+@import "../src/common/catalog/components/DropdownFilter/styles/index.scss";
+@import "../src/common/catalog/components/TagCloud/styles/index.scss";
+@import "../src/common/catalog/components/PriceRangeFilter/styles/index.scss";
+@import "../src/common/catalog/components/SortingPriceBlock/styles/index.scss";
+@import "../src/common/catalog/components/SaveEraseButtons/styles/index.scss";

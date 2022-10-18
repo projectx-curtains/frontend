@@ -1,28 +1,20 @@
 import { Slider } from "@mui/material";
 import { useState } from "react";
+import { IPriceRangeFilter } from "./interfaces";
 
-interface Props {
-  minPrice: number;
-  maxPrice: number;
-  minPriceDifference: number;
-  minPriceOnTheScreen: number;
-  maxPriceOnTheScreen: number;
-  handleChange: (newValue: Array<number>, activeThumb: number) => void;
-}
-
-const PriceRangeFilter = ({
+const PriceRangeFilter: React.FC<IPriceRangeFilter> = ({
   minPrice,
   maxPrice,
   minPriceDifference,
   minPriceOnTheScreen,
   maxPriceOnTheScreen,
-}: Props) => {
+}) => {
   const [values, setValues] = useState([
     minPriceOnTheScreen,
     maxPriceOnTheScreen,
   ]);
 
-  const handleChange = (newValue, activeThumb) => {
+  const handleChange = (event: React.ChangeEvent, newValue: number, activeThumb: number) => {
     if (!Array.isArray(newValue)) {
       return;
     }

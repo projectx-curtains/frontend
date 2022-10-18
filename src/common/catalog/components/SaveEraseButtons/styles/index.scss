@@ -1,0 +1,22 @@
+.save-erase-buttons {
+  @include display(flex, column, center, center);
+  width: 272px;
+  max-width: 100%; 
+  &__save-button, &__erase-button  {
+    width: 272px;    
+    @include body-18-medium;
+    text-align: center;    
+    cursor: pointer;
+  }
+  &__save-button {
+    background: $brown-350;
+    color: $white;
+    padding: 12px 47px 14px
+  }
+  &__erase-button {       
+    color: $gray-300;
+    border: 1px solid $brown-100;
+    padding: 12px 57px 14px;
+    margin-top: 16px;      
+  }
+}
