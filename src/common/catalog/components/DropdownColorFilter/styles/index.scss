@@ -7,17 +7,17 @@
   } 
   &__gradient-colors {
     @include display(flex, column, flex-start, center);  
-    width: 24px;
-    height: 24px;
+    width: 21px;
+    height: 21px;
     border: 3px solid $gray-500;
     border-radius: 3px; 
     .color-top, .color-mid, .color-bot{
-      width: 24px;
+      width: 21px;
       height: 8px;
     }   
   }
   &__name-title {   
-    @include body-20-medium;
+    @include body-16-regular;
     color: $gray-500;
     margin-right: auto;
     margin-left: 12px;    
@@ -59,9 +59,9 @@
       position: absolute;
       left: 0px;
       top: -4px;
-      width: 18px;
-      height: 18px;
-      border: 3px solid $gray-500;
+      width: 16px;
+      height: 16px;
+      border: 2px solid $gray-500;
       border-radius: 3px;
       background-color: $white;
     }
@@ -87,8 +87,8 @@
     }  
     
     &__color {
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
       border: 2px solid $gray-500;
       border-radius: 3px;
       margin-left: 19px;
@@ -96,12 +96,7 @@
     }
 
     &__name {
-      font-family: 'Noto Sans Regular';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 140%;    
-
+      @include body-16-regular;
       color: $gray-500;
       cursor: pointer;
     }    

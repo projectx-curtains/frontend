@@ -13,11 +13,7 @@
     @include display(flex, column, unset, center);    
   } 
   &__price-block {    
-    font-family: 'Noto Sans Regular';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 140%;  
+    @include body-16-regular; 
     color: $gray-500;    
     margin: 11px auto 0;  
   }

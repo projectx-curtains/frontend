@@ -17,9 +17,8 @@ const TagCloud: React.FC<tagData> = ( {id, name, colorTheSquare, color, removeTa
     );
   };
 
-  return (
-    <>
-      <div className="tag-cloud">
+  return (    
+    <div className="tag-cloud">
       {arrayTagsData.map((tagData) =>(
           <div
             key={tagData.id}
@@ -51,8 +50,7 @@ const TagCloud: React.FC<tagData> = ( {id, name, colorTheSquare, color, removeTa
           </div>
         )
       )}
-    </div>
-    </>
+    </div>  
     
   );
 };

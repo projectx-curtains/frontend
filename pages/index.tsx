@@ -1,17 +1,16 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
 import DropdownColorFilter from '../src/common/catalog/components/DropdownColorFilter'
 import { sampleColorFiltersData } from '../src/common/catalog/components/DropdownColorFilter/mocks/sampleColorFiltersData'
 import DropdownFilter from '../src/common/catalog/components/DropdownFilter'
 import { sampleDropdownFiltersData } from '../src/common/catalog/components/DropdownFilter/mocks/sampleDropdownFiltersData'
 import PriceRangeFilter from '../src/common/catalog/components/PriceRangeFilter'
 import SaveEraseButtons from '../src/common/catalog/components/SaveEraseButtons'
-import SortingPriceBlock from '../src/common/catalog/components/SortingPriceBlock'
-import { dropdownValues } from '../src/common/catalog/components/SortingPriceBlock/mocks/dropdownValues'
 import TagCloud from '../src/common/catalog/components/TagCloud'
 import { sampleDataTags } from '../src/common/catalog/components/TagCloud/mocks/sampleDataTags'
 import styles from '../styles/Home.module.css'
+import PriceFilter from '../src/common/catalog/components/PriceFilter'
+import LinkStructure from '../src/common/catalog/components/LinkStructure'
+import Categories from './Catalogue/Сategories'
 
 const Home: NextPage = () => {
   return (
@@ -38,7 +37,7 @@ const Home: NextPage = () => {
       </div>
 
       <div style={{marginTop:"20px"}}>        
-        <SortingPriceBlock key={5} />        
+        <PriceFilter key={5} />        
       </div>
 
       <div style={{marginTop:"20px"}}>
@@ -55,7 +54,13 @@ const Home: NextPage = () => {
         <SaveEraseButtons />
       </div>
 
-      
+      <div style={{marginTop:"20px"}}>
+        <LinkStructure />
+      </div>
+
+      <div style={{marginTop:"20px"}}>
+        <Categories />
+      </div>       
       
       {/* <--- */}
 

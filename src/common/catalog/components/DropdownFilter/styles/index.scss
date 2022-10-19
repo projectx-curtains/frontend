@@ -73,12 +73,7 @@
     }   
 
     &__name {
-      font-family: 'Noto Sans Regular';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 140%;    
-
+      @include body-16-regular;
       color: $gray-500;
       cursor: pointer;
     }    
