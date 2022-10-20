@@ -71,12 +71,12 @@
       transition: all 0.2s ease;
     }
     &__checkbox:checked::after, &__checkbox:not(:checked)::after {
-      left: 5px;
-      top: 2px;
+      left: 4px;
+      top: 1px;
       width: 10px;
       height: 5px;      
-      border-left: 3px solid $gray-500;
-      border-bottom: 3px solid $gray-500;      
+      border-left: 2px solid $gray-500;
+      border-bottom: 2px solid $gray-500;      
       transform: rotate(-45deg);
     }
     &__checkbox:not(:checked)::after {

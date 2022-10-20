@@ -57,7 +57,7 @@
       transition: all 0.2s ease;
     }
     &__checkbox:checked::after, &__checkbox:not(:checked)::after {
-      left: 5px;
+      left: 5.2px;
       top: 2px;
       width: 10px;
       height: 5px;      
