@@ -3,6 +3,7 @@
 
 1. libraries
 2. components
-3. utils
-4. mocks
-5. static (images and such)
+3. interfaces
+4. utils
+5. mocks
+6. static (images and such)
