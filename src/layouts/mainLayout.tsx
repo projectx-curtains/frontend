@@ -1,4 +1,5 @@
 import React from "react";
+import { Footer } from "../common/footer";
 import { Header } from "../common/header";
 
 interface Props {
@@ -10,6 +11,7 @@ const MainLayout = ({ children }: Props) => {
     <>
       <Header />
       <main>{children}</main>
+      <Footer />
     </>
   );
 };

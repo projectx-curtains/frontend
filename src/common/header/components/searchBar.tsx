@@ -1,15 +1,11 @@
 import React, { FormEvent, useState } from "react";
 import classNames from "classnames";
 import SearchBarPopup from "./searchBarPopup";
-import { MdSearch } from "react-icons/md";
+import SearchIcon from "@mui/icons-material/Search";
+import { ISearchBarProps } from "../interfaces";
 import style from "../styles/searchBar.module.scss";
 
-interface Props {
-  theme: string;
-  menuOpen: boolean;
-}
-
-const SearchBar = ({ theme, menuOpen }: Props) => {
+const SearchBar: React.FC<ISearchBarProps> = ({ theme, menuOpen }: Props) => {
   const [searchInput, setSearchInput] = useState("");
   const [isActivePopup, setIsActivePopup] = useState(false);
 
@@ -27,6 +23,7 @@ const SearchBar = ({ theme, menuOpen }: Props) => {
           className={classNames(style.search__input, {
             [style["search__input--menu-open"]]: menuOpen,
           })}
+          maxLength={25}
           type="text"
           placeholder=""
           value={searchInput}
@@ -38,7 +35,7 @@ const SearchBar = ({ theme, menuOpen }: Props) => {
             [style["search__button--menu-open"]]: menuOpen,
           })}
         >
-          <MdSearch />
+          <SearchIcon />
         </button>
       </form>
       {isActivePopup && (

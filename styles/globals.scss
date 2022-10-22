@@ -48,16 +48,7 @@ body {
   border-radius: 0px;
 
   &__icon {
-    color: inherit;
-    transform: translateY(1px) scale(1.8);
-
-    &--left {
-      padding-right: 12px;
-    }
-
-    &--right {
-      padding-left: 12px;
-    }
+    font-size: 40px;
   }
 
   &--primary {
@@ -110,6 +101,55 @@ body {
 
     &:active {
       color: $gray-400;
+    }
+  }
+}
+
+.slider {
+  .slick-slider {
+    .slick-slide img {
+      height: auto;
+      object-fit: cover;
+    }
+
+    .slick-dots {
+      max-width: 1440px;
+      margin: 0 auto;
+      position: relative;
+      bottom: -24px;
+      display: flex !important;
+      justify-content: space-between;
+
+      @media (max-width: $screen-md) {
+        bottom: -16px;
+      }
+
+      .slick-active {
+        background: $brown-400;
+      }
+    }
+
+    .slick-dots li,
+    .slick-dots li button {
+      width: 13.6vw;
+      height: 6px;
+
+      @media (max-width: $screen-md) {
+        height: 3px;
+      }
+    }
+
+    .slick-dots li {
+      margin: 0;
+      background: $brown-200;
+    }
+
+    .slick-dots li button {
+      padding: 0;
+
+      &::before {
+        display: none;
+      }
     }
   }
 }

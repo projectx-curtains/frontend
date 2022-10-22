@@ -2,16 +2,17 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/future/image";
 import classNames from "classnames";
-import { CATALOGUE } from "../../../constants/catalogue";
+import { CATEGORIES } from "../../../constants/categories";
+import { ICategory } from "../../../interfaces/category.type";
 import style from "../styles/header.module.scss";
 
 const CataloguePopup = () => {
   return (
     <div className={style["catalog-popup"]}>
       <ul className={classNames("container", style["catalog-popup__list"])}>
-        {CATALOGUE.map(
-          ({ name, path }, catalogueItem) =>
-            catalogueItem !== CATALOGUE.length - 1 && (
+        {CATEGORIES.map(
+          ({ name, path }: ICategory, catalogueItem) =>
+            catalogueItem !== CATEGORIES.length - 1 && (
               <li className={style["catalog-popup__item"]}>
                 <Link href={path}>
                   <>

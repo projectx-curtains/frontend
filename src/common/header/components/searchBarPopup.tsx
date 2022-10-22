@@ -4,16 +4,17 @@ import classNames from "classnames";
 import Link from "next/link";
 import Image from "next/future/image";
 import Button from "@mui/material/Button";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+
+import { ISearchBarPopupProps } from "../interfaces";
 import { ROUTES } from "../../../constants/routes";
-import { data } from "../data/data";
-import style from "../styles/searchBarPopup.module.scss";
+import { data } from "../mock/data";
+import style from "../styles/searchBar.module.scss";
 
-interface Props {
-  searchInput: string;
-  setIsActivePopup: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const SearchBarPopup = ({ searchInput, setIsActivePopup }: Props) => {
+const SearchBarPopup: React.FC<ISearchBarPopupProps> = ({
+  searchInput,
+  setIsActivePopup,
+}) => {
   return (
     <div className={style["search-popup"]}>
       <div className="container">
@@ -26,11 +27,11 @@ const SearchBarPopup = ({ searchInput, setIsActivePopup }: Props) => {
                 setIsActivePopup((isActive) => !isActive);
               }}
             >
-              <Link href="/" className={style["search-popup__link"]}>
-                <>
+              <Link href="/">
+                <div className={style["search-popup__link"]}>
                   <Image
                     className={style["search-popup__img"]}
-                    src={require(`../data/${img}`)}
+                    src={require(`../mock/${img}`)}
                     alt={title}
                   />
                   <div className={style["search-popup__text-wrapper"]}>
@@ -39,7 +40,7 @@ const SearchBarPopup = ({ searchInput, setIsActivePopup }: Props) => {
                       {data.category}
                     </p>
                   </div>
-                </>
+                </div>
               </Link>
             </li>
           ))}
@@ -63,6 +64,7 @@ const SearchBarPopup = ({ searchInput, setIsActivePopup }: Props) => {
             <span className={style["search-popup__button-text"]}>
               Смотреть все товары
             </span>
+            <KeyboardArrowRightIcon className="button__icon" />
           </Button>
         </Link>
       </div>

@@ -15,6 +15,9 @@ module.exports = {
 
     return config;
   },
+  images: {
+    domains: ["images.unsplash.com"],
+  },
   experimental: {
     images: {
       allowFutureImage: true,
