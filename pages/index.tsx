@@ -10,7 +10,7 @@ import { sampleDataTags } from '../src/common/catalog/components/TagCloud/mocks/
 import styles from '../styles/Home.module.css'
 import PriceFilter from '../src/common/catalog/components/PriceFilter'
 import LinkStructure from '../src/common/catalog/components/LinkStructure'
-import Categories from './Catalogue/Сategories'
+import Categories from '../src/common/catalog/components/Categories/index'
 
 const Home: NextPage = () => {
   return (
