@@ -1,5 +1,4 @@
 import React from "react";
-
 import { IColorFilterProps } from "./interfaces";
 
 const ItemColorFilter: React.FC<IColorFilterProps> = ({ itemFilterData }) => {

@@ -1,8 +1,8 @@
-import { Slider } from "@mui/material";
 import { useState } from "react";
-import { IPriceRangeFilter } from "./interfaces";
+import { Slider } from "@mui/material";
+import { IPriceRangeFilterProps } from "./interfaces";
 
-const PriceRangeFilter: React.FC<IPriceRangeFilter> = ({
+const PriceRangeFilter: React.FC<IPriceRangeFilterProps> = ({
   minPrice,
   maxPrice,
   minPriceDifference,

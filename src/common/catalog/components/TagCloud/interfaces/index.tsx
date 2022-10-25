@@ -1,4 +1,4 @@
-export interface tagData  {
+export interface ITagCloudProps  {
   id: number;
   name: string;
   colorTheSquare? : boolean;

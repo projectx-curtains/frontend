@@ -1,6 +1,6 @@
 import { useState } from "react";
-import ItemFilter from "./ItemFilter";
 import { MdExpandMore } from "react-icons/md";
+import ItemFilter from "./ItemFilter";
 import { IDropdownFilterProps } from "./interfaces";
 
 const DropdownFilter: React.FC<IDropdownFilterProps> = ( {nameTitle, itemsFilter}) => {

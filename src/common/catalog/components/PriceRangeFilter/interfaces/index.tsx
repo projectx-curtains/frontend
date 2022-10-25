@@ -1,4 +1,4 @@
-export interface IPriceRangeFilter {
+export interface IPriceRangeFilterProps {
   minPrice: number;
   maxPrice: number;
   minPriceDifference: number;

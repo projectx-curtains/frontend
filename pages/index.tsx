@@ -1,16 +1,19 @@
 import type { NextPage } from 'next'
 import DropdownColorFilter from '../src/common/catalog/components/DropdownColorFilter'
-import { sampleColorFiltersData } from '../src/common/catalog/components/DropdownColorFilter/mocks/sampleColorFiltersData'
 import DropdownFilter from '../src/common/catalog/components/DropdownFilter'
-import { sampleDropdownFiltersData } from '../src/common/catalog/components/DropdownFilter/mocks/sampleDropdownFiltersData'
 import PriceRangeFilter from '../src/common/catalog/components/PriceRangeFilter'
 import SaveEraseButtons from '../src/common/catalog/components/SaveEraseButtons'
 import TagCloud from '../src/common/catalog/components/TagCloud'
-import { sampleDataTags } from '../src/common/catalog/components/TagCloud/mocks/sampleDataTags'
-import styles from '../styles/Home.module.css'
 import PriceFilter from '../src/common/catalog/components/PriceFilter'
 import LinkStructure from '../src/common/catalog/components/LinkStructure'
-import Categories from './Catalogue/Сategories'
+import Categories from '../src/common/catalog/components/Categories'
+import { sampleColorFiltersData } from '../src/common/catalog/components/DropdownColorFilter/mocks/sampleColorFiltersData'
+import { sampleDropdownFiltersData } from '../src/common/catalog/components/DropdownFilter/mocks/sampleDropdownFiltersData'
+import { sampleDataTags } from '../src/common/catalog/components/TagCloud/mocks/sampleDataTags'
+import styles from '../styles/Home.module.css'
+
+
+
 
 const Home: NextPage = () => {
   return (
@@ -19,25 +22,29 @@ const Home: NextPage = () => {
       {/* for illustration purposes --->*/}
 
       <div>
-        {sampleColorFiltersData.map((obj)=>
-          (<DropdownColorFilter key={1} id={obj.id} nameTitle={obj.nameTitle} gradientColorBot={obj.gradientColorBot} gradientColorMid={obj.gradientColorMid} gradientColorTop={obj.gradientColorTop} dropdownFilterColor={obj.dropdownFilterColor} />)
+        {sampleColorFiltersData.map((colorFilter)=>
+          (<DropdownColorFilter key={colorFilter.id} id={colorFilter.id} nameTitle={colorFilter.nameTitle} gradientColorBot={colorFilter.gradientColorBot} gradientColorMid={colorFilter.gradientColorMid} gradientColorTop={colorFilter.gradientColorTop} dropdownFilterColor={colorFilter.dropdownFilterColor} />)
         )}      
       </div>
 
       <div style={{marginTop:"20px"}}>      
-        {sampleDropdownFiltersData.map((obj) => (
-            <DropdownFilter key={2} nameTitle={obj.nameTitle} itemsFilter={obj.itemsFilter} />
+        {sampleDropdownFiltersData.map((filter) => (
+            <DropdownFilter key={filter.id} nameTitle={filter.nameTitle} itemsFilter={filter.itemsFilter} />
         ))}        
       </div>
 
       <div style={{marginTop:"20px", display: "flex", flexDirection: "row"}}>
-        {sampleDataTags.map((obj)=>(
-          <TagCloud key={3}  id={obj.id} name={obj.name} colorTheSquare={obj.colorTheSquare} color={obj.color} />
+        {sampleDataTags.map((tag)=>(
+          <TagCloud key={tag.id}  id={tag.id} name={tag.name} colorTheSquare={tag.colorTheSquare} color={tag.color} />
         ))}        
       </div>
 
       <div style={{marginTop:"20px"}}>        
-        <PriceFilter key={5} />        
+        <PriceFilter />        
+      </div>
+
+      <div style={{marginTop:"20px"}}>        
+        <Categories />
       </div>
 
       <div style={{marginTop:"20px"}}>
@@ -58,9 +65,9 @@ const Home: NextPage = () => {
         <LinkStructure />
       </div>
 
-      <div style={{marginTop:"20px"}}>
-        <Categories />
-      </div>       
+
+
+             
       
       {/* <--- */}
 

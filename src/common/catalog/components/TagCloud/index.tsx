@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { MdClose } from "react-icons/md";
-import { tagData } from "./interfaces";
+import { ITagCloudProps } from "./interfaces";
 
-const TagCloud: React.FC<tagData> = ( {id, name, colorTheSquare, color, removeTag }) => {
+const TagCloud: React.FC<ITagCloudProps> = ( {id, name, colorTheSquare, color, removeTag }) => {
   const [arrayTagsData, setArrayData] = useState([...[{id, name, colorTheSquare, color, removeTag}]]);
 
   const clickOnButtonCross = (id: number) => {
