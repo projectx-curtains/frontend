@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/future/image";
 import classNames from "classnames";
 import { CATEGORIES } from "../../../constants/categories";
-import { ICategory } from "../../../interfaces/category.type";
+import { Category } from "../../../types/category.type";
 import style from "../styles/header.module.scss";
 
 const CataloguePopup = () => {
@@ -11,7 +11,7 @@ const CataloguePopup = () => {
     <div className={style["catalog-popup"]}>
       <ul className={classNames("container", style["catalog-popup__list"])}>
         {CATEGORIES.map(
-          ({ name, path }: ICategory, catalogueItem) =>
+          ({ name, path }: Category, catalogueItem) =>
             catalogueItem !== CATEGORIES.length - 1 && (
               <li className={style["catalog-popup__item"]}>
                 <Link href={path}>

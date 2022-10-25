@@ -6,8 +6,8 @@ import Image from "next/future/image";
 import Button from "@mui/material/Button";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
-import { ISearchBarPopupProps } from "../interfaces";
-import { ROUTES } from "../../../constants/routes";
+import { ISearchBarPopupProps } from "../../../interfaces";
+import { ROUTES } from "../../../../../constants/routes";
 import { data } from "../mock/data";
 import style from "../styles/searchBar.module.scss";
 

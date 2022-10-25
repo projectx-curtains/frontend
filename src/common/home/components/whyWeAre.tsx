@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/future/image";
 import { WHY_WE_ARE } from "../constants/whyWeAre.data";
-import { IWhyWeAreItem } from "../interfaces";
+import { WhyWeAreItem } from "../types";
 import style from "../styles/whyWeAre.module.scss";
 
 const WhyWeAre = () => {
@@ -10,7 +10,7 @@ const WhyWeAre = () => {
       <div className="container">
         <h2 className="heading">Почему мы</h2>
         <div className={style["why-we-are__content"]}>
-          {WHY_WE_ARE.map(({ image, text }: IWhyWeAreItem) => {
+          {WHY_WE_ARE.map(({ image, text }: WhyWeAreItem) => {
             return (
               <div key={text} className={style["why-we-are-item"]}>
                 <div className={style["why-we-are-item__image"]}>

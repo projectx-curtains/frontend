@@ -1,4 +1,4 @@
-import { ICategory } from "../interfaces/category.type";
+import { ICategory } from "../types/category.type";
 import { ROUTES } from "./routes";
 
 export const CATEGORIES: Array<ICategory> = [

@@ -3,14 +3,14 @@ import Link from "next/link";
 import classNames from "classnames";
 
 import CataloguePopup from "./cataloguePopup";
-import SearchBar from "./searchBar";
+import { SearchBar } from "./searchBar";
 
 import { ROUTES } from "../../../constants/routes";
 import { CATEGORIES } from "../../../constants/categories";
 import { CONTACTS } from "../../../constants/contacts";
 
 import { IHeaderProps } from "../interfaces";
-import { ICategory } from "../../../interfaces/category.type";
+import { Category } from "../../../types/category.type";
 
 import InstagramIcon from "../../../../assets/svg/insta.svg";
 import PhoneIcon from "../../../../assets/svg/phone.svg";
@@ -68,7 +68,7 @@ const Header: React.FC<IHeaderProps> = ({
                     style.nav__sublist
                   )}
                 >
-                  {CATEGORIES.map(({ name, path }: ICategory) => (
+                  {CATEGORIES.map(({ name, path }: Category) => (
                     <li key={name} className={style.nav__item}>
                       <Link key={name} href={path}>
                         <a className={style.nav__link}>{name}</a>

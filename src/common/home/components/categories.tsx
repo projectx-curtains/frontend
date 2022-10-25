@@ -4,13 +4,13 @@ import Link from "next/link";
 import NorthIcon from "@mui/icons-material/North";
 
 import { CATEGORIES } from "../../../constants/categories";
-import { ICategory } from "../../../interfaces/category.type";
+import { Category } from "../../../types/category.type";
 import style from "../styles/categories.module.scss";
 
 function Categories() {
   return (
     <section className={classNames("container", style["catalog-layout"])}>
-      {CATEGORIES.map(({ type, name, position, path }: ICategory) => (
+      {CATEGORIES.map(({ type, name, position, path }: Category) => (
         <Link href={path} key={name}>
           <a
             className={classNames(

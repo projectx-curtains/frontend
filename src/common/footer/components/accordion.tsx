@@ -1,15 +1,10 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { IAccordion } from "../interfaces";
 import style from "../styles/footer.module.scss";
 
-interface IAccordion {
-  children: React.ReactNode;
-  title: string;
-  className: string;
-}
-
-function Accordion({ children, title, className }: IAccordion) {
+const Accordion: React.FC<IAccordion> = ({ children, title, className }) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
@@ -34,6 +29,6 @@ function Accordion({ children, title, className }: IAccordion) {
       </div>
     </div>
   );
-}
+};
 
 export default Accordion;

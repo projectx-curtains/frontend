@@ -1,24 +1,22 @@
-import React, { FormEvent, useState } from "react";
+import React from "react";
 import classNames from "classnames";
 import SearchBarPopup from "./searchBarPopup";
 import SearchIcon from "@mui/icons-material/Search";
-import { ISearchBarProps } from "../interfaces";
+import { ISearchBarProps } from "../../../interfaces";
 import style from "../styles/searchBar.module.scss";
 
-const SearchBar: React.FC<ISearchBarProps> = ({ theme, menuOpen }: Props) => {
-  const [searchInput, setSearchInput] = useState("");
-  const [isActivePopup, setIsActivePopup] = useState(false);
-
-  const searchItems = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const searchValue = e.target.value; //??
-    setIsActivePopup(true);
-    setSearchInput(isActivePopup ? searchValue : "");
-  };
-
+const SearchBar: React.FC<ISearchBarProps> = ({
+  theme,
+  menuOpen,
+  handleSearchItems,
+  searchInput,
+  setSearchInput,
+  isActivePopup,
+  setIsActivePopup,
+}) => {
   return (
     <div className={classNames(style.search, style[`search--${theme}`])}>
-      <form className={style.search__form} onSubmit={searchItems}>
+      <form className={style.search__form} onSubmit={handleSearchItems}>
         <input
           className={classNames(style.search__input, {
             [style["search__input--menu-open"]]: menuOpen,
