@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
-import { HeadTags } from "../src/common/headTags";
-import MainLayout from "../src/layouts/mainLayout";
-import HomeModule from "../src/modules/home";
-import { HOME_METADATA } from "../src/modules/home/metaData";
+import { HeadTags } from "@common/headTags";
+import MainLayout from "@layouts/mainLayout";
+import HomeModule from "@modules/home";
+import { HOME_METADATA } from "@modules/home/mocks/metaData";
 
 const HomePage: NextPage = () => {
   return (

@@ -5,15 +5,15 @@ import classNames from "classnames";
 import CataloguePopup from "./cataloguePopup";
 import { SearchBar } from "./searchBar";
 
-import { ROUTES } from "../../../constants/routes";
-import { CATEGORIES } from "../../../constants/categories";
-import { CONTACTS } from "../../../constants/contacts";
+import { ROUTES } from "@constants/routes";
+import { CATEGORIES } from "@constants/categories";
+import { CONTACTS } from "@constants/contacts";
 
 import { IHeaderProps } from "../interfaces";
-import { Category } from "../../../types/category.type";
+import { Category } from "src/types/category.type";
 
-import InstagramIcon from "../../../../assets/svg/insta.svg";
-import PhoneIcon from "../../../../assets/svg/phone.svg";
+import InstagramIcon from "@assets/svg/insta.svg";
+import PhoneIcon from "@assets/svg/phone.svg";
 import CloseIcon from "@mui/icons-material/Close";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import NotesOutlinedIcon from "@mui/icons-material/NotesOutlined";

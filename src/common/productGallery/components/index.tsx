@@ -6,7 +6,9 @@ import Button from "@mui/material/Button";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 import { IProductGalleryProps } from "../interfaces";
-import { ROUTES } from "../../../constants/routes";
+import { IProductCardProps } from "../../productCard/interfaces";
+
+import { ROUTES } from "@constants/routes";
 import style from "../styles/productGallery.module.scss";
 
 const ProductGallery: React.FC<IProductGalleryProps> = ({
@@ -52,13 +54,13 @@ const ProductGallery: React.FC<IProductGalleryProps> = ({
           </Link>
         </div>
         <div className={style["gallery-container__content"]}>
-          {items.map(({ setName, image, setPrice }) => {
+          {items.map(({ name, image, price }: IProductCardProps) => {
             return (
               <ProductCard
-                key={setName}
+                key={name}
                 image={image}
-                name={setName}
-                price={setPrice}
+                name={name}
+                price={price}
                 link={"#"}
               />
             );

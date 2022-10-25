@@ -1,4 +1,4 @@
-import { HeadData } from "../../common/headTags/types";
+import { HeadData } from "@common/headTags/types";
 
 export const HOME_METADATA: HeadData = {
   title: `Салон штор "Зашторим". Дизайн и пошив штор в Могилеве по честным ценам.`,

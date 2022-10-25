@@ -19,7 +19,7 @@ const Reviews = () => {
                 <div className={style["image-container"]}>
                   <Image
                     className={style["image"]}
-                    src={require(`../../../../assets/img/Reviews/${sliderItem.image}`)}
+                    src={require(`@assets/img/Reviews/${sliderItem.image}`)}
                     alt="our work"
                   />
                   <div

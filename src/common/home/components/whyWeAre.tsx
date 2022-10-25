@@ -16,7 +16,7 @@ const WhyWeAre = () => {
                 <div className={style["why-we-are-item__image"]}>
                   <Image
                     className={style["why-we-are-item__icon"]}
-                    src={require(`../../../../assets/img/WhyWeAre/${image}`)}
+                    src={require(`@assets/img/WhyWeAre/${image}`)}
                     alt={text}
                     width={80}
                     height={80}

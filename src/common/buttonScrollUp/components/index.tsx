@@ -4,7 +4,7 @@ import debounce from "lodash.debounce";
 
 import { IButtonScrollUpProps } from "../interfaces";
 import { scrollToTop } from "../utils/scrollToTop";
-import UpArrow from "../../../../assets/svg/UpArrow.svg";
+import UpArrow from "@assets/svg/UpArrow.svg";
 import style from "../styles/buttonScrollUp.module.scss";
 
 const ButtonScrollUp: React.FC<IButtonScrollUpProps> = ({ scrolledValue }) => {

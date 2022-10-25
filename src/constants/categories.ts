@@ -1,7 +1,7 @@
-import { ICategory } from "../types/category.type";
+import { Category } from "src/types/category.type";
 import { ROUTES } from "./routes";
 
-export const CATEGORIES: Array<ICategory> = [
+export const CATEGORIES: Array<Category> = [
   {
     name: "Шторы",
     position: "center",

@@ -3,8 +3,8 @@ import classNames from "classnames";
 import Link from "next/link";
 import NorthIcon from "@mui/icons-material/North";
 
-import { CATEGORIES } from "../../../constants/categories";
-import { Category } from "../../../types/category.type";
+import { CATEGORIES } from "@constants/categories";
+import { Category } from "src/types/category.type";
 import style from "../styles/categories.module.scss";
 
 function Categories() {

@@ -3,12 +3,12 @@ import Link from "next/link";
 import classNames from "classnames";
 
 import Accordion from "./accordion";
-import { ROUTES } from "../../../constants/routes";
-import { CONTACTS } from "../../../constants/contacts";
+import { ROUTES } from "@constants/routes";
+import { CONTACTS } from "@constants/contacts";
 
-import LocationIcon from "../../../../assets/svg/location.svg";
-import InstagramIcon from "../../../../assets/svg/insta.svg";
-import PhoneIcon from "../../../../assets/svg/phone.svg";
+import LocationIcon from "@assets/svg/location.svg";
+import InstagramIcon from "@assets/svg/insta.svg";
+import PhoneIcon from "@assets/svg/phone.svg";
 
 import style from "../styles/footer.module.scss";
 

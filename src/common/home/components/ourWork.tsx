@@ -3,9 +3,9 @@ import classNames from "classnames";
 import Image from "next/future/image";
 import Button from "@mui/material/Button";
 import Carousel from "./carousel";
-import { ROUTES } from "../../../constants/routes";
-import { CarouselSlider_mockData } from "../../../../assets/data/carouselSlider_mockData";
-import { app_mockData } from "../../../../assets/data/app_mockData";
+import { ROUTES } from "@constants/routes";
+import { CarouselSlider_mockData } from "@assets/data/carouselSlider_mockData";
+import { app_mockData } from "@assets/data/app_mockData";
 import style from "../styles/ourWork.module.scss";
 
 const OurWork = () => {

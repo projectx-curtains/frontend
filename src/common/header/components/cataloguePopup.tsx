@@ -2,8 +2,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/future/image";
 import classNames from "classnames";
-import { CATEGORIES } from "../../../constants/categories";
-import { Category } from "../../../types/category.type";
+import { CATEGORIES } from "@constants/categories";
+import { Category } from "src/types/category.type";
 import style from "../styles/header.module.scss";
 
 const CataloguePopup = () => {
@@ -18,7 +18,7 @@ const CataloguePopup = () => {
                   <>
                     <Image
                       key={name}
-                      src={require(`../../../../assets/img/CatalogCategories/${name}.png`)}
+                      src={require(`@assets/img/CatalogCategories/${name}.png`)}
                       alt={name}
                       className={style["catalog-popup__img"]}
                     />
