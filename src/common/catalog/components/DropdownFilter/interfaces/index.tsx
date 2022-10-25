@@ -1,7 +1,7 @@
 type FilterData = {
   id: string;
   nameFilter: string;
-}
+};
 
 export interface IItemsFilterProps {
   itemsFilter: Array<FilterData>;

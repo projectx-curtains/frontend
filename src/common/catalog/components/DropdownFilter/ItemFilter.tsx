@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { IItemsFilterProps } from "./interfaces";
 
-const ItemFilter: React.FC<IItemsFilterProps> = ({itemsFilter}) => {
+const ItemFilter: React.FC<IItemsFilterProps> = ({ itemsFilter }) => {
   return (
     <>
       {itemsFilter.map((itemFilter) => (
@@ -16,7 +16,7 @@ const ItemFilter: React.FC<IItemsFilterProps> = ({itemsFilter}) => {
           </label>
         </div>
       ))}
-    </> 
-  )
+    </>
+  );
 };
 export default ItemFilter;

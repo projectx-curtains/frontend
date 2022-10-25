@@ -14,7 +14,11 @@ const PriceRangeFilter: React.FC<IPriceRangeFilterProps> = ({
     maxPriceOnTheScreen,
   ]);
 
-  const handleChange = (event: React.ChangeEvent, newValue: number, activeThumb: number) => {
+  const handleChange = (
+    event: React.ChangeEvent,
+    newValue: number,
+    activeThumb: number
+  ) => {
     if (!Array.isArray(newValue)) {
       return;
     }
