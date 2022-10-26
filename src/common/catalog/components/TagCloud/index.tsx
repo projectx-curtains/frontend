@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { MdClose } from "react-icons/md";
-import { tagData } from "./interfaces";
+import { ITagCloudProps } from "./interfaces";
 
-const TagCloud: React.FC<tagData> = ({
+const TagCloud: React.FC<ITagCloudProps> = ({
   id,
   name,
   colorTheSquare,

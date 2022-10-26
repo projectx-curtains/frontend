@@ -3,9 +3,9 @@ import DropdownColorFilter from "../src/common/catalog/components/DropdownColorF
 import { sampleColorFiltersData } from "../src/common/catalog/components/DropdownColorFilter/mocks/sampleColorFiltersData";
 import DropdownFilter from "../src/common/catalog/components/DropdownFilter";
 import { sampleDropdownFiltersData } from "../src/common/catalog/components/DropdownFilter/mocks/sampleDropdownFiltersData";
-import PriceRangeFilter from "../src/common/catalog/components/PriceRangeFilter";
+import PriceRangeFilterContainer from "../src/common/catalog/components/PriceRangeFilter/containers/index";
 import SaveEraseButtons from "../src/common/catalog/components/SaveEraseButtons";
-import TagCloud from "../src/common/catalog/components/TagCloud";
+import TagCloudContainer from "../src/common/catalog/components/TagCloud/containers/index";
 import { sampleDataTags } from "../src/common/catalog/components/TagCloud/mocks/sampleDataTags";
 import styles from "../styles/Home.module.css";
 import PriceFilter from "../src/common/catalog/components/PriceFilter";
@@ -43,7 +43,7 @@ const Home: NextPage = () => {
 
       <div style={{ marginTop: "20px", display: "flex", flexDirection: "row" }}>
         {sampleDataTags.map((obj) => (
-          <TagCloud
+          <TagCloudContainer
             key={3}
             id={obj.id}
             name={obj.name}
@@ -58,7 +58,7 @@ const Home: NextPage = () => {
       </div>
 
       <div style={{ marginTop: "20px" }}>
-        <PriceRangeFilter
+        <PriceRangeFilterContainer
           minPrice={0}
           maxPrice={2000}
           minPriceDifference={50}
