@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Link from "next/link";
 import categoriesData from "./mocks/categoriesData";
 
 const Categories = () => {
@@ -20,15 +21,16 @@ const Categories = () => {
           };
 
           return (
-            <a
-              className="categories__item"
-              key={titleItem.id}
-              href={titleItem.url}
-              onClick={handleClick}
-              style={style}
-            >
-              {titleItem.name}
-            </a>
+            <Link href={titleItem.url}>
+              <a
+                className="categories__item"
+                key={titleItem.id}
+                onClick={handleClick}
+                style={style}
+              >
+                {titleItem.name}
+              </a>
+            </Link>
           );
         })}
       </ul>
