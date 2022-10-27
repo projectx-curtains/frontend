@@ -1,4 +1,6 @@
-const categoriesData = [
+import { Categories } from "../interfaces";
+
+const categoriesData: Array<Categories> = [
   { id: 0, name: "Все категории", url: "/all" },
   { id: 1, name: "Шторы", url: "/curtains" },
   { id: 2, name: "Ткани", url: "/fabrics" },
