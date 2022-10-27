@@ -1,18 +1,24 @@
 type FilterData = {
   id: string;
-  nameFilter: string;
+  title: string;
   color: string;
 };
 
 export interface IColorFilterProps {
-  itemFilterData: Array<FilterData>;
+  filters: Array<FilterData>;
 }
 
-export interface IColorDropdownFilterProps {
+export interface IColorDropdownFilterContainerProps {
   id: number;
-  nameTitle: string;
+  title: string;
   gradientColorTop: string;
   gradientColorMid: string;
   gradientColorBot: string;
   dropdownFilterColor: Array<FilterData>;
+}
+
+export interface IColorDropdownFilterProps
+  extends IColorDropdownFilterContainerProps {
+  isOpen: boolean;
+  handleOpen: () => void;
 }

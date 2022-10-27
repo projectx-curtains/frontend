@@ -18,15 +18,15 @@ const Home: NextPage = () => {
       {/* for illustration purposes --->*/}
 
       <div>
-        {sampleColorFiltersData.map((obj) => (
+        {sampleColorFiltersData.map((filters) => (
           <DropdownColorFilter
             key={1}
-            id={obj.id}
-            nameTitle={obj.nameTitle}
-            gradientColorBot={obj.gradientColorBot}
-            gradientColorMid={obj.gradientColorMid}
-            gradientColorTop={obj.gradientColorTop}
-            dropdownFilterColor={obj.dropdownFilterColor}
+            id={filters.id}
+            title={filters.title}
+            gradientColorBot={filters.gradientColorBot}
+            gradientColorMid={filters.gradientColorMid}
+            gradientColorTop={filters.gradientColorTop}
+            dropdownFilterColor={filters.dropdownFilterColor}
           />
         ))}
       </div>
