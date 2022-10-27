@@ -6,8 +6,9 @@ import Button from "@mui/material/Button";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 import { IProductGalleryProps } from "../interfaces";
-import { IProductCardProps } from "../../productCard/interfaces";
+import { ProductCardType } from "@common/productCard/types";
 
+import { ProductCardStyle } from "@common/productCard/constants";
 import { ROUTES } from "@constants/routes";
 import style from "../styles/productGallery.module.scss";
 
@@ -54,14 +55,15 @@ const ProductGallery: React.FC<IProductGalleryProps> = ({
           </Link>
         </div>
         <div className={style["gallery-container__content"]}>
-          {items.map(({ name, image, price }: IProductCardProps) => {
+          {items.map(({ name, image, price, link }: ProductCardType) => {
             return (
               <ProductCard
                 key={name}
                 image={image}
                 name={name}
                 price={price}
-                link={"#"}
+                link={link}
+                variant={ProductCardStyle.homepage}
               />
             );
           })}

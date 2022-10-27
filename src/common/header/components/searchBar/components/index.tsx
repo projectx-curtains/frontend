@@ -1,8 +1,9 @@
 import React from "react";
 import classNames from "classnames";
 import SearchBarPopup from "./searchBarPopup";
+import ErrorSearchBarPopup from "./errorSearchBarPopup";
 import SearchIcon from "@mui/icons-material/Search";
-import { ISearchBarProps } from "../../../interfaces";
+import { ISearchBarProps } from "../interfaces";
 import style from "../styles/searchBar.module.scss";
 
 const SearchBar: React.FC<ISearchBarProps> = ({
@@ -37,10 +38,11 @@ const SearchBar: React.FC<ISearchBarProps> = ({
         </button>
       </form>
       {isActivePopup && (
-        <SearchBarPopup
-          searchInput={searchInput}
-          setIsActivePopup={setIsActivePopup}
-        />
+        // <SearchBarPopup
+        //   searchInput={searchInput}
+        //   setIsActivePopup={setIsActivePopup}
+        // />
+        <ErrorSearchBarPopup setIsActivePopup={setIsActivePopup} />
       )}
     </div>
   );

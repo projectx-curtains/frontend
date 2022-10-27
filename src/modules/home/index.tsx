@@ -1,6 +1,6 @@
 import Banner from "@common/home/components/banner";
 import Categories from "@common/home/components/categories";
-import ProductGallery from "@common/productGallery/components";
+import ProductGallery from "@common/home/components/productGallery";
 import WhyWeAre from "@common/home/components/whyWeAre";
 import ButtonScrollUp from "@common/buttonScrollUp/components";
 import OurWork from "@common/home/components/ourWork";

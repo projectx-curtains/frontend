@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ISearchBarContainerProps } from "../../../interfaces";
+import { ISearchBarContainerProps } from "../interfaces";
 import SearchBar from "../components";
 
 const SearchBarContainer: React.FC<ISearchBarContainerProps> = ({

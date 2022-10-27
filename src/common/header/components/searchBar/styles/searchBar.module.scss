@@ -142,4 +142,60 @@
   &__button-text {
     color: inherit;
   }
+
+  &__error {
+    margin-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .error {
+      color: $gray-400;
+
+      &__text-wrapper {
+        margin-bottom: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__text {
+        @include heading-24-medium();
+        color: $gray-400;
+      }
+
+      &__icon {
+        margin-right: 22px;
+        font-size: 32px;
+        color: $gray-400;
+      }
+
+      &__advices {
+        margin-bottom: 20px;
+        width: 706px;
+        color: $gray-400;
+        list-style: none;
+      }
+
+      &__advice {
+        padding-bottom: 8px;
+        @include body-18-light();
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__product-offer {
+    .product-offer {
+      &__headline {
+        margin-bottom: 24px;
+        @include heading-24-medium();
+        color: black;
+      }
+
+      &__content {
+        display: flex;
+      }
+    }
+  }
 }
