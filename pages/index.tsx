@@ -3,7 +3,7 @@ import DropdownColorFilter from "../src/common/catalog/components/DropdownColorF
 import { sampleColorFiltersData } from "../src/common/catalog/components/DropdownColorFilter/mocks/sampleColorFiltersData";
 import DropdownFilter from "../src/common/catalog/components/DropdownFilter";
 import { sampleDropdownFiltersData } from "../src/common/catalog/components/DropdownFilter/mocks/sampleDropdownFiltersData";
-import PriceRangeFilterContainer from "../src/common/catalog/components/PriceRangeFilter/containers/index";
+import PriceRangeFilter from "../src/common/catalog/components/PriceRangeFilter";
 import SaveEraseButtons from "../src/common/catalog/components/SaveEraseButtons";
 import TagCloudContainer from "../src/common/catalog/components/TagCloud/containers/index";
 import { sampleDataTags } from "../src/common/catalog/components/TagCloud/mocks/sampleDataTags";
@@ -32,23 +32,23 @@ const Home: NextPage = () => {
       </div>
 
       <div style={{ marginTop: "20px" }}>
-        {sampleDropdownFiltersData.map((obj) => (
+        {sampleDropdownFiltersData.map((filters) => (
           <DropdownFilter
             key={2}
-            nameTitle={obj.nameTitle}
-            itemsFilter={obj.itemsFilter}
+            title={filters.title}
+            itemsFilter={filters.itemsFilter}
           />
         ))}
       </div>
 
       <div style={{ marginTop: "20px", display: "flex", flexDirection: "row" }}>
-        {sampleDataTags.map((obj) => (
+        {sampleDataTags.map((tag) => (
           <TagCloudContainer
             key={3}
-            id={obj.id}
-            name={obj.name}
-            colorTheSquare={obj.colorTheSquare}
-            color={obj.color}
+            id={tag.id}
+            name={tag.name}
+            colorTheSquare={tag.colorTheSquare}
+            color={tag.color}
           />
         ))}
       </div>
@@ -58,7 +58,7 @@ const Home: NextPage = () => {
       </div>
 
       <div style={{ marginTop: "20px" }}>
-        <PriceRangeFilterContainer
+        <PriceRangeFilter
           minPrice={0}
           maxPrice={2000}
           minPriceDifference={50}
@@ -72,7 +72,7 @@ const Home: NextPage = () => {
       </div>
 
       <div style={{ marginTop: "20px" }}>
-        <LinkStructure />
+        <LinkStructure currentTitle="Название раздела" />
       </div>
 
       <div style={{ marginTop: "20px" }}>

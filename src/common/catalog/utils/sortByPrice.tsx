@@ -1,10 +1,10 @@
-import { ISortByPriceProps } from "../components/PriceFilter/interfaces";
+import { ISortByPriceProps } from "./interfaces";
 
 const sortByPrice: React.FC<ISortByPriceProps> = ({ data, rule }) => {
   if (rule === "ascending") {
-    return [...data].sort((a, b) => a.price - b.price); //по возрастанию
+    return [...data].sort((a, b) => a.price - b.price); //ascending
   } else {
-    return [...data].sort((a, b) => b.price - a.price); //по убыванию
+    return [...data].sort((a, b) => b.price - a.price); // descending
   }
 };
 

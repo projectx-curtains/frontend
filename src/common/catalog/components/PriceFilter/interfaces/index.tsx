@@ -1,10 +1,3 @@
-type CardsData = {
-  id: number;
-  price: number;
-  title: string;
-};
-
-export interface ISortByPriceProps {
-  data: Array<CardsData>;
-  rule: string;
+export interface IPriceFilterProps {
+  changeTargetValue: (event: React.ChangeEvent) => void;
 }

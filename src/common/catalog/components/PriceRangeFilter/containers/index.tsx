@@ -35,14 +35,14 @@ const PriceRangeFilterContainer: React.FC<IPriceRangeFilterContainerProps> = ({
     }
   };
 
-  return (
-    <PriceRangeFilter
-      minPrice={minPrice}
-      maxPrice={maxPrice}
-      values={values}
-      handleChange={handleChange}
-    />
-  );
+  const props = {
+    minPrice,
+    maxPrice,
+    values,
+    handleChange,
+  };
+
+  return <PriceRangeFilter {...props} />;
 };
 
 export default PriceRangeFilterContainer;

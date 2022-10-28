@@ -1,22 +1,22 @@
 export const sampleDropdownFiltersData = [
   {
     id: Math.random(),
-    nameTitle: "Тип штор",
+    title: "Тип штор",
     itemsFilter: [
-      { id: Math.random(), nameFilter: "Подъемные" },
-      { id: Math.random(), nameFilter: "Раздвижные" },
-      { id: Math.random(), nameFilter: "Стационарные" },
+      { id: Math.random(), title: "Подъемные" },
+      { id: Math.random(), title: "Раздвижные" },
+      { id: Math.random(), title: "Стационарные" },
     ],
   },
   {
     id: Math.random(),
-    nameTitle: "Вид штор",
+    title: "Вид штор",
     itemsFilter: [
-      { id: Math.random(), nameFilter: "Австрийские" },
-      { id: Math.random(), nameFilter: "Английские" },
-      { id: Math.random(), nameFilter: "Витражные" },
-      { id: Math.random(), nameFilter: "Императорские" },
-      { id: Math.random(), nameFilter: "Итальянские" },
+      { id: Math.random(), title: "Австрийские" },
+      { id: Math.random(), title: "Английские" },
+      { id: Math.random(), title: "Витражные" },
+      { id: Math.random(), title: "Императорские" },
+      { id: Math.random(), title: "Итальянские" },
     ],
   },
 ];

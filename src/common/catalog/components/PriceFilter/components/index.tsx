@@ -1,20 +1,13 @@
-// export { default } from "./containers";
+import { IPriceFilterProps } from "../interfaces";
+import { dropdownValues } from "../mocks/dropdownValues";
 
-import { useState } from "react";
-import { dropdownValues } from "./mocks/dropdownValues";
-
-const PriceFilter = () => {
-  const [sort, setSort] = useState("");
-
+const PriceFilter: React.FC<IPriceFilterProps> = ({ changeTargetValue }) => {
   return (
     <div className="priceFilter">
-      <select
-        className="priceFilter__select"
-        onChange={(e) => setSort(e.target.value)}
-      >
+      <select className="priceFilter__select" onChange={changeTargetValue}>
         {dropdownValues.map((dropdownValue) => (
           <option
-            key={1}
+            key={dropdownValue.id}
             className="priceFilter__select-item"
             value={dropdownValue.value}
           >

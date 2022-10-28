@@ -1,4 +1,5 @@
 import React from "react";
+import classnames from "classnames";
 import { MdClose } from "react-icons/md";
 import { ITagCloudProps } from "../interfaces";
 
@@ -8,8 +9,9 @@ const TagCloud: React.FC<ITagCloudProps> = ({ tags, handleClose }) => {
       {tags.map((tag) => (
         <div
           key={tag.id}
-          className={`tag-cloud__item
-              ${tag.removeTag ? "remove-tag" : ""}`}
+          className={classnames("tag-cloud__item", {
+            "remove-tag": tag.removeTag,
+          })}
         >
           {tag.colorTheSquare && (
             <span

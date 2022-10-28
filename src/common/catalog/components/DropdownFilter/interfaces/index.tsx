@@ -1,14 +1,19 @@
 type FilterData = {
   id: string;
-  nameFilter: string;
+  title: string;
 };
 
 export interface IItemsFilterProps {
+  filters: Array<FilterData>;
+}
+
+export interface IDropdownFilterContainerProps {
+  id?: string;
+  title: string;
   itemsFilter: Array<FilterData>;
 }
 
-export interface IDropdownFilterProps {
-  id: string;
-  nameTitle: string;
-  itemsFilter: Array<FilterData>;
+export interface IDropdownFilterProps extends IDropdownFilterContainerProps {
+  isOpen: boolean;
+  handleOpen: () => void;
 }
