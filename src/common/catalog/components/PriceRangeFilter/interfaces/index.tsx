@@ -1,10 +1,10 @@
 export interface IPriceRangeFilterProps {
   minPrice: number;
   maxPrice: number;
-  values: Array<number>;
+  priceValues: Array<number>;
   handleChange: (
-    event: React.ChangeEvent,
-    newValue: number,
+    event: Event,
+    value: number | number[],
     activeThumb: number
   ) => void;
 }

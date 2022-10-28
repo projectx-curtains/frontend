@@ -9,36 +9,40 @@ const PriceRangeFilterContainer: React.FC<IPriceRangeFilterContainerProps> = ({
   minPriceOnTheScreen,
   maxPriceOnTheScreen,
 }) => {
-  const [values, setValues] = useState([
+  const [priceValues, setPriceValues] = useState([
     minPriceOnTheScreen,
     maxPriceOnTheScreen,
   ]);
 
   const handleChange = (
-    event: React.ChangeEvent,
-    newValue: number,
+    event: Event,
+    value: number | number[],
     activeThumb: number
   ) => {
-    if (!Array.isArray(newValue)) {
-      return;
-    }
-    if (activeThumb === 0) {
-      setValues([
-        Math.min(newValue[0], values[1] - minPriceDifference),
-        values[1],
-      ]);
-    } else {
-      setValues([
-        values[0],
-        Math.max(newValue[1], values[0] + minPriceDifference),
-      ]);
+    if (Array.isArray(value)) {
+      let minPrice: number = value[0];
+      let maxPrice: number = value[1];
+      switch (activeThumb) {
+        case 0:
+          setPriceValues([
+            Math.min(minPrice, maxPrice - minPriceDifference),
+            maxPrice,
+          ]);
+          break;
+        case 1:
+          setPriceValues([
+            minPrice,
+            Math.max(maxPrice, minPrice + minPriceDifference),
+          ]);
+          break;
+      }
     }
   };
 
   const props = {
     minPrice,
     maxPrice,
-    values,
+    priceValues,
     handleChange,
   };
 

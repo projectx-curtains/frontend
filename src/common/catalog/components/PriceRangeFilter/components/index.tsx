@@ -4,7 +4,7 @@ import { IPriceRangeFilterProps } from "../interfaces";
 const PriceRangeFilter: React.FC<IPriceRangeFilterProps> = ({
   minPrice,
   maxPrice,
-  values,
+  priceValues,
   handleChange,
 }) => {
   return (
@@ -14,10 +14,10 @@ const PriceRangeFilter: React.FC<IPriceRangeFilterProps> = ({
         <Slider
           min={minPrice}
           max={maxPrice}
-          value={values}
+          value={priceValues}
           onChange={handleChange}
         />
-        <span className="price-range-filter__price-block">{`Цена: ${values[0]} BYN - ${values[1]} BYN`}</span>
+        <span className="price-range-filter__price-block">{`Цена: ${priceValues[0]} BYN - ${priceValues[1]} BYN`}</span>
       </div>
     </div>
   );
