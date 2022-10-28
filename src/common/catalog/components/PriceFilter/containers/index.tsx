@@ -1,5 +1,5 @@
 import { useState } from "react";
-import PriceFilter from "..";
+import PriceFilter from "../components";
 
 const PriceFilterContainer = () => {
   const [sort, setSort] = useState("");
