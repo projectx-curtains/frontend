@@ -4,7 +4,7 @@ import PriceFilter from "..";
 
 const PriceFilterContainer = () => {
   const [sort, setSort] = useState("");
-  const changeTargetValue = (event: React.FormEvent) => {
+  const changeTargetValue = (event: React.ChangeEvent) => {
     setSort((event.target.value);
   };
 
