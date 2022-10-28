@@ -4,7 +4,10 @@ import { dropdownValues } from "../mocks/dropdownValues";
 const PriceFilter: React.FC<IPriceFilterProps> = ({ changeTargetValue }) => {
   return (
     <div className="priceFilter">
-      <select className="priceFilter__select" onChange={changeTargetValue}>
+      <select
+        className="priceFilter__select"
+        onChange={() => changeTargetValue}
+      >
         {dropdownValues.map((dropdownValue) => (
           <option
             key={dropdownValue.id}

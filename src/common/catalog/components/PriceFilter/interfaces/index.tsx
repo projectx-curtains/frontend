@@ -1,3 +1,3 @@
 export interface IPriceFilterProps {
-  changeTargetValue: (event: React.ChangeEvent) => void;
+  changeTargetValue: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
