@@ -1,16 +1,16 @@
 import type { NextPage } from "next";
-import DropdownColorFilter from "../src/common/catalog/components/DropdownColorFilter";
-import { sampleColorFiltersData } from "../src/common/catalog/components/DropdownColorFilter/mocks/sampleColorFiltersData";
-import DropdownFilter from "../src/common/catalog/components/DropdownFilter";
-import { sampleDropdownFiltersData } from "../src/common/catalog/components/DropdownFilter/mocks/sampleDropdownFiltersData";
-import PriceRangeFilter from "../src/common/catalog/components/PriceRangeFilter";
-import SaveEraseButtons from "../src/common/catalog/components/SaveEraseButtons";
-import TagCloudContainer from "../src/common/catalog/components/TagCloud/containers/index";
-import { sampleDataTags } from "../src/common/catalog/components/TagCloud/mocks/sampleDataTags";
+import DropdownColorFilter from "@common/catalog/components/DropdownColorFilter";
+import { sampleColorFiltersData } from "@common/catalog/components/DropdownColorFilter/mocks/sampleColorFiltersData";
+import DropdownFilter from "@common/catalog/components/DropdownFilter";
+import { sampleDropdownFiltersData } from "@common/catalog/components/DropdownFilter/mocks/sampleDropdownFiltersData";
+import PriceRangeFilter from "@common/catalog/components/PriceRangeFilter";
+import SaveEraseButtons from "@common/catalog/components/SaveEraseButtons";
+import TagCloudContainer from "@common/catalog/components/TagCloud/containers/index";
+import { sampleDataTags } from "@common/catalog/components/TagCloud/mocks/sampleDataTags";
 import styles from "../styles/Home.module.css";
-import PriceFilter from "../src/common/catalog/components/PriceFilter";
-import LinkStructure from "../src/common/catalog/components/LinkStructure";
-import Categories from "../src/common/catalog/components/Categories/index";
+import PriceFilter from "@common/catalog/components/PriceFilter";
+import LinkStructure from "@common/catalog/components/LinkStructure";
+import Categories from "@common/catalog/components/Categories/index";
 
 const Home: NextPage = () => {
   return (
