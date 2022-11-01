@@ -1,0 +1,201 @@
+@import "../../../../../../styles/App";
+
+.search {
+  transition: 0.3s ease all;
+
+  &__form {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    display: none;
+    width: 126px;
+    @include body-14-regular();
+    background: transparent;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &--menu-open {
+      display: block;
+      width: 85vw;
+      height: 42px;
+      margin-bottom: 34px;
+      padding-top: 6px;
+      padding-left: 27px;
+    }
+  }
+
+  &--transparent-theme &__input {
+    color: $white;
+    border-bottom: 1px solid $white;
+  }
+
+  &--white-theme &__input {
+    color: $gray-500;
+    border-bottom: 1px solid $gray-500;
+  }
+
+  &:focus-within &__input,
+  &:focus-within .search-popup {
+    display: block;
+  }
+
+  // BUTTON
+  &__button {
+    cursor: pointer;
+    padding: 0;
+    padding-right: 4px;
+    font-size: 25px;
+    background: transparent;
+
+    &--menu-open {
+      right: 93%;
+      bottom: 10px;
+      position: relative;
+    }
+  }
+
+  &--transparent-theme &__button {
+    color: $white;
+  }
+
+  &--white-theme &__button {
+    color: $gray-500;
+  }
+}
+
+.search-popup {
+  top: 94px;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: none;
+  background-color: $background;
+  z-index: 100;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -12px;
+    right: 10vw;
+    width: 24px;
+    height: 24px;
+    transform: rotate(45deg);
+    background-color: $background;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    padding-bottom: 16px;
+  }
+
+  &__link {
+    display: flex;
+  }
+
+  &__img {
+    padding-right: 16px;
+  }
+
+  &__heading {
+    padding-bottom: 6px;
+    @include body-24-regular();
+    font-weight: 300;
+    color: $gray-500;
+  }
+
+  &__subheading {
+    @include body-18-regular();
+    color: $gray-350;
+  }
+
+  &__category {
+    margin-top: 8px;
+    padding: 16px 0;
+    @include heading-24-medium();
+    font-size: 28px;
+    color: $gray-500;
+    border-top: 1px solid $gray-350;
+    border-bottom: 1px solid $gray-350;
+  }
+
+  &__category-quantity {
+    padding-left: 12px;
+    @include body-18-regular();
+    color: $gray-350;
+  }
+
+  &__button {
+    margin-top: 32px;
+    color: $brown-600 !important;
+  }
+
+  &__button-text {
+    color: inherit;
+  }
+
+  &__error {
+    margin-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .error {
+      color: $gray-400;
+
+      &__text-wrapper {
+        margin-bottom: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__text {
+        @include heading-24-medium();
+        color: $gray-400;
+      }
+
+      &__icon {
+        margin-right: 22px;
+        font-size: 32px;
+        color: $gray-400;
+      }
+
+      &__advices {
+        margin-bottom: 20px;
+        width: 706px;
+        color: $gray-400;
+        list-style: none;
+      }
+
+      &__advice {
+        padding-bottom: 8px;
+        @include body-18-light();
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__product-offer {
+    .product-offer {
+      &__headline {
+        margin-bottom: 24px;
+        @include heading-24-medium();
+        color: black;
+      }
+
+      &__content {
+        display: flex;
+      }
+    }
+  }
+}

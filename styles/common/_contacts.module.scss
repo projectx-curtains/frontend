@@ -1,0 +1,31 @@
+.contacts {
+  &__heading {
+    padding-bottom: 16px;
+    @include body-18-semi-bold();
+
+    &:not(:first-child) {
+      padding-top: 64px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    padding-bottom: 16px;
+  }
+
+  &__icon {
+    padding-right: 10px;
+    font-size: 24px;
+
+    &--place {
+      transform: scale(1.1);
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__instagram:hover {
+    text-decoration: underline;
+  }
+}

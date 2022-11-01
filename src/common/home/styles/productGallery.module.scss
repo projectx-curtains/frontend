@@ -1,0 +1,63 @@
+@import "../../../../styles/App";
+
+.gallery {
+  .gallery-container {
+    width: 90%;
+    margin: 0 auto;
+
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      @media (max-width: $screen-md) {
+        .button--transparent {
+          padding: 8px;
+          display: flex;
+
+          .button-arrow {
+            width: 8px;
+            height: 12px;
+          }
+        }
+      }
+    }
+
+    &__content {
+      display: flex;
+      margin: 36px 0 132px;
+      @media (max-width: $screen-md) {
+        overflow-x: auto;
+        margin: 16px 0 72px -16px;
+      }
+    }
+
+    &__button {
+      &--mobile {
+        display: none;
+        padding: 2px 8px;
+        font-size: 16px;
+
+        @media (max-width: $screen-xl) {
+          display: flex;
+        }
+      }
+
+      &--desktop {
+        display: flex;
+
+        @media (max-width: $screen-xl) {
+          display: none;
+        }
+      }
+
+      &__icon {
+        color: $gray-500;
+
+        @media (max-width: $screen-xl) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
