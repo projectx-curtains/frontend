@@ -1,22 +1,26 @@
 import React from "react";
 
 import { IColorFilterProps } from "../interfaces";
+import style from "../styles/index.module.scss";
 
 const ItemColorFilter: React.FC<IColorFilterProps> = ({ filters }) => {
   return (
     <>
       {filters.map((filter) => (
-        <div className="item-color-filter" key={filter.id}>
+        <div className={style["item-color-filter"]} key={filter.id}>
           <input
-            className="item-color-filter__checkbox"
+            className={style["item-color-filter__checkbox"]}
             type="checkbox"
             id={filter.id}
           ></input>
           <div
-            className="item-color-filter__color"
+            className={style["item-color-filter__color"]}
             style={{ background: filter.color }}
           ></div>
-          <label className="item-color-filter__name" htmlFor={filter.id}>
+          <label
+            className={style["item-color-filter__name"]}
+            htmlFor={filter.id}
+          >
             {filter.title}
           </label>
         </div>

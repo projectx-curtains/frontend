@@ -1,3 +1,4 @@
+@import "../../../../../../styles/App";
 
 .price-range-filter {
   @include display(flex, column, unset, flex-start);
@@ -17,30 +18,31 @@
     color: $gray-500;    
     margin: 11px auto 0;  
   }
-
+  
   //весь слайдер
-  .MuiSlider-root {
+  :global(.MuiSlider-root) {
     color: $gray-500;
     height: 1px;
     max-width: 272px;   
   } 
 
   //круги
-  .MuiSlider-thumb {    
+  :global(.MuiSlider-thumb) {    
     width: 24px;
     height: 24px;  
     background-color: $gray-500;    
   }
 
   //вся полоска
-  .MuiSlider-rail {  
-  background-color: $gray-250;    
-  width: 272px;  
-  opacity: 1; 
+  :global(.MuiSlider-rail) {  
+    background-color: $gray-250;    
+    width: 272px;  
+    opacity: 1; 
   }
 
   //черная полоса
-  .MuiSlider-track {
+  :global(.MuiSlider-track) {
     height: 0;   
-  }
+  }  
+  
 }

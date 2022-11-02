@@ -1,16 +1,17 @@
 import { IItemsFilterProps } from "../interfaces";
+import style from "../styles/index.module.scss";
 
 const ItemFilter: React.FC<IItemsFilterProps> = ({ filters }) => {
   return (
     <>
       {filters.map((filter) => (
-        <div className="item-filter" key={filter.id}>
+        <div className={style["item-filter"]} key={filter.id}>
           <input
-            className="item-filter__checkbox"
+            className={style["item-filter__checkbox"]}
             type="checkbox"
             id={filter.id}
           ></input>
-          <label className="item-filter__name" htmlFor={filter.id}>
+          <label className={style["item-filter__name"]} htmlFor={filter.id}>
             {filter.title}
           </label>
         </div>

@@ -1,5 +1,6 @@
 import { Slider } from "@mui/material";
 import { IPriceRangeFilterProps } from "../interfaces";
+import style from "../styles/index.module.scss";
 
 const PriceRangeFilter: React.FC<IPriceRangeFilterProps> = ({
   minPrice,
@@ -8,16 +9,18 @@ const PriceRangeFilter: React.FC<IPriceRangeFilterProps> = ({
   handleChange,
 }) => {
   return (
-    <div className="price-range-filter">
-      <span className="price-range-filter__title">Стоимость</span>
-      <div className="price-range-filter__wrapper">
+    <div className={style["price-range-filter"]}>
+      <span className={style["price-range-filter__title"]}>Стоимость</span>
+      <div className={style["price-range-filter__wrapper"]}>
         <Slider
           min={minPrice}
           max={maxPrice}
           value={priceValues}
           onChange={handleChange}
         />
-        <span className="price-range-filter__price-block">{`Цена: ${priceValues[0]} BYN - ${priceValues[1]} BYN`}</span>
+        <span
+          className={style["price-range-filter__price-block"]}
+        >{`Цена: ${priceValues[0]} BYN - ${priceValues[1]} BYN`}</span>
       </div>
     </div>
   );

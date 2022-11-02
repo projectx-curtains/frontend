@@ -6,6 +6,8 @@ import ItemColorFilter from "./ItemColorFilter";
 
 import { IColorDropdownFilterProps } from "../interfaces";
 
+import style from "../styles/index.module.scss";
+
 const DropdownColorFilter: React.FC<IColorDropdownFilterProps> = ({
   title,
   gradientColorTop,
@@ -16,31 +18,36 @@ const DropdownColorFilter: React.FC<IColorDropdownFilterProps> = ({
   dropdownFilterColor,
 }) => {
   return (
-    <div className="dropdown-color-filter">
-      <div className="dropdown-color-filter__title-list" onClick={handleOpen}>
-        <div className="dropdown-color-filter__gradient-colors">
+    <div className={style["dropdown-color-filter"]}>
+      <div
+        className={style["dropdown-color-filter__title-list"]}
+        onClick={handleOpen}
+      >
+        <div className={style["dropdown-color-filter__gradient-colors"]}>
           <span
-            className="color-top"
+            className={style["color-top"]}
             style={{ backgroundColor: gradientColorTop }}
           ></span>
           <span
-            className="color-mid"
+            className={style["color-mid"]}
             style={{ backgroundColor: gradientColorMid }}
           ></span>
           <span
-            className="color-bot"
+            className={style["color-bot"]}
             style={{ backgroundColor: gradientColorBot }}
           ></span>
         </div>
-        <span className="dropdown-color-filter__name-title">{title}</span>
+        <span className={style["dropdown-color-filter__name-title"]}>
+          {title}
+        </span>
         <MdArrowDropDown
-          className={classnames("dropdown-color-filter__icon", {
-            "rotate-icon": isOpen,
+          className={classnames(style["dropdown-color-filter__icon"], {
+            [style["rotate-icon"]]: isOpen,
           })}
         />
       </div>
       {isOpen && (
-        <div className="dropdown-color-filter__scrolling-block">
+        <div className={style["dropdown-color-filter__scrolling-block"]}>
           <ItemColorFilter filters={dropdownFilterColor} />
         </div>
       )}
