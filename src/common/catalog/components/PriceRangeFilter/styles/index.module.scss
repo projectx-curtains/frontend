@@ -1,0 +1,48 @@
+@import "../../../../../../styles/App";
+
+.price-range-filter {
+  @include display(flex, column, unset, flex-start);
+    
+  &__title {
+    @include body-20-medium;
+    color: $gray-500;
+    margin-bottom: 29px;
+  } 
+  &__wrapper {
+    max-width: 272px;
+    width: 100%;
+    @include display(flex, column, unset, center);    
+  } 
+  &__price-block {    
+    @include body-16-regular; 
+    color: $gray-500;    
+    margin: 11px auto 0;  
+  }
+  
+  //весь слайдер
+  :global(.MuiSlider-root) {
+    color: $gray-500;
+    height: 1px;
+    max-width: 272px;   
+  } 
+
+  //круги
+  :global(.MuiSlider-thumb) {    
+    width: 24px;
+    height: 24px;  
+    background-color: $gray-500;    
+  }
+
+  //вся полоска
+  :global(.MuiSlider-rail) {  
+    background-color: $gray-250;    
+    width: 272px;  
+    opacity: 1; 
+  }
+
+  //черная полоса
+  :global(.MuiSlider-track) {
+    height: 0;   
+  }  
+  
+}
