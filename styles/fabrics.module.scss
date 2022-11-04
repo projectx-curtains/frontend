@@ -1,0 +1,9 @@
+@import "./App";
+
+.wrapper {
+  @include display(flex, row, none, none);
+
+  &__filters {
+    @include display(flex, column, flex-start, none);
+  }
+}

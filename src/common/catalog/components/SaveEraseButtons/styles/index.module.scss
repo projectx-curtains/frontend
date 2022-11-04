@@ -4,6 +4,7 @@
   @include display(flex, column, center, center);
   width: 272px;
   max-width: 100%;
+  margin-top: 56px;
   
   &__save-button, &__erase-button {
     width: 272px;
