@@ -1,6 +1,6 @@
-import { IReviews } from "../interfaces/reviews.type";
+import { ReviewsItem } from "../interfaces";
 
-export const REVIEWS: Array<IReviews> = [
+export const REVIEWS: Array<ReviewsItem> = [
   {
     name: "Галина",
     location: "г.Могилёв, Беларусь",

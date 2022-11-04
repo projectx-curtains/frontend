@@ -2,7 +2,7 @@ import React from "react";
 import Button from "@mui/material/Button";
 import { ROUTES } from "@constants/routes";
 import SouthIcon from "@mui/icons-material/South";
-import style from "../styles/banner.module.scss";
+import style from "./styles/banner.module.scss";
 
 function Banner() {
   return (

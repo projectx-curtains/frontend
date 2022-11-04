@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import Image from "next/future/image";
-import Carousel from "./carousel";
+import Carousel from "../../../common/carousel/components/carousel";
 import { REVIEWS } from "../constants/reviews.data";
 import style from "../styles/reviews.module.scss";
 

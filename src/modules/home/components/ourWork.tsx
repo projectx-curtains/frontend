@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import Image from "next/future/image";
 import Button from "@mui/material/Button";
-import Carousel from "./carousel";
+import Carousel from "../../../common/carousel/components/carousel";
 import { ROUTES } from "@constants/routes";
 import { CarouselSlider_mockData } from "@assets/data/carouselSlider_mockData";
 import { app_mockData } from "@assets/data/app_mockData";

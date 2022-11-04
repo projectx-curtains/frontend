@@ -1,10 +1,10 @@
-import Banner from "@common/home/components/banner";
-import Categories from "@common/home/components/categories";
-import ProductGallery from "@common/home/components/productGallery";
-import WhyWeAre from "@common/home/components/whyWeAre";
+import Banner from "@common/banner";
+import Categories from "@modules/home/components/categories";
+import ProductGallery from "@modules/home/components/productGallery";
+import WhyWeAre from "@modules/home/components/whyWeAre";
 import ButtonScrollUp from "@common/buttonScrollUp/components";
-import OurWork from "@common/home/components/ourWork";
-import Reviews from "@common/home/components/reviews";
+import OurWork from "@modules/home/components/ourWork";
+import Reviews from "@modules/home/components/reviews";
 
 import { SCROLLED_VALUE } from "./constants";
 

@@ -1,6 +1,6 @@
-import { IWhyWeAre } from "../interfaces/whyWeAre.type";
+import { WhyWeAreItem } from "../interfaces";
 
-export const WHY_WE_ARE: Array<IWhyWeAre> = [
+export const WHY_WE_ARE: Array<WhyWeAreItem> = [
   {
     image: "BenefitIcons-0.png",
     text: "Уникальное воплощение Ваших идей",
