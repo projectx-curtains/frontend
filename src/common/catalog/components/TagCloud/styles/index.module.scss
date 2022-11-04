@@ -2,11 +2,15 @@
 
 .tag-cloud {
   @include display(flex, row, flex-start, center);
+  margin-right: 12px; 
+  &:last-child{
+    margin-right: 0;
+  } 
   &__item {
     @include display(flex, row, space-around, center);    
     border: 1px solid $gray-300;
-    border-radius: 2px;       
-  } 
+    border-radius: 2px;         
+  }  
   &__item-color-the-square {
     width: 24px;
     height: 24px;    

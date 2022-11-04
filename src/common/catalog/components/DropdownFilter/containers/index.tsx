@@ -6,6 +6,7 @@ const DropdownFilterContainer: React.FC<IDropdownFilterContainerProps> = ({
   id,
   title,
   itemsFilter,
+  children,
 }) => {
   const [isOpen, setOpen] = useState(false);
 
@@ -16,6 +17,7 @@ const DropdownFilterContainer: React.FC<IDropdownFilterContainerProps> = ({
     itemsFilter,
     isOpen,
     handleOpen,
+    children,
   };
   return <DropdownFilter {...props} />;
 };

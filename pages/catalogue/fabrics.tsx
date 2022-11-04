@@ -12,6 +12,10 @@ import {
 } from "@common/mocks/fabricsFiltersData";
 import ColorFilter from "@common/catalog/colorFilter";
 import SaveEraseButtons from "@common/catalog/components/SaveEraseButtons";
+import ItemFilter from "@common/catalog/components/DropdownFilter/components/ItemFilter";
+import TagCloud from "@common/catalog/components/TagCloud";
+import PriceFilter from "@common/catalog/components/PriceFilter";
+import { sampleDataTags } from "@common/catalog/components/TagCloud/mocks/sampleDataTags";
 
 const FabricsPage = () => {
   return (
@@ -34,7 +38,9 @@ const FabricsPage = () => {
                 key={filter.id}
                 title={filter.title}
                 itemsFilter={filter.itemsFilter}
-              />
+              >
+                {<ItemFilter filters={filter.itemsFilter} />}
+              </DropdownFilter>
             ))}
           </div>
           <ColorFilter />
@@ -44,12 +50,29 @@ const FabricsPage = () => {
                 key={filter.id}
                 title={filter.title}
                 itemsFilter={filter.itemsFilter}
-              />
+              >
+                {<ItemFilter filters={filter.itemsFilter} />}
+              </DropdownFilter>
             ))}
           </div>
           <SaveEraseButtons />
         </div>
-        <div className={style["wrapper__cards"]}></div>
+        <div className={style["wrapper__cards"]}>
+          <div className={style["wrapper__filter-values"]}>
+            <div className={style["wrapper__tag-cloud"]}>
+              {sampleDataTags.map((tag) => (
+                <TagCloud
+                  key={tag.id}
+                  name={tag.name}
+                  colorTheSquare={tag.colorTheSquare}
+                  color={tag.color}
+                />
+              ))}
+            </div>
+            <PriceFilter />
+          </div>
+          <div>cards</div>
+        </div>
       </div>
       <Footer />
     </>

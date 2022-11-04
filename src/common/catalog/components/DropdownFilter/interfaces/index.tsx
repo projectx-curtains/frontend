@@ -11,6 +11,7 @@ export interface IDropdownFilterContainerProps {
   id?: string;
   title: string;
   itemsFilter: Array<FilterData>;
+  children: React.ReactNode;
 }
 
 export interface IDropdownFilterProps extends IDropdownFilterContainerProps {

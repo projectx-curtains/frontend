@@ -1,7 +1,7 @@
 @import "../../../../../../styles/App";
 
-.dropdown-color-filter {  
-  width: 272px;  
+.dropdown-color-filter {   
+  width: 254px; 
   margin-top: 13px; 
   &__title-list {
     @include display(flex, row, space-between, center);

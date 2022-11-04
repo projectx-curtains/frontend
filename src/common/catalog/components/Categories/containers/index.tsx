@@ -13,7 +13,6 @@ const CategoriesContainer = () => {
     style: StyleLink(router.asPath, category.url),
     ...category,
   }));
-
   return <Categories categories={categories} />;
 };
 

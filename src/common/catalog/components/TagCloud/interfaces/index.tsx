@@ -1,5 +1,5 @@
 export interface ITagCloudContainerProps {
-  id: number;
+  id?: number;
   name: string;
   colorTheSquare?: boolean;
   color?: string;

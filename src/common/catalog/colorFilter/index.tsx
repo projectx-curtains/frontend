@@ -16,7 +16,9 @@ const ColorFilter = () => {
   ));
   return (
     <div className={style["colorFilter"]}>
-      <DropdownFilter title="Цвет ткани" itemsFilter={itemsColorFilter} />
+      <DropdownFilter title="Цвет ткани" itemsFilter={itemsColorFilter}>
+        {itemsColorFilter}
+      </DropdownFilter>
     </div>
   );
 };

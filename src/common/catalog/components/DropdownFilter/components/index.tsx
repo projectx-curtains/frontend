@@ -10,6 +10,7 @@ const DropdownFilter: React.FC<IDropdownFilterProps> = ({
   itemsFilter,
   isOpen,
   handleOpen,
+  children,
 }) => {
   return (
     <div className={style["dropdown-filter"]}>
@@ -26,7 +27,7 @@ const DropdownFilter: React.FC<IDropdownFilterProps> = ({
       </div>
       {isOpen && (
         <div className={style["dropdown-filter__scrolling-block"]}>
-          <ItemFilter filters={itemsFilter} />
+          {children}
         </div>
       )}
     </div>
