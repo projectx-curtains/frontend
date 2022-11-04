@@ -1,5 +1,5 @@
 import React from "react";
-import classNames from "classnames";
+import classnames from "classnames";
 import Image from "next/future/image";
 import Button from "@mui/material/Button";
 import Carousel from "../../../common/carousel/components/carousel";
@@ -11,8 +11,8 @@ import style from "../styles/ourWork.module.scss";
 const OurWork = () => {
   return (
     <section className={style["our-work"]} id="our-works">
-      <div className={classNames("container", style["our-work__container"])}>
-        <h2 className={classNames("heading", style["our-work__heading"])}>
+      <div className={classnames("container", style["our-work__container"])}>
+        <h2 className={classnames("heading", style["our-work__heading"])}>
           Наши работы
         </h2>
         <Carousel className={style["our-work__slider"]}>

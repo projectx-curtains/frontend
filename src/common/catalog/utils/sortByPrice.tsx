@@ -1,6 +1,6 @@
-import { ISortByPriceProps } from "./interfaces";
+import { SortByPrice } from "./interfaces";
 
-const sortByPrice: React.FC<ISortByPriceProps> = ({ data, rule }) => {
+const sortByPrice = ({ data, rule }: SortByPrice) => {
   if (rule === "ascending") {
     return [...data].sort((a, b) => a.price - b.price); //ascending
   } else {

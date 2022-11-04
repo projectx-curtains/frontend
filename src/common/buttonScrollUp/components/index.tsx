@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import classNames from "classnames";
+import classnames from "classnames";
 import debounce from "lodash.debounce";
 
 import { IButtonScrollUpProps } from "../interfaces";
@@ -29,7 +29,7 @@ const ButtonScrollUp: React.FC<IButtonScrollUpProps> = ({ scrolledValue }) => {
 
   return (
     <div
-      className={classNames(style["button-scroll-up"], {
+      className={classnames(style["button-scroll-up"], {
         [style["hidden"]]: !isVisible,
       })}
     >

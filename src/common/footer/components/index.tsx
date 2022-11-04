@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import classNames from "classnames";
+import classnames from "classnames";
 
 import Accordion from "./accordion";
 import { ROUTES } from "@constants/routes";
@@ -15,9 +15,9 @@ import style from "../styles/footer.module.scss";
 const Footer = () => {
   return (
     <footer id="footer" className={style.footer}>
-      <div className={classNames("container", style.footer__container)}>
+      <div className={classnames("container", style.footer__container)}>
         <div
-          className={classNames(
+          className={classnames(
             style.footer__logo,
             style.logo,
             style["logo--dark"]
@@ -84,7 +84,7 @@ const Footer = () => {
           <p className={style.contacts__heading}>Контакты</p>
           <div className={style.contacts__wrapper}>
             <LocationIcon
-              className={classNames(
+              className={classnames(
                 style.contacts__icon,
                 style["contacts__icon--place"]
               )}
@@ -93,7 +93,7 @@ const Footer = () => {
               href={CONTACTS.addressLink}
               target="_blank"
               rel="noopener noreferrer"
-              className={classNames(
+              className={classnames(
                 style.contacts__text,
                 style.contacts__place
               )}
@@ -106,7 +106,7 @@ const Footer = () => {
             <div key={phone} className={style.contacts__wrapper}>
               <PhoneIcon className={style.contacts__icon} />
               <p
-                className={classNames(
+                className={classnames(
                   style.contacts__text,
                   style.contacts__phone
                 )}
@@ -125,7 +125,7 @@ const Footer = () => {
           >
             <InstagramIcon className={style.contacts__icon} />
             <p
-              className={classNames(
+              className={classnames(
                 style.contacts__text,
                 style.contacts__instagram
               )}

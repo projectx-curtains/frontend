@@ -1,5 +1,5 @@
 import React from "react";
-import classNames from "classnames";
+import classnames from "classnames";
 import Link from "next/link";
 import NorthIcon from "@mui/icons-material/North";
 
@@ -9,11 +9,11 @@ import style from "../styles/categories.module.scss";
 
 function Categories() {
   return (
-    <section className={classNames("container", style["catalog-layout"])}>
+    <section className={classnames("container", style["catalog-layout"])}>
       {CATEGORIES.map(({ type, name, position, path }: Category) => (
         <Link href={path} key={name}>
           <a
-            className={classNames(
+            className={classnames(
               style["category-card"],
               style[`category-card--${type}`],
               style[`catalog-layout__${position}`]

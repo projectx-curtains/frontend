@@ -4,7 +4,7 @@ type CardsData = {
   title: string;
 };
 
-export interface ISortByPriceProps {
+export interface SortByPrice {
   data: Array<CardsData>;
   rule: string;
 }

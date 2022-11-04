@@ -1,5 +1,5 @@
 import React from "react";
-import classNames from "classnames";
+import classnames from "classnames";
 import Link from "next/link";
 import NorthIcon from "@mui/icons-material/North";
 
@@ -15,7 +15,7 @@ const CategoryCard: React.FC<ICategoryCardProps> = ({
   return (
     <Link href={path}>
       <a
-        className={classNames(
+        className={classnames(
           style["category-card"],
           style[`category-card--${type}`],
           style[className]

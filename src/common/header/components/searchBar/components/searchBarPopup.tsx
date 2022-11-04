@@ -1,5 +1,5 @@
 import React from "react";
-import classNames from "classnames";
+import classnames from "classnames";
 
 import Link from "next/link";
 import Image from "next/future/image";
@@ -53,7 +53,7 @@ const SearchBarPopup: React.FC<ISearchBarPopupProps> = ({
         </p>
         <Link href={ROUTES.catalogue}>
           <Button
-            className={classNames(
+            className={classnames(
               "button--secondary",
               style["search-popup__button"]
             )}

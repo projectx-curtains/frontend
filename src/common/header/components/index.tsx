@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import classNames from "classnames";
+import classnames from "classnames";
 
 import CataloguePopup from "./cataloguePopup";
 import { SearchBar } from "./searchBar";
@@ -26,9 +26,9 @@ const Header: React.FC<IHeaderProps> = ({
 }) => {
   return (
     <header
-      className={classNames(style.header, style[`header--${headerTheme}`])}
+      className={classnames(style.header, style[`header--${headerTheme}`])}
     >
-      <div className={classNames("container", style.header__content)}>
+      <div className={classnames("container", style.header__content)}>
         <div className={style.header__toggle}>
           {!isMenuOpen ? (
             <NotesOutlinedIcon onClick={menuToggleHandler} />
@@ -38,21 +38,21 @@ const Header: React.FC<IHeaderProps> = ({
         </div>
         <Link href={ROUTES.home}>
           <a
-            className={classNames(style.header__logo, style.logo, {
+            className={classnames(style.header__logo, style.logo, {
               [style["logo--dark"]]: isMenuOpen,
             })}
           ></a>
         </Link>
         {isMenuOpen ? (
-          <nav className={classNames(style.nav, style["nav--open"])}>
-            <ul className={classNames("container", style.nav__list)}>
+          <nav className={classnames(style.nav, style["nav--open"])}>
+            <ul className={classnames("container", style.nav__list)}>
               <li className={style.nav__item}>
                 <SearchBar theme={headerTheme} menuOpen={isMenuOpen} />
               </li>
               <li className={style.nav__item}>
                 <Link href={ROUTES.catalogue}>
                   <a
-                    className={classNames(
+                    className={classnames(
                       style.nav__link,
                       style["nav__link--heading"]
                     )}
@@ -62,7 +62,7 @@ const Header: React.FC<IHeaderProps> = ({
                   </a>
                 </Link>
                 <ul
-                  className={classNames(
+                  className={classnames(
                     "container",
                     style.nav__list,
                     style.nav__sublist
@@ -80,7 +80,7 @@ const Header: React.FC<IHeaderProps> = ({
               <li className={style.nav__item}>
                 <Link href={ROUTES.curtainBuilder}>
                   <a
-                    className={classNames(
+                    className={classnames(
                       style.nav__link,
                       style["nav__link--heading"]
                     )}
@@ -93,7 +93,7 @@ const Header: React.FC<IHeaderProps> = ({
               <li className={style.nav__item}>
                 <Link href={ROUTES.consultation}>
                   <a
-                    className={classNames(
+                    className={classnames(
                       style.nav__link,
                       style["nav__link--heading"]
                     )}
@@ -103,7 +103,7 @@ const Header: React.FC<IHeaderProps> = ({
                   </a>
                 </Link>
               </li>
-              <li className={classNames(style.nav__item, style.contacts)}>
+              <li className={classnames(style.nav__item, style.contacts)}>
                 {CONTACTS.phones.map((phone) => (
                   <div key={phone} className={style.contacts__wrapper}>
                     <PhoneIcon className={style.contacts__icon} />
@@ -114,7 +114,7 @@ const Header: React.FC<IHeaderProps> = ({
                   href={CONTACTS.insta}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={classNames(
+                  className={classnames(
                     style.contacts__wrapper,
                     style["contacts__wrapper--insta"]
                   )}

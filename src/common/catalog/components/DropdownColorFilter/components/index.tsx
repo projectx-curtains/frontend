@@ -1,7 +1,7 @@
 import React from "react";
 import classnames from "classnames";
 
-import { MdArrowDropDown } from "react-icons/md";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ItemColorFilter from "./ItemColorFilter";
 
 import { IColorDropdownFilterProps } from "../interfaces";
@@ -40,7 +40,7 @@ const DropdownColorFilter: React.FC<IColorDropdownFilterProps> = ({
         <span className={style["dropdown-color-filter__name-title"]}>
           {title}
         </span>
-        <MdArrowDropDown
+        <ArrowDropDownIcon
           className={classnames(style["dropdown-color-filter__icon"], {
             [style["rotate-icon"]]: isOpen,
           })}
