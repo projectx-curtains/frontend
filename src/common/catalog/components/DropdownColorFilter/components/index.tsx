@@ -6,6 +6,8 @@ import ItemColorFilter from "./ItemColorFilter";
 
 import { IColorDropdownFilterProps } from "../interfaces";
 
+import { createSteppedGradient } from "../utils/gradient";
+
 import style from "../styles/index.module.scss";
 
 const DropdownColorFilter: React.FC<IColorDropdownFilterProps> = ({
@@ -23,20 +25,14 @@ const DropdownColorFilter: React.FC<IColorDropdownFilterProps> = ({
         className={style["dropdown-color-filter__title-list"]}
         onClick={handleOpen}
       >
-        <div className={style["dropdown-color-filter__gradient-colors"]}>
-          <span
-            className={style["color-top"]}
-            style={{ backgroundColor: gradientColorTop }}
-          ></span>
-          <span
-            className={style["color-mid"]}
-            style={{ backgroundColor: gradientColorMid }}
-          ></span>
-          <span
-            className={style["color-bot"]}
-            style={{ backgroundColor: gradientColorBot }}
-          ></span>
-        </div>
+        <div
+          className={style["dropdown-color-filter__gradient-colors"]}
+          style={createSteppedGradient([
+            gradientColorTop,
+            gradientColorMid,
+            gradientColorBot,
+          ])}
+        />
         <span className={style["dropdown-color-filter__name-title"]}>
           {title}
         </span>
