@@ -15,6 +15,7 @@ import SaveEraseButtons from "@common/catalog/components/SaveEraseButtons";
 import ItemFilter from "@common/catalog/components/DropdownFilter/components/ItemFilter";
 import TagCloud from "@common/catalog/components/TagCloud";
 import PriceFilter from "@common/catalog/components/PriceFilter";
+import TopFilter from "@common/catalog/components/TopFilter";
 import { sampleDataTags } from "@common/catalog/components/TagCloud/mocks/sampleDataTags";
 import { Formik, Form } from "formik";
 
@@ -48,6 +49,7 @@ const FabricsPage = () => {
           >
             {(props) => (
               <Form>
+                <TopFilter />
                 <div className={style["filters"]}>
                   {fabricsDropdownFiltersData.map((filter) => (
                     <DropdownFilter
