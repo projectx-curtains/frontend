@@ -46,7 +46,7 @@ const FabricsPage = () => {
               alert(JSON.stringify(values, null, 2));
             }}
           >
-            {() => (
+            {(props) => (
               <Form>
                 <div className={style["filters"]}>
                   {fabricsDropdownFiltersData.map((filter) => (
@@ -71,11 +71,10 @@ const FabricsPage = () => {
                     </DropdownFilter>
                   ))}
                 </div>
-                <button type="submit">Submit</button>
-                {/* <SaveEraseButtons
-                  clickSaveButton={()=>}
-                  clickEraseButton={handleReset}
-                /> */}
+                <SaveEraseButtons
+                  clickSaveButton={props.handleSubmit}
+                  clickEraseButton={props.handleReset}
+                />
               </Form>
             )}
           </Formik>
