@@ -1,8 +1,8 @@
 import SaveEraseButtons from "../components";
 
-const SaveEraseButtonsContainers = () => {
-  const clickSaveButton = () => {};
-  const clickEraseButton = () => {};
+const SaveEraseButtonsContainers = ({ clickSaveButton, clickEraseButton }) => {
+  // const clickSaveButton = () => {};
+  // const clickEraseButton = () => {};
 
   const props = {
     clickSaveButton,

@@ -1,3 +1,4 @@
+import { Field } from "formik";
 import { IItemsFilterProps } from "../interfaces";
 import style from "../styles/index.module.scss";
 
@@ -6,11 +7,13 @@ const ItemFilter: React.FC<IItemsFilterProps> = ({ filters }) => {
     <>
       {filters.map((filter) => (
         <div className={style["item-filter"]} key={filter.id}>
-          <input
+          <Field
             className={style["item-filter__checkbox"]}
             type="checkbox"
+            name="selectedFilters"
+            value={filter.title}
             id={filter.id}
-          ></input>
+          ></Field>
           <label className={style["item-filter__name"]} htmlFor={filter.id}>
             {filter.title}
           </label>

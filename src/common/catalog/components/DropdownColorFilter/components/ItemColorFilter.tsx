@@ -1,4 +1,5 @@
 import React from "react";
+import { Field } from "formik";
 
 import { IColorFilterProps } from "../interfaces";
 import style from "../styles/index.module.scss";
@@ -8,11 +9,13 @@ const ItemColorFilter: React.FC<IColorFilterProps> = ({ filters }) => {
     <>
       {filters.map((filter) => (
         <div className={style["item-color-filter"]} key={filter.id}>
-          <input
+          <Field
             className={style["item-color-filter__checkbox"]}
             type="checkbox"
+            name="selectedFilters"
+            value={filter.title}
             id={filter.id}
-          ></input>
+          ></Field>
           <div
             className={style["item-color-filter__color"]}
             style={{ background: filter.color }}
