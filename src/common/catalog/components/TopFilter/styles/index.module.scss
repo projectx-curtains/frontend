@@ -23,9 +23,9 @@
       position: absolute;
       left: 0px;
       top: -5px;
-      width: 16px;
-      height: 16px;
-      border: 2px solid $gray-500;
+      width: 18px;
+      height: 18px;
+      border: 3px solid $gray-500;
       border-radius: 3px;
       background-color: $white;
     }
@@ -37,12 +37,12 @@
     }
     &__checkbox:checked::after,
     &__checkbox:not(:checked)::after {
-      left: 4px;
-      top: 0.3px;
+      left: 5.2px;
+      top: 2px;
       width: 10px;
       height: 5px;
-      border-left: 2px solid $gray-500;
-      border-bottom: 2px solid $gray-500;
+      border-left: 3px solid $gray-500;
+      border-bottom: 3px solid $gray-500;
       transform: rotate(-45deg);
     }
     &__checkbox:not(:checked)::after {

@@ -41,7 +41,7 @@ const FabricsPage = () => {
             //   await sleep(500);
             //   alert(JSON.stringify(values, null, 2));
             // }}
-            onSubmit={(values: any) => {
+            onSubmit={(values) => {
               setSelectedFilters(values);
               console.log(selectedFilters);
             }}
