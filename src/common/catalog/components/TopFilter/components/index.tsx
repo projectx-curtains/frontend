@@ -14,7 +14,7 @@ const TopFilter = () => {
           className={style["item-filter__checkbox"]}
           id="1"
           type="checkbox"
-          name="selectedFilters"
+          name="topFilters"
           value="Новинки"
         ></Field>
         <label className={style["item-filter__name"]} htmlFor="1">
@@ -27,7 +27,7 @@ const TopFilter = () => {
           className={style["item-filter__checkbox"]}
           id="2"
           type="checkbox"
-          name="selectedFilters"
+          name="topFilters"
           value="Распродажа"
         ></Field>
         <label className={style["item-filter__name"]} htmlFor="2">
@@ -40,7 +40,7 @@ const TopFilter = () => {
           className={style["item-filter__checkbox"]}
           id="3"
           type="checkbox"
-          name="selectedFilters"
+          name="topFilters"
           value="Популярное"
         ></Field>
         <label className={style["item-filter__name"]} htmlFor="3">

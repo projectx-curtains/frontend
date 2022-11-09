@@ -12,7 +12,7 @@ const ItemColorFilter: React.FC<IColorFilterProps> = ({ filters }) => {
           <Field
             className={style["item-color-filter__checkbox"]}
             type="checkbox"
-            name="selectedFilters"
+            name="dropdownFilters"
             value={filter.title}
             id={filter.id}
           ></Field>

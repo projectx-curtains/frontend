@@ -10,7 +10,7 @@ const ItemFilter: React.FC<IItemsFilterProps> = ({ filters }) => {
           <Field
             className={style["item-filter__checkbox"]}
             type="checkbox"
-            name="selectedFilters"
+            name="dropdownFilters"
             value={filter.title}
             id={filter.id}
           ></Field>

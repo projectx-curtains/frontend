@@ -3,6 +3,7 @@
 .top-filter {
   max-width: 263px;
   width: 100%;
+  margin-bottom: 42px;
   .item-filter {
     @include display(flex, row, flex-start, center);
     margin-top: 22px;
