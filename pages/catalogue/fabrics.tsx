@@ -101,7 +101,9 @@ const FabricsPage = () => {
                   />
                 ))}
               </div>
-              <PriceFilter />
+              <div className={style["price-filter"]}>
+                <PriceFilter />
+              </div>
             </div>
 
             <div className={style["cards"]}>

@@ -15,9 +15,13 @@
         @include display(flex, row, space-between, center);
         flex-wrap: wrap;
       }
+      
     }
     &__filter-values {    
-      @include display(flex, row, flex-start, center);    
+      @include display(flex, row, flex-start, center); 
+      .price-filter {
+        margin-left: auto;
+      }
     }
     &__tag-cloud {
       @include display(flex, row, flex-start, center);
