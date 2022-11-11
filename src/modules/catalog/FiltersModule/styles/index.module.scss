@@ -1,0 +1,38 @@
+@import "../../../../../styles/App";
+
+
+.filters-module {
+  @include display(flex, column, flex-start, none);
+}
+
+// ----------------
+// .fabrics {
+//   margin-left: 80px;
+//   .wrapper {
+//     @include display(flex, row, none, none);    
+  
+//     &__filters {
+//       @include display(flex, column, flex-start, none);
+//     }
+//     &__cards {
+//       @include display(flex, column, flex-start, none);
+//       .cards {
+//         margin-top: 40px;
+//         @include display(flex, row, space-between, center);
+//         flex-wrap: wrap;
+//       }
+      
+//     }
+//     &__filter-values {    
+//       @include display(flex, row, flex-start, center); 
+//       .price-filter {
+//         margin-left: auto;
+//       }
+//     }
+//     &__tag-cloud {
+//       @include display(flex, row, flex-start, center);
+//       flex-wrap: wrap;
+//     }  
+//   }
+// }
+

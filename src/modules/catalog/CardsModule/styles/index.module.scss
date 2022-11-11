@@ -1,0 +1,20 @@
+@import "../../../../../styles/App";
+
+.cards-module {
+  @include display(flex, column, flex-start, none);
+  &__filter-values {
+    @include display(flex, row, flex-start, center);
+    .tag-cloud {
+      @include display(flex, row, flex-start, center);
+      flex-wrap: wrap;
+    }
+    .price-filter {
+      margin-left: auto;
+    }
+  }
+  &__cards {
+    margin-top: 40px;
+    @include display(flex, row, space-between, center);
+    flex-wrap: wrap;
+  }
+}

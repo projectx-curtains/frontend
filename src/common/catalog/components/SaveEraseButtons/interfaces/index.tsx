@@ -1,4 +1,4 @@
 export interface ISaveEraseButtonsProps {
   clickSaveButton: () => void;
-  clickEraseButton: () => void;
+  clickEraseButton: (e: any) => void;
 }

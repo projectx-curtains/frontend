@@ -1,21 +1,22 @@
 import React from "react";
-import { Field } from "formik";
+import { useField } from "formik";
 
 import { IColorFilterProps } from "../interfaces";
 import style from "../styles/index.module.scss";
 
 const ItemColorFilter: React.FC<IColorFilterProps> = ({ filters }) => {
+  const [field] = useField("dropdownFilters");
   return (
     <>
       {filters.map((filter) => (
         <div className={style["item-color-filter"]} key={filter.id}>
-          <Field
+          <input
             className={style["item-color-filter__checkbox"]}
             type="checkbox"
-            name="dropdownFilters"
+            {...field}
             value={filter.title}
             id={filter.id}
-          ></Field>
+          ></input>
           <div
             className={style["item-color-filter__color"]}
             style={{ background: filter.color }}

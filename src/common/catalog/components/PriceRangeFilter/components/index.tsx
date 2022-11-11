@@ -1,4 +1,5 @@
 import { Slider } from "@mui/material";
+import { useField } from "formik";
 import { IPriceRangeFilterProps } from "../interfaces";
 import style from "../styles/index.module.scss";
 
@@ -8,11 +9,13 @@ const PriceRangeFilter: React.FC<IPriceRangeFilterProps> = ({
   priceValues,
   handleChange,
 }) => {
+  const [field] = useField("priceRangeFilter");
   return (
     <div className={style["price-range-filter"]}>
       <span className={style["price-range-filter__title"]}>Стоимость</span>
       <div className={style["price-range-filter__wrapper"]}>
         <Slider
+          {...field}
           min={minPrice}
           max={maxPrice}
           value={priceValues}
