@@ -23,8 +23,8 @@ const FiltersModule = () => {
     onSubmit: (values) => {
       console.log(values);
     },
-    // onReset: (e) => resetForm(),
   });
+  const handleReset = () => formik.resetForm();
   return (
     <FormikProvider value={formik}>
       <div className={style["filters-module"]}>
@@ -61,7 +61,7 @@ const FiltersModule = () => {
         </div>
         <SaveEraseButtons
           clickSaveButton={formik.handleSubmit}
-          clickEraseButton={(e) => formik.resetForm()}
+          clickEraseButton={handleReset}
         />
       </div>
     </FormikProvider>
