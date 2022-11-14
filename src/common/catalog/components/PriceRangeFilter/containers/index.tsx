@@ -1,5 +1,8 @@
 import { useState } from "react";
+import { useField } from "formik";
+
 import PriceRangeFilter from "../components";
+
 import { IPriceRangeFilterContainerProps } from "../interfaces";
 
 const PriceRangeFilterContainer: React.FC<IPriceRangeFilterContainerProps> = ({
@@ -9,6 +12,7 @@ const PriceRangeFilterContainer: React.FC<IPriceRangeFilterContainerProps> = ({
   minPriceOnTheScreen,
   maxPriceOnTheScreen,
 }) => {
+  const [field, meta, helpers] = useField("priceRangeFilter");
   const [priceValues, setPriceValues] = useState([
     minPriceOnTheScreen,
     maxPriceOnTheScreen,
@@ -36,10 +40,12 @@ const PriceRangeFilterContainer: React.FC<IPriceRangeFilterContainerProps> = ({
           ]);
           break;
       }
+      helpers.setValue(priceValues);
     }
   };
 
   const props = {
+    field,
     minPrice,
     maxPrice,
     priceValues,

@@ -1,4 +1,7 @@
+import { FieldInputProps } from "formik";
+
 export interface IPriceRangeFilterProps {
+  field: FieldInputProps<any>;
   minPrice: number;
   maxPrice: number;
   priceValues: Array<number>;
