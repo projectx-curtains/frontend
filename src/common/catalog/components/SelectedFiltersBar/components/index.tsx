@@ -6,9 +6,9 @@ import { TopFiltersData } from "../mocks/sampleTopFiltersData";
 import style from "../styles/index.module.scss";
 
 const SelectedFiltersBar = () => {
-  const [field] = useField("topFilters");
+  const [field] = useField("selectedFiltersBar");
   return (
-    <div className={style["top-filter"]}>
+    <div className={style["selected-filters-bar"]}>
       {TopFiltersData.map(({ title, icon }, index) => {
         const filterKey = `${index + title}`;
         return (

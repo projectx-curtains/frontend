@@ -5,7 +5,7 @@ import DropdownFilter from "@common/catalog/components/DropdownFilter";
 import ItemFilter from "@common/catalog/components/DropdownFilter/components/ItemFilter";
 import PriceRangeFilter from "@common/catalog/components/PriceRangeFilter";
 import SaveEraseButtons from "@common/catalog/components/SaveEraseButtons";
-import TopFilter from "@common/catalog/components/TopFilter";
+import SelectedFiltersBar from "@common/catalog/components/SelectedFiltersBar";
 import {
   fabricsDesignFilter,
   fabricsDropdownFiltersData,
@@ -16,19 +16,20 @@ import style from "./styles/index.module.scss";
 const FiltersModule = () => {
   const formik = useFormik({
     initialValues: {
-      topFilters: [],
+      selectedFiltersBar: [],
       priceRangeFilter: [],
       dropdownFilters: [],
     },
     onSubmit: (values) => {
       console.log(values);
     },
+    onReset: (values, formikBag) => null,
   });
   const handleReset = () => formik.resetForm();
   return (
     <FormikProvider value={formik}>
       <div className={style["filters-module"]}>
-        <TopFilter />
+        <SelectedFiltersBar />
         <PriceRangeFilter
           minPrice={0}
           maxPrice={500}

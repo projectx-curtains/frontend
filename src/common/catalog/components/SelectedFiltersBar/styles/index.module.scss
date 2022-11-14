@@ -1,13 +1,13 @@
 @import "../../../../../../styles/App";
 
-.top-filter {
+.selected-filters-bar {
   max-width: 263px;
   width: 100%;
   margin-bottom: 42px;
   .item-filter {
     @include display(flex, row, flex-start, center);
     margin-top: 22px;
-  
+
     &__checkbox:checked,
     &__checkbox:not(:checked),
     &__name:checked,
@@ -64,6 +64,3 @@
     margin-bottom: 5px;
   }
 }
-
-
-
