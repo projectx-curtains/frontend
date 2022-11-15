@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import { HeadTags } from "@common/headTags";
 import MainLayout from "@layouts/mainLayout";
 import HomeModule from "@modules/home";
-import { HOME_METADATA } from "@modules/home/mocks/metaData";
+import { HOME_METADATA } from "@modules/home/mocks/meta.data";
 
 const HomePage: NextPage = () => {
   return (

@@ -23,10 +23,7 @@ const FiltersModule = () => {
     onSubmit: (values) => {
       console.log(values);
     },
-    // onReset: (values, formikBag) => null,
   });
-  // const handleReset = () => formik.resetForm({});
-  const handleReset = () => formik.resetForm();
 
   return (
     <FormikProvider value={formik}>
@@ -63,11 +60,7 @@ const FiltersModule = () => {
               </DropdownFilter>
             ))}
           </div>
-          <SaveEraseButtons
-            clickSaveButton={formik.handleSubmit}
-            clickEraseButton={handleReset}
-          />
-          <button type="reset">Reset</button>
+          <SaveEraseButtons />
         </div>
       </form>
     </FormikProvider>

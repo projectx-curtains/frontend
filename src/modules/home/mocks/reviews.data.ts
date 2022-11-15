@@ -1,4 +1,4 @@
-import { IReviews } from "../interfaces/reviews.type";
+import { IReviews } from "../interfaces";
 
 export const REVIEWS: Array<IReviews> = [
   {

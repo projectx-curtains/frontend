@@ -1,4 +1,8 @@
-export interface ISaveEraseButtonsProps {
-  clickSaveButton: () => void;
-  clickEraseButton: (e: any) => void;
+type buttonVariant = "text" | "outlined" | "contained";
+type buttonType = "submit" | "reset";
+
+export interface IFilterButtonProps {
+  variant: buttonVariant;
+  type: buttonType;
+  children: React.ReactNode;
 }

@@ -3,7 +3,7 @@ import classNames from "classnames";
 import Slider from "react-slick";
 
 import { ICarouselProps } from "../interfaces";
-import { carouselSettings } from "../constants/carouselSettings";
+import { carouselSettings } from "../constants";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 

@@ -1,4 +1,4 @@
-import { IWhyWeAre } from "../interfaces/whyWeAre.type";
+import { IWhyWeAre } from "../interfaces";
 
 export const WHY_WE_ARE: Array<IWhyWeAre> = [
   {

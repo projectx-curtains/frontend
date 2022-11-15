@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import Link from "next/link";
-import ProductCard from "../../productCard/components";
+import ProductCard from "../../../common/productCard/components";
 import Button from "@mui/material/Button";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 

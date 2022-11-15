@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import Link from "next/link";
+
 import NorthIcon from "@mui/icons-material/North";
 
 import { CATEGORIES } from "@constants/categories";

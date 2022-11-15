@@ -16,3 +16,15 @@ export interface ICarouselProps {
   children: React.ReactNode;
   className: string;
 }
+
+export interface IReviews {
+  name: string;
+  location: string;
+  comment: string;
+  image: string;
+}
+
+export interface IWhyWeAre {
+  image: string;
+  text: string;
+}

@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import Image from "next/future/image";
 import Carousel from "./carousel";
-import { REVIEWS } from "../constants/reviews.data";
+import { REVIEWS } from "../mocks/reviews.data";
 import style from "../styles/reviews.module.scss";
 
 const Reviews = () => {
