@@ -1,6 +1,6 @@
 const StyleLink = (currentUrl: string, url: string) => ({
-  color: currentUrl === url ? "$white" : "",
-  background: currentUrl === url ? "$brown-600" : "$gray-100",
+  color: currentUrl === url ? "#ffffff" : "",
+  background: currentUrl === url ? "#726158" : "#ebe8e6",
 });
 
 export default StyleLink;

@@ -1,6 +1,6 @@
 import { FormikProvider, useFormik } from "formik";
 
-import ColorFilter from "@common/catalog/colorFilter";
+import ColorFilter from "@common/catalog/components/ColorFilter";
 import DropdownFilter from "@common/catalog/components/DropdownFilter";
 import ItemFilter from "@common/catalog/components/DropdownFilter/components/ItemFilter";
 import PriceRangeFilter from "@common/catalog/components/PriceRangeFilter";

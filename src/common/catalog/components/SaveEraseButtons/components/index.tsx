@@ -1,4 +1,4 @@
-import FilterButton from "./Button";
+import FilterButton from "./button";
 
 import style from "../styles/index.module.scss";
 

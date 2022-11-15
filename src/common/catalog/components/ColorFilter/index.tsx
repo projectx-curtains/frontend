@@ -1,6 +1,6 @@
-import { sampleColorFiltersData } from "../components/DropdownColorFilter/mocks/sampleColorFiltersData";
-import DropdownColorFilter from "../components/DropdownColorFilter";
-import DropdownFilter from "../components/DropdownFilter";
+import { sampleColorFiltersData } from "../DropdownColorFilter/mocks/sampleColorFiltersData";
+import DropdownColorFilter from "../DropdownColorFilter";
+import DropdownFilter from "../DropdownFilter";
 import style from "./styles/index.module.scss";
 
 const ColorFilter = () => {
