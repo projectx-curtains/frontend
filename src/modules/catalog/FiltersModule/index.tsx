@@ -23,48 +23,53 @@ const FiltersModule = () => {
     onSubmit: (values) => {
       console.log(values);
     },
-    onReset: (values, formikBag) => null,
+    // onReset: (values, formikBag) => null,
   });
+  // const handleReset = () => formik.resetForm({});
   const handleReset = () => formik.resetForm();
+
   return (
     <FormikProvider value={formik}>
-      <div className={style["filters-module"]}>
-        <SelectedFiltersBar />
-        <PriceRangeFilter
-          minPrice={0}
-          maxPrice={500}
-          minPriceDifference={5}
-          minPriceOnTheScreen={5}
-          maxPriceOnTheScreen={250}
-        />
-        <div className={style["filters-module__filters"]}>
-          {fabricsDropdownFiltersData.map((filter) => (
-            <DropdownFilter
-              key={filter.id}
-              title={filter.title}
-              itemsFilter={filter.itemsFilter}
-            >
-              {<ItemFilter filters={filter.itemsFilter} />}
-            </DropdownFilter>
-          ))}
+      <form>
+        <div className={style["filters-module"]}>
+          <SelectedFiltersBar />
+          <PriceRangeFilter
+            minPrice={0}
+            maxPrice={500}
+            minPriceDifference={5}
+            minPriceOnTheScreen={5}
+            maxPriceOnTheScreen={250}
+          />
+          <div className={style["filters-module__filters"]}>
+            {fabricsDropdownFiltersData.map((filter) => (
+              <DropdownFilter
+                key={filter.id}
+                title={filter.title}
+                itemsFilter={filter.itemsFilter}
+              >
+                {<ItemFilter filters={filter.itemsFilter} />}
+              </DropdownFilter>
+            ))}
+          </div>
+          <ColorFilter />
+          <div className={style["filters-module__filter-design"]}>
+            {fabricsDesignFilter.map((filter) => (
+              <DropdownFilter
+                key={filter.id}
+                title={filter.title}
+                itemsFilter={filter.itemsFilter}
+              >
+                {<ItemFilter filters={filter.itemsFilter} />}
+              </DropdownFilter>
+            ))}
+          </div>
+          <SaveEraseButtons
+            clickSaveButton={formik.handleSubmit}
+            clickEraseButton={handleReset}
+          />
+          <button type="reset">Reset</button>
         </div>
-        <ColorFilter />
-        <div className={style["filters-module__filter-design"]}>
-          {fabricsDesignFilter.map((filter) => (
-            <DropdownFilter
-              key={filter.id}
-              title={filter.title}
-              itemsFilter={filter.itemsFilter}
-            >
-              {<ItemFilter filters={filter.itemsFilter} />}
-            </DropdownFilter>
-          ))}
-        </div>
-        <SaveEraseButtons
-          clickSaveButton={formik.handleSubmit}
-          clickEraseButton={handleReset}
-        />
-      </div>
+      </form>
     </FormikProvider>
   );
 };
