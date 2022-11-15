@@ -4,7 +4,7 @@ import { ROUTES } from "@constants/routes";
 import SouthIcon from "@mui/icons-material/South";
 import style from "../styles/banner.module.scss";
 
-function Banner() {
+const Banner = () => {
   return (
     <section className={style.banner}>
       <div className={style.banner__wrapper}>
@@ -21,6 +21,6 @@ function Banner() {
       </div>
     </section>
   );
-}
+};
 
 export default Banner;

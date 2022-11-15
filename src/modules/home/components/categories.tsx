@@ -8,7 +8,7 @@ import { CATEGORIES } from "@constants/categories";
 import { Category } from "src/types/category.type";
 import style from "../styles/categories.module.scss";
 
-function Categories() {
+const Categories = () => {
   return (
     <section className={classNames("container", style["catalog-layout"])}>
       {CATEGORIES.map(({ type, name, position, path }: Category) => (
@@ -29,6 +29,6 @@ function Categories() {
       ))}
     </section>
   );
-}
+};
 
 export default Categories;
