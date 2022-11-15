@@ -3,7 +3,7 @@ import TagCloud from "@common/catalog/components/TagCloud";
 import { sampleDataTags } from "@common/catalog/components/TagCloud/mocks/sampleDataTags";
 import ProductCard from "@common/productCard/components";
 
-import style from "./styles/index.module.scss";
+import style from "../styles/fabricsCardsModule.module.scss";
 
 const CardsModule = () => {
   return (

@@ -1,4 +1,4 @@
-@import "../../../../../styles/App";
+@import "../../../../styles/App";
 
 .cards-module {
   @include display(flex, column, flex-start, none);
