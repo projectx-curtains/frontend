@@ -11,10 +11,11 @@ const TagCloudContainer: React.FC<ITagCloudContainerProps> = ({
   color,
   removeTag,
 }) => {
+  // This actually create array for each component
   const [tags, setTags] = useState([
     ...[{ id, name, colorTheSquare, color, removeTag }],
   ]);
-
+  // so this handler make no sense coz state stores only 1 element
   const handleClose = (id: number) => {
     setTags(
       tags.map((tag) => (tag.id === id ? { ...tag, removeTag: true } : tag))
