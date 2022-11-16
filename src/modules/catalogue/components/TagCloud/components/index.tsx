@@ -14,7 +14,7 @@ const TagCloud: React.FC<ITagCloudProps> = ({ tags, handleClose }) => {
             [style["remove-tag"]]: tag.removeTag,
           })}
         >
-          {tag.colorTheSquare && (
+          {tag.color && (
             <span
               className={style["tag-cloud__item-color-the-square"]}
               style={{ background: tag.color }}
@@ -22,11 +22,7 @@ const TagCloud: React.FC<ITagCloudProps> = ({ tags, handleClose }) => {
           )}
           <p
             className={style["tag-cloud__item-name"]}
-            style={
-              tag.colorTheSquare
-                ? { paddingLeft: "6px" }
-                : { paddingLeft: "12px" }
-            }
+            style={tag.color ? { paddingLeft: "6px" } : { paddingLeft: "12px" }}
           >
             {tag.name}
           </p>
