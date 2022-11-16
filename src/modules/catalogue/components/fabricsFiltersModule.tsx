@@ -1,15 +1,15 @@
 import { FormikProvider, useFormik } from "formik";
 
-import ColorFilter from "@common/catalog/components/ColorFilter";
-import DropdownFilter from "@common/catalog/components/DropdownFilter";
-import ItemFilter from "@common/catalog/components/DropdownFilter/components/ItemFilter";
-import PriceRangeFilter from "@common/catalog/components/PriceRangeFilter";
-import SaveEraseButtons from "@common/catalog/components/SaveEraseButtons";
-import SelectedFiltersBar from "@common/catalog/components/SelectedFiltersBar";
+import ColorFilter from "@modules/catalogue/components/ColorFilter";
+import DropdownFilter from "@modules/catalogue/components/DropdownFilter";
+import ItemFilter from "@modules/catalogue/components/DropdownFilter/components/ItemFilter";
+import PriceRangeFilter from "@modules/catalogue/components/PriceRangeFilter";
+import SaveEraseButtons from "@modules/catalogue/components/SaveEraseButtons";
+import SelectedFiltersBar from "@modules/catalogue/components/SelectedFiltersBar";
 import {
   fabricsDesignFilter,
   fabricsDropdownFiltersData,
-} from "@modules/catalog/mocks/fabricsFiltersData";
+} from "@modules/catalogue/mocks/fabricsFiltersData";
 
 import style from "../styles/fabricsFiltersModule.module.scss";
 
