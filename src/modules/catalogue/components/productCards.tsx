@@ -3,9 +3,9 @@ import TagCloud from "@modules/catalogue/components/TagCloud";
 import { sampleDataTags } from "@modules/catalogue/components/TagCloud/mocks/sampleDataTags";
 import ProductCard from "@common/productCard/components";
 
-import style from "../styles/fabricsCardsModule.module.scss";
+import style from "../styles/productCards.module.scss";
 
-const CardsModule = () => {
+const ProductCards = () => {
   return (
     <div className={style["cards-module"]}>
       <div className={style["cards-module__filter-values"]}>
@@ -57,4 +57,4 @@ const CardsModule = () => {
     </div>
   );
 };
-export default CardsModule;
+export default ProductCards;

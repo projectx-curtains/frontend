@@ -11,9 +11,9 @@ import {
   fabricsDropdownFiltersData,
 } from "@modules/catalogue/mocks/fabricsFiltersData";
 
-import style from "../styles/fabricsFiltersModule.module.scss";
+import style from "../styles/productFilters.module.scss";
 
-const FabricsFiltersModule = () => {
+const ProductFilters = () => {
   const formik = useFormik({
     initialValues: {
       selectedFiltersBar: [],
@@ -66,4 +66,4 @@ const FabricsFiltersModule = () => {
     </FormikProvider>
   );
 };
-export default FabricsFiltersModule;
+export default ProductFilters;

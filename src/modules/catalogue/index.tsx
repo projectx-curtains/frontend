@@ -1,14 +1,13 @@
-import { Footer } from "@common/footer";
 import LinkStructure from "@modules/catalogue/components/LinkStructure";
 import Categories from "@modules/catalogue/components/Categories";
 import TitlePage from "@modules/catalogue/components/TitlePage";
-import FabricsFiltersModule from "@modules/catalogue/components/fabricsFiltersModule";
-import FabricsCardsModule from "@modules/catalogue/components/fabricsCardsModule";
+import ProductFilters from "@modules/catalogue/components/productFilters";
+import CardsModule from "@modules/catalogue/components/productCards";
 
 import style from "./styles/index.module.scss";
 import ButtonScrollUp from "@modules/catalogue/components/buttonScrollUp";
 
-const FabricsPage = () => {
+const CatalogueModule = () => {
   return (
     <>
       <div className={style["fabrics"]}>
@@ -16,13 +15,12 @@ const FabricsPage = () => {
         <Categories />
         <TitlePage title="Каталог тканей" />
         <div className={style["wrapper-module"]}>
-          <FabricsFiltersModule />
-          <FabricsCardsModule />
+          <ProductFilters />
+          <CardsModule />
         </div>
       </div>
       <ButtonScrollUp scrolledValue={3} />
-      <Footer />
     </>
   );
 };
-export default FabricsPage;
+export default CatalogueModule;
