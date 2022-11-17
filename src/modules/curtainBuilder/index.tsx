@@ -1,8 +1,8 @@
 import { useState } from "react";
-import BuilderStarter from "@common/curtainBuilder/components/builderStarter/components";
-import Builder from "@common/curtainBuilder/components/builder/components";
-import { StepsOptionType, StepsType } from "@common/curtainBuilder/types";
-import { BUILDER_OPTIONS } from "@common/curtainBuilder/constants";
+import BuilderStarter from "@modules/curtainBuilder/components/builderStarter/components";
+import Builder from "@modules/curtainBuilder/components/builder/components";
+import { StepsOptionType } from "./types";
+import { BUILDER_OPTIONS } from "./constants";
 
 const CurtainBuilderModule = () => {
   const [chosenOption, setChosenOption] = useState("");

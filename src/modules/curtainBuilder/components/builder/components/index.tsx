@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import * as yup from "yup";
 import MultiStepForm from "../../multiStepForm/components";
 import CheckoutStep from "../../steps/checkout";
