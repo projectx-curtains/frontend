@@ -1,0 +1,28 @@
+@import "../../../../../../styles/App";
+
+.select {
+  width: 343px;
+
+  &__item {
+    width: 343px;
+  }
+
+  &:hover {
+    :global(.MuiSelect-outlined) {
+      color: $gray-500;
+      border-color: $gray-300;
+      background-color: $gray-250;
+    }
+  }
+
+  &:global(.Mui-focused .MuiOutlinedInput-notchedOutline) {
+    border-color: $brown-600;
+    box-shadow: 0px 0px 0px 3.2px #beb3ad;
+  }
+
+  &__error {
+    @include body-18-light();
+    font-size: 14px;
+    color: red;
+  }
+}

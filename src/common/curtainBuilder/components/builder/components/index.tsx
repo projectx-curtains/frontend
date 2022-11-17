@@ -1,0 +1,85 @@
+import React, { useState } from "react";
+import * as yup from "yup";
+import MultiStepForm from "../../multiStepForm/components";
+import CheckoutStep from "../../steps/checkout";
+import CorniceStep from "../../steps/cornice";
+import CurtainStep from "../../steps/curtain";
+import TulleStep from "../../steps/tulle";
+import WindowStep from "../../steps/window/components";
+import { IBuilder } from "../interfaces";
+import { FormStep } from "../../multiStepForm/components/FormStep";
+import { WindowQuantityEnum, WindowTypeEnum } from "../../steps/window/types";
+
+const Builder: React.FC<IBuilder> = ({
+  isTulleDisplayed,
+  isCurtainDisplayed,
+}) => {
+  const initialValues = {
+    type: WindowTypeEnum.doubleLeaf,
+    quantity: WindowQuantityEnum.double,
+    width: 0,
+    height: 0,
+    distance: 0,
+  };
+
+  const windowValidationSchema = yup.object({
+    type: yup.string().required("*Обязательное поле"),
+    quantity: yup.string().required(),
+    width: yup.number().positive().required("*Обязательное поле"),
+    height: yup.number().positive().required("*Обязательное поле"),
+    distance: yup.number().positive().notRequired(),
+  });
+
+  return (
+    <div className="container">
+      <MultiStepForm
+        initialValues={{ initialValues }}
+        onSubmit={(values) => {
+          alert(JSON.stringify(values, null, 2));
+        }}
+      >
+        <FormStep
+          stepName="Выбор параметров окна"
+          onSubmit={() => console.log("Step1 submit")}
+          validationSchema={windowValidationSchema}
+        >
+          <WindowStep />
+        </FormStep>
+        <FormStep
+          stepName="Выбор параметров карниза"
+          onSubmit={() => console.log("Step2 submit")}
+          validationSchema={null}
+        >
+          <CorniceStep />
+        </FormStep>
+        {isTulleDisplayed && (
+          <FormStep
+            stepName="Выбор параметров тюля"
+            onSubmit={() => console.log("Step3 submit")}
+            validationSchema={null}
+          >
+            <TulleStep />
+          </FormStep>
+        )}
+        {isCurtainDisplayed && (
+          <FormStep
+            stepName="Выбор параметров портьер"
+            onSubmit={() => console.log("Step4 submit")}
+            validationSchema={null}
+          >
+            <CurtainStep />
+          </FormStep>
+        )}
+        <FormStep
+          stepName="Оформление заказа"
+          onSubmit={() => console.log("Step5 submit")}
+          validationSchema={null}
+        >
+          <CheckoutStep />
+        </FormStep>
+      </MultiStepForm>
+    </div>
+  );
+};
+
+export default Builder;
