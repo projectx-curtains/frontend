@@ -1,6 +1,6 @@
 import { useState } from "react";
-import BuilderStarter from "@modules/curtainBuilder/components/builderStarter/components";
-import Builder from "@modules/curtainBuilder/components/builder/components";
+import { BuilderStartPage } from "./components/builderStartPage";
+import { Builder } from "./components/builder";
 import { StepsOptionType } from "./types";
 import { BUILDER_OPTIONS } from "./constants";
 
@@ -27,7 +27,7 @@ const CurtainBuilderModule = () => {
           isCurtainDisplayed={isCurtainDisplayed}
         />
       ) : (
-        <BuilderStarter
+        <BuilderStartPage
           handleStartBuilder={handleStartBuilder}
           setChosenOption={setChosenOption}
         />

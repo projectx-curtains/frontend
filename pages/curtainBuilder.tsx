@@ -8,10 +8,10 @@ import { HEADER_THEME } from "@common/header/constants";
 const CurtainBuilderPage: NextPage = () => {
   return (
     <>
-      <HeadTags
+      {/* <HeadTags
         title={HOME_METADATA.title}
         description={HOME_METADATA.description}
-      />
+      /> */}
       <MainLayout defaultTheme={HEADER_THEME.brown} isScrolled={false}>
         <CurtainBuilderModule />
       </MainLayout>

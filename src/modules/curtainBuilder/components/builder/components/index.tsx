@@ -1,35 +1,19 @@
 import React from "react";
-import * as yup from "yup";
-import MultiStepForm from "../../multiStepForm/components";
-import CheckoutStep from "../../steps/checkout";
+import { WindowStep } from "../../steps/window";
 import CorniceStep from "../../steps/cornice";
-import CurtainStep from "../../steps/curtain";
 import TulleStep from "../../steps/tulle";
-import WindowStep from "../../steps/window/components";
-import { IBuilder } from "../interfaces";
-import { FormStep } from "../../multiStepForm/components/FormStep";
-import { WindowQuantityEnum, WindowTypeEnum } from "../../steps/window/types";
+import CurtainStep from "../../steps/curtain";
+import CheckoutStep from "../../steps/checkout";
+import { MultiStepForm } from "./multiStepForm";
+import { FormStep } from "./multiStepForm/components/FormStep";
+import { IBuilderProps } from "../interfaces";
 
-const Builder: React.FC<IBuilder> = ({
+const Builder: React.FC<IBuilderProps> = ({
   isTulleDisplayed,
   isCurtainDisplayed,
+  initialValues,
+  windowValidationSchema,
 }) => {
-  const initialValues = {
-    type: WindowTypeEnum.doubleLeaf,
-    quantity: WindowQuantityEnum.double,
-    width: 0,
-    height: 0,
-    distance: 0,
-  };
-
-  const windowValidationSchema = yup.object({
-    type: yup.string().required("*Обязательное поле"),
-    quantity: yup.string().required(),
-    width: yup.number().positive().required("*Обязательное поле"),
-    height: yup.number().positive().required("*Обязательное поле"),
-    distance: yup.number().positive().notRequired(),
-  });
-
   return (
     <div className="container">
       <MultiStepForm
