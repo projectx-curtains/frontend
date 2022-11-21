@@ -7,7 +7,7 @@ import style from "../styles/index.module.scss";
 const TagCloud: React.FC<ITagCloudProps> = ({ tags, handleClose }) => {
   return (
     <div className={style["tag-cloud"]}>
-      {tags.map((tag) => (
+      {tags.map((tag, index) => (
         <div
           key={tag.id}
           className={classnames(style["tag-cloud__item"], {
@@ -28,7 +28,7 @@ const TagCloud: React.FC<ITagCloudProps> = ({ tags, handleClose }) => {
           </p>
           <div
             className={style["tag-cloud__item-button-cross"]}
-            onClick={() => handleClose(tag.id)}
+            onClick={() => handleClose(index)}
           >
             <MdClose />
           </div>

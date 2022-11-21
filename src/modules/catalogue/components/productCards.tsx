@@ -10,14 +10,7 @@ const ProductCards = () => {
     <div className={style["cards-module"]}>
       <div className={style["cards-module__filter-values"]}>
         <div className={style["tag-cloud"]}>
-          {sampleDataTags.map((tag) => (
-            <TagCloud
-              key={tag.id}
-              name={tag.name}
-              colorTheSquare={tag.colorTheSquare}
-              color={tag.color}
-            />
-          ))}
+          <TagCloud />
         </div>
         <div className={style["price-filter"]}>
           <PriceFilter />
