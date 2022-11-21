@@ -1,7 +1,6 @@
 export interface ITagCloudContainerProps {
   id?: number;
   name: string;
-  colorTheSquare?: boolean;
   color?: string;
   isTagRemoved?: boolean;
 }
