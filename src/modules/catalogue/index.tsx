@@ -6,6 +6,7 @@ import CardsModule from "@modules/catalogue/components/productCards";
 
 import style from "./styles/index.module.scss";
 import ButtonScrollUp from "@modules/catalogue/components/buttonScrollUp";
+import NothingFound from "./components/NothingFound";
 
 const CatalogueModule = () => {
   return (
@@ -16,10 +17,11 @@ const CatalogueModule = () => {
         <TitlePage title="Каталог тканей" />
         <div className={style["wrapper-module"]}>
           <ProductFilters />
-          <CardsModule />
+          {/* <CardsModule /> */}
+          <NothingFound />
         </div>
       </div>
-      <ButtonScrollUp scrolledValue={3} />
+      <ButtonScrollUp scrolledValue={750} />
     </>
   );
 };
