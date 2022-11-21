@@ -11,7 +11,7 @@ const TagCloud: React.FC<ITagCloudProps> = ({ tags, handleClose }) => {
         <div
           key={tag.id}
           className={classnames(style["tag-cloud__item"], {
-            [style["remove-tag"]]: tag.removeTag,
+            [style["remove-tag"]]: tag.isTagRemoved,
           })}
         >
           {tag.color && (

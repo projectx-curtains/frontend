@@ -1,6 +1,5 @@
 import PriceFilter from "@modules/catalogue/components/PriceFilter";
 import TagCloud from "@modules/catalogue/components/TagCloud";
-import { sampleDataTags } from "@modules/catalogue/components/TagCloud/mocks/sampleDataTags";
 import ProductCard from "@common/productCard/components";
 
 import style from "../styles/productCards.module.scss";

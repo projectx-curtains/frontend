@@ -1,7 +1,6 @@
 import Button from "@mui/material/Button";
 import PriceFilter from "@modules/catalogue/components/PriceFilter";
 import TagCloud from "@modules/catalogue/components/TagCloud";
-import { sampleDataTags } from "@modules/catalogue/components/TagCloud/mocks/sampleDataTags";
 import IntrestingCards from "../../IntrestingCards/components";
 import NothingFoundImg from "../../../../../../assets/svg/nothingFoundImg.svg";
 
@@ -12,14 +11,7 @@ const NothingFound = () => {
     <div className={style["cards-module"]}>
       <div className={style["cards-module__filter-values"]}>
         <div className={style["tag-cloud"]}>
-          {sampleDataTags.map((tag) => (
-            <TagCloud
-              key={tag.id}
-              name={tag.name}
-              colorTheSquare={tag.colorTheSquare}
-              color={tag.color}
-            />
-          ))}
+          <TagCloud />
         </div>
         <div className={style["price-filter"]}>
           <PriceFilter />

@@ -3,7 +3,7 @@ export interface ITagCloudContainerProps {
   name: string;
   colorTheSquare?: boolean;
   color?: string;
-  removeTag?: boolean;
+  isTagRemoved?: boolean;
 }
 
 export interface ITagCloudProps {
