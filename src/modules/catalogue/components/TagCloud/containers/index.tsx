@@ -12,11 +12,10 @@ const TagCloudContainer = ({}) => {
   }));
 
   const [tags, setTags] = useState(initialState);
-  console.log(tags);
 
   const removeTag = (index: number) => {
     const newTags = [...tags];
-    newTags.splice(index, index + 1);
+    newTags.splice(index, 1);
     setTimeout(() => setTags(newTags), 400);
   };
 
