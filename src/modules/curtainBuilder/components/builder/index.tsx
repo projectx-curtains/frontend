@@ -1,1 +1,1 @@
-export { default as Builder } from "./containers";
+export { default as Builder } from "./components";

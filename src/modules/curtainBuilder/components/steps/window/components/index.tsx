@@ -1,8 +1,8 @@
 import classNames from "classnames";
-import { SelectField } from "@modules/curtainBuilder/components/formUI/components/select";
-import { TooltipField } from "@modules/curtainBuilder/components/formUI/components/tooltip";
-import { RadioGroupField } from "@modules/curtainBuilder/components/formUI/components/radioGroup";
-import { InputField } from "@modules/curtainBuilder/components/formUI/components/input";
+import { SelectField } from "@common/formUI/components/select";
+import { TooltipField } from "@common/formUI/components/tooltip";
+import { RadioGroupField } from "@common/formUI/components/radioGroup";
+import { InputField } from "@common/formUI/components/input";
 import FormControl from "@mui/material/FormControl";
 import TooltipQuantityText from "./tooltipText";
 import { IWindowStep } from "../interfaces";

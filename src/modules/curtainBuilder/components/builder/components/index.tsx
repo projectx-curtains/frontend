@@ -7,12 +7,12 @@ import CheckoutStep from "../../steps/checkout";
 import { MultiStepForm } from "./multiStepForm";
 import { FormStep } from "./multiStepForm/components/FormStep";
 import { IBuilderProps } from "../interfaces";
+import { initialValues } from "../constants/initialValues";
+import { windowValidationSchema } from "../validation";
 
 const Builder: React.FC<IBuilderProps> = ({
   isTulleDisplayed,
   isCurtainDisplayed,
-  initialValues,
-  windowValidationSchema,
 }) => {
   return (
     <div className="container">
