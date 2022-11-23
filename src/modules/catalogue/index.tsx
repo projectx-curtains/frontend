@@ -3,10 +3,10 @@ import Categories from "@modules/catalogue/components/Categories";
 import TitlePage from "@modules/catalogue/components/TitlePage";
 import ProductFilters from "@modules/catalogue/components/productFilters";
 import CardsModule from "@modules/catalogue/components/productCards";
+import ButtonScrollUp from "@common/buttonScrollUp";
+import NothingFound from "./components/NothingFound";
 
 import style from "./styles/index.module.scss";
-import ButtonScrollUp from "@modules/catalogue/components/buttonScrollUp";
-import NothingFound from "./components/NothingFound";
 
 const CatalogueModule = () => {
   return (
@@ -21,7 +21,7 @@ const CatalogueModule = () => {
           <NothingFound />
         </div>
       </div>
-      <ButtonScrollUp scrolledValue={750} />
+      <ButtonScrollUp scrolledValue={750} isMobile={false} />
     </>
   );
 };

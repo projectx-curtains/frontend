@@ -1,1 +1,1 @@
-export { default as buttonScrollUp } from "./components";
+export { default } from "./components";

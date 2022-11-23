@@ -5,14 +5,9 @@
   
   &__home {
     @include body-18-regular;
-    text-decoration-line: underline;
-    color: $gray-500;
-  }
-  &__arrow-forward {
-    margin: 0 8px;
-  }
+    text-decoration-line: underline;    
+  } 
   &__current{
-    @include body-18-regular;
-    color: $gray-400;      
+    @include body-18-regular;          
   }
 }  

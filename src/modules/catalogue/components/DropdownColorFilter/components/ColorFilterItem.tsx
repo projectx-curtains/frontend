@@ -4,7 +4,7 @@ import { useField } from "formik";
 import { IColorFilterProps } from "../interfaces";
 import style from "../styles/index.module.scss";
 
-const ItemColorFilter: React.FC<IColorFilterProps> = ({ filters }) => {
+const ColorFilterItem: React.FC<IColorFilterProps> = ({ filters }) => {
   const [field] = useField("dropdownFilters");
   return (
     <>
@@ -32,4 +32,4 @@ const ItemColorFilter: React.FC<IColorFilterProps> = ({ filters }) => {
     </>
   );
 };
-export default ItemColorFilter;
+export default ColorFilterItem;

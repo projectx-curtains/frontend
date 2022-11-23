@@ -2,7 +2,7 @@ import React from "react";
 import classnames from "classnames";
 
 import { MdArrowDropDown } from "react-icons/md";
-import ItemColorFilter from "./ItemColorFilter";
+import ColorFilterItem from "./ColorFilterItem";
 
 import { IColorDropdownFilterProps } from "../interfaces";
 
@@ -48,7 +48,7 @@ const DropdownColorFilter: React.FC<IColorDropdownFilterProps> = ({
       </div>
       {isOpen && (
         <div className={style["dropdown-color-filter__scrolling-block"]}>
-          <ItemColorFilter filters={dropdownFilterColor} />
+          <ColorFilterItem filters={dropdownFilterColor} />
         </div>
       )}
     </div>
