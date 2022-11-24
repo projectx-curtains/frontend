@@ -1,9 +1,17 @@
-import { FieldConfig } from "formik";
+import { FieldConfig, FieldInputProps } from "formik";
 import { RadioOrSelectType } from "../../../types";
 
-export interface IRadioGroupField extends FieldConfig {
+export interface IRadioGroupFieldContainer extends FieldConfig {
   defaultValue: string;
   content: Array<RadioOrSelectType>;
-  handleRadioButtonOptions: (e: React.FormEvent<HTMLFormElement>) => void;
+  handleRadioButtonOptions?: (e: React.FormEvent<HTMLFormElement>) => void;
+  disabled?: boolean;
+}
+
+export interface IRadioGroupField extends FieldConfig {
+  field: FieldInputProps<any>;
+  defaultValue: string;
+  content: Array<RadioOrSelectType>;
+  handleRadioButtonOptions?: (e: React.FormEvent<HTMLFormElement>) => void;
   disabled?: boolean;
 }

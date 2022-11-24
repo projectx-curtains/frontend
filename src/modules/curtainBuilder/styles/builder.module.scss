@@ -1,6 +1,6 @@
-@import "../../../../../../../styles/App";
+@import "@styles/App";
 
-.window-builder {
+.builder {
   display: flex;
 
   &__board {
@@ -12,6 +12,7 @@
   .sidebar {
     margin: 24px 0;
     padding: 16px;
+    width: 343px;
     max-width: 343px;
     height: 598px;
     background-color: $white;

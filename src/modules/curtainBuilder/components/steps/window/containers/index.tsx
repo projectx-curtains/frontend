@@ -5,25 +5,23 @@ import { WindowTypeEnum, WindowQuantityEnum } from "../types";
 
 const WindowStepContainer = () => {
   const { values, setValues } = useFormikContext<FormikValues>();
-  const [isTypeEmpty, setIsTypeEmpty] = useState(!values.type);
+  const [isTypeEmpty, setIsTypeEmpty] = useState(!values.typeWindow);
   const [isDistanceDisabled, setIsDistanceDisabled] = useState(
-    values.quantity === WindowQuantityEnum.single
+    values.quantityWindow === WindowQuantityEnum.single
   );
   const [isTripleLeaf, setIsTripleLeaf] = useState(false);
-
-  console.log(values);
 
   const getImagePath = (): string => {
     const { singleLeaf, doubleLeaf, tripleLeaf } = WindowTypeEnum;
     const { single, double } = WindowQuantityEnum;
 
-    switch (values.type) {
+    switch (values.typeWindow) {
       case singleLeaf:
-        return values.quantity === single
+        return values.quantityWindow === single
           ? `${singleLeaf}-${single}.png`
           : `${singleLeaf}-${double}.png`;
       case doubleLeaf:
-        return values.quantity === single
+        return values.quantityWindow === single
           ? `${doubleLeaf}-${single}.png`
           : `${doubleLeaf}-${double}.png`;
       case tripleLeaf:
@@ -36,19 +34,15 @@ const WindowStepContainer = () => {
   const handleSelectOptions = (e: React.MouseEventHandler<HTMLLIElement>) => {
     const { value } = e.target.dataset;
     //If no value in select disable all inputs
-    if (!value) {
-      setIsTypeEmpty(true);
-    } else {
-      setIsTypeEmpty(false);
-    }
+    const isEmptyType = !!value;
+    setIsTypeEmpty(isEmptyType);
 
     //If window is tripleleaf hide distance input and disable radiobuttons
     if (value === WindowTypeEnum.tripleLeaf) {
       setIsDistanceDisabled(true);
       setIsTripleLeaf(true);
-      setValues({ ...values, quantity: WindowQuantityEnum.single }); // change quantity to 1 when it is tripleleaf window
+      setValues({ ...values, quantityWindow: WindowQuantityEnum.single }); // change quantity to 1 when it is tripleleaf window
     } else {
-      // setIsDistanceDisabled(false);
       setIsTripleLeaf(false);
     }
   };
@@ -56,11 +50,8 @@ const WindowStepContainer = () => {
   const handleRadioButtonOptions = (e: React.FormEvent<HTMLFormElement>) => {
     const { value } = e.target;
 
-    if (value === WindowQuantityEnum.single) {
-      setIsDistanceDisabled(true);
-    } else {
-      setIsDistanceDisabled(false);
-    }
+    const isSingleWindow = value === WindowQuantityEnum.single;
+    setIsDistanceDisabled(isSingleWindow);
   };
 
   return (

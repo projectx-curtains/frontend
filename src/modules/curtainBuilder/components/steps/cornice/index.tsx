@@ -1,5 +1,1 @@
-const CorniceStep = () => {
-  return <h1>cornice</h1>;
-};
-
-export default CorniceStep;
+export { default as CorniceStep } from "./containers";

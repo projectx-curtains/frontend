@@ -16,16 +16,11 @@ const FormNavigation: React.FC<IFormNavigation> = ({
     <div className={style["form-nav"]}>
       {hasPrevious && (
         <Button
-          className={classNames("button--primary", style["form-nav__button"])}
+          className={classNames("button--secondary", style["form-nav__button"])}
           type="button"
           onClick={onBackClick}
         >
-          <KeyboardArrowLeftIcon
-            className={classNames(
-              "button__icon",
-              style["gallery-container__button__icon"]
-            )}
-          />
+          <KeyboardArrowLeftIcon className="button__icon" />
           Назад
         </Button>
       )}
@@ -35,12 +30,7 @@ const FormNavigation: React.FC<IFormNavigation> = ({
         disabled={disableNext}
       >
         {isLastStep ? "Заказать" : "Далее"}
-        <KeyboardArrowRightIcon
-          className={classNames(
-            "button__icon",
-            style["gallery-container__button__icon"]
-          )}
-        />
+        <KeyboardArrowRightIcon className="button__icon" />
       </Button>
     </div>
   );

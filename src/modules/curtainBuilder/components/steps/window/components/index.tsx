@@ -8,7 +8,7 @@ import TooltipQuantityText from "./tooltipText";
 import { IWindowStep } from "../interfaces";
 import { WindowQuantityEnum } from "../types";
 import { WINDOW_TYPE, WINDOW_QUANTITY } from "../constants";
-import style from "../styles/window.module.scss";
+import style from "../../../../styles/builder.module.scss";
 
 const WindowStep: React.FC<IWindowStep> = ({
   isTypeEmpty,
@@ -19,9 +19,9 @@ const WindowStep: React.FC<IWindowStep> = ({
   handleRadioButtonOptions,
 }) => {
   return (
-    <div className={style["window-builder"]}>
+    <div className={style.builder}>
       <div
-        className={style["window-builder__board"]}
+        className={style.builder__board}
         style={{
           backgroundImage: `url("/img/Builder/${getImagePath()}")`,
         }}
@@ -31,7 +31,7 @@ const WindowStep: React.FC<IWindowStep> = ({
         <FormControl className={style.sidebar__block}>
           <p className={style.sidebar__text}>Вид окна</p>
           <SelectField
-            name="type"
+            name="typeWindow"
             defaultValue=""
             content={WINDOW_TYPE}
             handleSelectOptions={handleSelectOptions}
@@ -42,7 +42,7 @@ const WindowStep: React.FC<IWindowStep> = ({
           <TooltipField title="Количество окон" text={TooltipQuantityText} />
 
           <RadioGroupField
-            name="quantity"
+            name="quantityWindow"
             defaultValue={WindowQuantityEnum.double}
             content={WINDOW_QUANTITY}
             disabled={isTripleLeaf || isTypeEmpty}
@@ -55,11 +55,11 @@ const WindowStep: React.FC<IWindowStep> = ({
           <div className={style["sidebar__block-sizing"]}>
             <FormControl>
               <p className={style.sidebar__label}>Ширина, см</p>
-              <InputField name="width" disabled={isTypeEmpty} />
+              <InputField name="widthWindow" disabled={isTypeEmpty} />
             </FormControl>
             <FormControl>
               <p className={style.sidebar__label}>Высота, см</p>
-              <InputField name="height" disabled={isTypeEmpty} />
+              <InputField name="heightWindow" disabled={isTypeEmpty} />
             </FormControl>
           </div>
         </div>
@@ -70,7 +70,7 @@ const WindowStep: React.FC<IWindowStep> = ({
           })}
         >
           <p className={style.sidebar__text}>Расстояние между окнами</p>
-          <InputField name="distance" />
+          <InputField name="distanceWindow" />
         </FormControl>
       </div>
     </div>

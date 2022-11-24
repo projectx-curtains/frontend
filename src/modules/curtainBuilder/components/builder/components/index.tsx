@@ -1,14 +1,14 @@
 import React from "react";
 import { WindowStep } from "../../steps/window";
-import CorniceStep from "../../steps/cornice";
+import { CorniceStep } from "../../steps/cornice";
 import TulleStep from "../../steps/tulle";
 import CurtainStep from "../../steps/curtain";
 import CheckoutStep from "../../steps/checkout";
 import { MultiStepForm } from "./multiStepForm";
-import { FormStep } from "./multiStepForm/components/FormStep";
+import { FormStepContainer } from "./multiStepForm/containers/FormStepContainer";
 import { IBuilderProps } from "../interfaces";
 import { initialValues } from "../constants/initialValues";
-import { windowValidationSchema } from "../validation";
+import { windowValidationSchema, corniceValidationSchema } from "../validation";
 
 const Builder: React.FC<IBuilderProps> = ({
   isTulleDisplayed,
@@ -22,45 +22,37 @@ const Builder: React.FC<IBuilderProps> = ({
           alert(JSON.stringify(values, null, 2));
         }}
       >
-        <FormStep
+        <FormStepContainer
           stepName="Выбор параметров окна"
-          onSubmit={() => console.log("Step1 submit")}
           validationSchema={windowValidationSchema}
         >
           <WindowStep />
-        </FormStep>
-        <FormStep
+        </FormStepContainer>
+        <FormStepContainer
           stepName="Выбор параметров карниза"
-          onSubmit={() => console.log("Step2 submit")}
-          validationSchema={null}
+          validationSchema={corniceValidationSchema}
         >
           <CorniceStep />
-        </FormStep>
+        </FormStepContainer>
         {isTulleDisplayed && (
-          <FormStep
+          <FormStepContainer
             stepName="Выбор параметров тюля"
-            onSubmit={() => console.log("Step3 submit")}
             validationSchema={null}
           >
             <TulleStep />
-          </FormStep>
+          </FormStepContainer>
         )}
         {isCurtainDisplayed && (
-          <FormStep
+          <FormStepContainer
             stepName="Выбор параметров портьер"
-            onSubmit={() => console.log("Step4 submit")}
             validationSchema={null}
           >
             <CurtainStep />
-          </FormStep>
+          </FormStepContainer>
         )}
-        <FormStep
-          stepName="Оформление заказа"
-          onSubmit={() => console.log("Step5 submit")}
-          validationSchema={null}
-        >
+        <FormStepContainer stepName="Оформление заказа" validationSchema={null}>
           <CheckoutStep />
-        </FormStep>
+        </FormStepContainer>
       </MultiStepForm>
     </div>
   );

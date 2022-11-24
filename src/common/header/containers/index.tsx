@@ -12,7 +12,7 @@ const HeaderContainer: React.FC<IHeaderContainerProps> = ({
   const [headerTheme, setHeaderTheme] = useState(defaultTheme);
 
   const menuToggleHandler = () => {
-    setIsMenuOpen((isOpen) => !isOpen);
+    setIsMenuOpen(!isMenuOpen);
     if (window.scrollY < colorSwitchPosition) {
       const currentTheme = isMenuOpen ? defaultTheme : HEADER_THEME.white;
       setHeaderTheme(currentTheme);

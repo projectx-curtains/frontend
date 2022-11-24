@@ -1,4 +1,3 @@
-import { useField } from "formik";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
@@ -7,13 +6,12 @@ import { RadioOrSelectType } from "../../../types";
 import style from "../styles/radio.module.scss";
 
 const RadioGroupField: React.FC<IRadioGroupField> = ({
+  field,
   content,
   handleRadioButtonOptions,
   disabled,
   ...props
 }) => {
-  const [field] = useField(props.name);
-
   return (
     <RadioGroup
       {...field}

@@ -1,9 +1,12 @@
+import { CorniceTypeEnum } from "./../../steps/cornice/types/index";
 import { WindowQuantityEnum } from "../../steps/window/types";
 
 export const initialValues = {
-  type: "",
-  quantity: WindowQuantityEnum.double,
-  width: 0,
-  height: 0,
-  distance: 0,
+  typeWindow: "",
+  quantityWindow: WindowQuantityEnum.double,
+  widthWindow: 0,
+  heightWindow: 0,
+  distanceWindow: 0,
+  typeCornice: CorniceTypeEnum.ceiling,
+  widthCornice: 0,
 };

@@ -18,6 +18,7 @@ const MultiStepForm: React.FC<IMultiStepForm> = ({
       initialValues={snapshot}
       onSubmit={handleSubmit}
       validationSchema={step.props.validationSchema}
+      validateOnMount
     >
       {(formik) => (
         <form onSubmit={formik.handleSubmit}>

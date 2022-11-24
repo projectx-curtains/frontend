@@ -16,3 +16,9 @@ export interface IMultiStepForm {
   ) => void;
   previousStep: (values: FormikValues) => void;
 }
+
+export interface IFormStepContainer {
+  stepName: string;
+  children: React.ReactElement;
+  validationSchema: object;
+}

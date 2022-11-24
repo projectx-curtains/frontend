@@ -1,1 +1,1 @@
-export { default as RadioGroupField } from "./components";
+export { default as RadioGroupField } from "./containers";
