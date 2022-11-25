@@ -1,0 +1,14 @@
+@import "../../../../../../styles/App";
+
+.mobile-module {
+  @include display(flex, column, unset, unset);
+  &__icons {
+    @include display(flex, row, space-between, unset);
+    margin-top: 7px;
+    margin-top: 19px;
+  }
+  &__cards {
+    @include display(flex, row, space-between, unset);
+    flex-wrap: wrap;
+  }
+}

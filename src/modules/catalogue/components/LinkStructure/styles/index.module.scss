@@ -5,9 +5,15 @@
   
   &__home {
     @include body-18-regular;
-    text-decoration-line: underline;    
+    text-decoration-line: underline; 
+    @media (max-width: $screen-xl) {
+      @include body-14-regular;      
+    }   
   } 
   &__current{
-    @include body-18-regular;          
+    @include body-18-regular;  
+    @media (max-width: $screen-xl) {      
+      @include body-14-regular;
+    }         
   }
 }  
