@@ -2,15 +2,17 @@
 
 .categories {
   margin-top: 36px;
-  max-width: 1440px;
-  width: 100%;
+  width: 1440px;
   border-bottom: 1px solid $gray-250;
   @media (max-width: $screen-xl) {
     margin-top: 32px;
   }
   &__list {
     @include display(flex, row, flex-start, center);
-    list-style-type: none;      
+    list-style-type: none; 
+    @media (max-width: $screen-xl) {
+      flex-wrap: nowrap;
+    }  
   }
   &__item {      
     @include display(flex, column, center, center); 

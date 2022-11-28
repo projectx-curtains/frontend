@@ -18,7 +18,7 @@ const CataloguePopup = () => {
                   <>
                     <Image
                       key={name}
-                      src={require(`@assets/img/CatalogCategories/${name}.png`)}
+                      // src={require(`@assets/img/CatalogCategories/${name}.png`)}
                       alt={name}
                       className={style["catalog-popup__img"]}
                     />

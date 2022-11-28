@@ -33,11 +33,13 @@ const MobileModule = () => {
       <div className={style["mobile-module__icons"]}>
         <MobileFilterImg onClick={handleOpenFilter} />
         <ModalWindow open={openFilter} handleClose={handleCloseFilter}>
-          <ClearIcon
-            onClick={handleCloseFilter}
-            fontSize="medium"
-            sx={{ color: "#C2C4CB" }}
-          />
+          <div className={style["clear-icon"]}>
+            <ClearIcon
+              onClick={handleCloseFilter}
+              fontSize="medium"
+              sx={{ color: "#C2C4CB" }}
+            />
+          </div>
           <ProductFilters />
         </ModalWindow>
         <MobileSortPriceImg onClick={setOpenSortPrice} />
@@ -61,7 +63,6 @@ const MobileModule = () => {
           variant="categories"
         />
       </div>
-      <ButtonScrollUp scrolledValue={750} isMobile={true} />
     </div>
   );
 };
