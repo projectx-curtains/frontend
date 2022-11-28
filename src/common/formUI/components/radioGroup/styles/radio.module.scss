@@ -1,0 +1,21 @@
+@import "@styles/App";
+
+.radio-group {
+  padding-top: 4px;
+
+  &__option-wrapper {
+    padding: 6px 9px;
+    color: $gray-500;
+  }
+
+  &__option-wrapper:global(.Mui-checked) {
+    color: $gray-500;
+  }
+
+  &__option {
+    :global(.MuiFormControlLabel-label) {
+      @include body-16-regular();
+      color: $gray-500;
+    }
+  }
+}

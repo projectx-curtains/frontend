@@ -29,7 +29,8 @@
     }
   }
 
-  &--transparent-theme &__input {
+  &--transparent-theme &__input,
+  &--brown-theme &__input {
     color: $white;
     border-bottom: 1px solid $white;
   }
@@ -59,7 +60,8 @@
     }
   }
 
-  &--transparent-theme &__button {
+  &--transparent-theme &__button,
+  &--brown-theme &__button {
     color: $white;
   }
 

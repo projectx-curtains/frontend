@@ -1,0 +1,49 @@
+@import "@styles/App";
+
+.stepper {
+  padding: 26px 73px;
+  border-top: 1px solid $gray-250;
+  border-bottom: 1px solid $gray-250;
+
+  &__label {
+    flex-direction: row !important;
+
+    :global(.MuiStepLabel-iconContainer) {
+      padding: 8px 13px;
+      @include heading-24-medium();
+      color: $brown-200;
+      background-color: $brown-400;
+      border-radius: 4px;
+    }
+
+    :global(.MuiStepLabel-iconContainer.Mui-active) {
+      background-color: $brown-500;
+      color: $white;
+    }
+
+    :global(.MuiStepLabel-label.Mui-active) {
+      color: $brown-500;
+    }
+
+    :global(.MuiStepLabel-iconContainer.Mui-completed) {
+      background-color: $brown-600;
+      color: $white;
+    }
+
+    :global(.MuiStepLabel-label.Mui-completed) {
+      color: $brown-600;
+    }
+
+    :global(.MuiStepLabel-label) {
+      margin-top: 0px;
+      padding-left: 16px;
+      text-align: left;
+      @include body-16-regular();
+      color: $brown-350;
+    }
+  }
+
+  :global(.MuiStepConnector-root) {
+    display: none;
+  }
+}

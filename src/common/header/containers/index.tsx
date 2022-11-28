@@ -1,32 +1,34 @@
 import React, { useEffect, useState } from "react";
-import { HEADER_THEME } from "../constants";
 import Header from "../components";
+import { IHeaderContainerProps } from "../interfaces";
+import { HEADER_THEME } from "../constants";
 
-const HeaderContainer = () => {
+const HeaderContainer: React.FC<IHeaderContainerProps> = ({
+  defaultTheme,
+  isScrolled,
+}) => {
   const colorSwitchPosition = 10;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [headerTheme, setHeaderTheme] = useState(HEADER_THEME.transparent);
+  const [headerTheme, setHeaderTheme] = useState(defaultTheme);
 
   const menuToggleHandler = () => {
-    setIsMenuOpen((isOpen) => !isOpen);
+    setIsMenuOpen(!isMenuOpen);
     if (window.scrollY < colorSwitchPosition) {
-      const currentTheme = isMenuOpen
-        ? HEADER_THEME.transparent
-        : HEADER_THEME.white;
+      const currentTheme = isMenuOpen ? defaultTheme : HEADER_THEME.white;
       setHeaderTheme(currentTheme);
     }
   };
 
   const pageScrollHandler = () => {
     const currentTheme =
-      window.scrollY > colorSwitchPosition
-        ? HEADER_THEME.white
-        : HEADER_THEME.transparent;
+      window.scrollY > colorSwitchPosition ? HEADER_THEME.white : defaultTheme;
     setHeaderTheme(currentTheme);
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", pageScrollHandler);
+    if (isScrolled) {
+      window.addEventListener("scroll", pageScrollHandler);
+    }
   });
 
   return (

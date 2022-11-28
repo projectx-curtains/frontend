@@ -1,4 +1,4 @@
-import Banner from "@common/banner";
+import Banner from "@modules/home/components/banner";
 import Categories from "@modules/home/components/categories";
 import ProductGallery from "@modules/home/components/productGallery";
 import WhyWeAre from "@modules/home/components/whyWeAre";

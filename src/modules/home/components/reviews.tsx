@@ -1,6 +1,6 @@
 import React from "react";
 import classnames from "classnames";
-import Image from "next/image";
+import Image from "next/future/image";
 import Carousel from "../../../common/carousel/components/carousel";
 import { REVIEWS } from "../constants/reviews.data";
 import style from "../styles/reviews.module.scss";
