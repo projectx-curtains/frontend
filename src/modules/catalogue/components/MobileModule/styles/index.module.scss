@@ -5,12 +5,9 @@
   &__icons {
     @include display(flex, row, space-between, unset);
     margin-top: 7px;
-    .clear-icon{      
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
+    .mobile-filter-img, .mobile-sort-price-img {
       cursor: pointer;
-    }
+    }    
   }
   &__cards {
     @include display(flex, row, space-between, unset);

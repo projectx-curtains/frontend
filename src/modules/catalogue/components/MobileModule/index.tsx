@@ -31,19 +31,37 @@ const MobileModule = () => {
     <div className={style["mobile-module"]}>
       <TagCloud />
       <div className={style["mobile-module__icons"]}>
-        <MobileFilterImg onClick={handleOpenFilter} />
-        <ModalWindow open={openFilter} handleClose={handleCloseFilter}>
-          <div className={style["clear-icon"]}>
-            <ClearIcon
-              onClick={handleCloseFilter}
-              fontSize="medium"
-              sx={{ color: "#C2C4CB" }}
-            />
-          </div>
+        <MobileFilterImg
+          className={style["mobile-filter-img"]}
+          onClick={handleOpenFilter}
+        />
+        <ModalWindow
+          anchor="left"
+          open={openFilter}
+          handleClose={handleCloseFilter}
+        >
+          <ClearIcon
+            onClick={handleCloseFilter}
+            fontSize="medium"
+            sx={{
+              color: "#C2C4CB",
+              ml: "auto",
+              mr: "16px",
+              display: "block",
+              cursor: "pointer",
+            }}
+          />
           <ProductFilters />
         </ModalWindow>
-        <MobileSortPriceImg onClick={setOpenSortPrice} />
-        <ModalWindow open={openSortPrice} handleClose={handleCloseSortPrice}>
+        <MobileSortPriceImg
+          className={style["mobile-sort-price-img"]}
+          onClick={handleOpenSortPrice}
+        />
+        <ModalWindow
+          anchor="right"
+          open={openSortPrice}
+          handleClose={handleCloseSortPrice}
+        >
           <PriceFilter />
         </ModalWindow>
       </div>

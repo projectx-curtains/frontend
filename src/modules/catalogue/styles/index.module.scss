@@ -3,6 +3,21 @@
 .fabrics {
   margin-left: 80px;
   margin-top: 36px;
+  .mobile-module {
+    display: none;
+  }
+  .web-module {
+    display: block;
+  }
+  @media (max-width: $screen-md) {
+    .mobile-module {
+      display: block;
+    }
+    .web-module {
+      display: none;
+    }
+  }
+  
   .wrapper-module {
     @include display(flex, row, none, none); 
   }  

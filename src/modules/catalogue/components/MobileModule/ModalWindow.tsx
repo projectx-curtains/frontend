@@ -1,29 +1,19 @@
 import { Dialog } from "@mui/material";
+import Drawer from "@mui/material/Drawer";
 import { IModalProps } from "./interfacer";
 
 import style from "./styles/index.module.scss";
 
 const ModalWindow: React.FC<IModalProps> = ({
+  anchor,
   open,
   handleClose,
   children,
 }) => {
   return (
-    <Dialog
-      className={style["modal-product-filters"]}
-      onClose={handleClose}
-      open={open}
-      // sx={{
-      //   "& ,MuiDialog-root": {
-      //     // justifyContent: "flex-start",
-      //     top: 100,
-      //     left: 100,
-      //   },
-      //   "& ,MuiDialog-container": { with: "304px", top: 0, left: 0 },
-      // }}
-    >
+    <Drawer anchor={anchor} onClose={handleClose} open={open}>
       {children}
-    </Dialog>
+    </Drawer>
   );
 };
 export default ModalWindow;
