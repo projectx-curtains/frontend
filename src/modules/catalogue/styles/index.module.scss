@@ -10,6 +10,8 @@
     display: block;
   }
   @media (max-width: $screen-md) {
+    margin-left: 16px;
+    margin-top: 12px;
     .mobile-module {
       display: block;
     }

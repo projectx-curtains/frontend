@@ -1,9 +1,8 @@
 import { useState } from "react";
+import Drawer from "@mui/material/Drawer";
 import ClearIcon from "@mui/icons-material/Clear";
 import ProductCard from "@common/productCard/components";
-import ButtonScrollUp from "@common/buttonScrollUp";
 import TagCloud from "../TagCloud";
-import ModalWindow from "./ModalWindow";
 import ProductFilters from "../productFilters";
 import PriceFilter from "../PriceFilter";
 import MobileFilterImg from "../../../../../assets/svg/mobileFilter.svg";
@@ -35,11 +34,7 @@ const MobileModule = () => {
           className={style["mobile-filter-img"]}
           onClick={handleOpenFilter}
         />
-        <ModalWindow
-          anchor="left"
-          open={openFilter}
-          handleClose={handleCloseFilter}
-        >
+        <Drawer anchor="left" open={openFilter} onClose={handleCloseFilter}>
           <ClearIcon
             onClick={handleCloseFilter}
             fontSize="medium"
@@ -52,18 +47,24 @@ const MobileModule = () => {
             }}
           />
           <ProductFilters />
-        </ModalWindow>
+        </Drawer>
         <MobileSortPriceImg
           className={style["mobile-sort-price-img"]}
           onClick={handleOpenSortPrice}
         />
-        <ModalWindow
+        <Drawer
           anchor="right"
           open={openSortPrice}
-          handleClose={handleCloseSortPrice}
+          onClose={handleCloseSortPrice}
+          sx={{
+            "& .MuiDrawer-paper": {
+              height: "38px",
+              mt: "176px",
+            },
+          }}
         >
           <PriceFilter />
-        </ModalWindow>
+        </Drawer>
       </div>
       <div className={style["mobile-module__cards"]}>
         <ProductCard
