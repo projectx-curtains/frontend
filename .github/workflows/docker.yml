@@ -40,7 +40,7 @@ jobs:
           ECR_REPOSITORY: ${{ secrets.REPOSITORY_NAME }}
           IMAGE_TAG: ${{ github.ref_name }}
         run: |
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f ./Dockerfile . 
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f ./workflow.Dockerfile . 
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
       
