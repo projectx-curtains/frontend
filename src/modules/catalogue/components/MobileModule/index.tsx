@@ -34,7 +34,14 @@ const MobileModule = () => {
           className={style["mobile-filter-img"]}
           onClick={handleOpenFilter}
         />
-        <Drawer anchor="left" open={openFilter} onClose={handleCloseFilter}>
+        <Drawer
+          anchor="left"
+          open={openFilter}
+          onClose={handleCloseFilter}
+          sx={{
+            "& .MuiDrawer-paper": { mt: "56px", height: "auto" },
+          }}
+        >
           <ClearIcon
             onClick={handleCloseFilter}
             fontSize="medium"
