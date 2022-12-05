@@ -1,49 +1,36 @@
 @import "../../../../../../styles/App";
 
-.cards-module {
-  @include display(flex, column, flex-start, none);
-  &__filter-values {
-    @include display(flex, row, flex-start, center);
-    .tag-cloud {
-      @include display(flex, row, flex-start, center);
-      flex-wrap: wrap;
-    }
-    .price-filter {
-      margin-left: auto;
-    }
+.nothing-found {
+  @include display(flex, column, center, center);
+  margin-top: 52px;
+  margin-bottom: 96px;
+  .title {
+    @include heading-24-medium;          
+    color: $gray-400;
   }
-  &__nothing-found {
-    @include display(flex, column, center, center);
-    margin-top: 52px;
-    margin-bottom: 96px;
-    .title {
-      @include heading-24-medium;          
+  .img {
+    margin: 24px 0px;      
+  }
+  .subtitle {
+    margin-top:24px;
+    margin-bottom: 48px;      
+    li {
+      @include body-24-light;
       color: $gray-400;
     }
-    .img {
-      margin: 24px 0px;      
+    li::marker {
+      font-size: 18px;
     }
-    .subtitle {
-      margin-top:24px;
-      margin-bottom: 48px;      
-      li {
-        @include body-24-light;
-        color: $gray-400;
-      }
-      li::marker {
-        font-size: 18px;
-      }
-    }
-    
-    .button-on-constructor {
-      width: 336px;
-      max-width: 100%;
-      @include body-18-medium;    
-      box-shadow: none;
-      padding: 24px 48px 26px;
-      background-color: $brown-500;
-      color: $white;
-      margin-bottom: 96px;
-    }
-  }  
-}
+  }
+  
+  .button-on-constructor {
+    width: 336px;
+    max-width: 100%;
+    @include body-18-medium;    
+    box-shadow: none;
+    padding: 24px 48px 26px;
+    background-color: $brown-500;
+    color: $white;
+    margin-bottom: 96px;
+  }
+}  

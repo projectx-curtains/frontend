@@ -4,6 +4,9 @@
   width: 1440px;
   border-bottom: 1px solid $gray-250;
   margin-top: 56px; 
+  @media (max-width: $screen-md) {
+    display: none;
+  }
 
   &__title { 
     @include heading-40-medium;

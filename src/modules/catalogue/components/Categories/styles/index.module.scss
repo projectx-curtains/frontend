@@ -10,6 +10,7 @@
   &__list {
     @include display(flex, row, flex-start, center);
     list-style-type: none; 
+    width: 100%;
     @media (max-width: $screen-md) {
       flex-wrap: nowrap;
     }  
