@@ -8,7 +8,7 @@ export interface ISearchBarContainerProps {
 export interface ISearchBarProps {
   theme: string;
   menuOpen: boolean;
-  handleSearchItems: (e: React.FormEvent<HTMLFormElement>) => void;
+  handleSearchItems: (e: React.SyntheticEvent<HTMLFormElement>) => void;
   searchInput: string;
   setSearchInput: React.Dispatch<React.SetStateAction<string>>;
   isActivePopup: boolean;

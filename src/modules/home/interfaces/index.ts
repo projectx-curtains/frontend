@@ -1,10 +1,5 @@
 import { ProductCardType } from "@common/productCard/types";
 
-export interface IProductGalleryProps {
-  items: Array<ProductCardType>; //Todo: change the type when we'll get json data
-  titleText: string;
-}
-
 export interface ICategoryCardProps {
   type: string;
   text: string;
@@ -12,19 +7,19 @@ export interface ICategoryCardProps {
   path: string;
 }
 
-export interface ICarouselProps {
-  children: React.ReactNode;
-  className: string;
+export interface IProductGalleryProps {
+  items: Array<ProductCardType>; //Todo: change the type when we'll get json data
+  titleText: string;
 }
 
-export interface IReviews {
+export type WhyWeAreItem = {
+  image: string;
+  text: string;
+};
+
+export type ReviewsItem = {
   name: string;
   location: string;
   comment: string;
   image: string;
-}
-
-export interface IWhyWeAre {
-  image: string;
-  text: string;
-}
+};

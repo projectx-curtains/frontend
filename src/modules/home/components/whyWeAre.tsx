@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/future/image";
-import { WHY_WE_ARE } from "../mocks/whyWeAre.data";
-import { WhyWeAreItem } from "../types";
+import { WHY_WE_ARE } from "../constants/whyWeAre.data";
+import { WhyWeAreItem } from "../interfaces";
 import style from "../styles/whyWeAre.module.scss";
 
 const WhyWeAre = () => {

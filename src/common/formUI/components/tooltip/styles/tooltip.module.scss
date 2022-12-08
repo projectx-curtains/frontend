@@ -1,0 +1,30 @@
+@import "@styles/App";
+
+.tooltip {
+  display: flex;
+  align-items: center;
+
+  &__title {
+    @include body-20-medium();
+    font-size: 16px;
+    color: $gray-500;
+  }
+
+  &__icon {
+    margin-left: 18px;
+    color: $gray-500;
+  }
+
+  &__popper {
+    padding: 16px;
+    width: 343px;
+    @include body-14-regular();
+    background-color: $white;
+    color: $gray-500;
+    filter: drop-shadow(0px 0px 10px rgba(64, 64, 64, 0.15));
+  }
+
+  &__arrow {
+    color: $white;
+  }
+}

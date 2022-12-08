@@ -1,6 +1,6 @@
 import React from "react";
 import classnames from "classnames";
-import { MdClose } from "react-icons/md";
+import CloseIcon from "@mui/icons-material/Close";
 import { ITagCloudProps } from "../interfaces";
 import style from "../styles/index.module.scss";
 
@@ -30,7 +30,7 @@ const TagCloud: React.FC<ITagCloudProps> = ({ tags, handleClose }) => {
             className={style["tag-cloud__item-button-cross"]}
             onClick={() => handleClose(index)}
           >
-            <MdClose />
+            <CloseIcon />
           </div>
         </div>
       ))}

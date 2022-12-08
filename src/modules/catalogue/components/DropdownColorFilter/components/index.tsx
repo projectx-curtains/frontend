@@ -1,10 +1,9 @@
 import React from "react";
 import classnames from "classnames";
-
-import { MdArrowDropDown } from "react-icons/md";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ColorFilterItem from "./ColorFilterItem";
-
 import { IColorDropdownFilterProps } from "../interfaces";
+import { createSteppedGradient } from "@common/catalog/components/DropdownColorFilter/utils/gradient";
 
 import style from "../styles/index.module.scss";
 
@@ -23,24 +22,18 @@ const DropdownColorFilter: React.FC<IColorDropdownFilterProps> = ({
         className={style["dropdown-color-filter__title-list"]}
         onClick={handleOpen}
       >
-        <div className={style["dropdown-color-filter__gradient-colors"]}>
-          <span
-            className={style["color-top"]}
-            style={{ backgroundColor: gradientColorTop }}
-          ></span>
-          <span
-            className={style["color-mid"]}
-            style={{ backgroundColor: gradientColorMid }}
-          ></span>
-          <span
-            className={style["color-bot"]}
-            style={{ backgroundColor: gradientColorBot }}
-          ></span>
-        </div>
+        <div
+          className={style["dropdown-color-filter__gradient-colors"]}
+          style={createSteppedGradient([
+            gradientColorTop,
+            gradientColorMid,
+            gradientColorBot,
+          ])}
+        />
         <span className={style["dropdown-color-filter__name-title"]}>
           {title}
         </span>
-        <MdArrowDropDown
+        <ArrowDropDownIcon
           className={classnames(style["dropdown-color-filter__icon"], {
             [style["rotate-icon"]]: isOpen,
           })}

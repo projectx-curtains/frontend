@@ -1,15 +1,15 @@
 import React from "react";
-import classNames from "classnames";
+import classnames from "classnames";
 import Image from "next/future/image";
-import Carousel from "./carousel";
-import { REVIEWS } from "../mocks/reviews.data";
+import Carousel from "../../../common/carousel/components/carousel";
+import { REVIEWS } from "../constants/reviews.data";
 import style from "../styles/reviews.module.scss";
 
 const Reviews = () => {
   return (
     <section className={style.reviews}>
       <div className={style.reviews__container}>
-        <h2 className={classNames("heading", style.reviews__heading)}>
+        <h2 className={classnames("heading", style.reviews__heading)}>
           Отзывы
         </h2>
         <Carousel className={style.reviews__slider}>
@@ -23,7 +23,7 @@ const Reviews = () => {
                     alt="our work"
                   />
                   <div
-                    className={classNames(style.user, style["user--mobile"])}
+                    className={classnames(style.user, style["user--mobile"])}
                   >
                     <div className={style.user__name}>{sliderItem.name}</div>
                     <div className={style.user__location}>
@@ -54,7 +54,7 @@ const Reviews = () => {
                     </div>
                   </div>
                   <div
-                    className={classNames(style.user, style["user--desktop"])}
+                    className={classnames(style.user, style["user--desktop"])}
                   >
                     <div className={style.user__name}>{sliderItem.name}</div>
                     <div className={style.user__location}>
