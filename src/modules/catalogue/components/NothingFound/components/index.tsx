@@ -1,7 +1,7 @@
 import Button from "@mui/material/Button";
 import PriceFilter from "@modules/catalogue/components/PriceFilter";
 import TagCloud from "@modules/catalogue/components/TagCloud";
-import IntrestingCards from "../../IntrestingCards/components";
+import SuggestionCards from "../../SuggestionCards/components";
 import NothingFoundImg from "../../../../../../assets/svg/nothingFoundImg.svg";
 
 import style from "../styles/index.module.scss";
@@ -38,7 +38,7 @@ const NothingFound = () => {
         >
           Создать свой проект штор
         </Button>
-        <IntrestingCards />
+        <SuggestionCards />
       </div>
     </div>
   );

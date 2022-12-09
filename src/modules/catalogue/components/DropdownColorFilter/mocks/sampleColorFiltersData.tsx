@@ -2,9 +2,7 @@ export const sampleColorFiltersData = [
   {
     id: Math.random(),
     title: "Красный/розовый",
-    gradientColorTop: "#E9ADB0",
-    gradientColorMid: "#EB757A",
-    gradientColorBot: "#E61710",
+    gradient: ["#E9ADB0", "#EB757A", "#E61710"],
     dropdownFilterColor: [
       { id: Math.random(), title: "Пастель светлая", color: "#F2DBE0" },
       { id: Math.random(), title: "Пастель розовая", color: "#E9ADB0" },
@@ -17,9 +15,7 @@ export const sampleColorFiltersData = [
   {
     id: Math.random(),
     title: "Оранжевый",
-    gradientColorTop: "#F4CD63",
-    gradientColorMid: "#EFA839",
-    gradientColorBot: "#EC6718",
+    gradient: ["#F4CD63", "#EFA839", "#EC6718"],
     dropdownFilterColor: [
       { id: Math.random(), title: "Пастель светлая", color: "#F2DBE0" },
       { id: Math.random(), title: "Пастель персик", color: "#E9ADB0" },
@@ -33,9 +29,7 @@ export const sampleColorFiltersData = [
   {
     id: Math.random(),
     title: "Желтый/хаки",
-    gradientColorTop: "#FEF88F",
-    gradientColorMid: "#F4EE47",
-    gradientColorBot: "#F6BE1A",
+    gradient: ["#FEF88F", "#F4EE47", "#F6BE1A"],
     dropdownFilterColor: [
       { id: Math.random(), title: "Пастель светлая", color: "#F8F4DB" },
       { id: Math.random(), title: "Пастель желтая", color: "#FEF88F" },
@@ -48,9 +42,7 @@ export const sampleColorFiltersData = [
   {
     id: Math.random(),
     title: "Зеленый/салатовый",
-    gradientColorTop: "#ADDEA9",
-    gradientColorMid: "#45C264",
-    gradientColorBot: "#00982E",
+    gradient: ["#ADDEA9", "#45C264", "#00982E"],
     dropdownFilterColor: [
       { id: Math.random(), title: "Пастель светлая", color: "#D7ECD9" },
       { id: Math.random(), title: "Пастель салатовая", color: "#ADDEA9" },
@@ -63,9 +55,7 @@ export const sampleColorFiltersData = [
   {
     id: Math.random(),
     title: "Синий/голубой",
-    gradientColorTop: "#A4D8E9",
-    gradientColorMid: "#0079D1",
-    gradientColorBot: "#282683",
+    gradient: ["#A4D8E9", "#0079D1", "#282683"],
     dropdownFilterColor: [
       { id: Math.random(), title: "Пастель светлая", color: "#E5EFF3" },
       { id: Math.random(), title: "Пастель голубая", color: "#A4D8E9" },
@@ -78,9 +68,7 @@ export const sampleColorFiltersData = [
   {
     id: Math.random(),
     title: "Фиолетовый/сирень",
-    gradientColorTop: "#D69AC9",
-    gradientColorMid: "#AD4D9F",
-    gradientColorBot: "#A03276",
+    gradient: ["#D69AC9", "#AD4D9F", "#A03276"],
     dropdownFilterColor: [
       { id: Math.random(), title: "Пастель светлая", color: "#E7D7E7" },
       { id: Math.random(), title: "Пастель сереневая", color: "#D69AC9" },
@@ -93,9 +81,7 @@ export const sampleColorFiltersData = [
   {
     id: Math.random(),
     title: "Бежевый",
-    gradientColorTop: "#FFFED6",
-    gradientColorMid: "#DED3C5",
-    gradientColorBot: "#D7BF9C",
+    gradient: ["#FFFED6", "#DED3C5", "#D7BF9C"],
     dropdownFilterColor: [
       { id: Math.random(), title: "Кремовый", color: "#FFFED6" },
       { id: Math.random(), title: "Молочный", color: "#FDF6D8" },
@@ -108,9 +94,7 @@ export const sampleColorFiltersData = [
   {
     id: Math.random(),
     title: "Белый/Серый/Черный",
-    gradientColorTop: "#FFFFFF",
-    gradientColorMid: "#7C7D81",
-    gradientColorBot: "#000000",
+    gradient: ["#FFFFFF", "#7C7D81", "#000000"],
     dropdownFilterColor: [
       { id: Math.random(), title: "Белый", color: "#FFFFFF" },
       { id: Math.random(), title: "Пепел", color: "#C7C8CA" },

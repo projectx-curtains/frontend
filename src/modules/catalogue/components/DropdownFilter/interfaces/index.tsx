@@ -1,5 +1,5 @@
 type FilterData = {
-  id: string;
+  id: number;
   title: string;
 };
 
@@ -8,9 +8,9 @@ export interface IItemsFilterProps {
 }
 
 export interface IDropdownFilterContainerProps {
-  id?: string;
-  title: string;
-  itemsFilter: Array<FilterData>;
+  id?: number;
+  title?: string;
+  itemsFilter?: Array<FilterData>;
   children: React.ReactNode;
 }
 

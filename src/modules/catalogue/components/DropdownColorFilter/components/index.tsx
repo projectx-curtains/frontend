@@ -9,9 +9,7 @@ import style from "../styles/index.module.scss";
 
 const DropdownColorFilter: React.FC<IColorDropdownFilterProps> = ({
   title,
-  gradientColorTop,
-  gradientColorMid,
-  gradientColorBot,
+  gradient,
   isOpen,
   handleOpen,
   dropdownFilterColor,
@@ -24,11 +22,7 @@ const DropdownColorFilter: React.FC<IColorDropdownFilterProps> = ({
       >
         <div
           className={style["dropdown-color-filter__gradient-colors"]}
-          style={createSteppedGradient([
-            gradientColorTop,
-            gradientColorMid,
-            gradientColorBot,
-          ])}
+          style={createSteppedGradient(gradient)}
         />
         <span className={style["dropdown-color-filter__name-title"]}>
           {title}

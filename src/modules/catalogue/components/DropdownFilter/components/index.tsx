@@ -5,9 +5,7 @@ import { IDropdownFilterProps } from "../interfaces";
 import style from "../styles/index.module.scss";
 
 const DropdownFilter: React.FC<IDropdownFilterProps> = ({
-  id,
   title,
-  itemsFilter,
   isOpen,
   handleOpen,
   children,

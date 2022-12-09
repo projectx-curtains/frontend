@@ -1,7 +1,7 @@
 import ProductCard from "@common/productCard/components";
 import style from "../styles/index.module.scss";
 
-const IntrestingCards = (children: any) => {
+const SuggestionCards = (children: any) => {
   return (
     <div className={style["intresting-cards"]}>
       <h1 className={style["title"]}>Вам будет интересно</h1>
@@ -18,4 +18,4 @@ const IntrestingCards = (children: any) => {
     </div>
   );
 };
-export default IntrestingCards;
+export default SuggestionCards;

@@ -6,14 +6,7 @@ import { IColorDropdownFilterContainerProps } from "../interfaces";
 
 const DropdownColorFilterContainer: React.FC<
   IColorDropdownFilterContainerProps
-> = ({
-  id,
-  title,
-  gradientColorTop,
-  gradientColorMid,
-  gradientColorBot,
-  dropdownFilterColor,
-}) => {
+> = ({ id, title, gradient, dropdownFilterColor }) => {
   const [isOpen, setOpen] = useState(false);
 
   const handleOpen = () => setOpen(!isOpen);
@@ -21,9 +14,7 @@ const DropdownColorFilterContainer: React.FC<
   const props = {
     id,
     title,
-    gradientColorTop,
-    gradientColorMid,
-    gradientColorBot,
+    gradient,
     isOpen,
     handleOpen,
     dropdownFilterColor,

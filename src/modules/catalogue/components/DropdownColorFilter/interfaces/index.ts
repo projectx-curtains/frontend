@@ -1,5 +1,5 @@
 type FilterData = {
-  id: string;
+  id: number;
   title: string;
   color: string;
 };
@@ -10,10 +10,8 @@ export interface IColorFilterProps {
 
 export interface IColorDropdownFilterContainerProps {
   id: number;
-  title: string;
-  gradientColorTop: string;
-  gradientColorMid: string;
-  gradientColorBot: string;
+  title: string;  
+  gradient: Array<string>;
   dropdownFilterColor: Array<FilterData>;
 }
 

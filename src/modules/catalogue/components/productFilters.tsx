@@ -38,25 +38,17 @@ const ProductFilters = () => {
             maxPriceOnTheScreen={250}
           />
           <div className={style["filters-module__filters"]}>
-            {fabricsDropdownFiltersData.map((filter) => (
-              <DropdownFilter
-                key={filter.id}
-                title={filter.title}
-                itemsFilter={filter.itemsFilter}
-              >
-                {<ItemFilter filters={filter.itemsFilter} />}
+            {fabricsDropdownFiltersData.map(({ id, title, itemsFilter }) => (
+              <DropdownFilter key={id} title={title} itemsFilter={itemsFilter}>
+                {<ItemFilter filters={itemsFilter} />}
               </DropdownFilter>
             ))}
           </div>
           <ColorFilter />
           <div className={style["filters-module__filter-design"]}>
-            {fabricsDesignFilter.map((filter) => (
-              <DropdownFilter
-                key={filter.id}
-                title={filter.title}
-                itemsFilter={filter.itemsFilter}
-              >
-                {<ItemFilter filters={filter.itemsFilter} />}
+            {fabricsDesignFilter.map(({ id, title, itemsFilter }) => (
+              <DropdownFilter key={id} title={title} itemsFilter={itemsFilter}>
+                {<ItemFilter filters={itemsFilter} />}
               </DropdownFilter>
             ))}
           </div>
