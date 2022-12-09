@@ -3,8 +3,10 @@ import classnames from "classnames";
 import CloseIcon from "@mui/icons-material/Close";
 import { ITagCloudProps } from "../interfaces";
 import style from "../styles/index.module.scss";
+import classNames from "classnames";
 
 const TagCloud: React.FC<ITagCloudProps> = ({ tags, handleClose }) => {
+  const withColorTag = style["tag-cloud__with-color-tag"];
   return (
     <div className={style["tag-cloud"]}>
       {tags.map((tag, index) => (
@@ -21,8 +23,9 @@ const TagCloud: React.FC<ITagCloudProps> = ({ tags, handleClose }) => {
             ></span>
           )}
           <p
-            className={style["tag-cloud__item-name"]}
-            style={tag.color ? { paddingLeft: "6px" } : { paddingLeft: "12px" }}
+            className={classNames(style["tag-cloud__item-name"], {
+              withColorTag: tag.color,
+            })}
           >
             {tag.name}
           </p>

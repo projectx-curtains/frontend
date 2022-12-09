@@ -8,24 +8,21 @@ const ColorFilterItem: React.FC<IColorFilterProps> = ({ filters }) => {
   const [field] = useField("dropdownFilters");
   return (
     <>
-      {filters.map((filter) => (
-        <div className={style["item-color-filter"]} key={filter.id}>
+      {filters.map(({ id, color, title }) => (
+        <div className={style["item-color-filter"]} key={id}>
           <input
             className={style["item-color-filter__checkbox"]}
             type="checkbox"
             {...field}
-            value={filter.title}
-            id={filter.id}
+            value={title}
+            id={id}
           ></input>
           <div
             className={style["item-color-filter__color"]}
-            style={{ background: filter.color }}
+            style={{ background: color }}
           ></div>
-          <label
-            className={style["item-color-filter__name"]}
-            htmlFor={filter.id}
-          >
-            {filter.title}
+          <label className={style["item-color-filter__name"]} htmlFor={id}>
+            {title}
           </label>
         </div>
       ))}
