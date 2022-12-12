@@ -10,7 +10,6 @@ export interface IItemsFilterProps {
 export interface IDropdownFilterContainerProps {
   id?: number;
   title?: string;
-  itemsFilter?: Array<FilterData>;
   children: React.ReactNode;
 }
 

@@ -1,9 +1,12 @@
 import React from "react";
 import classnames from "classnames";
+
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ColorFilterItem from "./ColorFilterItem";
+
 import { IColorDropdownFilterProps } from "../interfaces";
-import { createSteppedGradient } from "@common/catalog/components/DropdownColorFilter/utils/gradient";
+
+import { createSteppedGradient } from "@modules/catalogue/components/DropdownColorFilter/utils/gradient";
 
 import style from "../styles/index.module.scss";
 

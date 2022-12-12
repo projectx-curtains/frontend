@@ -7,6 +7,7 @@ const ColorFilter = () => {
   const itemsColorFilter = sampleColorFiltersData.map(
     ({ id, title, gradient, dropdownFilterColor }) => (
       <DropdownColorFilter
+        id={id}
         key={id}
         title={title}
         gradient={gradient}
@@ -16,9 +17,7 @@ const ColorFilter = () => {
   );
   return (
     <div className={style["colorFilter"]}>
-      <DropdownFilter title="Цвет ткани" itemsFilter={itemsColorFilter}>
-        {itemsColorFilter}
-      </DropdownFilter>
+      <DropdownFilter title="Цвет ткани">{itemsColorFilter}</DropdownFilter>
     </div>
   );
 };
