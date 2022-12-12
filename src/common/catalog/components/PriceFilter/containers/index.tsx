@@ -1,13 +1,14 @@
-import { useState } from "react";
-import PriceFilter from "../components";
+import { useState } from "react"
+import PriceFilter from "../components"
 
 const PriceFilterContainer = () => {
-  const [sort, setSort] = useState("");
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [sort, setSort] = useState("")
   const changeTargetValue = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSort(event.target.value);
-  };
+    setSort(event.target.value)
+  }
 
-  return <PriceFilter changeTargetValue={changeTargetValue} />;
-};
+  return <PriceFilter changeTargetValue={changeTargetValue} />
+}
 
-export default PriceFilterContainer;
+export default PriceFilterContainer

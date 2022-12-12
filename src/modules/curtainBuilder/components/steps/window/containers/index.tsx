@@ -16,18 +16,18 @@ const WindowStepContainer = () => {
     const { single, double } = WindowQuantityEnum;
 
     switch (values.typeWindow) {
-      case singleLeaf:
-        return values.quantityWindow === single
-          ? `${singleLeaf}-${single}.png`
-          : `${singleLeaf}-${double}.png`;
-      case doubleLeaf:
-        return values.quantityWindow === single
-          ? `${doubleLeaf}-${single}.png`
-          : `${doubleLeaf}-${double}.png`;
-      case tripleLeaf:
-        return `${tripleLeaf}-${single}.png`;
-      default:
-        return `${doubleLeaf}-${double}.png`;
+    case singleLeaf:
+      return values.quantityWindow === single
+        ? `${singleLeaf}-${single}.png`
+        : `${singleLeaf}-${double}.png`;
+    case doubleLeaf:
+      return values.quantityWindow === single
+        ? `${doubleLeaf}-${single}.png`
+        : `${doubleLeaf}-${double}.png`;
+    case tripleLeaf:
+      return `${tripleLeaf}-${single}.png`;
+    default:
+      return `${doubleLeaf}-${double}.png`;
     }
   };
 

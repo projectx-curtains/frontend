@@ -1,15 +1,14 @@
-import React from "react";
-import classnames from "classnames";
-import Link from "next/link";
-import Image from "next/future/image";
-import { IProductCardProps } from "../interfaces";
-import style from "../styles/productCard.module.scss";
+import React from "react"
+import classnames from "classnames"
+import Link from "next/link"
+import Image from "next/future/image"
+import { IProductCardProps } from "../interfaces"
+import style from "../styles/productCard.module.scss"
 
 const ProductCard: React.FC<IProductCardProps> = ({
   image,
   name,
   price,
-  link,
   variant,
 }) => {
   return (
@@ -26,7 +25,7 @@ const ProductCard: React.FC<IProductCardProps> = ({
         <p className={style.card__price}>От {price} BYN</p>
       </a>
     </Link>
-  );
-};
+  )
+}
 
-export default ProductCard;
+export default ProductCard

@@ -1,7 +1,7 @@
-import { useEffect } from "react";
-import { useField } from "formik";
-import RadioGroupField from "../components";
-import { IRadioGroupFieldContainer } from "../interfaces";
+import { useEffect } from "react"
+import { useField } from "formik"
+import RadioGroupField from "../components"
+import { IRadioGroupFieldContainer } from "../interfaces"
 
 const RadioGroupFieldContainer: React.FC<IRadioGroupFieldContainer> = ({
   content,
@@ -9,11 +9,11 @@ const RadioGroupFieldContainer: React.FC<IRadioGroupFieldContainer> = ({
   disabled,
   ...props
 }) => {
-  const [field, meta, helpers] = useField(props.name);
+  const [field, , helpers] = useField(props.name)
 
   useEffect(() => {
-    helpers.setValue(props.defaultValue);
-  }, []);
+    helpers.setValue(props.defaultValue)
+  }, [])
 
   return (
     <RadioGroupField
@@ -23,7 +23,7 @@ const RadioGroupFieldContainer: React.FC<IRadioGroupFieldContainer> = ({
       disabled={disabled}
       {...props}
     />
-  );
-};
+  )
+}
 
-export default RadioGroupFieldContainer;
+export default RadioGroupFieldContainer
