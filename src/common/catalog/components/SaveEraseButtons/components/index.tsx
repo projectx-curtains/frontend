@@ -11,15 +11,13 @@ const SaveEraseButtons: React.FC<ISaveEraseButtonsProps> = ({
       <Button
         className={style["save-erase-buttons__save-button"]}
         onClick={clickSaveButton}
-        variant="contained"
-      >
+        variant="contained">
         Показать варианты
       </Button>
       <Button
         className={style["save-erase-buttons__erase-button"]}
         onClick={clickEraseButton}
-        variant="outlined"
-      >
+        variant="outlined">
         Очистить фильтр
       </Button>
     </div>

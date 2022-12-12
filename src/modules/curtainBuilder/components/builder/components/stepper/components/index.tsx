@@ -8,15 +8,19 @@ import style from "../styles/steps.module.scss";
 
 const CustomStepper: React.FC<ICustomStepper> = ({ activeStep, steps }) => {
   return (
-    <Stepper alternativeLabel activeStep={activeStep} className={style.stepper}>
+    <Stepper
+      alternativeLabel
+      activeStep={activeStep}
+      className={style.stepper}>
       {steps.map((currentStep) => {
         const label = currentStep.props.stepName;
         return (
-          <Step key={label} className={style.stepper__step}>
+          <Step
+            key={label}
+            className={style.stepper__step}>
             <StepLabel
               StepIconComponent={CustomStepIcon}
-              className={style.stepper__label}
-            >
+              className={style.stepper__label}>
               {label}
             </StepLabel>
           </Step>

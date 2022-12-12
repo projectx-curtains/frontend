@@ -20,37 +20,34 @@ const Builder: React.FC<IBuilderProps> = ({
         initialValues={{ initialValues }}
         onSubmit={(values) => {
           alert(JSON.stringify(values, null, 2));
-        }}
-      >
+        }}>
         <FormStepContainer
           stepName="Выбор параметров окна"
-          validationSchema={windowValidationSchema}
-        >
+          validationSchema={windowValidationSchema}>
           <WindowStep />
         </FormStepContainer>
         <FormStepContainer
           stepName="Выбор параметров карниза"
-          validationSchema={corniceValidationSchema}
-        >
+          validationSchema={corniceValidationSchema}>
           <CorniceStep />
         </FormStepContainer>
         {isTulleDisplayed && (
           <FormStepContainer
             stepName="Выбор параметров тюля"
-            validationSchema={null}
-          >
+            validationSchema={null}>
             <TulleStep />
           </FormStepContainer>
         )}
         {isCurtainDisplayed && (
           <FormStepContainer
             stepName="Выбор параметров портьер"
-            validationSchema={null}
-          >
+            validationSchema={null}>
             <CurtainStep />
           </FormStepContainer>
         )}
-        <FormStepContainer stepName="Оформление заказа" validationSchema={null}>
+        <FormStepContainer
+          stepName="Оформление заказа"
+          validationSchema={null}>
           <CheckoutStep />
         </FormStepContainer>
       </MultiStepForm>

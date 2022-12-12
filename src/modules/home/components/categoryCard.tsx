@@ -19,8 +19,7 @@ const CategoryCard: React.FC<ICategoryCardProps> = ({
           style["category-card"],
           style[`category-card--${type}`],
           style[className]
-        )}
-      >
+        )}>
         <div className={style["category-card__description"]}>
           <h2 className={style["category-card__name"]}>{text}</h2>
           <NorthIcon className={style["category-card__arrow"]} />

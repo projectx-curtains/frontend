@@ -11,12 +11,6 @@ const ButtonScrollUp: React.FC<IButtonScrollUpProps> = ({ scrolledValue }) => {
   const [isVisible, setIsVisible] = useState(false);
   const waitDebounce = 10;
 
-  useEffect(() => {
-    const debounceVal = debounce(toggleVisible, waitDebounce);
-    window.addEventListener("scroll", debounceVal);
-    return () => window.removeEventListener("scroll", debounceVal);
-  });
-
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
 
@@ -27,12 +21,17 @@ const ButtonScrollUp: React.FC<IButtonScrollUpProps> = ({ scrolledValue }) => {
     }
   };
 
+  useEffect(() => {
+    const debounceVal = debounce(toggleVisible, waitDebounce);
+    window.addEventListener("scroll", debounceVal);
+    return () => window.removeEventListener("scroll", debounceVal);
+  });
+
   return (
     <div
       className={classnames(style["button-scroll-up"], {
         [style["hidden"]]: !isVisible,
-      })}
-    >
+      })}>
       <UpArrow onClick={scrollToTop} />
     </div>
   );

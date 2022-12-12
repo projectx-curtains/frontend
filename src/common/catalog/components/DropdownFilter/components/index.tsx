@@ -5,7 +5,6 @@ import { IDropdownFilterProps } from "../interfaces";
 import style from "../styles/index.module.scss";
 
 const DropdownFilter: React.FC<IDropdownFilterProps> = ({
-  id,
   title,
   itemsFilter,
   isOpen,
@@ -15,8 +14,7 @@ const DropdownFilter: React.FC<IDropdownFilterProps> = ({
     <div className={style["dropdown-filter"]}>
       <div
         className={style["dropdown-filter__title-list"]}
-        onClick={handleOpen}
-      >
+        onClick={handleOpen}>
         <span className={style["dropdown-filter__name-title"]}>{title}</span>
         <ExpandMoreIcon
           className={classnames(style["dropdown-filter__icon"], {

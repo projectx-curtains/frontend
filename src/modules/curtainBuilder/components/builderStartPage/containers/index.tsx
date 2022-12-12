@@ -5,10 +5,7 @@ const BuilderStartPageContainer: React.FC<IBuilderStartPageContainer> = ({
   handleStartBuilder,
   setChosenOption,
 }) => {
-  const handleRadioChange = (
-    event: React.ChangeEvent<HTMLInputElement>,
-    value: string
-  ) => {
+  const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setChosenOption(event.target.value);
   };
 

@@ -9,7 +9,7 @@ export const windowValidationSchema = yup.object({
   quantityWindow: yup.string().default(WindowQuantityEnum.double),
   widthWindow: yup.number().positive().required(REQUIRED_FIELD),
   heightWindow: yup.number().positive().required(REQUIRED_FIELD),
-  distanceWindow: yup.number().when("quantityWindow", (val, schema) => {
+  distanceWindow: yup.number().when("quantityWindow", (val) => {
     if (val === WindowQuantityEnum.double) {
       return yup.number().positive().required(REQUIRED_FIELD);
     } else {

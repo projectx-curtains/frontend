@@ -1,8 +1,8 @@
 @import "../../../../../../styles/App";
 
-.link-structure {    
-  @include display(flex, row, flex-start, center);   
-  
+.link-structure {
+  @include display(flex, row, flex-start, center);
+
   &__home {
     @include body-18-regular;
     text-decoration-line: underline;
@@ -11,8 +11,8 @@
   &__arrow-forward {
     margin: 0 8px;
   }
-  &__current{
+  &__current {
     @include body-18-regular;
-    color: $gray-400;      
+    color: $gray-400;
   }
-}  
+}

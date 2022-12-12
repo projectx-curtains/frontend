@@ -12,7 +12,9 @@ const HomePage: NextPage = () => {
         title={HOME_METADATA.title}
         description={HOME_METADATA.description}
       />
-      <MainLayout defaultTheme={HEADER_THEME.transparent} isScrolled={true}>
+      <MainLayout
+        defaultTheme={HEADER_THEME.transparent}
+        isScrolled={true}>
         <HomeModule />
       </MainLayout>
     </>

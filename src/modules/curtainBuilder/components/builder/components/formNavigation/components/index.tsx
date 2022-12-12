@@ -18,8 +18,7 @@ const FormNavigation: React.FC<IFormNavigation> = ({
         <Button
           className={classNames("button--secondary", style["form-nav__button"])}
           type="button"
-          onClick={onBackClick}
-        >
+          onClick={onBackClick}>
           <KeyboardArrowLeftIcon className="button__icon" />
           Назад
         </Button>
@@ -27,8 +26,7 @@ const FormNavigation: React.FC<IFormNavigation> = ({
       <Button
         className={classNames("button--primary", style["form-nav__button"])}
         type="submit"
-        disabled={disableNext}
-      >
+        disabled={disableNext}>
         {isLastStep ? "Заказать" : "Далее"}
         <KeyboardArrowRightIcon className="button__icon" />
       </Button>

@@ -9,7 +9,6 @@ const ProductCard: React.FC<IProductCardProps> = ({
   image,
   name,
   price,
-  link,
   variant,
 }) => {
   return (

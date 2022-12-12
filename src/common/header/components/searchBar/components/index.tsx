@@ -1,6 +1,6 @@
 import React from "react";
 import classnames from "classnames";
-import SearchBarPopup from "./searchBarPopup";
+// import SearchBarPopup from "./searchBarPopup";
 import ErrorSearchBarPopup from "./errorSearchBarPopup";
 import SearchIcon from "@mui/icons-material/Search";
 import { ISearchBarProps } from "../interfaces";
@@ -17,7 +17,9 @@ const SearchBar: React.FC<ISearchBarProps> = ({
 }) => {
   return (
     <div className={classnames(style.search, style[`search--${theme}`])}>
-      <form className={style.search__form} onSubmit={handleSearchItems}>
+      <form
+        className={style.search__form}
+        onSubmit={handleSearchItems}>
         <input
           className={classnames(style.search__input, {
             [style["search__input--menu-open"]]: menuOpen,
@@ -32,8 +34,7 @@ const SearchBar: React.FC<ISearchBarProps> = ({
           type="submit"
           className={classnames(style.search__button, {
             [style["search__button--menu-open"]]: menuOpen,
-          })}
-        >
+          })}>
           <SearchIcon />
         </button>
       </form>

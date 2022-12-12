@@ -18,11 +18,13 @@ const MultiStepForm: React.FC<IMultiStepForm> = ({
       initialValues={snapshot}
       onSubmit={handleSubmit}
       validationSchema={step.props.validationSchema}
-      validateOnMount
-    >
+      validateOnMount>
       {(formik) => (
         <form onSubmit={formik.handleSubmit}>
-          <CustomStepper activeStep={stepNumber} steps={steps} />
+          <CustomStepper
+            activeStep={stepNumber}
+            steps={steps}
+          />
 
           {step}
 
