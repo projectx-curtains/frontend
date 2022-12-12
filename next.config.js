@@ -23,6 +23,9 @@ module.exports = {
       allowFutureImage: true,
     },
   },
+  eslint: {
+    dirs: ["pages", "src"],
+  },
 };
 
 // module.exports = nextConfig;
