@@ -9,11 +9,12 @@ const RadioGroupFieldContainer: React.FC<IRadioGroupFieldContainer> = ({
   disabled,
   ...props
 }) => {
-  const [field, , helpers] = useField(props.name)
+  const { name, defaultValue } = props
+  const [field, , helpers] = useField(name)
 
   useEffect(() => {
-    helpers.setValue(props.defaultValue)
-  }, [])
+    helpers.setValue(defaultValue)
+  }, [helpers, defaultValue])
 
   return (
     <RadioGroupField
