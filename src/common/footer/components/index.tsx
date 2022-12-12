@@ -14,18 +14,21 @@ import style from "../styles/footer.module.scss";
 
 const Footer = () => {
   return (
-    <footer id="footer" className={style.footer}>
+    <footer
+      id="footer"
+      className={style.footer}>
       <div className={classnames("container", style.footer__container)}>
         <div
           className={classnames(
             style.footer__logo,
             style.logo,
             style["logo--dark"]
-          )}
-        ></div>
+          )}></div>
 
         <nav className={style.nav}>
-          <Accordion title="О компании" className={style.nav__accordion}>
+          <Accordion
+            title="О компании"
+            className={style.nav__accordion}>
             <ul className={style.nav__list}>
               <li className={style.nav__item}>
                 <Link href={ROUTES.catalogue}>
@@ -43,13 +46,17 @@ const Footer = () => {
                 </Link>
               </li>
               <li className={style.nav__item}>
-                <a href="#our-works" className={style.nav__link}>
+                <a
+                  href="#our-works"
+                  className={style.nav__link}>
                   Наши работы
                 </a>
               </li>
             </ul>
           </Accordion>
-          <Accordion title="Покупателям" className={style.nav__accordion}>
+          <Accordion
+            title="Покупателям"
+            className={style.nav__accordion}>
             <ul className={style.nav__list}>
               <li className={style.nav__item}>
                 <Link href={ROUTES.consultation}>
@@ -96,21 +103,21 @@ const Footer = () => {
               className={classnames(
                 style.contacts__text,
                 style.contacts__place
-              )}
-            >
+              )}>
               {CONTACTS.address}
             </a>
           </div>
 
           {CONTACTS.phones.map((phone) => (
-            <div key={phone} className={style.contacts__wrapper}>
+            <div
+              key={phone}
+              className={style.contacts__wrapper}>
               <PhoneIcon className={style.contacts__icon} />
               <p
                 className={classnames(
                   style.contacts__text,
                   style.contacts__phone
-                )}
-              >
+                )}>
                 {phone}
               </p>
             </div>
@@ -121,15 +128,13 @@ const Footer = () => {
             href={CONTACTS.insta}
             target="_blank"
             rel="noopener noreferrer"
-            className={style.contacts__wrapper}
-          >
+            className={style.contacts__wrapper}>
             <InstagramIcon className={style.contacts__icon} />
             <p
               className={classnames(
                 style.contacts__text,
                 style.contacts__instagram
-              )}
-            >
+              )}>
               Instagram
             </p>
           </a>

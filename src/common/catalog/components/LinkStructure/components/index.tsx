@@ -5,7 +5,9 @@ import style from "../styles/index.module.scss";
 const LinkStructure: React.FC<ILinkStructureProps> = ({ currentTitle }) => {
   return (
     <div className={style["link-structure"]}>
-      <a href="/ " className={style["link-structure__home"]}>
+      <a
+        href="/ "
+        className={style["link-structure__home"]}>
         Главная
       </a>
       <ArrowForwardIosIcon className={style["link-structure__arrow-forward"]} />

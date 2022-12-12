@@ -1,10 +1,10 @@
-import React from "react"
-import classnames from "classnames"
+import React from "react";
+import classnames from "classnames";
 // import SearchBarPopup from "./searchBarPopup";
-import ErrorSearchBarPopup from "./errorSearchBarPopup"
-import SearchIcon from "@mui/icons-material/Search"
-import { ISearchBarProps } from "../interfaces"
-import style from "../styles/searchBar.module.scss"
+import ErrorSearchBarPopup from "./errorSearchBarPopup";
+import SearchIcon from "@mui/icons-material/Search";
+import { ISearchBarProps } from "../interfaces";
+import style from "../styles/searchBar.module.scss";
 
 const SearchBar: React.FC<ISearchBarProps> = ({
   theme,
@@ -46,7 +46,7 @@ const SearchBar: React.FC<ISearchBarProps> = ({
         <ErrorSearchBarPopup setIsActivePopup={setIsActivePopup} />
       )}
     </div>
-  )
-}
+  );
+};
 
-export default SearchBar
+export default SearchBar;

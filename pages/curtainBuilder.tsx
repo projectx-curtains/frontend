@@ -1,9 +1,9 @@
-import type { NextPage } from "next"
+import type { NextPage } from "next";
 // import { HeadTags } from "@common/headTags";
-import MainLayout from "@layouts/mainLayout/components"
-import { CurtainBuilderModule } from "@modules/curtainBuilder"
+import MainLayout from "@layouts/mainLayout/components";
+import { CurtainBuilderModule } from "@modules/curtainBuilder";
 // import { HOME_METADATA } from "@modules/home/mocks/metaData";
-import { HEADER_THEME } from "@common/header/constants"
+import { HEADER_THEME } from "@common/header/constants";
 
 const CurtainBuilderPage: NextPage = () => {
   return (
@@ -18,7 +18,7 @@ const CurtainBuilderPage: NextPage = () => {
         <CurtainBuilderModule />
       </MainLayout>
     </>
-  )
-}
+  );
+};
 
-export default CurtainBuilderPage
+export default CurtainBuilderPage;

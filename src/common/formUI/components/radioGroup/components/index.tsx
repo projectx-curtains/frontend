@@ -17,8 +17,7 @@ const RadioGroupField: React.FC<IRadioGroupField> = ({
       {...field}
       {...props}
       value={field.value || props.defaultValue}
-      className={style["radio-group"]}
-    >
+      className={style["radio-group"]}>
       {content.map(({ name, value }: RadioOrSelectType) => (
         <FormControlLabel
           key={name}

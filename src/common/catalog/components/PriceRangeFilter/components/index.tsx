@@ -19,8 +19,9 @@ const PriceRangeFilter: React.FC<IPriceRangeFilterProps> = ({
           onChange={handleChange}
         />
         <span
-          className={style["price-range-filter__price-block"]}
-        >{`Цена: ${priceValues[0]} BYN - ${priceValues[1]} BYN`}</span>
+          className={
+            style["price-range-filter__price-block"]
+          }>{`Цена: ${priceValues[0]} BYN - ${priceValues[1]} BYN`}</span>
       </div>
     </div>
   );

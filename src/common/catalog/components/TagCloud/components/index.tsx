@@ -12,13 +12,11 @@ const TagCloud: React.FC<ITagCloudProps> = ({ tags, handleClose }) => {
           key={tag.id}
           className={classnames(style["tag-cloud__item"], {
             [style["remove-tag"]]: tag.removeTag,
-          })}
-        >
+          })}>
           {tag.colorTheSquare && (
             <span
               className={style["tag-cloud__item-color-the-square"]}
-              style={{ background: tag.color }}
-            ></span>
+              style={{ background: tag.color }}></span>
           )}
           <p
             className={style["tag-cloud__item-name"]}
@@ -26,14 +24,12 @@ const TagCloud: React.FC<ITagCloudProps> = ({ tags, handleClose }) => {
               tag.colorTheSquare
                 ? { paddingLeft: "6px" }
                 : { paddingLeft: "12px" }
-            }
-          >
+            }>
             {tag.name}
           </p>
           <div
             className={style["tag-cloud__item-button-cross"]}
-            onClick={() => handleClose(tag.id)}
-          >
+            onClick={() => handleClose(tag.id)}>
             <CloseIcon />
           </div>
         </div>

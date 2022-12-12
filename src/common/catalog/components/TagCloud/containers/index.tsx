@@ -22,6 +22,11 @@ const TagCloudContainer: React.FC<ITagCloudContainerProps> = ({
     setTimeout(() => setTags(tags.filter((tag) => tag.id !== id)), 400);
   };
 
-  return <TagCloud tags={tags} handleClose={handleClose} />;
+  return (
+    <TagCloud
+      tags={tags}
+      handleClose={handleClose}
+    />
+  );
 };
 export default TagCloudContainer;

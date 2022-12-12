@@ -7,14 +7,12 @@ const PriceFilter: React.FC<IPriceFilterProps> = ({ changeTargetValue }) => {
     <div className={style["priceFilter"]}>
       <select
         className={style["priceFilter__select"]}
-        onChange={() => changeTargetValue}
-      >
+        onChange={() => changeTargetValue}>
         {dropdownValues.map((dropdownValue) => (
           <option
             key={dropdownValue.id}
             className={style["priceFilter__select-item"]}
-            value={dropdownValue.value}
-          >
+            value={dropdownValue.value}>
             {dropdownValue.name}
           </option>
         ))}

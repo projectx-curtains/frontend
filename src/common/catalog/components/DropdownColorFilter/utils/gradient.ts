@@ -9,14 +9,14 @@ export const createSteppedGradient = (
     background: `linear-gradient(to ${gradientDirection}, ${sections.map(
       (section: string, index: number) => {
         switch (index) {
-        case isFirstSection:
-          return `${section} ${sectionAvgHeight}%`;
-        case isLastSection:
-          return `${section} ${sectionAvgHeight * (index + 1)}%`;
-        default:
-          return `${section} ${sectionAvgHeight * index}% ${
-            sectionAvgHeight * (index + 1)
-          }%`;
+          case isFirstSection:
+            return `${section} ${sectionAvgHeight}%`;
+          case isLastSection:
+            return `${section} ${sectionAvgHeight * (index + 1)}%`;
+          default:
+            return `${section} ${sectionAvgHeight * index}% ${
+              sectionAvgHeight * (index + 1)
+            }%`;
         }
       }
     )})`,

@@ -26,8 +26,7 @@ const ProductGallery: React.FC<IProductGalleryProps> = ({
               className={classnames(
                 "button--transparent",
                 style["gallery-container__button--mobile"]
-              )}
-            >
+              )}>
               Все
               <KeyboardArrowRightIcon
                 className={classnames(
@@ -42,8 +41,7 @@ const ProductGallery: React.FC<IProductGalleryProps> = ({
               className={classnames(
                 "button--secondary",
                 style["gallery-container__button--desktop"]
-              )}
-            >
+              )}>
               Смотреть все
               <KeyboardArrowRightIcon
                 className={classnames(

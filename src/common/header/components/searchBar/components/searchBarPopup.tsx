@@ -1,15 +1,15 @@
-import React from "react"
-import classnames from "classnames"
+import React from "react";
+import classnames from "classnames";
 
-import Link from "next/link"
-import Image from "next/future/image"
-import Button from "@mui/material/Button"
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight"
+import Link from "next/link";
+import Image from "next/future/image";
+import Button from "@mui/material/Button";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
-import { ISearchBarPopupProps } from "../interfaces"
-import { ROUTES } from "@constants/routes"
-import { data } from "../mock/data"
-import style from "../styles/searchBar.module.scss"
+import { ISearchBarPopupProps } from "../interfaces";
+import { ROUTES } from "@constants/routes";
+import { data } from "../mock/data";
+import style from "../styles/searchBar.module.scss";
 
 const SearchBarPopup: React.FC<ISearchBarPopupProps> = ({
   setIsActivePopup,
@@ -23,7 +23,7 @@ const SearchBarPopup: React.FC<ISearchBarPopupProps> = ({
               key={title}
               className={style["search-popup__item"]}
               onClick={() => {
-                setIsActivePopup((isActive) => !isActive)
+                setIsActivePopup((isActive) => !isActive);
               }}>
               <Link href="/">
                 <div className={style["search-popup__link"]}>
@@ -56,7 +56,7 @@ const SearchBarPopup: React.FC<ISearchBarPopupProps> = ({
               style["search-popup__button"]
             )}
             onClick={() => {
-              setIsActivePopup((isActive) => !isActive)
+              setIsActivePopup((isActive) => !isActive);
             }}>
             <span className={style["search-popup__button-text"]}>
               Смотреть все товары
@@ -66,7 +66,7 @@ const SearchBarPopup: React.FC<ISearchBarPopupProps> = ({
         </Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SearchBarPopup
+export default SearchBarPopup;

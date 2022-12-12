@@ -1,8 +1,8 @@
-import classnames from "classnames"
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
-import ItemFilter from "./ItemFilter"
-import { IDropdownFilterProps } from "../interfaces"
-import style from "../styles/index.module.scss"
+import classnames from "classnames";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ItemFilter from "./ItemFilter";
+import { IDropdownFilterProps } from "../interfaces";
+import style from "../styles/index.module.scss";
 
 const DropdownFilter: React.FC<IDropdownFilterProps> = ({
   title,
@@ -28,6 +28,6 @@ const DropdownFilter: React.FC<IDropdownFilterProps> = ({
         </div>
       )}
     </div>
-  )
-}
-export default DropdownFilter
+  );
+};
+export default DropdownFilter;

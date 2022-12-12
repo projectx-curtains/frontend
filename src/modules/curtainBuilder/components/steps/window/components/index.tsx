@@ -24,8 +24,7 @@ const WindowStep: React.FC<IWindowStep> = ({
         className={style.builder__board}
         style={{
           backgroundImage: `url("/img/Builder/${getImagePath()}")`,
-        }}
-      ></div>
+        }}></div>
       <div className={style.sidebar}>
         <h2 className={style.sidebar__heading}>Параметры окна</h2>
         <FormControl className={style.sidebar__block}>
@@ -39,7 +38,10 @@ const WindowStep: React.FC<IWindowStep> = ({
         </FormControl>
 
         <FormControl className={style.sidebar__block}>
-          <TooltipField title="Количество окон" text={TooltipQuantityText} />
+          <TooltipField
+            title="Количество окон"
+            text={TooltipQuantityText}
+          />
 
           <RadioGroupField
             name="quantityWindow"
@@ -55,11 +57,17 @@ const WindowStep: React.FC<IWindowStep> = ({
           <div className={style["sidebar__block-sizing"]}>
             <FormControl>
               <p className={style.sidebar__label}>Ширина, см</p>
-              <InputField name="widthWindow" disabled={isTypeEmpty} />
+              <InputField
+                name="widthWindow"
+                disabled={isTypeEmpty}
+              />
             </FormControl>
             <FormControl>
               <p className={style.sidebar__label}>Высота, см</p>
-              <InputField name="heightWindow" disabled={isTypeEmpty} />
+              <InputField
+                name="heightWindow"
+                disabled={isTypeEmpty}
+              />
             </FormControl>
           </div>
         </div>
@@ -67,8 +75,7 @@ const WindowStep: React.FC<IWindowStep> = ({
           className={classNames(style.sidebar__block, {
             [style["sidebar__block--hidden"]]:
               isDistanceDisabled || isTypeEmpty,
-          })}
-        >
+          })}>
           <p className={style.sidebar__text}>Расстояние между окнами</p>
           <InputField name="distanceWindow" />
         </FormControl>

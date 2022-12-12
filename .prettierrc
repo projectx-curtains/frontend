@@ -6,6 +6,6 @@
   "bracketSpacing": true,
   "bracketSameLine": true,
   "arrowParens": "always",
-  "endOfLine": "lf",
+  "endOfLine": "crlf",
   "singleAttributePerLine": true
 }

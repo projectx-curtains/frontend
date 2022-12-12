@@ -33,7 +33,7 @@ export const curtainsData = [
       { id: Math.random(), nameFilter: "Для коттеджа" },
       { id: Math.random(), nameFilter: "Для кухни" },
       { id: Math.random(), nameFilter: "Для офиса" },
-      { id: Math.random(), nameFilter: "Для спальни" },      
+      { id: Math.random(), nameFilter: "Для спальни" },
     ],
   },
   {
@@ -63,7 +63,7 @@ export const curtainsData = [
       { id: Math.random(), nameFilter: "Тафта" },
       { id: Math.random(), nameFilter: "Шелк" },
     ],
-  },  
+  },
   {
     id: Math.random(),
     nameTitle: "Состав ткани",
@@ -72,7 +72,7 @@ export const curtainsData = [
       { id: Math.random(), nameFilter: "Лен" },
       { id: Math.random(), nameFilter: "Нейлон" },
       { id: Math.random(), nameFilter: "ПЭ 100%" },
-      { id: Math.random(), nameFilter: "Хлопок" },            
+      { id: Math.random(), nameFilter: "Хлопок" },
     ],
   },
   {
@@ -80,7 +80,7 @@ export const curtainsData = [
     nameTitle: "Плотность ткани",
     itemsFilter: [
       { id: Math.random(), nameFilter: "Плотная" },
-      { id: Math.random(), nameFilter: "Неплотная" },                  
+      { id: Math.random(), nameFilter: "Неплотная" },
     ],
   },
   {
@@ -88,7 +88,7 @@ export const curtainsData = [
     nameTitle: "Защита от солнца",
     itemsFilter: [
       { id: Math.random(), nameFilter: "более 50%" },
-      { id: Math.random(), nameFilter: "менее 50%" },                  
+      { id: Math.random(), nameFilter: "менее 50%" },
     ],
   },
   {
@@ -96,7 +96,7 @@ export const curtainsData = [
     nameTitle: "Высота",
     itemsFilter: [
       { id: Math.random(), nameFilter: "до 200 см" },
-      { id: Math.random(), nameFilter: "200-250 см" },                  
+      { id: Math.random(), nameFilter: "200-250 см" },
     ],
   },
   {
@@ -109,7 +109,7 @@ export const curtainsData = [
       { id: Math.random(), nameFilter: "240-300 см" },
       { id: Math.random(), nameFilter: "300-400 см" },
       { id: Math.random(), nameFilter: "400-500 см" },
-      { id: Math.random(), nameFilter: "500-600 см" },          
+      { id: Math.random(), nameFilter: "500-600 см" },
     ],
   },
   {
@@ -118,7 +118,7 @@ export const curtainsData = [
     itemsFilter: [
       { id: Math.random(), nameFilter: "Однотонные" },
       { id: Math.random(), nameFilter: "Рисунок" },
-      { id: Math.random(), nameFilter: "Вышивка" },        
+      { id: Math.random(), nameFilter: "Вышивка" },
     ],
   },
   {
@@ -129,7 +129,7 @@ export const curtainsData = [
       { id: Math.random(), nameFilter: "Завязки" },
       { id: Math.random(), nameFilter: "Крючки" },
       { id: Math.random(), nameFilter: "Кулиска" },
-      { id: Math.random(), nameFilter: "Люверсы" },         
+      { id: Math.random(), nameFilter: "Люверсы" },
     ],
   },
 ];

@@ -26,8 +26,7 @@ const Header: React.FC<IHeaderProps> = ({
 }) => {
   return (
     <header
-      className={classnames(style.header, style[`header--${headerTheme}`])}
-    >
+      className={classnames(style.header, style[`header--${headerTheme}`])}>
       <div className={classnames("container", style.header__content)}>
         <div className={style.header__toggle}>
           {!isMenuOpen ? (
@@ -40,14 +39,16 @@ const Header: React.FC<IHeaderProps> = ({
           <a
             className={classnames(style.header__logo, style.logo, {
               [style["logo--dark"]]: isMenuOpen,
-            })}
-          ></a>
+            })}></a>
         </Link>
         {isMenuOpen ? (
           <nav className={classnames(style.nav, style["nav--open"])}>
             <ul className={classnames("container", style.nav__list)}>
               <li className={style.nav__item}>
-                <SearchBar theme={headerTheme} menuOpen={isMenuOpen} />
+                <SearchBar
+                  theme={headerTheme}
+                  menuOpen={isMenuOpen}
+                />
               </li>
               <li className={style.nav__item}>
                 <Link href={ROUTES.catalogue}>
@@ -56,8 +57,7 @@ const Header: React.FC<IHeaderProps> = ({
                       style.nav__link,
                       style["nav__link--heading"]
                     )}
-                    onClick={menuToggleHandler}
-                  >
+                    onClick={menuToggleHandler}>
                     Каталог
                   </a>
                 </Link>
@@ -66,11 +66,14 @@ const Header: React.FC<IHeaderProps> = ({
                     "container",
                     style.nav__list,
                     style.nav__sublist
-                  )}
-                >
+                  )}>
                   {CATEGORIES.map(({ name, path }: Category) => (
-                    <li key={name} className={style.nav__item}>
-                      <Link key={name} href={path}>
+                    <li
+                      key={name}
+                      className={style.nav__item}>
+                      <Link
+                        key={name}
+                        href={path}>
                         <a className={style.nav__link}>{name}</a>
                       </Link>
                     </li>
@@ -84,8 +87,7 @@ const Header: React.FC<IHeaderProps> = ({
                       style.nav__link,
                       style["nav__link--heading"]
                     )}
-                    onClick={menuToggleHandler}
-                  >
+                    onClick={menuToggleHandler}>
                     Конструктор
                   </a>
                 </Link>
@@ -97,15 +99,16 @@ const Header: React.FC<IHeaderProps> = ({
                       style.nav__link,
                       style["nav__link--heading"]
                     )}
-                    onClick={menuToggleHandler}
-                  >
+                    onClick={menuToggleHandler}>
                     Консультация
                   </a>
                 </Link>
               </li>
               <li className={classnames(style.nav__item, style.contacts)}>
                 {CONTACTS.phones.map((phone) => (
-                  <div key={phone} className={style.contacts__wrapper}>
+                  <div
+                    key={phone}
+                    className={style.contacts__wrapper}>
                     <PhoneIcon className={style.contacts__icon} />
                     <p className={style.contacts__phone}>{phone}</p>
                   </div>
@@ -117,8 +120,7 @@ const Header: React.FC<IHeaderProps> = ({
                   className={classnames(
                     style.contacts__wrapper,
                     style["contacts__wrapper--insta"]
-                  )}
-                >
+                  )}>
                   <InstagramIcon className={style.contacts__icon} />
                   <p className={style.contacts__instagram}>Instagram</p>
                 </a>
@@ -133,8 +135,7 @@ const Header: React.FC<IHeaderProps> = ({
                   <a
                     id={style["catalogue-nav"]}
                     className={style.nav__link}
-                    onClick={menuToggleHandler}
-                  >
+                    onClick={menuToggleHandler}>
                     Каталог
                   </a>
                 </Link>
@@ -142,25 +143,34 @@ const Header: React.FC<IHeaderProps> = ({
               </li>
               <li className={style.nav__item}>
                 <Link href={ROUTES.curtainBuilder}>
-                  <a className={style.nav__link} onClick={menuToggleHandler}>
+                  <a
+                    className={style.nav__link}
+                    onClick={menuToggleHandler}>
                     Конструктор штор
                   </a>
                 </Link>
               </li>
               <li className={style.nav__item}>
                 <Link href={ROUTES.consultation}>
-                  <a className={style.nav__link} onClick={menuToggleHandler}>
+                  <a
+                    className={style.nav__link}
+                    onClick={menuToggleHandler}>
                     Консультация
                   </a>
                 </Link>
               </li>
               <li className={style.nav__item}>
-                <a href="#footer" className={style.nav__link}>
+                <a
+                  href="#footer"
+                  className={style.nav__link}>
                   Контакты
                 </a>
               </li>
               <li className={style.nav__item}>
-                <SearchBar theme={headerTheme} menuOpen={isMenuOpen} />
+                <SearchBar
+                  theme={headerTheme}
+                  menuOpen={isMenuOpen}
+                />
               </li>
             </ul>
           </nav>
