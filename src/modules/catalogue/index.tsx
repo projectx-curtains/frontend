@@ -1,4 +1,4 @@
-import LinkStructure from "@modules/catalogue/components/LinkStructure";
+import CustomBreadcrumbs from "@modules/catalogue/components/LinkStructure";
 import Categories from "@modules/catalogue/components/Categories";
 import TitlePage from "@modules/catalogue/components/TitlePage";
 import ProductFilters from "@modules/catalogue/components/productFilters";
@@ -12,7 +12,7 @@ const CatalogueModule = () => {
   return (
     <>
       <div className={style["fabrics"]}>
-        <LinkStructure currentTitle="Каталог тканей" />
+        <CustomBreadcrumbs currentTitle="Каталог тканей" />
         <Categories />
         <TitlePage title="Каталог тканей" />
         <div className={style["wrapper-module"]}>
