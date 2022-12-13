@@ -1,9 +1,9 @@
 import { FormikProvider, useFormik } from "formik";
 
-import ColorFilter from "@modules/catalogue/components/ColorFilter";
-import DropdownFilter from "@modules/catalogue/components/DropdownFilter";
-import ItemFilter from "@modules/catalogue/components/DropdownFilter/components/ItemFilter";
-import PriceRangeFilter from "@modules/catalogue/components/PriceRangeFilter";
+import ColorFilter from "@modules/catalogue/components/Filters/ColorFilter";
+import DropdownFilter from "@modules/catalogue/components/Filters/DropdownFilter";
+import ItemFilter from "@modules/catalogue/components/Filters/DropdownFilter/components/ItemFilter";
+import PriceRangeFilter from "@modules/catalogue/components/Filters/PriceRangeFilter";
 import SaveEraseButtons from "@modules/catalogue/components/SaveEraseButtons";
 import SelectedFiltersBar from "@modules/catalogue/components/SelectedFiltersBar";
 import {

@@ -1,5 +1,5 @@
-import PriceFilter from "@modules/catalogue/components/PriceFilter";
-import TagCloud from "@modules/catalogue/components/TagCloud";
+import PriceFilter from "@modules/catalogue/components/Filters/PriceFilter";
+import FilterTags from "@modules/catalogue/components/FilterTags";
 import ProductCard from "@common/productCard/components";
 
 import style from "../styles/productCards.module.scss";
@@ -9,7 +9,7 @@ const ProductCards = () => {
     <div className={style["cards-module"]}>
       <div className={style["cards-module__filter-values"]}>
         <div className={style["tag-cloud"]}>
-          <TagCloud />
+          <FilterTags />
         </div>
         <div className={style["price-filter"]}>
           <PriceFilter />

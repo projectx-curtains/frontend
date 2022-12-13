@@ -1,6 +1,6 @@
 import Button from "@mui/material/Button";
-import PriceFilter from "@modules/catalogue/components/PriceFilter";
-import TagCloud from "@modules/catalogue/components/TagCloud";
+import PriceFilter from "@modules/catalogue/components/Filters/PriceFilter";
+import FilterTags from "@modules/catalogue/components/FilterTags";
 import SuggestionCards from "../../SuggestionCards/components";
 import NothingFoundImg from "../../../../../../assets/svg/nothingFoundImg.svg";
 
@@ -11,7 +11,7 @@ const NothingFound = () => {
     <div className={style["cards-module"]}>
       <div className={style["cards-module__filter-values"]}>
         <div className={style["tag-cloud"]}>
-          <TagCloud />
+          <FilterTags />
         </div>
         <div className={style["price-filter"]}>
           <PriceFilter />
