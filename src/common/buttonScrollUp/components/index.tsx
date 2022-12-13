@@ -7,18 +7,9 @@ import { scrollToTop } from "../utils/scrollToTop";
 import UpArrow from "@assets/svg/UpArrow.svg";
 import style from "../styles/buttonScrollUp.module.scss";
 
-const ButtonScrollUp: React.FC<IButtonScrollUpProps> = ({
-  scrolledValue,
-  isMobile,
-}) => {
+const ButtonScrollUp: React.FC<IButtonScrollUpProps> = ({ scrolledValue }) => {
   const [isVisible, setIsVisible] = useState(false);
   const DebounceWait = 10;
-
-  useEffect(() => {
-    const debounceVal = debounce(toggleVisible, DebounceWait);
-    window.addEventListener("scroll", debounceVal);
-    return () => window.removeEventListener("scroll", debounceVal);
-  });
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
@@ -30,18 +21,17 @@ const ButtonScrollUp: React.FC<IButtonScrollUpProps> = ({
     }
   };
 
+  useEffect(() => {
+    const debounceVal = debounce(toggleVisible, DebounceWait);
+    window.addEventListener("scroll", debounceVal);
+    return () => window.removeEventListener("scroll", debounceVal);
+  });
+
   return (
     <div
-      className={classnames(
-        style["button-scroll-up"],
-        {
-          [style["hidden"]]: !isVisible,
-        },
-        {
-          [style["only-mobile"]]: isMobile,
-        }
-      )}
-    >
+      className={classnames(style["button-scroll-up"], {
+        [style["hidden"]]: !isVisible,
+      })}>
       <UpArrow onClick={scrollToTop} />
     </div>
   );

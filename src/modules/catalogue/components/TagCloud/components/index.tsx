@@ -14,25 +14,21 @@ const TagCloud: React.FC<ITagCloudProps> = ({ tags, handleClose }) => {
           key={tag.id}
           className={classnames(style["tag-cloud__item"], {
             [style["remove-tag"]]: tag.isTagRemoved,
-          })}
-        >
+          })}>
           {tag.color && (
             <span
               className={style["tag-cloud__item-color-the-square"]}
-              style={{ background: tag.color }}
-            ></span>
+              style={{ background: tag.color }}></span>
           )}
           <p
             className={classNames(style["tag-cloud__item-name"], {
-              withColorTag: tag.color,
-            })}
-          >
+              [withColorTag]: tag.color,
+            })}>
             {tag.name}
           </p>
           <div
             className={style["tag-cloud__item-button-cross"]}
-            onClick={() => handleClose(index)}
-          >
+            onClick={() => handleClose(index)}>
             <CloseIcon />
           </div>
         </div>

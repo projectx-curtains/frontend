@@ -14,7 +14,9 @@ const Banner = () => {
         <h2 className={style.banner__subtitle}>
           Создай свой дизайн-проект штор от идеи до реализации
         </h2>
-        <Button className={style.banner__button} href={ROUTES.curtainBuilder}>
+        <Button
+          className={style.banner__button}
+          href={ROUTES.curtainBuilder}>
           Создать свой проект штор
         </Button>
         <SouthIcon className={style.banner__arrow} />

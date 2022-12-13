@@ -1,6 +1,4 @@
-
 import { ReviewsItem } from "../interfaces";
-
 
 export const REVIEWS: Array<ReviewsItem> = [
   {

@@ -1,7 +1,7 @@
 import ProductCard from "@common/productCard/components";
 import style from "../styles/index.module.scss";
 
-const SuggestionCards = (children: any) => {
+const SuggestionCards = () => {
   return (
     <div className={style["intresting-cards"]}>
       <h1 className={style["title"]}>Вам будет интересно</h1>

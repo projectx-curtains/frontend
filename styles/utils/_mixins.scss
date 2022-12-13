@@ -1,6 +1,11 @@
 // Mixins for reusing layouts, buttons and etc.
 
-@mixin display($display: flex, $direction: unset, $justify_content: unset, $align_items: unset) {
+@mixin display(
+  $display: flex,
+  $direction: unset,
+  $justify_content: unset,
+  $align_items: unset
+) {
   display: $display;
   flex-direction: $direction;
   justify-content: $justify_content;
@@ -20,31 +25,37 @@
   }
 }
 
-@mixin button($padding: 'basic', $type: 'primary', $disabled: '', $color: '', $text: white) {
+@mixin button(
+  $padding: "basic",
+  $type: "primary",
+  $disabled: "",
+  $color: "",
+  $text: white
+) {
   @include display(flex, unset, center, center);
   cursor: pointer;
   transition: 0.3s;
   overflow: hidden;
   user-select: none !important;
 
-  @if ($type == 'primary') {
+  @if ($type == "primary") {
     background-color: $brown-500;
-    @include hover($brown-600); 
+    @include hover($brown-600);
     @include focus($brown-600);
 
-    @if ($disabled == 'disabled') {
+    @if ($disabled == "disabled") {
       background-color: $brown-350;
     }
   }
 
-  @if ($type == 'secondary') {
+  @if ($type == "secondary") {
     color: $gray-500;
     background-color: transparent;
     border: 1px solid $gray-500;
-    @include hover($background); 
+    @include hover($background);
     @include focus($brown-500);
 
-    @if ($disabled == 'disabled') {
+    @if ($disabled == "disabled") {
       color: $gray-300;
       border: 1px solid $gray-300;
     }
@@ -55,14 +66,14 @@
   //   background-color: transparent;
   // }
 
-  @if ($type == 'custom') {
+  @if ($type == "custom") {
     background-color: $color;
     color: $text;
   }
 
-  @if ($padding == 'basic') {
-      padding: 10px 14px;
+  @if ($padding == "basic") {
+    padding: 10px 14px;
   } @else {
-      padding: $padding;
+    padding: $padding;
   }
 }

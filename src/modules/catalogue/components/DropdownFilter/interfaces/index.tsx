@@ -1,5 +1,5 @@
 type FilterData = {
-  id: number;
+  id: string;
   title: string;
 };
 

@@ -39,7 +39,9 @@ const ProductFilters = () => {
           />
           <div className={style["filters-module__filters"]}>
             {fabricsDropdownFiltersData.map(({ id, title, itemsFilter }) => (
-              <DropdownFilter key={id} title={title}>
+              <DropdownFilter
+                key={id}
+                title={title}>
                 {<ItemFilter filters={itemsFilter} />}
               </DropdownFilter>
             ))}
@@ -47,7 +49,9 @@ const ProductFilters = () => {
           <ColorFilter />
           <div className={style["filters-module__filter-design"]}>
             {fabricsDesignFilter.map(({ id, title, itemsFilter }) => (
-              <DropdownFilter key={id} title={title}>
+              <DropdownFilter
+                key={id}
+                title={title}>
                 {<ItemFilter filters={itemsFilter} />}
               </DropdownFilter>
             ))}

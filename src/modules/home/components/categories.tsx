@@ -12,14 +12,15 @@ const Categories = () => {
   return (
     <section className={classnames("container", style["catalog-layout"])}>
       {CATEGORIES.map(({ type, name, position, path }: Category) => (
-        <Link href={path} key={name}>
+        <Link
+          href={path}
+          key={name}>
           <a
             className={classnames(
               style["category-card"],
               style[`category-card--${type}`],
               style[`catalog-layout__${position}`]
-            )}
-          >
+            )}>
             <div className={style["category-card__description"]}>
               <h2 className={style["category-card__name"]}>{name}</h2>
               <NorthIcon className={style["category-card__arrow"]} />

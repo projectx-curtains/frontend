@@ -10,7 +10,7 @@ export interface IColorFilterProps {
 
 export interface IColorDropdownFilterContainerProps {
   id: number;
-  title: string;  
+  title: string;
   gradient: Array<string>;
   dropdownFilterColor: Array<FilterData>;
 }

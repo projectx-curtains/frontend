@@ -34,8 +34,7 @@ const NothingFound = () => {
         <Button
           className={style["button-on-constructor"]}
           href="/constructor"
-          variant="contained"
-        >
+          variant="contained">
           Создать свой проект штор
         </Button>
         <SuggestionCards />

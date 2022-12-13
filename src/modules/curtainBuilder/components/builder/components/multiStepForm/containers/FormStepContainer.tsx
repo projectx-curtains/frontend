@@ -6,7 +6,7 @@ export const FormStepContainer = ({ stepName = "", children }: any) => {
 
   useEffect(() => {
     formik.validateForm();
-  }, [stepName]);
+  }, [stepName, formik]);
 
   return children;
 };

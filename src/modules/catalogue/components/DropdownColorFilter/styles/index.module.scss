@@ -1,24 +1,24 @@
 @import "../../../../../../styles/App";
 
-.dropdown-color-filter {   
-  width: 254px; 
-  margin-top: 13px; 
+.dropdown-color-filter {
+  width: 254px;
+  margin-top: 13px;
   &__title-list {
     @include display(flex, row, space-between, center);
     cursor: pointer;
-  } 
+  }
   &__gradient-colors {
-    @include display(flex, column, flex-start, center);  
+    @include display(flex, column, flex-start, center);
     width: 21px;
     height: 21px;
     border: 3px solid $gray-500;
-    border-radius: 3px; 
+    border-radius: 3px;
   }
-  &__name-title {   
+  &__name-title {
     @include body-16-regular;
     color: $gray-500;
     margin-right: auto;
-    margin-left: 12px;    
+    margin-left: 12px;
   }
   &__icon {
     transition: transform 0.5s ease;
@@ -27,32 +27,37 @@
     transform: rotate(180deg);
   }
 
-  &__scrolling-block {  // настройка скролла    
+  &__scrolling-block {
+    // настройка скролла
     width: 272px;
     max-height: 186px;
-    overflow-y: scroll;    
+    overflow-y: scroll;
   }
   &__scrolling-block::-webkit-scrollbar {
-    width: 10px;    
+    width: 10px;
   }
   &__scrolling-block::-webkit-scrollbar-thumb {
-    background: #D9D9D9;
+    background: #d9d9d9;
     border-radius: 5px;
     height: 100px;
   }
 
   .item-color-filter {
     @include display(flex, row, flex-start, center);
-    margin-top: 12px; 
+    margin-top: 12px;
     margin-left: 27px;
 
-    &__checkbox:checked, &__checkbox:not(:checked), &__name:checked, &__name:not(:checked) {
+    &__checkbox:checked,
+    &__checkbox:not(:checked),
+    &__name:checked,
+    &__name:not(:checked) {
       display: inline-block;
-      position: relative;      
-      padding-left: 12px;        
+      position: relative;
+      padding-left: 12px;
       cursor: pointer;
     }
-    &__checkbox:checked::before, &__checkbox:not(:checked)::before {
+    &__checkbox:checked::before,
+    &__checkbox:not(:checked)::before {
       content: "";
       position: absolute;
       left: 0px;
@@ -63,18 +68,20 @@
       border-radius: 3px;
       background-color: $white;
     }
-    &__checkbox:checked::after, &__checkbox:not(:checked)::after {
+    &__checkbox:checked::after,
+    &__checkbox:not(:checked)::after {
       content: "";
-      position: absolute;    
+      position: absolute;
       transition: all 0.2s ease;
     }
-    &__checkbox:checked::after, &__checkbox:not(:checked)::after {
+    &__checkbox:checked::after,
+    &__checkbox:not(:checked)::after {
       left: 4px;
       top: 1px;
       width: 10px;
-      height: 5px;      
+      height: 5px;
       border-left: 2px solid $gray-500;
-      border-bottom: 2px solid $gray-500;      
+      border-bottom: 2px solid $gray-500;
       transform: rotate(-45deg);
     }
     &__checkbox:not(:checked)::after {
@@ -82,22 +89,21 @@
     }
     &__checkbox:checked::after {
       opacity: 1;
-    }  
-    
+    }
+
     &__color {
       width: 22px;
       height: 22px;
       border: 2px solid $gray-500;
       border-radius: 3px;
       margin-left: 19px;
-
     }
 
     &__name {
       @include body-16-regular;
       color: $gray-500;
       cursor: pointer;
-    }    
+    }
   }
   .item-color-filter:last-child {
     margin-bottom: 5px;

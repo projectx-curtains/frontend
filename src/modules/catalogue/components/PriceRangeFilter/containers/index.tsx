@@ -12,7 +12,7 @@ const PriceRangeFilterContainer: React.FC<IPriceRangeFilterContainerProps> = ({
   minPriceOnTheScreen,
   maxPriceOnTheScreen,
 }) => {
-  const [field, meta, helpers] = useField("priceRangeFilter");
+  const [field, , helpers] = useField("priceRangeFilter");
   const [priceValues, setPriceValues] = useState([
     minPriceOnTheScreen,
     maxPriceOnTheScreen,

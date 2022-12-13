@@ -43,8 +43,7 @@ const ErrorSearchBarPopup: React.FC<IErrorSearchBarPopupProps> = ({
               className="button--primary"
               onClick={() => {
                 setIsActivePopup((isActive) => !isActive);
-              }}
-            >
+              }}>
               Смотреть все товары
             </Button>
           </Link>

@@ -1,13 +1,13 @@
 @import "../../../../../../styles/App";
 
-.link-structure {    
-  @include display(flex, row, flex-start, center);   
-  
+.link-structure {
+  @include display(flex, row, flex-start, center);
+
   &__home {
     @include body-18-regular;
-    text-decoration-line: underline;    
-  } 
-  &__current{
-    @include body-18-regular;          
+    text-decoration-line: underline;
   }
-}  
+  &__current {
+    @include body-18-regular;
+  }
+}

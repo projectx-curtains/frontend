@@ -29,8 +29,7 @@ const BuilderStartPage: React.FC<IBuilderStartPage> = ({
                 aria-labelledby="builder-start-options"
                 name="radio-buttons-group"
                 className={style["builder-start__options"]}
-                onChange={handleRadioChange}
-              >
+                onChange={handleRadioChange}>
                 {BUILDER_OPTIONS.map(({ value, label }: StepsOptionType) => (
                   <FormControlLabel
                     key={value}
@@ -44,7 +43,9 @@ const BuilderStartPage: React.FC<IBuilderStartPage> = ({
                 ))}
               </RadioGroup>
             </FormControl>
-            <Button type="submit" className={style["builder-start__button"]}>
+            <Button
+              type="submit"
+              className={style["builder-start__button"]}>
               Создать свой проект штор
             </Button>
           </form>

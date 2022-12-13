@@ -11,8 +11,7 @@ const Accordion: React.FC<IAccordion> = ({ children, title, className }) => {
     <div className={classnames(style.accordion, style[className])}>
       <div
         className={style.accordion__button}
-        onClick={() => setIsActive((isActive) => !isActive)}
-      >
+        onClick={() => setIsActive((isActive) => !isActive)}>
         <p className={style.accordion__title}>{title}</p>
         <ChevronRightIcon
           className={classnames(style.accordion__icon, {
@@ -23,8 +22,7 @@ const Accordion: React.FC<IAccordion> = ({ children, title, className }) => {
       <div
         className={classnames(style.accordion__content, {
           [style["accordion__content--active"]]: isActive,
-        })}
-      >
+        })}>
         {children}
       </div>
     </div>

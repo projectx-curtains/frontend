@@ -8,15 +8,18 @@ const ItemFilter: React.FC<IItemsFilterProps> = ({ filters }) => {
   return (
     <>
       {filters.map(({ id, title }) => (
-        <div className={style["item-filter"]} key={id}>
+        <div
+          className={style["item-filter"]}
+          key={id}>
           <input
             className={style["item-filter__checkbox"]}
             type="checkbox"
             {...field}
             value={title}
-            id={id}
-          ></input>
-          <label className={style["item-filter__name"]} htmlFor={id}>
+            id={id}></input>
+          <label
+            className={style["item-filter__name"]}
+            htmlFor={id}>
             {title}
           </label>
         </div>

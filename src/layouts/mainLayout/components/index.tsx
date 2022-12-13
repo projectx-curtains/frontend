@@ -10,7 +10,10 @@ const MainLayout: React.FC<IMainLayout> = ({
 }) => {
   return (
     <>
-      <Header defaultTheme={defaultTheme} isScrolled={isScrolled} />
+      <Header
+        defaultTheme={defaultTheme}
+        isScrolled={isScrolled}
+      />
       <main>{children}</main>
       <Footer />
     </>

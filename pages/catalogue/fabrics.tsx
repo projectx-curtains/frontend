@@ -14,7 +14,9 @@ const FabricsPage: NextPage = () => {
         title={CATALOGUE_METADATA.title}
         description={CATALOGUE_METADATA.description}
       />
-      <MainLayout defaultTheme={HEADER_THEME.brown} isScrolled={false}>
+      <MainLayout
+        defaultTheme={HEADER_THEME.brown}
+        isScrolled={false}>
         <FabricsModule />
       </MainLayout>
     </>

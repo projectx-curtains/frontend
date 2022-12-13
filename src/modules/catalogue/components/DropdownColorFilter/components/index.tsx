@@ -21,8 +21,7 @@ const DropdownColorFilter: React.FC<IColorDropdownFilterProps> = ({
     <div className={style["dropdown-color-filter"]}>
       <div
         className={style["dropdown-color-filter__title-list"]}
-        onClick={handleOpen}
-      >
+        onClick={handleOpen}>
         <div
           className={style["dropdown-color-filter__gradient-colors"]}
           style={createSteppedGradient(gradient)}

@@ -10,7 +10,9 @@ import style from "../styles/ourWork.module.scss";
 
 const OurWork = () => {
   return (
-    <section className={style["our-work"]} id="our-works">
+    <section
+      className={style["our-work"]}
+      id="our-works">
       <div className={classnames("container", style["our-work__container"])}>
         <h2 className={classnames("heading", style["our-work__heading"])}>
           Наши работы
@@ -18,27 +20,26 @@ const OurWork = () => {
         <Carousel className={style["our-work__slider"]}>
           {CarouselSlider_mockData.map((sliderItem, sliderIndex, sliderArr) => {
             return (
-              <div key={sliderIndex} className={style["work-content"]}>
+              <div
+                key={sliderIndex}
+                className={style["work-content"]}>
                 <div className={style["description-container"]}>
                   <div className={style["description-container__description"]}>
                     {app_mockData.ourWork.descriptionText}
                   </div>
                   <Button
                     className={style["description-container__button"]}
-                    href={ROUTES.consultation}
-                  >
+                    href={ROUTES.consultation}>
                     Консультация
                   </Button>
                   <div className={style["index-slide"]}>
                     <div className={style["index-slide-wrapper"]}>
                       <div
-                        className={style["index-slide-wrapper__current-slide"]}
-                      >
+                        className={style["index-slide-wrapper__current-slide"]}>
                         0{sliderIndex + 1}/
                       </div>
                       <div
-                        className={style["index-slide-wrapper__slides-length"]}
-                      >
+                        className={style["index-slide-wrapper__slides-length"]}>
                         0{sliderArr.length}
                       </div>
                     </div>

@@ -18,8 +18,7 @@ const TooltipField: React.FC<ITooltipField> = ({ title, text }) => {
           arrow: {
             className: style.tooltip__arrow,
           },
-        }}
-      >
+        }}>
         <InfoOutlinedIcon className={style.tooltip__icon} />
       </Tooltip>
     </div>

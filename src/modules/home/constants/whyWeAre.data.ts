@@ -1,6 +1,4 @@
-
 import { WhyWeAreItem } from "../interfaces";
-
 
 export const WHY_WE_ARE: Array<WhyWeAreItem> = [
   {

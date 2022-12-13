@@ -2,7 +2,6 @@ import { useState } from "react";
 
 import TagCloud from "../components";
 
-import { ITagCloudContainerProps } from "../interfaces";
 import { sampleDataTags } from "../mocks/sampleDataTags";
 
 const TagCloudContainer = ({}) => {
@@ -26,6 +25,11 @@ const TagCloudContainer = ({}) => {
     removeTag(index);
   };
 
-  return <TagCloud tags={tags} handleClose={handleClose} />;
+  return (
+    <TagCloud
+      tags={tags}
+      handleClose={handleClose}
+    />
+  );
 };
 export default TagCloudContainer;

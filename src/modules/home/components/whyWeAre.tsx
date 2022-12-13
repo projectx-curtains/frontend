@@ -12,7 +12,9 @@ const WhyWeAre = () => {
         <div className={style["why-we-are__content"]}>
           {WHY_WE_ARE.map(({ image, text }: WhyWeAreItem) => {
             return (
-              <div key={text} className={style["why-we-are-item"]}>
+              <div
+                key={text}
+                className={style["why-we-are-item"]}>
                 <div className={style["why-we-are-item__image"]}>
                   <Image
                     className={style["why-we-are-item__icon"]}

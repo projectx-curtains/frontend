@@ -2,7 +2,6 @@ import CustomBreadcrumbs from "@modules/catalogue/components/LinkStructure";
 import Categories from "@modules/catalogue/components/Categories";
 import TitlePage from "@modules/catalogue/components/TitlePage";
 import ProductFilters from "@modules/catalogue/components/productFilters";
-import CardsModule from "@modules/catalogue/components/productCards";
 import ButtonScrollUp from "@common/buttonScrollUp";
 import NothingFound from "./components/NothingFound";
 
@@ -12,7 +11,7 @@ const CatalogueModule = () => {
   return (
     <>
       <div className={style["fabrics"]}>
-        <CustomBreadcrumbs currentTitle="Каталог тканей" />
+        <CustomBreadcrumbs />
         <Categories />
         <TitlePage title="Каталог тканей" />
         <div className={style["wrapper-module"]}>
@@ -21,7 +20,10 @@ const CatalogueModule = () => {
           <NothingFound />
         </div>
       </div>
-      <ButtonScrollUp scrolledValue={750} isMobile={false} />
+      <ButtonScrollUp
+        scrolledValue={750}
+        isMobile={false}
+      />
     </>
   );
 };

@@ -4,7 +4,6 @@
   margin-left: 80px;
   margin-top: 36px;
   .wrapper-module {
-    @include display(flex, row, none, none); 
-  }  
+    @include display(flex, row, none, none);
+  }
 }
-

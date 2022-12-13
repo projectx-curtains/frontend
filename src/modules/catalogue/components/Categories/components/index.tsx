@@ -11,8 +11,12 @@ const Categories: React.FC<ICategoriesProps> = ({ categories }) => {
     <div className={style["categories"]}>
       <ul className={style["categories__list"]}>
         {categories.map(({ id, name, url }) => (
-          <Link key={id} href={url}>
-            <a className={style["categories__item"]} style={StyleLink(url)}>
+          <Link
+            key={id}
+            href={url}>
+            <a
+              className={style["categories__item"]}
+              style={StyleLink(url)}>
               {name}
             </a>
           </Link>

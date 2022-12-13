@@ -13,8 +13,7 @@ const CorniceStep: React.FC<ICorniceStep> = ({ getImagePath }) => {
         className={style.builder__board}
         style={{
           backgroundImage: `url("/img/Builder/cornice/${getImagePath()}")`,
-        }}
-      ></div>
+        }}></div>
       <div className={style.sidebar}>
         <h2 className={style.sidebar__heading}>Параметры карниза</h2>
         <FormControl className={style.sidebar__block}>

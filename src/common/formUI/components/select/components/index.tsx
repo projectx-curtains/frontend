@@ -22,13 +22,11 @@ const SelectField: React.FC<ISelectField> = ({
         defaultValue={defaultValue}
         inputProps={{ "aria-label": "Without label" }}
         className={style.select}
-        error={meta.touched && Boolean(meta.error)}
-      >
+        error={meta.touched && Boolean(meta.error)}>
         <MenuItem
           value=""
           className={style.select__item}
-          onClick={handleSelectOptions}
-        >
+          onClick={handleSelectOptions}>
           Выбрать
         </MenuItem>
         {content.map(({ name, value }) => (
@@ -36,8 +34,7 @@ const SelectField: React.FC<ISelectField> = ({
             key={name}
             value={value}
             className={style.select__item}
-            onClick={handleSelectOptions}
-          >
+            onClick={handleSelectOptions}>
             {name}
           </MenuItem>
         ))}

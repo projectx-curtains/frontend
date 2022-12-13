@@ -8,8 +8,6 @@ import { useRouter } from "next/router";
 
 import { ROUTES_MAP } from "@constants/routes";
 
-import { ILinkStructureProps } from "../interfaces";
-
 import style from "../styles/index.module.scss";
 
 const BreadcrumbLink = () => {
@@ -29,15 +27,16 @@ const BreadcrumbLink = () => {
             underline="none"
             key={`breadcrumbs-${index}`}
             color="#373b49"
-            href={route.link}
-          >
+            href={route.link}>
             {route.title}
           </Link>
         );
         break;
       case isLast:
         breadcrumb.push(
-          <Typography key={`breadcrumbs-${index}`} color="#6a7082">
+          <Typography
+            key={`breadcrumbs-${index}`}
+            color="#6a7082">
             {route.title}
           </Typography>
         );
@@ -48,8 +47,7 @@ const BreadcrumbLink = () => {
             underline="none"
             key={`breadcrumbs-${index}`}
             color="#373b49"
-            href={route.link}
-          >
+            href={route.link}>
             {route.title}
           </Link>
         );
@@ -60,16 +58,20 @@ const BreadcrumbLink = () => {
   return breadcrumb;
 };
 
-const CustomBreadcrumbs: React.FC<ILinkStructureProps> = ({ currentTitle }) => {
+const CustomBreadcrumbs: React.FC = () => {
   const breadcrumb = BreadcrumbLink();
   return (
-    <Stack className={style["link-structure"]} spacing={1}>
+    <Stack
+      className={style["link-structure"]}
+      spacing={1}>
       <Breadcrumbs
         aria-label="breadcrumb"
         separator={
-          <NavigateNextIcon fontSize="medium" sx={{ color: "#373B49" }} />
-        }
-      >
+          <NavigateNextIcon
+            fontSize="medium"
+            sx={{ color: "#373B49" }}
+          />
+        }>
         {breadcrumb}
       </Breadcrumbs>
     </Stack>
