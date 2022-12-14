@@ -3,7 +3,7 @@ import DropdownColorFilter from "../DropdownColorFilter";
 import DropdownFilter from "../DropdownFilter";
 import style from "./styles/index.module.scss";
 
-const ColorFilter = () => {
+const ColorFilter: React.FC = () => {
   const itemsColorFilter = sampleColorFiltersData.map(
     ({ id, title, gradient, dropdownFilterColor }) => (
       <DropdownColorFilter

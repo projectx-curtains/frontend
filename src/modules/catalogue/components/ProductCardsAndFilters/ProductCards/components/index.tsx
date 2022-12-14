@@ -4,7 +4,7 @@ import ProductCard from "@common/productCard/components";
 
 import style from "../styles/productCards.module.scss";
 
-const ProductCards = () => {
+const ProductCards: React.FC = () => {
   return (
     <div className={style["cards-module"]}>
       <div className={style["cards-module__filter-values"]}>

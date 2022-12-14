@@ -5,7 +5,7 @@ import { TopFiltersData } from "../mocks/sampleTopFiltersData";
 
 import style from "../styles/index.module.scss";
 
-const SelectedFiltersBar = () => {
+const SelectedFiltersBar: React.FC = () => {
   const [field] = useField("selectedFiltersBar");
   return (
     <div className={style["selected-filters-bar"]}>

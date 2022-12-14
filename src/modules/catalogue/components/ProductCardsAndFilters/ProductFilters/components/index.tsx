@@ -1,4 +1,4 @@
-import { FormikProvider, useFormik } from "formik";
+import { FormikContextType, FormikProvider } from "formik";
 
 import ColorFilter from "@modules/catalogue/components/Filters/ColorFilter";
 import DropdownFilter from "@modules/catalogue/components/Filters/DropdownFilter";
@@ -10,21 +10,11 @@ import {
   fabricsDesignFilter,
   fabricsDropdownFiltersData,
 } from "@modules/catalogue/mocks/fabricsFiltersData";
+// import { IProductFiltersProps } from "../interfaces";
 
-import style from "../styles/productFilters.module.scss";
+import style from "../styles/index.module.scss";
 
-const ProductFilters = () => {
-  const formik = useFormik({
-    initialValues: {
-      selectedFiltersBar: [],
-      priceRangeFilter: [],
-      dropdownFilters: [],
-    },
-    onSubmit: (values) => {
-      console.log(values);
-    },
-  });
-
+const ProductFilters = (formik: FormikContextType<any>) => {
   return (
     <FormikProvider value={formik}>
       <form>

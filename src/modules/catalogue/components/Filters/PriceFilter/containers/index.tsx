@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PriceFilter from "../components";
 
-const PriceFilterContainer = () => {
+const PriceFilterContainer: React.FC = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [sort, setSort] = useState("");
   const changeTargetValue = (event: React.ChangeEvent<HTMLInputElement>) => {

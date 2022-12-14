@@ -2,7 +2,7 @@ import FilterButton from "./button";
 
 import style from "../styles/index.module.scss";
 
-const SaveEraseButtons = () => {
+const SaveEraseButtons: React.FC = () => {
   return (
     <div className={style["save-erase-buttons"]}>
       <FilterButton

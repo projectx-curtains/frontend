@@ -4,7 +4,7 @@ import FilterTags from "../components";
 
 import { sampleDataTags } from "../mocks/sampleDataTags";
 
-const FilterTagsContainer = ({}) => {
+const FilterTagsContainer: React.FC = ({}) => {
   const initialState = sampleDataTags.map((tag: any) => ({
     ...tag,
     isTagRemoved: false,
