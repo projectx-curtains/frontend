@@ -1,12 +1,5 @@
-type ProductFilters = {
-  initialValues: {
-    selectedFiltersBar: [];
-    priceRangeFilter: [];
-    dropdownFilters: [];
-  };
-  onSubmit: () => void;
-};
+import { FormikContextType } from "formik";
 
 export interface IProductFiltersProps {
-  formik: ProductFilters;
+  formik: FormikContextType<any>;
 }
