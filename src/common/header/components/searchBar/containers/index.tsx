@@ -9,11 +9,10 @@ const SearchBarContainer: React.FC<ISearchBarContainerProps> = ({
   const [searchInput, setSearchInput] = useState("");
   const [isActivePopup, setIsActivePopup] = useState(false);
 
-  const handleSearchItems = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSearchItems = (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const searchValue = e.target.value; //??
     setIsActivePopup(true);
-    setSearchInput(isActivePopup ? searchValue : "");
+    setSearchInput(isActivePopup ? searchInput : "");
   };
 
   return (

@@ -1,0 +1,58 @@
+@import "@styles/App";
+
+.builder {
+  display: flex;
+
+  &__board {
+    width: 1065px;
+    height: 569px;
+    transition: 0.7s ease-in-out;
+  }
+
+  .sidebar {
+    margin: 24px 0;
+    padding: 16px;
+    width: 343px;
+    max-width: 343px;
+    height: 598px;
+    background-color: $white;
+    box-shadow: 0px 0px 10px rgba(64, 64, 64, 0.15);
+
+    &__heading {
+      margin: 0 -16px;
+      padding: 0 16px 16px;
+      @include body-20-medium();
+      color: $gray-500;
+      border-bottom: 1px solid $gray-250;
+    }
+
+    &__block {
+      padding-top: 16px;
+      visibility: visible;
+      opacity: 1;
+
+      &--hidden {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 1s linear;
+      }
+    }
+
+    &__block-sizing {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__text {
+      padding-bottom: 8px;
+      @include body-20-medium();
+      font-size: 16px;
+      color: $gray-500;
+    }
+
+    &__label {
+      @include body-14-regular();
+      color: $gray-250;
+    }
+  }
+}

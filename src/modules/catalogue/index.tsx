@@ -1,19 +1,19 @@
-import LinkStructure from "@modules/catalogue/components/LinkStructure";
-import Categories from "@modules/catalogue/components/Categories";
-import TitlePage from "@modules/catalogue/components/TitlePage";
-import ProductFilters from "@modules/catalogue/components/productFilters";
-import CardsModule from "@modules/catalogue/components/ProductCards";
+import CustomBreadcrumbs from "@modules/catalogue/components/CustomBreadcrumbs";
+import CategoriesNavBar from "@modules/catalogue/components/CategoriesNavBar";
+import PageTitle from "@modules/catalogue/components/PageTitle";
+import ProductFilters from "@modules/catalogue/components/ProductCardsAndFilters/ProductFilters";
+import CardsModule from "@modules/catalogue/components/ProductCardsAndFilters/ProductCards";
 import ButtonScrollUp from "@common/buttonScrollUp";
 
 import style from "./styles/index.module.scss";
 
-const CatalogueModule = () => {
+const CatalogueModule: React.FC = () => {
   return (
     <>
       <div className={style["fabrics"]}>
-        <LinkStructure currentTitle="Каталог тканей" />
-        <Categories />
-        <TitlePage title="Каталог тканей" />
+        <CustomBreadcrumbs />
+        <CategoriesNavBar />
+        <PageTitle title="Каталог тканей" />
         <div className={style["wrapper-module"]}>
           <div className={style["product-filters"]}>
             <ProductFilters />
@@ -21,7 +21,10 @@ const CatalogueModule = () => {
           <CardsModule />
         </div>
       </div>
-      <ButtonScrollUp scrolledValue={750} isMobile={false} />
+      <ButtonScrollUp
+        scrolledValue={750}
+        isMobile={false}
+      />
     </>
   );
 };

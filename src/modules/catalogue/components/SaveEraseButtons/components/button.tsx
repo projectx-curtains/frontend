@@ -17,8 +17,7 @@ const FilterButton: React.FC<IFilterButtonProps> = ({
         ]
       }
       type={type}
-      variant={variant}
-    >
+      variant={variant}>
       {children}
     </Button>
   );

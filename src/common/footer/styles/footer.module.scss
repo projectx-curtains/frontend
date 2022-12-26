@@ -2,14 +2,13 @@
 @import "../../../../styles/common/logo.module";
 @import "../../../../styles/common/contacts.module";
 
-
 .footer {
   height: 305px;
   padding-top: 40px;
   padding-bottom: 40px;
   color: $gray-500;
   background-color: $gray-100;
-  z-index: 3000;  
+  z-index: 3000;
 
   @media (max-width: $screen-md) {
     height: auto;

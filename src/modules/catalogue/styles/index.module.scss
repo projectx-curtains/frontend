@@ -2,20 +2,19 @@
 
 .fabrics {
   margin-left: 80px;
-  margin-top: 36px; 
-  
+  margin-top: 36px;
+
   @media (max-width: $screen-md) {
     margin-left: 16px;
-    margin-top: 12px;    
+    margin-top: 12px;
   }
   .product-filters {
     @media (max-width: $screen-md) {
       display: none;
     }
   }
-  
-  .wrapper-module {
-    @include display(flex, row, none, none); 
-  }  
-}
 
+  .wrapper-module {
+    @include display(flex, row, none, none);
+  }
+}

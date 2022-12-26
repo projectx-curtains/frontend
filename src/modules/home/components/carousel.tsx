@@ -1,5 +1,5 @@
 import React from "react";
-import classNames from "classnames";
+import classnames from "classnames";
 import Slider from "react-slick";
 
 import { ICarouselProps } from "../interfaces";
@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Carousel: React.FC<ICarouselProps> = ({ children, className }) => {
   return (
-    <div className={classNames("slider", className)}>
+    <div className={classnames("slider", className)}>
       <Slider {...carouselSettings}>{children}</Slider>
     </div>
   );

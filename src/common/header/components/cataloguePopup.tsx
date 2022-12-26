@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/future/image";
-import classNames from "classnames";
+import classnames from "classnames";
 import { CATEGORIES } from "@constants/categories";
 import { Category } from "src/types/category.type";
 import style from "../styles/header.module.scss";
@@ -9,7 +9,7 @@ import style from "../styles/header.module.scss";
 const CataloguePopup = () => {
   return (
     <div className={style["catalog-popup"]}>
-      <ul className={classNames("container", style["catalog-popup__list"])}>
+      <ul className={classnames("container", style["catalog-popup__list"])}>
         {CATEGORIES.map(
           ({ name, path }: Category, catalogueItem) =>
             catalogueItem !== CATEGORIES.length - 1 && (

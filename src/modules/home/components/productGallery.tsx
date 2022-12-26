@@ -1,5 +1,5 @@
 import React from "react";
-import classNames from "classnames";
+import classnames from "classnames";
 import Link from "next/link";
 import ProductCard from "../../../common/productCard/components";
 import Button from "@mui/material/Button";
@@ -23,14 +23,13 @@ const ProductGallery: React.FC<IProductGalleryProps> = ({
           <h2 className="heading">{titleText}</h2>
           <Link href={ROUTES.catalogue}>
             <Button
-              className={classNames(
+              className={classnames(
                 "button--transparent",
                 style["gallery-container__button--mobile"]
-              )}
-            >
+              )}>
               Все
               <KeyboardArrowRightIcon
-                className={classNames(
+                className={classnames(
                   "button__icon",
                   style["gallery-container__button__icon"]
                 )}
@@ -39,14 +38,13 @@ const ProductGallery: React.FC<IProductGalleryProps> = ({
           </Link>
           <Link href={ROUTES.catalogue}>
             <Button
-              className={classNames(
+              className={classnames(
                 "button--secondary",
                 style["gallery-container__button--desktop"]
-              )}
-            >
+              )}>
               Смотреть все
               <KeyboardArrowRightIcon
-                className={classNames(
+                className={classnames(
                   "button__icon",
                   style["gallery-container__button__icon"]
                 )}

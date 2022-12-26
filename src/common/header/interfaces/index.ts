@@ -3,3 +3,8 @@ export interface IHeaderProps {
   headerTheme: string;
   menuToggleHandler: () => void;
 }
+
+export interface IHeaderContainerProps {
+  defaultTheme: string;
+  isScrolled: boolean;
+}

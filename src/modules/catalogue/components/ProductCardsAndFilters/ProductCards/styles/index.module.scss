@@ -1,0 +1,36 @@
+@import "../../../../../../../styles/App";
+
+.cards-module {
+  @include display(flex, column, flex-start, none);
+  &__filter-values {
+    @include display(flex, row, flex-start, center);
+    .tag-cloud {
+      @include display(flex, row, flex-start, center);
+      flex-wrap: wrap;
+    }
+    .price-filter {
+      margin-left: auto;
+      @media (max-width: $screen-md) {
+        display: none;
+      }
+    }
+  }
+  .mobile-module {
+    @include display(flex, row, space-between, unset);
+    margin-top: 7px;
+    display: none;
+    @media (max-width: $screen-md) {
+      display: flex;
+    }
+    .mobile-filter-img,
+    .mobile-sort-price-img {
+      cursor: pointer;
+    }
+  }
+
+  &__cards {
+    margin-top: 40px;
+    @include display(flex, row, space-between, center);
+    flex-wrap: wrap;
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import classNames from "classnames";
+import classnames from "classnames";
 
 import CataloguePopup from "./cataloguePopup";
 import { SearchBar } from "./searchBar";
@@ -26,9 +26,8 @@ const Header: React.FC<IHeaderProps> = ({
 }) => {
   return (
     <header
-      className={classNames(style.header, style[`header--${headerTheme}`])}
-    >
-      <div className={classNames("container", style.header__content)}>
+      className={classnames(style.header, style[`header--${headerTheme}`])}>
+      <div className={classnames("container", style.header__content)}>
         <div className={style.header__toggle}>
           {!isMenuOpen ? (
             <NotesOutlinedIcon onClick={menuToggleHandler} />
@@ -38,39 +37,43 @@ const Header: React.FC<IHeaderProps> = ({
         </div>
         <Link href={ROUTES.home}>
           <a
-            className={classNames(style.header__logo, style.logo, {
+            className={classnames(style.header__logo, style.logo, {
               [style["logo--dark"]]: isMenuOpen,
-            })}
-          ></a>
+            })}></a>
         </Link>
         {isMenuOpen ? (
-          <nav className={classNames(style.nav, style["nav--open"])}>
-            <ul className={classNames("container", style.nav__list)}>
+          <nav className={classnames(style.nav, style["nav--open"])}>
+            <ul className={classnames("container", style.nav__list)}>
               <li className={style.nav__item}>
-                <SearchBar theme={headerTheme} menuOpen={isMenuOpen} />
+                <SearchBar
+                  theme={headerTheme}
+                  menuOpen={isMenuOpen}
+                />
               </li>
               <li className={style.nav__item}>
                 <Link href={ROUTES.catalogue}>
                   <a
-                    className={classNames(
+                    className={classnames(
                       style.nav__link,
                       style["nav__link--heading"]
                     )}
-                    onClick={menuToggleHandler}
-                  >
+                    onClick={menuToggleHandler}>
                     Каталог
                   </a>
                 </Link>
                 <ul
-                  className={classNames(
+                  className={classnames(
                     "container",
                     style.nav__list,
                     style.nav__sublist
-                  )}
-                >
+                  )}>
                   {CATEGORIES.map(({ name, path }: Category) => (
-                    <li key={name} className={style.nav__item}>
-                      <Link key={name} href={path}>
+                    <li
+                      key={name}
+                      className={style.nav__item}>
+                      <Link
+                        key={name}
+                        href={path}>
                         <a className={style.nav__link}>{name}</a>
                       </Link>
                     </li>
@@ -80,12 +83,11 @@ const Header: React.FC<IHeaderProps> = ({
               <li className={style.nav__item}>
                 <Link href={ROUTES.curtainBuilder}>
                   <a
-                    className={classNames(
+                    className={classnames(
                       style.nav__link,
                       style["nav__link--heading"]
                     )}
-                    onClick={menuToggleHandler}
-                  >
+                    onClick={menuToggleHandler}>
                     Конструктор
                   </a>
                 </Link>
@@ -93,19 +95,20 @@ const Header: React.FC<IHeaderProps> = ({
               <li className={style.nav__item}>
                 <Link href={ROUTES.consultation}>
                   <a
-                    className={classNames(
+                    className={classnames(
                       style.nav__link,
                       style["nav__link--heading"]
                     )}
-                    onClick={menuToggleHandler}
-                  >
+                    onClick={menuToggleHandler}>
                     Консультация
                   </a>
                 </Link>
               </li>
-              <li className={classNames(style.nav__item, style.contacts)}>
+              <li className={classnames(style.nav__item, style.contacts)}>
                 {CONTACTS.phones.map((phone) => (
-                  <div key={phone} className={style.contacts__wrapper}>
+                  <div
+                    key={phone}
+                    className={style.contacts__wrapper}>
                     <PhoneIcon className={style.contacts__icon} />
                     <p className={style.contacts__phone}>{phone}</p>
                   </div>
@@ -114,11 +117,10 @@ const Header: React.FC<IHeaderProps> = ({
                   href={CONTACTS.insta}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={classNames(
+                  className={classnames(
                     style.contacts__wrapper,
                     style["contacts__wrapper--insta"]
-                  )}
-                >
+                  )}>
                   <InstagramIcon className={style.contacts__icon} />
                   <p className={style.contacts__instagram}>Instagram</p>
                 </a>
@@ -133,8 +135,7 @@ const Header: React.FC<IHeaderProps> = ({
                   <a
                     id={style["catalogue-nav"]}
                     className={style.nav__link}
-                    onClick={menuToggleHandler}
-                  >
+                    onClick={menuToggleHandler}>
                     Каталог
                   </a>
                 </Link>
@@ -142,25 +143,34 @@ const Header: React.FC<IHeaderProps> = ({
               </li>
               <li className={style.nav__item}>
                 <Link href={ROUTES.curtainBuilder}>
-                  <a className={style.nav__link} onClick={menuToggleHandler}>
+                  <a
+                    className={style.nav__link}
+                    onClick={menuToggleHandler}>
                     Конструктор штор
                   </a>
                 </Link>
               </li>
               <li className={style.nav__item}>
                 <Link href={ROUTES.consultation}>
-                  <a className={style.nav__link} onClick={menuToggleHandler}>
+                  <a
+                    className={style.nav__link}
+                    onClick={menuToggleHandler}>
                     Консультация
                   </a>
                 </Link>
               </li>
               <li className={style.nav__item}>
-                <a href="#footer" className={style.nav__link}>
+                <a
+                  href="#footer"
+                  className={style.nav__link}>
                   Контакты
                 </a>
               </li>
               <li className={style.nav__item}>
-                <SearchBar theme={headerTheme} menuOpen={isMenuOpen} />
+                <SearchBar
+                  theme={headerTheme}
+                  menuOpen={isMenuOpen}
+                />
               </li>
             </ul>
           </nav>

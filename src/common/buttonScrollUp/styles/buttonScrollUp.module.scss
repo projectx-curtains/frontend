@@ -1,11 +1,11 @@
 @import "../../../../styles/App";
 
 .button-scroll-up {
-  position: fixed;  
+  position: fixed;
   bottom: 433px;
   right: 80px;
   z-index: 999;
-  animation: 0.5s move-left;  
+  animation: 0.5s move-left;
 }
 .hidden {
   bottom: 16px;

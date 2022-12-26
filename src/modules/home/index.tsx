@@ -15,8 +15,14 @@ const HomeModule = () => {
     <>
       <Banner />
       <Categories />
-      <ProductGallery titleText="Новинки" items={NewProduct_mockData} />
-      <ProductGallery titleText="Популярное" items={NewProduct_mockData} />
+      <ProductGallery
+        titleText="Новинки"
+        items={NewProduct_mockData}
+      />
+      <ProductGallery
+        titleText="Популярное"
+        items={NewProduct_mockData}
+      />
       <OurWork />
       <WhyWeAre />
       <Reviews />

@@ -1,5 +1,5 @@
 import React from "react";
-import classNames from "classnames";
+import classnames from "classnames";
 import Link from "next/link";
 import Image from "next/future/image";
 import { IProductCardProps } from "../interfaces";
@@ -9,12 +9,11 @@ const ProductCard: React.FC<IProductCardProps> = ({
   image,
   name,
   price,
-  link,
   variant,
 }) => {
   return (
     <Link href="#">
-      <a className={classNames(style.card, style[`card--${variant}`])}>
+      <a className={classnames(style.card, style[`card--${variant}`])}>
         <Image
           className={style.card__img}
           src={image}
