@@ -1,13 +1,18 @@
-import { Drawer } from "@mui/material";
 import ClearIcon from "@mui/icons-material/Clear";
 import PriceFilter from "@modules/catalogue/components/Filters/PriceFilter";
 import FilterTags from "@modules/catalogue/components/FilterTags";
 import ProductCard from "@common/productCard/components";
+import DrawerComponent from "@modules/catalogue/components/DrawerComponent";
 // import NothingFound from "../../../NothingFound";
 import ProductFilters from "../../ProductFilters";
 import { IProductCardsProps } from "../interfacer";
 import MobileFilterImg from "../../../../../../../assets/svg/mobileFilter.svg";
 import MobileSortPriceImg from "../../../../../../../assets/svg/mobileSortPrice.svg";
+import {
+  styleClearIcon,
+  styleLeftDrawer,
+  styleRightDrawer,
+} from "../mocks/styleClearIcon";
 
 import style from "../styles/index.module.scss";
 
@@ -35,49 +40,29 @@ const ProductCards: React.FC<IProductCardsProps> = ({
           className={style["mobile-filter-img"]}
           onClick={handleOpenFilter}
         />
-        <Drawer
+        <DrawerComponent
           anchor="left"
           open={openFilter}
           onClose={handleCloseFilter}
-          sx={{
-            "& .MuiDrawer-paper": {
-              mt: "56px",
-              height: "auto",
-              width: "304px",
-              alignItems: "center",
-              paddingTop: "18px",
-              paddingBottom: "10px",
-            },
-          }}>
+          styleVariable={styleLeftDrawer}>
           <ClearIcon
             onClick={handleCloseFilter}
             fontSize="medium"
-            sx={{
-              color: "#C2C4CB",
-              ml: "auto",
-              mr: "16px",
-              display: "block",
-              cursor: "pointer",
-            }}
+            sx={styleClearIcon}
           />
           <ProductFilters />
-        </Drawer>
+        </DrawerComponent>
         <MobileSortPriceImg
           className={style["mobile-sort-price-img"]}
           onClick={handleOpenSortPrice}
         />
-        <Drawer
+        <DrawerComponent
           anchor="right"
           open={openSortPrice}
           onClose={handleCloseSortPrice}
-          sx={{
-            "& .MuiDrawer-paper": {
-              height: "38px",
-              mt: "176px",
-            },
-          }}>
+          styleVariable={styleRightDrawer}>
           <PriceFilter />
-        </Drawer>
+        </DrawerComponent>
       </div>
 
       {/* <NothingFound /> */}
