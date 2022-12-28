@@ -2,15 +2,16 @@
 
 .categories {
   margin-top: 36px;
-  width: 1440px;
+  max-width: 1920px;
+  width: 100%;
   border-bottom: 1px solid $gray-250;
   @media (max-width: $screen-md) {
     margin-top: 32px;
+    overflow-y: scroll;
   }
   &__list {
     @include display(flex, row, flex-start, center);
     list-style-type: none;
-    width: 100%;
     @media (max-width: $screen-md) {
       flex-wrap: nowrap;
     }

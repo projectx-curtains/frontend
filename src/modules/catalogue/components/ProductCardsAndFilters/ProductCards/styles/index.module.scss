@@ -3,13 +3,13 @@
 .cards-module {
   @include display(flex, column, flex-start, none);
   &__filter-values {
-    @include display(flex, row, flex-start, center);
+    @include display(flex, row, space-between, center);
     .tag-cloud {
       @include display(flex, row, flex-start, center);
       flex-wrap: wrap;
+      margin-right: auto;
     }
     .price-filter {
-      margin-left: auto;
       @media (max-width: $screen-md) {
         display: none;
       }
