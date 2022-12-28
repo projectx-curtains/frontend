@@ -5,9 +5,9 @@ import ProductCard from "@common/productCard/components";
 import DrawerComponent from "@modules/catalogue/components/DrawerComponent";
 // import NothingFound from "../../../NothingFound";
 import ProductFilters from "../../ProductFilters";
-import { IProductCardsProps } from "../interfacer";
-import MobileFilterImg from "../../../../../../../assets/svg/mobileFilter.svg";
-import MobileSortPriceImg from "../../../../../../../assets/svg/mobileSortPrice.svg";
+import { IProductCardsProps } from "../interfaces";
+import MobileFilterImg from "@assets/svg/mobileFilter.svg";
+import MobileSortPriceImg from "@assets/svg/mobileSortPrice.svg";
 import {
   styleClearIcon,
   styleLeftDrawer,

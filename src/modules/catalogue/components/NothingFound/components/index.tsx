@@ -1,6 +1,6 @@
 import Button from "@mui/material/Button";
 import SuggestionCards from "../../SuggestionCards";
-import NothingFoundImg from "../../../../../../assets/svg/nothingFoundImg.svg";
+import NothingFoundImg from "@assets/svg/nothingFoundImg.svg";
 
 import style from "../styles/index.module.scss";
 
