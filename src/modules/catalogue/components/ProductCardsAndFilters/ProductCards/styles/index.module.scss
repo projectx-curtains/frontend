@@ -8,6 +8,9 @@
       @include display(flex, row, flex-start, center);
       flex-wrap: wrap;
       margin-right: auto;
+      @media (max-width: $screen-md) {
+        margin-top: 24px;
+      }
     }
     .price-filter {
       @media (max-width: $screen-md) {
