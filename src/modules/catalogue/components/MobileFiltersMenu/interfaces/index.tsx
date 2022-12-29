@@ -1,4 +1,4 @@
-export interface IProductCardsProps {
+export interface IMobileFiltersMenuProps {
   openFilter: boolean;
   handleOpenFilter: () => void;
   handleCloseFilter: () => void;

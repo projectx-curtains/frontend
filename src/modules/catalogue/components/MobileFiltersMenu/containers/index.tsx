@@ -1,7 +1,7 @@
 import { useState } from "react";
-import ProductCards from "../components";
+import MobileFiltersMenu from "../components";
 
-const ProductCardsContainer = () => {
+const MobileFiltersMenuContainer = () => {
   const [openFilter, setOpenFilter] = useState(false);
   const handleOpenFilter = () => {
     setOpenFilter(true);
@@ -24,6 +24,6 @@ const ProductCardsContainer = () => {
     handleOpenSortPrice,
     handleCloseSortPrice,
   };
-  return <ProductCards {...props} />;
+  return <MobileFiltersMenu {...props} />;
 };
-export default ProductCardsContainer;
+export default MobileFiltersMenuContainer;

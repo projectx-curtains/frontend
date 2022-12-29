@@ -1,29 +1,13 @@
-import ClearIcon from "@mui/icons-material/Clear";
 import PriceFilter from "@modules/catalogue/components/Filters/PriceFilter";
 import FilterTags from "@modules/catalogue/components/FilterTags";
+import MobileFiltersMenu from "@modules/catalogue/components/MobileFiltersMenu";
 import ProductCard from "@common/productCard/components";
-import DrawerComponent from "@modules/catalogue/components/DrawerComponent";
+
 // import NothingFound from "../../../NothingFound";
-import ProductFilters from "../../ProductFilters";
-import { IProductCardsProps } from "../interfaces";
-import MobileFilterImg from "@assets/svg/mobileFilter.svg";
-import MobileSortPriceImg from "@assets/svg/mobileSortPrice.svg";
-import {
-  styleClearIcon,
-  styleLeftDrawer,
-  styleRightDrawer,
-} from "../mocks/styleClearIcon";
 
 import style from "../styles/index.module.scss";
 
-const ProductCards: React.FC<IProductCardsProps> = ({
-  openFilter,
-  handleOpenFilter,
-  handleCloseFilter,
-  openSortPrice,
-  handleOpenSortPrice,
-  handleCloseSortPrice,
-}) => {
+const ProductCards: React.FC = () => {
   return (
     <div className={style["cards-module"]}>
       <div className={style["cards-module__filter-values"]}>
@@ -34,36 +18,7 @@ const ProductCards: React.FC<IProductCardsProps> = ({
           <PriceFilter />
         </div>
       </div>
-
-      <div className={style["mobile-module"]}>
-        <MobileFilterImg
-          className={style["mobile-filter-img"]}
-          onClick={handleOpenFilter}
-        />
-        <DrawerComponent
-          anchor="left"
-          open={openFilter}
-          onClose={handleCloseFilter}
-          styleVariable={styleLeftDrawer}>
-          <ClearIcon
-            onClick={handleCloseFilter}
-            fontSize="medium"
-            sx={styleClearIcon}
-          />
-          <ProductFilters />
-        </DrawerComponent>
-        <MobileSortPriceImg
-          className={style["mobile-sort-price-img"]}
-          onClick={handleOpenSortPrice}
-        />
-        <DrawerComponent
-          anchor="right"
-          open={openSortPrice}
-          onClose={handleCloseSortPrice}
-          styleVariable={styleRightDrawer}>
-          <PriceFilter />
-        </DrawerComponent>
-      </div>
+      <MobileFiltersMenu />
 
       {/* <NothingFound /> */}
 

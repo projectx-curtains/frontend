@@ -1,4 +1,4 @@
-import { IPageTitleProps } from "../interface";
+import { IPageTitleProps } from "../interfaces";
 import style from "../styles/index.module.scss";
 
 const PageTitle: React.FC<IPageTitleProps> = ({ title }) => {
