@@ -8,6 +8,7 @@
   padding-bottom: 40px;
   color: $gray-500;
   background-color: $gray-100;
+  z-index: 3000;
 
   @media (max-width: $screen-md) {
     height: auto;

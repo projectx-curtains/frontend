@@ -9,7 +9,7 @@ import style from "../styles/buttonScrollUp.module.scss";
 
 const ButtonScrollUp: React.FC<IButtonScrollUpProps> = ({ scrolledValue }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const waitDebounce = 10;
+  const DebounceWait = 10;
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
@@ -22,7 +22,7 @@ const ButtonScrollUp: React.FC<IButtonScrollUpProps> = ({ scrolledValue }) => {
   };
 
   useEffect(() => {
-    const debounceVal = debounce(toggleVisible, waitDebounce);
+    const debounceVal = debounce(toggleVisible, DebounceWait);
     window.addEventListener("scroll", debounceVal);
     return () => window.removeEventListener("scroll", debounceVal);
   });

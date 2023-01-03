@@ -13,7 +13,9 @@ const CataloguePopup = () => {
         {CATEGORIES.map(
           ({ name, path }: Category, catalogueItem) =>
             catalogueItem !== CATEGORIES.length - 1 && (
-              <li className={style["catalog-popup__item"]}>
+              <li
+                className={style["catalog-popup__item"]}
+                key={`${name}-${path}`}>
                 <Link href={path}>
                   <>
                     <Image

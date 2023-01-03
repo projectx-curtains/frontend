@@ -3,7 +3,7 @@ import { HeadTags } from "@common/headTags";
 import MainLayout from "@layouts/mainLayout/components";
 import HomeModule from "@modules/home";
 import { HEADER_THEME } from "@common/header/constants";
-import { HOME_METADATA } from "@modules/home/mocks/metaData";
+import { HOME_METADATA } from "@modules/home/mocks/meta.data";
 
 const HomePage: NextPage = () => {
   return (

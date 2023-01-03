@@ -2,20 +2,23 @@
 
 .button-scroll-up {
   position: fixed;
-  bottom: 16px;
-  right: 16px;
+  bottom: 433px;
+  right: 80px;
   z-index: 999;
   animation: 0.5s move-left;
-  display: none;
-  @media (max-width: $screen-md) {
-    display: block;
-  }
 }
-
 .hidden {
   bottom: 16px;
   right: -60px;
   animation: 0.5s move-right;
+}
+.only-mobile {
+  bottom: 16px;
+  right: 16px;
+  display: none;
+  @media (max-width: $screen-md) {
+    display: block;
+  }
 }
 
 @keyframes move-left {
