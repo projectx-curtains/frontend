@@ -1,9 +1,13 @@
 @import "../../../../../../styles/App";
 
 .wrapper {
-  width: 1440px;
+  max-width: 1920px;
+  width: 100%;
   border-bottom: 1px solid $gray-250;
   margin-top: 56px;
+  @media (max-width: $screen-md) {
+    display: none;
+  }
 
   &__title {
     @include heading-40-medium;

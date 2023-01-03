@@ -1,23 +1,12 @@
 import Button from "@mui/material/Button";
-import PriceFilter from "@modules/catalogue/components/Filters/PriceFilter";
-import FilterTags from "@modules/catalogue/components/FilterTags";
 import SuggestionCards from "../../SuggestionCards";
-import NothingFoundImg from "../../../../../../assets/svg/nothingFoundImg.svg";
+import NothingFoundImg from "@assets/svg/nothingFoundImg.svg";
 
 import style from "../styles/index.module.scss";
 
 const NothingFound: React.FC = () => {
   return (
     <div className={style["cards-module"]}>
-      <div className={style["cards-module__filter-values"]}>
-        <div className={style["tag-cloud"]}>
-          <FilterTags />
-        </div>
-        <div className={style["price-filter"]}>
-          <PriceFilter />
-        </div>
-      </div>
-
       <div className={style["cards-module__nothing-found"]}>
         <h3 className={style["title"]}>
           У нас нет таких товаров, попробуйте изменить условия поиска

@@ -1,8 +1,11 @@
 import PriceFilter from "@modules/catalogue/components/Filters/PriceFilter";
 import FilterTags from "@modules/catalogue/components/FilterTags";
+import MobileFiltersMenu from "@modules/catalogue/components/MobileFiltersMenu";
 import ProductCard from "@common/productCard/components";
 
-import style from "../styles/productCards.module.scss";
+// import NothingFound from "../../../NothingFound";
+
+import style from "../styles/index.module.scss";
 
 const ProductCards: React.FC = () => {
   return (
@@ -15,6 +18,9 @@ const ProductCards: React.FC = () => {
           <PriceFilter />
         </div>
       </div>
+      <MobileFiltersMenu />
+
+      {/* <NothingFound /> */}
 
       <div className={style["cards-module__cards"]}>
         <ProductCard

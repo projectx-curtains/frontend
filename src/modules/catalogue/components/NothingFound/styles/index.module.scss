@@ -2,16 +2,7 @@
 
 .cards-module {
   @include display(flex, column, flex-start, none);
-  &__filter-values {
-    @include display(flex, row, flex-start, center);
-    .tag-cloud {
-      @include display(flex, row, flex-start, center);
-      flex-wrap: wrap;
-    }
-    .price-filter {
-      margin-left: auto;
-    }
-  }
+
   &__nothing-found {
     @include display(flex, column, center, center);
     margin-top: 52px;
