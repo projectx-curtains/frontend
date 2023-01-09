@@ -1,0 +1,15 @@
+@import "../../../../../../styles/App";
+
+.img-Box {
+  // @include display(flex, column, center, center);
+  max-width: 564px;
+  width: 100%;
+}
+.small-Slider {
+  max-width: 564px;
+  width: 100%;
+  .inSlider {
+    // не работает
+    @include display(flex, row, space-between, unset);
+  }
+}

@@ -1,0 +1,8 @@
+@import "../../../../styles/App";
+
+.wrapper {
+  @include display(flex, row, unset, unset);
+}
+.wrapper-description-card {
+  margin-left: 60px;
+}
