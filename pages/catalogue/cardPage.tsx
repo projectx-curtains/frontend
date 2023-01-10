@@ -19,7 +19,6 @@ const FabricsPage: NextPage = () => {
         isScrolled={false}>
         <CardPage />
       </MainLayout>
-      <CardPage />
     </>
   );
 };

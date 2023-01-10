@@ -2,8 +2,9 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import { useState } from "react";
 import { cardData } from "../mocks/cardData";
-import LogoPrice from "@assets/svg/logoPriceCardPage.svg";
 import { tooltipText } from "../mocks/tooltipText";
+import LogoPrice from "@assets/svg/logoPriceCardPage.svg";
+
 import style from "../styles/index.module.scss";
 
 const DescriptionCard: React.FC = () => {
@@ -26,7 +27,7 @@ const DescriptionCard: React.FC = () => {
           // ----------------------------не работает цвет
           //
           sx={{
-            "& .MuiTooltip-popper": {
+            "& .MuiTooltip-tooltip": {
               backgroundColor: "#FFFFFF",
             },
           }}>

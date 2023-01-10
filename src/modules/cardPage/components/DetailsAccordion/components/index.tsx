@@ -6,11 +6,11 @@ import {
   returnToStore,
 } from "./itemsInAccordion";
 
-// import style from "../styles/index.module.scss";
+import style from "../styles/index.module.scss";
 
 const DetailsAccordion: React.FC = () => {
   return (
-    <>
+    <div className={style["details-accordion"]}>
       <AccordionItem
         summary={"Параметры"}
         details={parameters}
@@ -27,7 +27,7 @@ const DetailsAccordion: React.FC = () => {
         summary={"Возврат"}
         details={returnToStore}
       />
-    </>
+    </div>
   );
 };
 export default DetailsAccordion;

@@ -8,7 +8,7 @@ import style from "./styles/index.module.scss";
 
 const CardPage: React.FC = () => {
   return (
-    <>
+    <div className={style["card-page"]}>
       <CustomBreadcrumbs />
       <div className={style["wrapper"]}>
         <ImgBox />
@@ -19,7 +19,7 @@ const CardPage: React.FC = () => {
       </div>
 
       <SuggestionCards />
-    </>
+    </div>
   );
 };
 export default CardPage;
