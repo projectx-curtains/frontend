@@ -8,8 +8,8 @@ import {
   settingsSmallSlider,
   styleBigSlider,
   styleSmallSlider,
-} from "../moks/settingsSliders";
-import { sampleImgBig } from "../moks/sampleImg";
+} from "../mocks/settingsSliders";
+import { sampleImgBig } from "../mocks/sampleImg";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
