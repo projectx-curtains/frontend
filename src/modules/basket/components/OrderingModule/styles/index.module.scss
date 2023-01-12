@@ -1,14 +1,67 @@
 @import "../../../../../../styles/App";
 
-.custom-breadcrumbs-in-basket {
-  margin-top: 31px;
-  &__typography {
-    @include body-18-medium;
+.ordering-module {
+  @include display(flex, column, flex-start, unset);
+  border: 1px solid $gray-300;
+  background-color: $white;
+  max-width: 405px;
+  width: 100%;
+  padding: 24px 16px;
+  &__title {
+    @include body-18-semi-bold;
     color: $gray-500;
+    border-bottom: 1px solid $gray-300;
+    padding-bottom: 16px;
   }
-  &__link {
-    @include body-18-light;
-    line-height: 140%;
-    color: $gray-500;
+  &__wrapper-info {
+    @include display(flex, column, unset, unset);
+    padding: 16px 0;
+    border-bottom: 1px solid $gray-300;
+    .item {
+      @include display(flex, row, space-between, center);
+      &__title {
+        @include body-16-medium;
+        color: $gray-500;
+      }
+      &__text {
+        @include body-16-light;
+        color: $gray-500;
+      }
+    }
+    .item:first-child {
+      margin-bottom: 16px;
+    }
+  }
+  &__wrapper-price {
+    @include display(flex, row, space-between, center);
+    padding: 16px 0;
+    border-bottom: 1px solid $gray-300;
+    .price-item {
+      @include heading-24-medium;
+      color: $gray-500;
+    }
+  }
+  &__wrapper-description {
+    @include display(flex, row, unset, flex-start);
+    margin: 16px 0;
+    .description-item {
+      @include body-16-medium;
+      color: $gray-500;
+      margin-left: 10px;
+    }
+    .bold {
+      font-weight: bold;
+    }
+  }
+  &__button {
+    @include body-18-medium;
+    max-width: 405px;
+    width: 100%;
+    padding: 25px 127px;
+    background-color: $brown-500;
+    color: $white;
+  }
+  &__button:hover {
+    background-color: $brown-500;
   }
 }
