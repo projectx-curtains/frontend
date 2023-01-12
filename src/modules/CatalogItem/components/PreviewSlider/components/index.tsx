@@ -8,15 +8,15 @@ import {
   settingsSmallSlider,
   styleBigSlider,
   styleSmallSlider,
-} from "../moks/settingsSliders";
-import { sampleImgBig } from "../moks/sampleImg";
+} from "../mocks/settingsSliders";
+import { sampleImgBig } from "../mocks/sampleImg";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import style from "../styles/index.module.scss";
 
-const ImgBox: React.FC = () => {
+const PreviewSlider: React.FC = () => {
   return (
     <div className={style["wrapper-sliders"]}>
       <div className={style["wrapper-sliders__big-slider"]}>
@@ -69,4 +69,4 @@ const ImgBox: React.FC = () => {
     </div>
   );
 };
-export default ImgBox;
+export default PreviewSlider;

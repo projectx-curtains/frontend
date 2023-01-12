@@ -7,7 +7,7 @@
   color: $gray-500;
 }
 
-.description-card {
+.catalog-item-description {
   @include display(flex, column, center, flex-start);
   &__title {
     @include heading-40-medium;
@@ -28,29 +28,6 @@
       @include heading-32-medium;
       color: $brown-600;
       margin-right: 18px;
-    }
-  }
-  &__buttons {
-    @include display(flex, row, unset, center);
-    .button-buy {
-      max-width: 227px;
-      width: 100%;
-      @include body-18-medium;
-      box-shadow: none;
-      padding: 12px 48px;
-      background-color: $brown-500;
-      color: $white;
-      margin-right: 32px;
-    }
-    .button-add {
-      max-width: 311px;
-      width: 100%;
-      @include body-18-medium;
-      box-shadow: none;
-      border: 1px solid $brown-500;
-      padding: 12px 48px;
-      background-color: $white;
-      color: $gray-500;
     }
   }
 }

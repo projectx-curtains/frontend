@@ -1,19 +1,19 @@
 import CustomBreadcrumbs from "@modules/catalogue/components/CustomBreadcrumbs";
 import SuggestionCards from "@modules/catalogue/components/SuggestionCards";
-import DescriptionCard from "./components/descriptionCard";
+import CatalogItemDescription from "./components/CatalogItemDescription";
 import DetailsAccordion from "./components/DetailsAccordion";
-import ImgBox from "./components/ImgBox/components";
+import PreviewSlider from "./components/PreviewSlider";
 
 import style from "./styles/index.module.scss";
 
-const CardPage: React.FC = () => {
+const CatalogItem: React.FC = () => {
   return (
-    <div className={style["card-page"]}>
+    <div className={style["catalog-item"]}>
       <CustomBreadcrumbs />
       <div className={style["wrapper"]}>
-        <ImgBox />
+        <PreviewSlider />
         <div className={style["wrapper-description-card"]}>
-          <DescriptionCard />
+          <CatalogItemDescription />
           <DetailsAccordion />
         </div>
       </div>
@@ -22,4 +22,4 @@ const CardPage: React.FC = () => {
     </div>
   );
 };
-export default CardPage;
+export default CatalogItem;

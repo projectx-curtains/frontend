@@ -1,0 +1,33 @@
+@import "../../../../../../styles/App";
+
+.control-buttons {
+  @include display(flex, row, unset, center);
+  &__buy {
+    max-width: 227px;
+    width: 100%;
+    @include body-18-medium;
+    box-shadow: none;
+    padding: 12px 48px;
+    background-color: $brown-500;
+    color: $white;
+    margin-right: 32px;
+  }
+  &__buy:hover {
+    background-color: $brown-500;
+    box-shadow: none;
+  }
+  &__add {
+    max-width: 311px;
+    width: 100%;
+    @include body-18-medium;
+    box-shadow: none;
+    border: 1px solid $brown-500;
+    padding: 12px 48px;
+    background-color: $white;
+    color: $gray-500;
+  }
+  &__add:hover {
+    background-color: $white;
+    border-color: $brown-500;
+  }
+}
