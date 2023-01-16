@@ -1,4 +1,5 @@
 import CustomBreadcrumbs from "@modules/catalogue/components/CustomBreadcrumbs";
+import CardProduct from "./components/CardProduct";
 import CustomBreadcrumbsInBasket from "./components/CustomBreadcrumbsInBasket";
 import OrderingModule from "./components/OrderingModule";
 
@@ -13,6 +14,13 @@ const BasketeModule: React.FC = () => {
         number={2}
         price={1050}
         address="г.Минск, ул Уманская, д.54"
+      />
+      <CardProduct
+        // nameProduct="Комплект штор Кармен"
+        materialProduct="сатин софт и сетка вышивка корд"
+        widthProduct={330}
+        heightProduct={250}
+        priceProduct={1050.0}
       />
     </>
   );

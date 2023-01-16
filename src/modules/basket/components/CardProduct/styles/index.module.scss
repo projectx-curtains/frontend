@@ -1,0 +1,94 @@
+@import "../../../../../../styles/App";
+
+.card-product {
+  @include display(flex, row, space-between, flex-start);
+  max-width: 955px;
+  width: 100%;
+  border-bottom: 1px solid #c2c4cb;
+  padding-bottom: 24px;
+
+  .description-product {
+    @include display(flex, column, flex-start, unset);
+    &__title {
+      @include body-16-medium;
+      font-weight: 700;
+      line-height: 130%;
+      color: #373b49;
+      margin-bottom: 8px;
+    }
+    &__text {
+      @include body-14-light;
+      color: #373b49;
+    }
+    &__size-window {
+      @include display(flex, column, flex-start, unset);
+      margin-top: 12px;
+      .title {
+        @include body-16-regular;
+      }
+      .wrapper-inputs {
+        @include display(flex, row, flex-start, unset);
+        &__width-window,
+        &__height-window {
+          @include display(flex, column, flex-start, unset);
+        }
+        &__height-window {
+          margin-left: 16px;
+        }
+        .text {
+          @include body-14-light;
+          color: #c2c4cb;
+        }
+        .input {
+          max-width: 118px;
+          width: 100%;
+
+          padding: 10px 0px;
+          border: 1px solid #e2e3e6;
+        }
+      }
+    }
+  }
+
+  .quantity-product {
+    @include display(flex, column, flex-start, unset);
+    .wrapper-button {
+      @include display(flex, row, flex-start, center);
+    }
+    .button {
+      border: 1px solid #e2e3e6;
+      color: #373b49;
+      background-color: $white;
+      border-radius: 4px;
+      width: 42px;
+      height: 42px;
+      min-width: 11px;
+      padding: 0;
+    }
+    .button:hover {
+      background-color: $white;
+    }
+    .quantity {
+      @include body-16-regular;
+      color: #373b49;
+      background-color: $white;
+      border: 1px solid #e2e3e6;
+      border-radius: 4px;
+      margin: 0 8px;
+      width: 64px;
+      height: 42px;
+      text-align: center;
+      line-height: 42px;
+    }
+    .delete-button {
+      @include body-14-regular;
+      color: #373b49;
+      text-decoration-line: underline;
+      margin-top: 8px;
+    }
+  }
+
+  .price-product {
+    @include heading-24-medium;
+  }
+}
