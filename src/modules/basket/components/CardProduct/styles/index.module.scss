@@ -4,7 +4,7 @@
   @include display(flex, row, space-between, flex-start);
   max-width: 955px;
   width: 100%;
-  border-bottom: 1px solid #c2c4cb;
+  border-bottom: 1px solid $gray-300;
   padding-bottom: 24px;
 
   .description-product {
@@ -13,12 +13,12 @@
       @include body-16-medium;
       font-weight: 700;
       line-height: 130%;
-      color: #373b49;
+      color: $gray-500;
       margin-bottom: 8px;
     }
     &__text {
       @include body-14-light;
-      color: #373b49;
+      color: $gray-500;
     }
     &__size-window {
       @include display(flex, column, flex-start, unset);
@@ -37,14 +37,14 @@
         }
         .text {
           @include body-14-light;
-          color: #c2c4cb;
+          color: $gray-300;
         }
         .input {
           max-width: 118px;
           width: 100%;
 
           padding: 10px 0px;
-          border: 1px solid #e2e3e6;
+          border: 1px solid $gray-250;
         }
       }
     }
@@ -56,8 +56,8 @@
       @include display(flex, row, flex-start, center);
     }
     .button {
-      border: 1px solid #e2e3e6;
-      color: #373b49;
+      border: 1px solid $gray-250;
+      color: $gray-500;
       background-color: $white;
       border-radius: 4px;
       width: 42px;
@@ -70,9 +70,9 @@
     }
     .quantity {
       @include body-16-regular;
-      color: #373b49;
+      color: $gray-500;
       background-color: $white;
-      border: 1px solid #e2e3e6;
+      border: 1px solid $gray-250;
       border-radius: 4px;
       margin: 0 8px;
       width: 64px;
@@ -82,7 +82,7 @@
     }
     .delete-button {
       @include body-14-regular;
-      color: #373b49;
+      color: $gray-500;
       text-decoration-line: underline;
       margin-top: 8px;
     }

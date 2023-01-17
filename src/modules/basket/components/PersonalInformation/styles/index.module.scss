@@ -1,0 +1,41 @@
+@import "../../../../../../styles/App";
+
+.personal-information {
+  @include display(flex, column, flex-start, unset);
+  max-width: 955px;
+  width: 100%;
+  margin-top: 40px;
+  &__title {
+    @include body-18-medium;
+    color: $gray-500;
+    margin-bottom: 24px;
+  }
+  &__wrapper-info {
+    @include display(flex, row, space-between, flex-start);
+    .title {
+      @include body-16-regular;
+      color: $gray-500;
+      margin-bottom: 4px;
+    }
+  }
+  &__wrapper-comment {
+    @include display(flex, column, flex-start, unset);
+    margin-top: 16px;
+    .title {
+      @include body-16-regular;
+      color: $gray-500;
+      margin-bottom: 8px;
+    }
+    .character-count {
+      @include body-14-light;
+      color: $gray-350;
+      margin-left: auto;
+      margin-top: 8px;
+    }
+  }
+  &__subtitle {
+    @include body-16-regular;
+    color: $gray-500;
+    margin-top: 28px;
+  }
+}

@@ -1,7 +1,9 @@
 import CustomBreadcrumbs from "@modules/catalogue/components/CustomBreadcrumbs";
 import CardProduct from "./components/CardProduct";
 import CustomBreadcrumbsInBasket from "./components/CustomBreadcrumbsInBasket";
+import Delivery from "./components/Delivery";
 import OrderingModule from "./components/OrderingModule";
+import PersonalInformation from "./components/PersonalInformation";
 
 // import style from "./styles/index.module.scss";
 
@@ -16,12 +18,14 @@ const BasketeModule: React.FC = () => {
         address="г.Минск, ул Уманская, д.54"
       />
       <CardProduct
-        // nameProduct="Комплект штор Кармен"
+        nameProduct="Комплект штор Кармен"
         materialProduct="сатин софт и сетка вышивка корд"
         widthProduct={330}
         heightProduct={250}
         priceProduct={1050.0}
       />
+      <Delivery />
+      <PersonalInformation />
     </>
   );
 };

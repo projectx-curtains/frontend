@@ -1,23 +1,22 @@
 import Image from "next/future/image";
 import Button from "@mui/material/Button";
-import { useState } from "react";
+import { FormikProvider } from "formik";
+import { ICardProductProps } from "../interfaces";
 import srcImage from "../mocks/img-product.png";
 import style from "../styles/index.module.scss";
 
-const CardProduct = (
-  // nameProduct: any,
-  materialProduct: any,
-  widthProduct: any,
-  heightProduct: any,
-  priceProduct: any
-) => {
-  let [countQuality, setCountQuality] = useState(1);
-  const onAdd = () => {
-    setCountQuality(countQuality++);
-  };
-  const onReduct = () => {
-    countQuality === 1 ? countQuality : setCountQuality(countQuality--);
-  };
+const CardProduct: React.FC<ICardProductProps> = ({
+  nameProduct,
+  materialProduct,
+  widthProduct,
+  heightProduct,
+  priceProduct,
+  handleRemove,
+  countQuality,
+  onAdd,
+  onReduct,
+  formik,
+}) => {
   return (
     <div className={style["card-product"]}>
       <div className={style["image"]}>
@@ -29,7 +28,7 @@ const CardProduct = (
         />
       </div>
       <div className={style["description-product"]}>
-        <h1 className={style["description-product__title"]}>{"nameProduct"}</h1>
+        <h1 className={style["description-product__title"]}>{nameProduct}</h1>
         <p
           className={
             style["description-product__text"]
@@ -41,18 +40,24 @@ const CardProduct = (
         <div className={style["description-product__size-window"]}>
           <p className={style["title"]}>Размеры окна</p>
           <div className={style["wrapper-inputs"]}>
-            <div className={style["wrapper-inputs__width-window"]}>
-              <p className={style["text"]}>Ширина, см</p>
-              <input
-                className={style["input"]}
-                type="text"></input>
-            </div>
-            <div className={style["wrapper-inputs__height-window"]}>
-              <p className={style["text"]}>Высота, см</p>
-              <input
-                className={style["input"]}
-                type="text"></input>
-            </div>
+            <FormikProvider value={formik}>
+              <form>
+                <div className={style["wrapper-inputs__width-window"]}>
+                  <p className={style["text"]}>Ширина, см</p>
+                  <input
+                    className={style["input"]}
+                    type="text"
+                    value={formik.initialValues.widthWindow}></input>
+                </div>
+                <div className={style["wrapper-inputs__height-window"]}>
+                  <p className={style["text"]}>Высота, см</p>
+                  <input
+                    className={style["input"]}
+                    type="text"
+                    value={formik.initialValues.heightWindow}></input>
+                </div>
+              </form>
+            </FormikProvider>
           </div>
         </div>
       </div>
@@ -60,17 +65,23 @@ const CardProduct = (
         <div className={style["wrapper-button"]}>
           <Button
             className={style["button"]}
-            onClick={onReduct}>
+            onClick={() => onReduct()}>
             -
           </Button>
           <p className={style["quantity"]}>{countQuality}</p>
           <Button
             className={style["button"]}
-            onClick={onAdd}>
+            onClick={() => onAdd()}>
             +
           </Button>
         </div>
-        <p className={style["delete-button"]}>Удалить</p>
+        <p
+          className={style["delete-button"]}
+          onClick={() => {
+            handleRemove;
+          }}>
+          Удалить
+        </p>
       </div>
       <p className={style["price-product"]}>{`От ${priceProduct} BYN`}</p>
     </div>

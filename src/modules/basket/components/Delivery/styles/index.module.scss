@@ -1,0 +1,29 @@
+@import "../../../../../../styles/App";
+
+.delivery {
+  @include display(flex, column, flex-start, unset);
+  margin-top: 40px;
+  &__title {
+    @include body-18-medium;
+    color: $gray-500;
+    margin-bottom: 24px;
+  }
+}
+
+.address {
+  @include display(flex, column, flex-start, unset);
+  max-width: 955px;
+  width: 100%;
+  padding: 16px;
+  background-color: $gray-100;
+  &__title {
+    @include body-16-regular;
+    color: $gray-500;
+    margin-bottom: 4px;
+  }
+  &__subtitle {
+    @include body-16-light;
+    color: $gray-500;
+    margin-top: 10px;
+  }
+}
