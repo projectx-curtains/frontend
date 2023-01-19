@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import { HeadTags } from "@common/headTags";
 
 import MainLayout from "@layouts/mainLayout/components";
-import BasketeModule from "@modules/basket";
+import BasketModule from "@modules/basket";
 import { CATALOGUE_METADATA } from "@modules/catalogue/mocks/meta.data";
 import { HEADER_THEME } from "@common/header/constants";
 
@@ -17,7 +17,7 @@ const Basket: NextPage = () => {
       <MainLayout
         defaultTheme={HEADER_THEME.brown}
         isScrolled={false}>
-        <BasketeModule />
+        <BasketModule />
       </MainLayout>
     </>
   );

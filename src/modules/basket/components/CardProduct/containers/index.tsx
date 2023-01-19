@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useFormik } from "formik";
 import { ICardProductContainerProps } from "../interfaces";
 
 import CardProduct from "../components";
@@ -27,15 +26,6 @@ const CardProductContainer: React.FC<ICardProductContainerProps> = ({
     setCards(newCards);
   };
 
-  const formik = useFormik({
-    initialValues: {
-      widthWindow: [],
-      heightWindow: [],
-    },
-    onSubmit: (values) => {
-      console.log(values);
-    },
-  });
   const props = {
     nameProduct,
     materialProduct,
@@ -46,7 +36,6 @@ const CardProductContainer: React.FC<ICardProductContainerProps> = ({
     countQuality,
     onAdd,
     onReduct,
-    formik,
   };
 
   return <CardProduct {...props} />;

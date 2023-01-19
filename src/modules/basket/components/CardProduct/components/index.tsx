@@ -1,6 +1,5 @@
 import Image from "next/future/image";
 import Button from "@mui/material/Button";
-import { FormikProvider } from "formik";
 import { ICardProductProps } from "../interfaces";
 import srcImage from "../mocks/img-product.png";
 import style from "../styles/index.module.scss";
@@ -15,7 +14,6 @@ const CardProduct: React.FC<ICardProductProps> = ({
   countQuality,
   onAdd,
   onReduct,
-  formik,
 }) => {
   return (
     <div className={style["card-product"]}>
@@ -40,24 +38,18 @@ const CardProduct: React.FC<ICardProductProps> = ({
         <div className={style["description-product__size-window"]}>
           <p className={style["title"]}>Размеры окна</p>
           <div className={style["wrapper-inputs"]}>
-            <FormikProvider value={formik}>
-              <form>
-                <div className={style["wrapper-inputs__width-window"]}>
-                  <p className={style["text"]}>Ширина, см</p>
-                  <input
-                    className={style["input"]}
-                    type="text"
-                    value={formik.initialValues.widthWindow}></input>
-                </div>
-                <div className={style["wrapper-inputs__height-window"]}>
-                  <p className={style["text"]}>Высота, см</p>
-                  <input
-                    className={style["input"]}
-                    type="text"
-                    value={formik.initialValues.heightWindow}></input>
-                </div>
-              </form>
-            </FormikProvider>
+            <div className={style["wrapper-inputs__width-window"]}>
+              <p className={style["text"]}>Ширина, см</p>
+              <input
+                className={style["input"]}
+                type="text"></input>
+            </div>
+            <div className={style["wrapper-inputs__height-window"]}>
+              <p className={style["text"]}>Высота, см</p>
+              <input
+                className={style["input"]}
+                type="text"></input>
+            </div>
           </div>
         </div>
       </div>

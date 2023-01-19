@@ -7,7 +7,7 @@ import Address from "./address";
 import style from "../styles/index.module.scss";
 import { useState } from "react";
 
-const Delivery = () => {
+const Delivery: React.FC = () => {
   const [checked, setChecked] = useState("");
 
   return (

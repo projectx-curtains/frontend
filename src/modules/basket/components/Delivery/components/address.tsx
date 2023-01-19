@@ -5,7 +5,7 @@ import LocationIcon from "@assets/svg/location-icon.svg";
 
 import style from "../styles/index.module.scss";
 
-const Address = () => {
+const Address: React.FC = () => {
   return (
     <div className={style["address"]}>
       <h3 className={style["address__title"]}>Адрес доставки*</h3>

@@ -42,7 +42,6 @@
         .input {
           max-width: 118px;
           width: 100%;
-
           padding: 10px 0px;
           border: 1px solid $gray-250;
         }
@@ -90,5 +89,18 @@
 
   .price-product {
     @include heading-24-medium;
+  }
+}
+
+.list-cards-header {
+  @include display(flex, row, space-between, center);
+  max-width: 955px;
+  width: 100%;
+  margin-bottom: 24px;
+  border-top: 1px solid #c2c4cb;
+  border-bottom: 1px solid #c2c4cb;
+  &__title {
+    @include body-16-light;
+    color: #373b49;
   }
 }

@@ -1,7 +1,9 @@
+import { useField } from "formik";
 import TextField from "@mui/material/TextField";
 import style from "../styles/index.module.scss";
 
-const PersonalInformation = () => {
+const PersonalInformation: React.FC = () => {
+  const [field] = useField("initialValues");
   return (
     <div className={style["personal-information"]}>
       <h1 className={style["personal-information__title"]}>
@@ -20,6 +22,7 @@ const PersonalInformation = () => {
         <div className={style["personal-information__wrapper-phone"]}>
           <p className={style["title"]}>Номер телефона</p>
           <TextField
+            {...field}
             placeholder="+375"
             sx={{
               "& .MuiInputBase-input": { padding: "10px 16px" },
@@ -29,6 +32,7 @@ const PersonalInformation = () => {
         <div className={style["personal-information__wrapper-email"]}>
           <p className={style["title"]}>Email</p>
           <TextField
+            {...field}
             placeholder="Email"
             sx={{
               "& .MuiInputBase-input": { padding: "10px 16px" },
@@ -38,8 +42,9 @@ const PersonalInformation = () => {
       </div>
       <div className={style["personal-information__wrapper-comment"]}>
         <p className={style["title"]}>Комментарий</p>
-        {/* не нашел ограничение по количеству символов maxlength="220" ------!!! */}
+        {/* не нашел ограничение по количеству символов maxlength="220" и как вывести количество символов ниже ------!!! */}
         <TextField
+          {...field}
           placeholder="Комментарий"
           multiline
           rows={4}
