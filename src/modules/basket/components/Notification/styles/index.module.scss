@@ -1,0 +1,46 @@
+@import "../../../../../../styles/App";
+
+.notification {
+  @include display(flex, column, center, center);
+  max-width: 852px;
+  width: 100%;
+  background-color: $white;
+  &__title {
+    @include heading-40-medium;
+    color: $gray-500;
+    margin-top: 64px;
+  }
+  &__wrapper-subtitle {
+    @include display(flex, row, unset, unset);
+    margin-top: 11px;
+    .subtitle {
+      @include body-24-regular;
+      color: $green;
+      margin-right: 7px;
+    }
+  }
+  &__info {
+    @include body-18-regular;
+    color: $gray-500;
+    margin-top: 19px;
+  }
+  &__wrapper-button {
+    @include display(flex, row, space-between, unset);
+    margin-top: 56px;
+    margin-bottom: 64px;
+    .catalogue {
+      @include body-18-medium;
+      background-color: $white;
+      color: $gray-500;
+      border: 1px solid $brown-500;
+      padding: 16px 90px;
+      margin-right: 26px;
+    }
+    .main {
+      @include body-18-medium;
+      background-color: $brown-500;
+      color: $white;
+      padding: 16px 90px;
+    }
+  }
+}

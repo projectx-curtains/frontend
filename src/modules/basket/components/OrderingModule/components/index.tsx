@@ -2,12 +2,14 @@ import Button from "@mui/material/Button";
 import { IOrderingModuleProps } from "../interfaces";
 import OrderInfoIcon from "@assets/svg/order-info-icon.svg";
 import style from "../styles/index.module.scss";
+// import { useContext } from "react";
 
 const OrderingModule: React.FC<IOrderingModuleProps> = ({
   number,
   address,
   price,
 }) => {
+  // const context = useContext(countQualityContext)
   return (
     <div className={style["ordering-module"]}>
       <p className={style["ordering-module__title"]}>Общая сумма корзины</p>
@@ -37,7 +39,6 @@ const OrderingModule: React.FC<IOrderingModuleProps> = ({
       </div>
       <Button
         className={style["ordering-module__button"]}
-        href="/---"
         variant="contained">
         Оформить заказ
       </Button>

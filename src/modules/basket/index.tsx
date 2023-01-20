@@ -4,6 +4,7 @@ import CardProduct from "./components/CardProduct";
 import ListCardsHeader from "./components/CardProduct/components/listCardsHeader";
 import CustomBreadcrumbsInBasket from "./components/CustomBreadcrumbsInBasket";
 import Delivery from "./components/Delivery";
+import Notification from "./components/Notification";
 import OrderingModule from "./components/OrderingModule";
 import PersonalInformation from "./components/PersonalInformation";
 
@@ -34,6 +35,7 @@ const BasketModule: React.FC = () => {
           address="г.Минск, ул Уманская, д.54"
         />
       </div>
+      <Notification />
     </div>
     // </FormikProvider>
   );

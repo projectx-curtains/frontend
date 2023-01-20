@@ -1,3 +1,4 @@
+// import React, { useContext } from "react";
 import Image from "next/future/image";
 import Button from "@mui/material/Button";
 import { ICardProductProps } from "../interfaces";
@@ -15,6 +16,8 @@ const CardProduct: React.FC<ICardProductProps> = ({
   onAdd,
   onReduct,
 }) => {
+  // const countQualityContext = React.createContext(countQuality);
+
   return (
     <div className={style["card-product"]}>
       <div className={style["image"]}>
