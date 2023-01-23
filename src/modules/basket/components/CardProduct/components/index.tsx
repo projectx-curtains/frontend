@@ -1,4 +1,5 @@
 // import React, { useContext } from "react";
+import { useField } from "formik";
 import Image from "next/future/image";
 import Button from "@mui/material/Button";
 import { ICardProductProps } from "../interfaces";
@@ -17,6 +18,7 @@ const CardProduct: React.FC<ICardProductProps> = ({
   onReduct,
 }) => {
   // const countQualityContext = React.createContext(countQuality);
+  const [field] = useField("initialValues");
 
   return (
     <div className={style["card-product"]}>
@@ -45,13 +47,15 @@ const CardProduct: React.FC<ICardProductProps> = ({
               <p className={style["text"]}>Ширина, см</p>
               <input
                 className={style["input"]}
-                type="text"></input>
+                type="text"
+                {...field}></input>
             </div>
             <div className={style["wrapper-inputs__height-window"]}>
               <p className={style["text"]}>Высота, см</p>
               <input
                 className={style["input"]}
-                type="text"></input>
+                type="text"
+                {...field}></input>
             </div>
           </div>
         </div>

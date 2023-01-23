@@ -1,4 +1,5 @@
 import Input from "@mui/material/Input";
+import { useField } from "formik";
 import InputAdornment from "@mui/material/InputAdornment";
 import FormControl from "@mui/material/FormControl";
 import LocationIcon from "@assets/svg/location-icon.svg";
@@ -6,6 +7,7 @@ import LocationIcon from "@assets/svg/location-icon.svg";
 import style from "../styles/index.module.scss";
 
 const Address: React.FC = () => {
+  const [field] = useField("initialValues");
   return (
     <div className={style["address"]}>
       <h3 className={style["address__title"]}>Адрес доставки*</h3>
@@ -13,6 +15,7 @@ const Address: React.FC = () => {
         <Input
           id="address"
           placeholder="Адрес"
+          {...field}
           startAdornment={
             <InputAdornment
               position="start"

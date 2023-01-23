@@ -1,10 +1,10 @@
-// import { useField } from "formik";
+import { useField } from "formik";
 import { useState } from "react";
 import TextField from "@mui/material/TextField";
 import style from "../styles/index.module.scss";
 
 const PersonalInformation: React.FC = () => {
-  // const [field] = useField("initialValues");
+  const [field] = useField("initialValues");
 
   const [commentValue, setCommentValue] = useState("");
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -21,7 +21,9 @@ const PersonalInformation: React.FC = () => {
         <div className={style["personal-information__wrapper-name"]}>
           <p className={style["title"]}>Имя</p>
           <TextField
+            id="name"
             placeholder="Имя"
+            {...field}
             sx={{
               "& .MuiInputBase-input": { padding: "10px 16px" },
             }}
@@ -30,8 +32,9 @@ const PersonalInformation: React.FC = () => {
         <div className={style["personal-information__wrapper-phone"]}>
           <p className={style["title"]}>Номер телефона</p>
           <TextField
-            // {...field}
+            id="phone"
             placeholder="+375"
+            {...field}
             sx={{
               "& .MuiInputBase-input": { padding: "10px 16px" },
             }}
@@ -40,8 +43,9 @@ const PersonalInformation: React.FC = () => {
         <div className={style["personal-information__wrapper-email"]}>
           <p className={style["title"]}>Email</p>
           <TextField
-            // {...field}
+            id="email"
             placeholder="Email"
+            {...field}
             sx={{
               "& .MuiInputBase-input": { padding: "10px 16px" },
             }}
@@ -50,10 +54,10 @@ const PersonalInformation: React.FC = () => {
       </div>
       <div className={style["personal-information__wrapper-comment"]}>
         <p className={style["title"]}>Комментарий</p>
-        {/* не нашел ограничение по количеству символов maxlength="220" и как вывести количество символов ниже ------!!! */}
         <TextField
-          // {...field}
+          id="comment"
           placeholder="Комментарий"
+          {...field}
           multiline
           rows={4}
           maxRows={4}
