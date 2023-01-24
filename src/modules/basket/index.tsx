@@ -1,5 +1,6 @@
 import { FormikProvider } from "formik";
 import { useFormik } from "formik";
+import { useContext } from "react";
 import CustomBreadcrumbs from "@modules/catalogue/components/CustomBreadcrumbs";
 import CardProduct from "./components/CardProduct";
 import ListCardsHeader from "./components/CardProduct/components/listCardsHeader";
@@ -10,22 +11,27 @@ import OrderingModule from "./components/OrderingModule";
 import PersonalInformation from "./components/PersonalInformation";
 
 import style from "./styles/index.module.scss";
+import Context from "./components/CardProduct/components/context";
 
 const BasketModule: React.FC = () => {
   const formik = useFormik({
     initialValues: {
-      widthWindow: [],
-      heightWindow: [],
-      address: [],
-      name: [],
-      phone: [],
-      email: [],
-      comment: [],
+      widthWindow: 0,
+      heightWindow: 0,
+      // countQuantity: 1,
+      address: "",
+      name: "",
+      phone: "",
+      email: "",
+      comment: "",
     },
     onSubmit: (values) => {
       console.log(values);
     },
   });
+
+  const { countQuantity, priceProduct } = useContext(Context);
+
   return (
     <FormikProvider value={formik}>
       <div className={style["basket"]}>
@@ -45,14 +51,18 @@ const BasketModule: React.FC = () => {
             <PersonalInformation />
           </div>
           <OrderingModule
-            number={2}
-            price={1050}
+            number={countQuantity}
+            price={priceProduct}
             address="г.Минск, ул Уманская, д.54"
           />
         </div>
         {/* <Notification /> */}
       </div>
-      <button type="submit">---test---</button>
+      {/* <button
+        type="submit"
+        >
+        ---test---
+      </button> */}
     </FormikProvider>
   );
 };

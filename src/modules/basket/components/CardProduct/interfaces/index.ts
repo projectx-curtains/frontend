@@ -9,7 +9,7 @@ export interface ICardProductContainerProps {
 }
 
 export interface ICardProductProps extends ICardProductContainerProps {
-  countQuality: number;
+  countQuantity: number;
   onAdd: () => void;
   onReduct: () => void;
   handleRemove: () => void;

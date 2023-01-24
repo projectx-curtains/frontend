@@ -1,15 +1,20 @@
 import Button from "@mui/material/Button";
+import { useState } from "react";
+import Notification from "../../Notification";
 import { IOrderingModuleProps } from "../interfaces";
 import OrderInfoIcon from "@assets/svg/order-info-icon.svg";
+import Modal from "@mui/material/Modal";
+
 import style from "../styles/index.module.scss";
-// import { useContext } from "react";
 
 const OrderingModule: React.FC<IOrderingModuleProps> = ({
   number,
   address,
   price,
 }) => {
-  // const context = useContext(countQualityContext)
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <div className={style["ordering-module"]}>
       <p className={style["ordering-module__title"]}>Общая сумма корзины</p>
@@ -39,9 +44,16 @@ const OrderingModule: React.FC<IOrderingModuleProps> = ({
       </div>
       <Button
         className={style["ordering-module__button"]}
-        variant="contained">
+        variant="contained"
+        type="submit"
+        onClick={() => handleOpen()}>
         Оформить заказ
       </Button>
+      <Modal
+        open={open}
+        onClose={() => handleClose()}>
+        <Notification />
+      </Modal>
     </div>
   );
 };

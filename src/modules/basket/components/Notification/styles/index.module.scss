@@ -5,6 +5,9 @@
   max-width: 852px;
   width: 100%;
   background-color: $white;
+  position: absolute;
+  top: 20%;
+  left: 20%;
   &__title {
     @include heading-40-medium;
     color: $gray-500;

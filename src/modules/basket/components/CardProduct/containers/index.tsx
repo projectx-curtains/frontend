@@ -10,12 +10,12 @@ const CardProductContainer: React.FC<ICardProductContainerProps> = ({
   heightProduct,
   priceProduct,
 }) => {
-  let [countQuality, setCountQuality] = useState(1);
+  let [countQuantity, setCountQuantity] = useState(1);
   const onAdd = () => {
-    setCountQuality(countQuality++);
+    setCountQuantity(countQuantity++);
   };
   const onReduct = () => {
-    countQuality === 1 ? countQuality : setCountQuality(countQuality--);
+    countQuantity === 1 ? countQuantity : setCountQuantity(countQuantity--);
   };
 
   const [cards, setCards] = useState([]);
@@ -33,7 +33,7 @@ const CardProductContainer: React.FC<ICardProductContainerProps> = ({
     heightProduct,
     priceProduct,
     handleRemove,
-    countQuality,
+    countQuantity,
     onAdd,
     onReduct,
   };
