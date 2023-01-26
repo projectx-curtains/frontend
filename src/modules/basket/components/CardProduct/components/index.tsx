@@ -1,5 +1,6 @@
 import Image from "next/future/image";
 import Button from "@mui/material/Button";
+import { useCallback } from "react";
 import { InputWindow } from "../fields";
 import { ICardProductProps } from "../interfaces";
 import srcImage from "../mocks/img-product.png";
@@ -17,6 +18,10 @@ const CardProduct: React.FC<ICardProductProps> = ({
   onAdd,
   onReduct,
 }) => {
+  const CountQuantity = useCallback(() => {
+    return <p className={style["quantity"]}>{countQuantity}</p>;
+  }, [countQuantity]);
+
   return (
     <Context.Provider
       value={{ countQuantity: countQuantity, priceProduct: priceProduct }}>
@@ -60,8 +65,7 @@ const CardProduct: React.FC<ICardProductProps> = ({
               onClick={() => onReduct()}>
               -
             </Button>
-            {/* КАк подключить формик к элементу ниже ?? ------------------------? */}
-            <p className={style["quantity"]}>{countQuantity}</p>
+            <CountQuantity />
             <Button
               className={style["button"]}
               onClick={() => onAdd()}>
