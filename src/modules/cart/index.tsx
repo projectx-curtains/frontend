@@ -13,7 +13,7 @@ import PersonalInformation from "./components/PersonalInformation";
 
 import style from "./styles/index.module.scss";
 
-const BasketModule: React.FC = () => {
+const CartModule: React.FC = () => {
   const formik = useFormik({
     initialValues: {
       widthWindow: 0,
@@ -63,4 +63,4 @@ const BasketModule: React.FC = () => {
     </FormikProvider>
   );
 };
-export default BasketModule;
+export default CartModule;

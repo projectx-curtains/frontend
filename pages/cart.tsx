@@ -2,11 +2,11 @@ import type { NextPage } from "next";
 import { HeadTags } from "@common/headTags";
 
 import MainLayout from "@layouts/mainLayout/components";
-import BasketModule from "@modules/basket";
+import CartModule from "@modules/cart";
 import { CATALOGUE_METADATA } from "@modules/catalogue/mocks/meta.data";
 import { HEADER_THEME } from "@common/header/constants";
 
-const Basket: NextPage = () => {
+const Cart: NextPage = () => {
   return (
     <>
       {/* TODO: add metadata for catalog page */}
@@ -17,9 +17,9 @@ const Basket: NextPage = () => {
       <MainLayout
         defaultTheme={HEADER_THEME.brown}
         isScrolled={false}>
-        <BasketModule />
+        <CartModule />
       </MainLayout>
     </>
   );
 };
-export default Basket;
+export default Cart;

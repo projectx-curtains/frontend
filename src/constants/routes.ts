@@ -14,7 +14,7 @@ export const ROUTES = {
   curtainBuilder: "/curtainBuilder",
   consultation: "/consultation",
   shoppingCart: "/shoppingCart",
-  basket: "/basket",
+  cart: "/cart",
 };
 
 export const ROUTES_MAP: IROUTES_MAP = {
@@ -34,14 +34,14 @@ export const ROUTES_MAP: IROUTES_MAP = {
       link: ROUTES.catalogueFabrics,
     },
   ],
-  [ROUTES.basket]: [
+  [ROUTES.cart]: [
     {
       title: "Главная",
       link: ROUTES.home,
     },
     {
       title: "Корзина",
-      link: ROUTES.basket,
+      link: ROUTES.cart,
     },
   ],
 };
