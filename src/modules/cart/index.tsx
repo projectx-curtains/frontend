@@ -8,8 +8,8 @@ import ListCardsHeader from "./components/CardProduct/components/listCardsHeader
 import CustomBreadcrumbsInBasket from "./components/CustomBreadcrumbsInBasket";
 import Delivery from "./components/Delivery";
 import OrderingModule from "./components/OrderingModule";
-import Context from "./components/CardProduct/components/context";
 import PersonalInformation from "./components/PersonalInformation";
+import { cartContext } from "@common/contexts/cartContext/components";
 
 import style from "./styles/index.module.scss";
 
@@ -31,12 +31,12 @@ const CartModule: React.FC = () => {
     validationSchema,
   });
 
-  const { countQuantity, priceProduct } = useContext(Context);
+  const cartData = useContext(cartContext);
 
   return (
     <FormikProvider value={formik}>
       <form onSubmit={() => formik.handleSubmit()}>
-        <div className={style["basket"]}>
+        <div className={style["cart"]}>
           <CustomBreadcrumbs />
           <CustomBreadcrumbsInBasket number={2} />
           <div className={style["wrapper"]}>
@@ -53,8 +53,8 @@ const CartModule: React.FC = () => {
               <PersonalInformation />
             </div>
             <OrderingModule
-              number={countQuantity}
-              price={priceProduct}
+              number={cartData.cartContextValue.countQuantity}
+              price={cartData.cartContextValue.priceProduct}
               address="г.Минск, ул Уманская, д.54"
             />
           </div>

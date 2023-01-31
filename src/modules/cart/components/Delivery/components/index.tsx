@@ -20,8 +20,12 @@ const Delivery: React.FC = () => {
             onChange={() => setChecked("deliv")}
             sx={
               checked === "deliv"
-                ? { padding: "8px 42px 10px 10px", backgroundColor: "#F5F5F5" }
-                : { padding: "8px 42px 10px 10px" }
+                ? {
+                    padding: "8px 42px 10px 10px",
+                    marginLeft: "0",
+                    backgroundColor: "#F5F5F5",
+                  }
+                : { padding: "8px 42px 10px 10px", marginLeft: "0" }
             }
             control={
               <Radio

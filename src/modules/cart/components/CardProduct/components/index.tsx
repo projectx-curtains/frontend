@@ -2,10 +2,11 @@ import Image from "next/future/image";
 import Button from "@mui/material/Button";
 import { useCallback } from "react";
 import { InputWindow } from "../fields";
+import CartContextWrapper from "@common/contexts/cartContext/components/cartContextWrapper";
 import { ICardProductProps } from "../interfaces";
 import srcImage from "../mocks/img-product.png";
 import style from "../styles/index.module.scss";
-import Context from "./context";
+// import Context from "./context";
 
 const CardProduct: React.FC<ICardProductProps> = ({
   nameProduct,
@@ -23,8 +24,9 @@ const CardProduct: React.FC<ICardProductProps> = ({
   }, [countQuantity]);
 
   return (
-    <Context.Provider
-      value={{ countQuantity: countQuantity, priceProduct: priceProduct }}>
+    // <Context.Provider
+    //   value={{ countQuantity: countQuantity, priceProduct: priceProduct }}>
+    <CartContextWrapper>
       <div className={style["card-product"]}>
         <div className={style["image"]}>
           <Image
@@ -82,7 +84,8 @@ const CardProduct: React.FC<ICardProductProps> = ({
         </div>
         <p className={style["price-product"]}>{`От ${priceProduct} BYN`}</p>
       </div>
-    </Context.Provider>
+    </CartContextWrapper>
+    // </Context.Provider>
   );
 };
 export default CardProduct;

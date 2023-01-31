@@ -19,6 +19,7 @@
     &__text {
       @include body-14-light;
       color: $gray-500;
+      word-wrap: break-word;
     }
     &__size-window {
       @include display(flex, column, flex-start, unset);

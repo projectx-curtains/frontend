@@ -1,6 +1,6 @@
 @import "../../../../styles/App";
 
-.basket {
+.cart {
   @include display(flex, column, flex-start, unset);
   margin-left: 80px;
   margin-top: 41px;
