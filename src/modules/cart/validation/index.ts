@@ -12,6 +12,7 @@ export const validationSchema = yup.object().shape({
     .string()
     .min(2)
     .max(25)
+    .matches(/^[А-ЯЁа-яёA-Za-z,\-\s]$/)
     .typeError("Недопустимые символы")
     .required("Обязательное поле"),
   phone: yup
@@ -22,5 +23,9 @@ export const validationSchema = yup.object().shape({
     .typeError("Недопустимые символы")
     .required("Обязательное поле"),
   email: yup.string().email().typeError("Error").min(12).max(30),
-  comment: yup.string().min(0).max(220),
+  comment: yup
+    .string()
+    .min(0)
+    .max(220)
+    .matches(/^[А-ЯЁа-яёA-Za-z0-9,\.\,\!\?\/\s]$/),
 });

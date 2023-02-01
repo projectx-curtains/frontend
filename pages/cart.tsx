@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import { HeadTags } from "@common/headTags";
 
 import MainLayout from "@layouts/mainLayout/components";
-import CartModule from "@modules/cart";
+import CartModule from "@modules/cart/containers";
 import { CATALOGUE_METADATA } from "@modules/catalogue/mocks/meta.data";
 import { HEADER_THEME } from "@common/header/constants";
 

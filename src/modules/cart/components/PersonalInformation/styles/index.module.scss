@@ -33,6 +33,14 @@
       margin-top: 8px;
     }
   }
+  &__data-processin-text {
+    @include body-14-regular;
+    color: $gray-500;
+    .link {
+      color: #726158;
+      text-decoration: underline;
+    }
+  }
   &__subtitle {
     @include body-16-regular;
     color: $gray-500;

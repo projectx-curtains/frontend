@@ -1,5 +1,5 @@
 export interface IOrderingModuleProps {
-  number: number;
+  countQuantity: number;
   address: string;
   price: number;
 }

@@ -6,12 +6,12 @@ export interface ICardProductContainerProps {
   widthProduct: number;
   heightProduct: number;
   priceProduct: number;
-}
-
-export interface ICardProductProps extends ICardProductContainerProps {
   countQuantity: number;
   onAdd: () => void;
   onReduct: () => void;
+}
+
+export interface ICardProductProps extends ICardProductContainerProps {
   handleRemove: () => void;
   formik: FormikContextType<any>;
 }

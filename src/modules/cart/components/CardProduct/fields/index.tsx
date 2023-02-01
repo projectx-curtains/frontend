@@ -2,6 +2,7 @@ import { useField } from "formik";
 import TextField from "@mui/material/TextField";
 import Input from "@mui/material/Input";
 import InputAdornment from "@mui/material/InputAdornment";
+import Checkbox from "@mui/material/Checkbox";
 import LocationIcon from "@assets/svg/location-icon.svg";
 
 import style from "../styles/index.module.scss";
@@ -73,6 +74,17 @@ export const InputAddress = (props: any) => {
         //   border: "none",
         // },
       }}
+    />
+  );
+};
+
+export const DataProcessingCheckbox = (props: any) => {
+  const [field] = useField(props);
+  return (
+    <Checkbox
+      {...field}
+      {...props}
+      sx={{ color: "#505669", "&.Mui-checked": { color: "#505669" } }}
     />
   );
 };

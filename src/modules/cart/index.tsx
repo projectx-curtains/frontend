@@ -1,7 +1,4 @@
 import { FormikProvider } from "formik";
-import { useFormik } from "formik";
-import { useContext } from "react";
-import { validationSchema } from "./validation";
 import CustomBreadcrumbs from "@modules/catalogue/components/CustomBreadcrumbs";
 import CardProduct from "./components/CardProduct";
 import ListCardsHeader from "./components/CardProduct/components/listCardsHeader";
@@ -9,30 +6,16 @@ import CustomBreadcrumbsInBasket from "./components/CustomBreadcrumbsInBasket";
 import Delivery from "./components/Delivery";
 import OrderingModule from "./components/OrderingModule";
 import PersonalInformation from "./components/PersonalInformation";
-import { cartContext } from "@common/contexts/cartContext/components";
+import { ICartModuleProps } from "./interfaces";
 
 import style from "./styles/index.module.scss";
 
-const CartModule: React.FC = () => {
-  const formik = useFormik({
-    initialValues: {
-      widthWindow: 0,
-      heightWindow: 0,
-      // countQuantity: 1,
-      address: "",
-      name: "",
-      phone: "",
-      email: "",
-      comment: "",
-    },
-    onSubmit: (values) => {
-      console.log(values);
-    },
-    validationSchema,
-  });
-
-  const cartData = useContext(cartContext);
-
+const CartModule: React.FC<ICartModuleProps> = ({
+  formik,
+  countQuantity,
+  onAdd,
+  onReduct,
+}) => {
   return (
     <FormikProvider value={formik}>
       <form onSubmit={() => formik.handleSubmit()}>
@@ -48,13 +31,16 @@ const CartModule: React.FC = () => {
                 widthProduct={330}
                 heightProduct={250}
                 priceProduct={1050.0}
+                countQuantity={countQuantity}
+                onAdd={onAdd}
+                onReduct={onReduct}
               />
               <Delivery />
               <PersonalInformation />
             </div>
             <OrderingModule
-              number={cartData.cartContextValue.countQuantity}
-              price={cartData.cartContextValue.priceProduct}
+              countQuantity={countQuantity}
+              price={1050.0}
               address="г.Минск, ул Уманская, д.54"
             />
           </div>
