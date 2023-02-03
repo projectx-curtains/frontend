@@ -1,13 +1,25 @@
 @import "../../../../../../styles/App";
 
 .card-product {
-  @include display(flex, row, space-between, flex-start);
+  // @include display(flex, row, space-between, flex-start);
+  display: grid;
+  grid-template-rows: 34px 1fr;
+  grid-template-columns: repeat(4, auto);
+  grid-row-gap: 24px;
   max-width: 955px;
   width: 100%;
   border-bottom: 1px solid $gray-300;
   padding-bottom: 24px;
 
+  .image {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding-right: 32px;
+  }
+
   .description-product {
+    grid-column: 2/3;
+    grid-row: 2/3;
     @include display(flex, column, flex-start, unset);
     &__title {
       @include body-16-medium;
@@ -51,6 +63,8 @@
   }
 
   .quantity-product {
+    grid-column: 3/4;
+    grid-row: 2/3;
     @include display(flex, column, flex-start, unset);
     .wrapper-button {
       @include display(flex, row, flex-start, center);
@@ -90,19 +104,62 @@
   }
 
   .price-product {
+    grid-column: 4/5;
+    grid-row: 2/3;
     @include heading-24-medium;
+  }
+
+  .list-cards-empty {
+    grid-column: 1/1;
+    grid-row: 1/1;
+    align-self: center;
+    color: $background;
+    padding: 6px 0;
+    @include body-16-light;
+    border-top: 1px solid $gray-300;
+    border-bottom: 1px solid $gray-300;
+  }
+  .list-cards-description-product {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: center;
+    @include body-16-light;
+    color: $gray-500;
+    padding: 6px 0;
+    border-top: 1px solid $gray-300;
+    border-bottom: 1px solid $gray-300;
+  }
+  .list-cards-quantity-product {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    align-self: center;
+    @include body-16-light;
+    color: $gray-500;
+    padding: 6px 0;
+    border-top: 1px solid $gray-300;
+    border-bottom: 1px solid $gray-300;
+  }
+  .list-cards-price-product {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    align-self: center;
+    @include body-16-light;
+    color: $gray-500;
+    padding: 6px 0;
+    border-top: 1px solid $gray-300;
+    border-bottom: 1px solid $gray-300;
   }
 }
 
-.list-cards-header {
-  @include display(flex, row, space-between, center);
-  max-width: 955px;
-  width: 100%;
-  margin-bottom: 24px;
-  border-top: 1px solid #c2c4cb;
-  border-bottom: 1px solid #c2c4cb;
-  &__title {
-    @include body-16-light;
-    color: #373b49;
-  }
-}
+// .list-cards-header {
+//   @include display(flex, row, space-between, center);
+//   max-width: 955px;
+//   width: 100%;
+//   margin-bottom: 24px;
+//   border-top: 1px solid $gray-300;
+//   border-bottom: 1px solid $gray-300;
+//   &__title {
+//     @include body-16-light;
+//     color: $gray-500;
+//   }
+// }

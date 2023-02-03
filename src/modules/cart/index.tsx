@@ -1,7 +1,6 @@
 import { FormikProvider } from "formik";
 import CustomBreadcrumbs from "@modules/catalogue/components/CustomBreadcrumbs";
 import CardProduct from "./components/CardProduct";
-import ListCardsHeader from "./components/CardProduct/components/listCardsHeader";
 import CustomBreadcrumbsInBasket from "./components/CustomBreadcrumbsInBasket";
 import Delivery from "./components/Delivery";
 import OrderingModule from "./components/OrderingModule";
@@ -24,7 +23,6 @@ const CartModule: React.FC<ICartModuleProps> = ({
           <CustomBreadcrumbsInBasket number={2} />
           <div className={style["wrapper"]}>
             <div className={style["wrapper-cards-deliv-info"]}>
-              <ListCardsHeader />
               <CardProduct
                 nameProduct="Комплект штор Кармен"
                 materialProduct="сатин софт и сетка вышивка корд"

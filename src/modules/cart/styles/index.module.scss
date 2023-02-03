@@ -10,5 +10,7 @@
   }
   .wrapper-cards-deliv-info {
     @include display(flex, column, flex-start, unset);
+    max-width: 955px;
+    width: 100%;
   }
 }

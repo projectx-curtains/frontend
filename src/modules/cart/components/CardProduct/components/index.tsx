@@ -23,6 +23,10 @@ const CardProduct: React.FC<ICardProductProps> = ({
 
   return (
     <div className={style["card-product"]}>
+      <p className={style["list-cards-empty"]}>.</p>
+      <p className={style["list-cards-description-product"]}>Товар</p>
+      <p className={style["list-cards-quantity-product"]}>Количество</p>
+      <p className={style["list-cards-price-product"]}>Цена</p>
       <div className={style["image"]}>
         <Image
           src={srcImage}
