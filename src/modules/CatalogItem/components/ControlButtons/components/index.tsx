@@ -1,18 +1,21 @@
 import Button from "@mui/material/Button";
-import { useState } from "react";
+import { catalogItemContext } from "@common/contexts/catalogItemContext/components";
+import { useContext } from "react";
 
 import style from "../styles/index.module.scss";
 
 const ControlButtons: React.FC = () => {
-  const [isItemAdded, setisItemAdded] = useState(false);
+  const { catalogItemContextValue, setCatalogItemContextValue } =
+    useContext(catalogItemContext);
+
   const onClickAdd = () => {
-    setisItemAdded(true);
+    setCatalogItemContextValue(true);
   };
   return (
     <div className={style["control-buttons"]}>
       <Button
         className={style["control-buttons__buy"]}
-        href="/basket"
+        href="/cart"
         variant="contained">
         Купить сейчас
       </Button>
@@ -20,7 +23,7 @@ const ControlButtons: React.FC = () => {
         className={style["control-buttons__add"]}
         variant="outlined"
         onClick={onClickAdd}>
-        {isItemAdded ? "Товар в корзине" : "Добавить в Мои заказы"}
+        {catalogItemContextValue ? "Товар в корзине" : "Добавить в Мои заказы"}
       </Button>
     </div>
   );
