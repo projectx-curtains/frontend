@@ -1,5 +1,3 @@
-import { FormikContextType } from "formik";
-
 export interface ICardProductContainerProps {
   nameProduct: string;
   materialProduct: string;
@@ -12,6 +10,5 @@ export interface ICardProductContainerProps {
 }
 
 export interface ICardProductProps extends ICardProductContainerProps {
-  handleRemove: () => void;
-  formik: FormikContextType<any>;
+  handleRemove: (id: number) => void;
 }

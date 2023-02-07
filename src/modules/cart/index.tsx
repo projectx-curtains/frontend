@@ -38,8 +38,7 @@ const CartModule: React.FC<ICartModuleProps> = ({
             </div>
             <OrderingModule
               countQuantity={countQuantity}
-              price={1050.0}
-              address="г.Минск, ул Уманская, д.54"
+              address={formik.initialValues.address}
             />
           </div>
         </div>

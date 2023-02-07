@@ -5,7 +5,4 @@ export interface ICartModuleProps {
   countQuantity: number;
   onAdd: () => void;
   onReduct: () => void;
-  children: React.ReactNode;
-  defaultTheme: string;
-  isScrolled: boolean;
 }

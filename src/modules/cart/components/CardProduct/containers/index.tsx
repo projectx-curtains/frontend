@@ -15,9 +15,9 @@ const CardProductContainer: React.FC<ICardProductContainerProps> = ({
 }) => {
   const [cards, setCards] = useState([]);
 
-  const handleRemove = (index: number) => {
+  const handleRemove = (id: number) => {
     const newCards = [...cards];
-    newCards.splice(index, 1);
+    newCards.filter((index) => id === index);
     setCards(newCards);
   };
 

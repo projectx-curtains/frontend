@@ -1,16 +1,16 @@
 import Button from "@mui/material/Button";
+import Modal from "@mui/material/Modal";
 import { useState, useCallback } from "react";
 import Notification from "../../Notification";
+import { priseProduct } from "@modules/cart/constants";
 import { IOrderingModuleProps } from "../interfaces";
 import OrderInfoIcon from "@assets/svg/order-info-icon.svg";
-import Modal from "@mui/material/Modal";
 
 import style from "../styles/index.module.scss";
 
 const OrderingModule: React.FC<IOrderingModuleProps> = ({
   countQuantity,
   address,
-  price,
 }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -34,7 +34,7 @@ const OrderingModule: React.FC<IOrderingModuleProps> = ({
       </div>
       <div className={style["ordering-module__wrapper-price"]}>
         <p className={style["price-item"]}>Итого</p>
-        <p className={style["price-item"]}>{`от ${price} BYN`}</p>
+        <p className={style["price-item"]}>{`от ${priseProduct} BYN`}</p>
       </div>
       <div className={style["ordering-module__wrapper-description"]}>
         <div>

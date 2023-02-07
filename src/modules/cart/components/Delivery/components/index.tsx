@@ -16,10 +16,10 @@ const Delivery: React.FC = () => {
       <FormControl>
         <RadioGroup row>
           <FormControlLabel
-            value="deliv"
-            onChange={() => setChecked("deliv")}
+            value="delivery"
+            onChange={() => setChecked("delivery")}
             sx={
-              checked === "deliv"
+              checked === "delivery"
                 ? {
                     padding: "8px 42px 10px 10px",
                     marginLeft: "0",
@@ -38,10 +38,10 @@ const Delivery: React.FC = () => {
             label="Доставка"
           />
           <FormControlLabel
-            value="self-deliv"
-            onChange={() => setChecked("self-deliv")}
+            value="self-delivery"
+            onChange={() => setChecked("self-delivery")}
             sx={
-              checked === "self-deliv"
+              checked === "self-delivery"
                 ? { padding: "8px 42px 10px 10px", backgroundColor: "#F5F5F5" }
                 : { padding: "8px 42px 10px 10px" }
             }
@@ -54,7 +54,7 @@ const Delivery: React.FC = () => {
           />
         </RadioGroup>
       </FormControl>
-      {checked === "deliv" ? <Address /> : null}
+      {checked === "delivery" ? <Address /> : null}
     </div>
   );
 };

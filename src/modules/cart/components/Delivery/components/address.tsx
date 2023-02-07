@@ -1,5 +1,5 @@
 import FormControl from "@mui/material/FormControl";
-import { InputAddress } from "../../CardProduct/fields";
+import { AddressInput } from "../../CardProduct/fields";
 
 import style from "../styles/index.module.scss";
 
@@ -8,7 +8,7 @@ const Address: React.FC = () => {
     <div className={style["address"]}>
       <h3 className={style["address__title"]}>Адрес доставки*</h3>
       <FormControl variant="outlined">
-        <InputAddress name="address" />
+        <AddressInput name="address" />
       </FormControl>
       <p className={style["address__subtitle"]}>
         *Доставка только по Республике Беларусь. <br />

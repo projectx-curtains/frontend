@@ -7,7 +7,7 @@ import LocationIcon from "@assets/svg/location-icon.svg";
 
 import style from "../styles/index.module.scss";
 
-export const InputWindow = (props: any) => {
+export const WindowInput = (props: any) => {
   const [field] = useField(props);
   return (
     <input
@@ -18,7 +18,7 @@ export const InputWindow = (props: any) => {
   );
 };
 
-export const TextFieldPersonalInformation = (props: any) => {
+export const CustomerInfoInput = (props: any) => {
   const [field] = useField(props);
   return (
     <TextField
@@ -31,7 +31,7 @@ export const TextFieldPersonalInformation = (props: any) => {
   );
 };
 
-export const TextFieldComment = (props: any) => {
+export const CommentInput = (props: any) => {
   const [field] = useField(props);
   return (
     <TextField
@@ -44,7 +44,7 @@ export const TextFieldComment = (props: any) => {
   );
 };
 
-export const InputAddress = (props: any) => {
+export const AddressInput = (props: any) => {
   const [field] = useField(props);
   return (
     <Input

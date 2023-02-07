@@ -2,8 +2,8 @@ import { useState } from "react";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import {
   DataProcessingCheckbox,
-  TextFieldComment,
-  TextFieldPersonalInformation,
+  CommentInput,
+  CustomerInfoInput,
 } from "../../CardProduct/fields";
 import style from "../styles/index.module.scss";
 
@@ -23,21 +23,21 @@ const PersonalInformation: React.FC = () => {
       <div className={style["personal-information__wrapper-info"]}>
         <div className={style["personal-information__wrapper-name"]}>
           <p className={style["title"]}>Имя</p>
-          <TextFieldPersonalInformation
+          <CustomerInfoInput
             name="name"
             placeholder="Имя"
           />
         </div>
         <div className={style["personal-information__wrapper-phone"]}>
           <p className={style["title"]}>Номер телефона</p>
-          <TextFieldPersonalInformation
+          <CustomerInfoInput
             name="phone"
             placeholder="+375"
           />
         </div>
         <div className={style["personal-information__wrapper-email"]}>
           <p className={style["title"]}>Email</p>
-          <TextFieldPersonalInformation
+          <CustomerInfoInput
             name="email"
             placeholder="Email"
           />
@@ -45,7 +45,7 @@ const PersonalInformation: React.FC = () => {
       </div>
       <div className={style["personal-information__wrapper-comment"]}>
         <p className={style["title"]}>Комментарий</p>
-        <TextFieldComment
+        <CommentInput
           name="comment"
           value={commentValue}
           onChange={handleChange}

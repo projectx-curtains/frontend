@@ -1,7 +1,8 @@
 import Image from "next/future/image";
 import Button from "@mui/material/Button";
 import { useCallback } from "react";
-import { InputWindow } from "../fields";
+import { WindowInput } from "../fields";
+import { sizeImage } from "../../../constants";
 import { ICardProductProps } from "../interfaces";
 import srcImage from "../mocks/img-product.png";
 import style from "../styles/index.module.scss";
@@ -31,8 +32,8 @@ const CardProduct: React.FC<ICardProductProps> = ({
         <Image
           src={srcImage}
           alt="img product"
-          width={127}
-          height={171}
+          width={sizeImage.width}
+          height={sizeImage.height}
         />
       </div>
       <div className={style["description-product"]}>
@@ -50,11 +51,11 @@ const CardProduct: React.FC<ICardProductProps> = ({
           <div className={style["wrapper-inputs"]}>
             <div className={style["wrapper-inputs__width-window"]}>
               <p className={style["text"]}>Ширина, см</p>
-              <InputWindow name="widthWindow" />
+              <WindowInput name="widthWindow" />
             </div>
             <div className={style["wrapper-inputs__height-window"]}>
               <p className={style["text"]}>Высота, см</p>
-              <InputWindow name="heightWindow" />
+              <WindowInput name="heightWindow" />
             </div>
           </div>
         </div>
