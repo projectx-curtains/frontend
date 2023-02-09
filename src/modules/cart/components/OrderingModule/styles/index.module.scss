@@ -7,11 +7,17 @@
   max-width: 405px;
   width: 100%;
   padding: 24px 16px;
+  @media (max-width: $screen-md) {
+    border: none;
+  }
   &__title {
     @include body-18-semi-bold;
     color: $gray-500;
     border-bottom: 1px solid $gray-300;
     padding-bottom: 16px;
+    @media (max-width: $screen-md) {
+      @include body-16-regular;
+    }
   }
   &__wrapper-info {
     @include display(flex, column, unset, unset);
@@ -22,10 +28,16 @@
       &__title {
         @include body-16-medium;
         color: $gray-500;
+        @media (max-width: $screen-md) {
+          @include body-14-regular;
+        }
       }
       &__text {
         @include body-16-light;
         color: $gray-500;
+        @media (max-width: $screen-md) {
+          font-size: 14px;
+        }
       }
     }
     .item:first-child {
@@ -48,6 +60,10 @@
       @include body-16-medium;
       color: $gray-500;
       margin-left: 10px;
+      @media (max-width: $screen-md) {
+        font-weight: 400;
+        font-size: 14px;
+      }
     }
     .bold {
       font-weight: bold;
@@ -60,6 +76,9 @@
     padding: 25px 127px;
     background-color: $brown-500;
     color: $white;
+    @media (max-width: $screen-md) {
+      padding: 12px 96px;
+    }
   }
   &__button:hover {
     background-color: $brown-500;

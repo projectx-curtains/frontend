@@ -4,6 +4,7 @@ import { useCallback } from "react";
 import { WindowInput } from "../fields";
 import { sizeImage } from "../../../constants";
 import { ICardProductProps } from "../interfaces";
+import CartIcon from "@assets/svg/cart-icon.svg";
 import srcImage from "../mocks/img-product.png";
 import style from "../styles/index.module.scss";
 
@@ -81,6 +82,12 @@ const CardProduct: React.FC<ICardProductProps> = ({
           }}>
           Удалить
         </p>
+        <CartIcon
+          className={style["delete-button-mobile"]}
+          onClick={() => {
+            handleRemove;
+          }}
+        />
       </div>
       <p className={style["price-product"]}>{`От ${priceProduct} BYN`}</p>
     </div>

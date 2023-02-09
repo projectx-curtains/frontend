@@ -8,6 +8,7 @@ import PersonalInformation from "./components/PersonalInformation";
 import { ICartModuleProps } from "./interfaces";
 
 import style from "./styles/index.module.scss";
+import CustomBreadcrumbsInBasketMobile from "./components/CustomBreadcrumbsInBasket/components/mobileVersion";
 
 const CartModule: React.FC<ICartModuleProps> = ({
   formik,
@@ -33,6 +34,7 @@ const CartModule: React.FC<ICartModuleProps> = ({
                 onAdd={onAdd}
                 onReduct={onReduct}
               />
+              <CustomBreadcrumbsInBasketMobile />
               <Delivery />
               <PersonalInformation />
             </div>

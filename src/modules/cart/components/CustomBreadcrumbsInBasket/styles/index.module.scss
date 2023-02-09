@@ -11,5 +11,19 @@
     @include body-18-light;
     line-height: 140%;
     color: $gray-500;
+    @media (max-width: $screen-md) {
+      display: none;
+    }
+  }
+}
+.custom-breadcrumbs-in-basket-mobile {
+  display: none;
+  margin-top: 16px;
+  @media (max-width: $screen-md) {
+    display: block;
+  }
+  &__linkMobile {
+    @include body-18-light;
+    line-height: 140%;
   }
 }

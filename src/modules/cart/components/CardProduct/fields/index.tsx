@@ -25,7 +25,12 @@ export const CustomerInfoInput = (props: any) => {
       {...field}
       {...props}
       sx={{
-        "& .MuiInputBase-input": { padding: "10px 16px" },
+        "& .MuiInputBase-input": {
+          padding: "10px 16px",
+          // maxWidth: "310px",
+          // width: "100%",
+          // "@media (max-width: 768px)": { maxWidth: "343px" },
+        },
       }}
     />
   );

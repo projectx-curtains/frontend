@@ -16,6 +16,13 @@
       @include body-16-regular;
       color: $gray-500;
       margin-bottom: 4px;
+      @media (max-width: $screen-md) {
+        margin-top: 13px;
+        @include body-16-regular;
+      }
+    }
+    @media (max-width: $screen-md) {
+      @include display(flex, column, unset, flex-start);
     }
   }
   &__wrapper-comment {

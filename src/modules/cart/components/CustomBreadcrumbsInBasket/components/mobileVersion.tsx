@@ -2,15 +2,12 @@ import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import { Breadcrumbs } from "@mui/material";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
-import { ICustomBreadcrumbsInBasketProps } from "../interfaces";
 
 import style from "../styles/index.module.scss";
 
-const CustomBreadcrumbsInBasket: React.FC<ICustomBreadcrumbsInBasketProps> = ({
-  number,
-}) => {
+const CustomBreadcrumbsInBasketMobile: React.FC = () => {
   return (
-    <div className={style["custom-breadcrumbs-in-basket"]}>
+    <div className={style["custom-breadcrumbs-in-basket-mobile"]}>
       <Breadcrumbs
         className={style["CustomBreadcrumbsInBasket"]}
         aria-label="breadcrumb"
@@ -19,21 +16,20 @@ const CustomBreadcrumbsInBasket: React.FC<ICustomBreadcrumbsInBasketProps> = ({
             fontSize="medium"
             sx={{
               color: "#323232",
-              "@media (max-width: 768px)": { display: "none" },
             }}
           />
         }>
-        <Typography
-          className={
-            style["custom-breadcrumbs-in-basket__typography"]
-          }>{`В Вашей корзине ${number} товара`}</Typography>
+        <Typography></Typography>
         <Link
-          className={style["custom-breadcrumbs-in-basket__link"]}
-          href="/catalogue">
+          className={style["custom-breadcrumbs-in-basket__linkMobile"]}
+          href="/catalogue"
+          sx={{
+            color: "#373b49",
+          }}>
           Вернуться в Каталог
         </Link>
       </Breadcrumbs>
     </div>
   );
 };
-export default CustomBreadcrumbsInBasket;
+export default CustomBreadcrumbsInBasketMobile;
