@@ -1,5 +1,6 @@
 import Button from "@mui/material/Button";
 import SuccessfullyIcon from "@assets/svg/successfully-icon.svg";
+import SuccessfullyIconMobile from "@assets/svg/successfully-icon-mobile.svg";
 import style from "../styles/index.module.scss";
 
 const Notification: React.FC = () => {
@@ -8,7 +9,8 @@ const Notification: React.FC = () => {
       <p className={style["notification__title"]}>Спасибо !</p>
       <div className={style["notification__wrapper-subtitle"]}>
         <p className={style["subtitle"]}>Ваш заказ успешно оформлен</p>
-        <SuccessfullyIcon />
+        <SuccessfullyIcon className={style["icon"]} />
+        <SuccessfullyIconMobile className={style["icon-mobile"]} />
       </div>
       <p className={style["notification__info"]}>
         Пожалуйста, ожидайте звонка специалиста для уточнения деталей заказа.
