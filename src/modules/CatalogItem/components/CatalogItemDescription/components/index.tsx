@@ -29,6 +29,9 @@ const CatalogItemDescription: React.FC = () => {
             "& .MuiTooltip-tooltip": {
               backgroundColor: "#FFFFFF",
             },
+            "& .MuiTooltip-arrow": {
+              color: "#FFFFFF",
+            },
           }}>
           <div>
             <TooltipInfoIcon />

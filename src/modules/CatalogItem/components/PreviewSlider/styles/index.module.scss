@@ -13,5 +13,13 @@
     max-height: 146px;
     height: 100%;
     margin-top: 40px;
+    @media (max-width: $screen-md) {
+      margin-top: 24px;
+    }
+    .slick-next {
+      @media (max-width: $screen-md) {
+        display: none;
+      }
+    }
   }
 }

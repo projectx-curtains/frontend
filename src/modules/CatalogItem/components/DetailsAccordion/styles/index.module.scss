@@ -77,4 +77,7 @@
 
 .details-accordion {
   margin-top: 48px;
+  @media (max-width: $screen-md) {
+    margin-top: 58px;
+  }
 }

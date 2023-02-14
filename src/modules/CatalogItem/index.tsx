@@ -17,8 +17,9 @@ const CatalogItem: React.FC = () => {
           <DetailsAccordion />
         </div>
       </div>
-
-      <SuggestionCards />
+      <div className={style["suggestion-cards"]}>
+        <SuggestionCards />
+      </div>
     </div>
   );
 };

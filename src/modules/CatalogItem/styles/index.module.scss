@@ -3,13 +3,33 @@
 .catalog-item {
   margin-top: 36px;
   margin-left: 80px;
-}
+  @media (max-width: $screen-md) {
+    @include display(flex, column, unset, unset);
+    margin-top: 0;
+    margin-left: 0;
+  }
 
-.wrapper {
-  @include display(flex, row, unset, unset);
-  margin-top: 36px;
-  margin-bottom: 120px;
-}
-.wrapper-description-card {
-  margin-left: 60px;
+  .wrapper {
+    @include display(flex, row, unset, unset);
+    margin-top: 36px;
+    margin-bottom: 120px;
+    @media (max-width: $screen-md) {
+      @include display(flex, column, unset, unset);
+      margin-top: 24px;
+      margin-bottom: 56px;
+    }
+  }
+  .wrapper-description-card {
+    margin-left: 60px;
+    @media (max-width: $screen-md) {
+      @include display(flex, column, unset, unset);
+      margin-left: 16px;
+      margin-top: 56px;
+    }
+  }
+  .suggestion-cards {
+    @media (max-width: $screen-md) {
+      margin-left: 16px;
+    }
+  }
 }
