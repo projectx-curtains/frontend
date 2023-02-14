@@ -13,8 +13,8 @@ const RadioGroupFieldContainer: React.FC<IRadioGroupFieldContainer> = ({
   const [field, , helpers] = useField(name);
 
   useEffect(() => {
-    helpers.setValue(defaultValue);
-  }, [helpers, defaultValue]);
+    helpers.setValue(field.value || props.defaultValue);
+  }, [field.value, props.defaultValue]);
 
   return (
     <RadioGroupField

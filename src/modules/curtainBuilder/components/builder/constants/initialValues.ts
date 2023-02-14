@@ -9,4 +9,13 @@ export const initialValues = {
   distanceWindow: 0,
   typeCornice: CorniceTypeEnum.ceiling,
   widthCornice: 0,
+  widthCurtain: 0,
+  heightCurtain: 0,
+  quantityCurtain: 0,
+  typeCurtain: "",
+  materialCurtain: "",
+  designCurtain: "",
+  // sectionDirectionCurtain: "",
+  // sectionQuantityCurtain: "",
+  // colorCurtain: [],
 };

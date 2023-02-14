@@ -4,7 +4,7 @@ import { TooltipField } from "@common/formUI/components/tooltip";
 import { RadioGroupField } from "@common/formUI/components/radioGroup";
 import { InputField } from "@common/formUI/components/input";
 import FormControl from "@mui/material/FormControl";
-import TooltipQuantityText from "./tooltipText";
+import TooltipQuantityText from "../../curtain/components/parameters/components/tooltipText";
 import { IWindowStep } from "../interfaces";
 import { WindowQuantityEnum } from "../types";
 import { WINDOW_TYPE, WINDOW_QUANTITY } from "../constants";

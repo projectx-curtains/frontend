@@ -35,7 +35,7 @@ const WindowStepContainer = () => {
     const { value } = e.target.dataset;
     //If no value in select disable all inputs
     const isEmptyType = !!value;
-    setIsTypeEmpty(isEmptyType);
+    setIsTypeEmpty(!isEmptyType);
 
     //If window is tripleleaf hide distance input and disable radiobuttons
     if (value === WindowTypeEnum.tripleLeaf) {

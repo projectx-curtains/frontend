@@ -3,13 +3,13 @@ import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import { ITooltipField } from "../interfaces";
 import style from "../styles/tooltip.module.scss";
 
-const TooltipField: React.FC<ITooltipField> = ({ title, text }) => {
+const TooltipField: React.FC<ITooltipField> = ({ title, text, placement }) => {
   return (
     <div className={style.tooltip}>
       <p className={style.tooltip__title}>{title}</p>
       <Tooltip
-        className={style.tooltip__text}
         title={text}
+        placement={placement}
         arrow
         componentsProps={{
           tooltip: {

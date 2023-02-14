@@ -18,7 +18,8 @@ const MultiStepForm: React.FC<IMultiStepForm> = ({
       initialValues={snapshot}
       onSubmit={handleSubmit}
       validationSchema={step.props.validationSchema}
-      validateOnMount>
+      //validateOnMount
+      validateOnChange>
       {(formik) => (
         <form onSubmit={formik.handleSubmit}>
           <CustomStepper
@@ -32,7 +33,10 @@ const MultiStepForm: React.FC<IMultiStepForm> = ({
             isLastStep={isLastStep}
             hasPrevious={stepNumber > 0}
             onBackClick={() => previousStep(formik.values)}
-            disableNext={!formik.isValid}
+            disableNext={
+              !formik.isValid ||
+              Object.values(formik.values).every((value) => value == true)
+            }
           />
         </form>
       )}

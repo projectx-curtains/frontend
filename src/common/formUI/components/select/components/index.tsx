@@ -32,7 +32,7 @@ const SelectField: React.FC<ISelectField> = ({
         {content.map(({ name, value }) => (
           <MenuItem
             key={name}
-            value={value}
+            value={value || name}
             className={style.select__item}
             onClick={handleSelectOptions}>
             {name}

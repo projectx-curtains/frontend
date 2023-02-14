@@ -2,13 +2,17 @@ import React from "react";
 import { WindowStep } from "../../steps/window";
 import { CorniceStep } from "../../steps/cornice";
 import TulleStep from "../../steps/tulle";
-import CurtainStep from "../../steps/curtain";
+import { CurtainStep } from "../../steps/curtain";
 import CheckoutStep from "../../steps/checkout";
 import { MultiStepForm } from "./multiStepForm";
 import { FormStepContainer } from "./multiStepForm/containers/FormStepContainer";
 import { IBuilderProps } from "../interfaces";
 import { initialValues } from "../constants/initialValues";
-import { windowValidationSchema, corniceValidationSchema } from "../validation";
+import {
+  windowValidationSchema,
+  corniceValidationSchema,
+  curtainValidationSchema,
+} from "../validation";
 
 const Builder: React.FC<IBuilderProps> = ({
   isTulleDisplayed,
@@ -41,7 +45,7 @@ const Builder: React.FC<IBuilderProps> = ({
         {isCurtainDisplayed && (
           <FormStepContainer
             stepName="Выбор параметров портьер"
-            validationSchema={null}>
+            validationSchema={curtainValidationSchema}>
             <CurtainStep />
           </FormStepContainer>
         )}
