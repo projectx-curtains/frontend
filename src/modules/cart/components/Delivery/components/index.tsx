@@ -1,14 +1,15 @@
+import { useState } from "react";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
+import classNames from "classnames";
 import Address from "./address";
 
 import style from "../styles/index.module.scss";
-import { useState } from "react";
 
 const Delivery: React.FC = () => {
-  const [checked, setChecked] = useState("");
+  const [isDeliveryRequred, setIsDeliveryRequred] = useState(true);
 
   return (
     <div className={style["delivery"]}>
@@ -16,45 +17,31 @@ const Delivery: React.FC = () => {
       <FormControl>
         <RadioGroup row>
           <FormControlLabel
+            className={classNames([style["delivery-form"]], {
+              [style["selected-delivery"]]: isDeliveryRequred,
+            })}
             value="delivery"
-            onChange={() => setChecked("delivery")}
-            sx={
-              checked === "delivery"
-                ? {
-                    padding: "8px 42px 10px 10px",
-                    marginLeft: "0",
-                    backgroundColor: "#F5F5F5",
-                  }
-                : { padding: "8px 42px 10px 10px", marginLeft: "0" }
-            }
+            onChange={() => setIsDeliveryRequred(true)}
             control={
               <Radio
-                sx={{
-                  color: "#373B49",
-                  "&.Mui-checked": { color: "#373B49" },
-                }}
+                className={style["control"]}
+                checked={isDeliveryRequred}
               />
             }
             label="Доставка"
           />
           <FormControlLabel
+            className={classNames([style["self-delivery-form"]], {
+              [style["selected-self-delivery"]]: isDeliveryRequred,
+            })}
             value="self-delivery"
-            onChange={() => setChecked("self-delivery")}
-            sx={
-              checked === "self-delivery"
-                ? { padding: "8px 42px 10px 10px", backgroundColor: "#F5F5F5" }
-                : { padding: "8px 42px 10px 10px" }
-            }
-            control={
-              <Radio
-                sx={{ color: "#373B49", "&.Mui-checked": { color: "#373B49" } }}
-              />
-            }
+            onChange={() => setIsDeliveryRequred(false)}
+            control={<Radio className={style["control"]} />}
             label="Самовывоз"
           />
         </RadioGroup>
       </FormControl>
-      {checked === "delivery" ? <Address /> : null}
+      {isDeliveryRequred ? <Address /> : null}
     </div>
   );
 };

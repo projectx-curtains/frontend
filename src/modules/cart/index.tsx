@@ -3,7 +3,7 @@ import CustomBreadcrumbs from "@modules/catalogue/components/CustomBreadcrumbs";
 import CardProduct from "./components/CardProduct";
 import CustomBreadcrumbsInBasket from "./components/CustomBreadcrumbsInBasket";
 import Delivery from "./components/Delivery";
-import OrderingModule from "./components/OrderingModule";
+import Order from "./components/Order";
 import PersonalInformation from "./components/PersonalInformation";
 import { ICartModuleProps } from "./interfaces";
 
@@ -38,7 +38,7 @@ const CartModule: React.FC<ICartModuleProps> = ({
               <Delivery />
               <PersonalInformation />
             </div>
-            <OrderingModule
+            <Order
               countQuantity={countQuantity}
               address={formik.initialValues.address}
             />

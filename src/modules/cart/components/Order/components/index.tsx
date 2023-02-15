@@ -3,18 +3,16 @@ import Modal from "@mui/material/Modal";
 import { useState, useCallback } from "react";
 import Notification from "../../Notification";
 import { priseProduct } from "@modules/cart/constants";
-import { IOrderingModuleProps } from "../interfaces";
+import { IOrderProps } from "../interfaces";
 import OrderInfoIcon from "@assets/svg/order-info-icon.svg";
 
 import style from "../styles/index.module.scss";
 
-const OrderingModule: React.FC<IOrderingModuleProps> = ({
-  countQuantity,
-  address,
-}) => {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+const Order: React.FC<IOrderProps> = ({ countQuantity, address }) => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const handleModal = (state: boolean) => {
+    setModalOpen(state);
+  };
   const CountQuantity = useCallback(() => {
     return <p className={style["item__text"]}>{`${countQuantity} шт.`}</p>;
   }, [countQuantity]);
@@ -50,15 +48,15 @@ const OrderingModule: React.FC<IOrderingModuleProps> = ({
         className={style["ordering-module__button"]}
         variant="contained"
         type="submit"
-        onClick={() => handleOpen()}>
+        onClick={() => handleModal(true)}>
         Оформить заказ
       </Button>
       <Modal
-        open={open}
-        onClose={() => handleClose()}>
+        open={modalOpen}
+        onClose={() => handleModal(false)}>
         <Notification />
       </Modal>
     </div>
   );
 };
-export default OrderingModule;
+export default Order;

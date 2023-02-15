@@ -24,6 +24,7 @@ export const CustomerInfoInput = (props: any) => {
     <TextField
       {...field}
       {...props}
+      fullWidth={true}
       sx={{
         "& .MuiInputBase-input": {
           padding: "10px 16px",
