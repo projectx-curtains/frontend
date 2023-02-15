@@ -9,6 +9,12 @@
     margin-left: 0;
   }
 
+  .custom-breadcrumbs {
+    @media (max-width: $screen-md) {
+      display: none;
+    }
+  }
+
   .wrapper {
     @include display(flex, row, unset, unset);
     margin-top: 36px;
