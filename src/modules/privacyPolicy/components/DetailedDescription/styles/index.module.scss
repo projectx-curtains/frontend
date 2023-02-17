@@ -3,12 +3,19 @@
 .detailed-description {
   @include display(flex, column, none, none);
   margin-top: 44px;
+  @media (max-width: $screen-md) {
+    margin-top: 24px;
+  }
   &__title {
     @include heading-40-medium;
     font-size: 32px;
     line-height: 130%;
     color: $gray-500;
     margin-bottom: 40px;
+    @media (max-width: $screen-md) {
+      @include heading-24-medium;
+      margin-bottom: 24px;
+    }
   }
   &__block {
     @include display(flex, column, flex-start, none);
