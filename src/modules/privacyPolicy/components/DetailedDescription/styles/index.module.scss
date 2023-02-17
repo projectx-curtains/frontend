@@ -1,0 +1,31 @@
+@import "../../../../../../styles/App";
+
+.detailed-description {
+  @include display(flex, column, none, none);
+  margin-top: 44px;
+  &__title {
+    @include heading-40-medium;
+    font-size: 32px;
+    line-height: 130%;
+    color: $gray-500;
+    margin-bottom: 40px;
+  }
+  &__block {
+    @include display(flex, column, flex-start, none);
+    margin-bottom: 24px;
+    .block-title {
+      @include body-18-regular;
+      color: $gray-500;
+      margin-bottom: 12px;
+    }
+    .block-text {
+      @include body-18-light;
+      line-height: 140%;
+      color: $gray-500;
+      white-space: pre-wrap;
+    }
+  }
+  &__block:last-child {
+    margin-bottom: 0;
+  }
+}
