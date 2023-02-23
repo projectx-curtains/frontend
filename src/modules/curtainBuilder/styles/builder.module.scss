@@ -2,6 +2,9 @@
 
 .builder {
   display: flex;
+  @media (max-width: $screen-md) {
+    @include display(flex, column, center, center);
+  }
 
   &__board {
     width: 1065px;
