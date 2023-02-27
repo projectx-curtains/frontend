@@ -12,7 +12,6 @@ import CustomBreadcrumbsInBasketMobile from "./components/CustomBreadcrumbsInBas
 
 const CartModule: React.FC<ICartModuleProps> = ({
   formik,
-  countQuantity,
   onAdd,
   onReduct,
 }) => {
@@ -30,7 +29,6 @@ const CartModule: React.FC<ICartModuleProps> = ({
                 widthProduct={330}
                 heightProduct={250}
                 priceProduct={1050.0}
-                countQuantity={countQuantity}
                 onAdd={onAdd}
                 onReduct={onReduct}
               />
@@ -39,7 +37,7 @@ const CartModule: React.FC<ICartModuleProps> = ({
               <PersonalInformation />
             </div>
             <Order
-              countQuantity={countQuantity}
+              countQuantity={formik.initialValues.countQuantity}
               address={formik.initialValues.address}
             />
           </div>

@@ -18,6 +18,20 @@ export const WindowInput = (props: any) => {
   );
 };
 
+export const CountQuantity = (props: any) => {
+  const [field, meta] = useField(props);
+  const { value } = meta;
+  return (
+    <input
+      type="text"
+      {...field}
+      {...props}
+      className={style["quantity"]}
+      value={value}
+      disabled={true}></input>
+  );
+};
+
 export const CustomerInfoInput = (props: any) => {
   const [field] = useField(props);
   return (

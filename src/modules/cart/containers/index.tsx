@@ -1,14 +1,14 @@
 import { useFormik } from "formik";
-import { useState } from "react";
 import { validationSchema } from "../validation";
 import CartModule from "..";
+import { useState } from "react";
 
 const CartModuleContainer: React.FC = () => {
   const formik = useFormik({
     initialValues: {
       widthWindow: 0,
       heightWindow: 0,
-      // countQuantity: 1,
+      countQuantity: 1,
       address: "",
       name: "",
       phone: "",
@@ -22,7 +22,9 @@ const CartModuleContainer: React.FC = () => {
     validationSchema: validationSchema,
   });
 
-  let [countQuantity, setCountQuantity] = useState(1);
+  let [countQuantity, setCountQuantity] = useState(
+    formik.initialValues.countQuantity
+  );
   const onAdd = () => {
     setCountQuantity(countQuantity++);
   };
@@ -32,7 +34,6 @@ const CartModuleContainer: React.FC = () => {
 
   const props = {
     formik,
-    countQuantity,
     onAdd,
     onReduct,
   };

@@ -1,12 +1,8 @@
 import { useState } from "react";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import {
-  DataProcessingCheckbox,
-  CommentInput,
-  CustomerInfoInput,
-} from "../../CardProduct/fields";
+import { CommentInput, CustomerInfoInput } from "../../CardProduct/fields";
 import { maxSymbols } from "../constants";
 import style from "../styles/index.module.scss";
+import DataProcessing from "@common/dataProcessing/components";
 
 const PersonalInformation: React.FC = () => {
   const [commentValue, setCommentValue] = useState("");
@@ -56,19 +52,7 @@ const PersonalInformation: React.FC = () => {
             style["character-count"]
           }>{`${commentValue.length}/${maxSymbols}`}</p>
       </div>
-      <FormControlLabel
-        control={<DataProcessingCheckbox name="dataProcessing" />}
-        label={
-          <p className={style["personal-information__data-processin-text"]}>
-            Я согласен на обработку персональных данных в соответствии с{" "}
-            <a
-              href="#"
-              className={style["link"]}>
-              политикой.
-            </a>
-          </p>
-        }
-      />
+      <DataProcessing />
       <p className={style["personal-information__subtitle"]}>
         Менеджер свяжется с Вами{" "}
         <b className={style["bold"]}>в течение суток.</b>

@@ -4,7 +4,6 @@ export interface ICardProductContainerProps {
   widthProduct: number;
   heightProduct: number;
   priceProduct: number;
-  countQuantity: number;
   onAdd: () => void;
   onReduct: () => void;
 }

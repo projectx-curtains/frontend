@@ -8,7 +8,6 @@ const CardProductContainer: React.FC<ICardProductContainerProps> = ({
   widthProduct,
   heightProduct,
   priceProduct,
-  countQuantity,
   onAdd,
   onReduct,
 }) => {
@@ -27,7 +26,6 @@ const CardProductContainer: React.FC<ICardProductContainerProps> = ({
     heightProduct,
     priceProduct,
     handleRemove,
-    countQuantity,
     onAdd,
     onReduct,
   };
