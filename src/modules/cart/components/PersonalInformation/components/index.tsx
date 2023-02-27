@@ -5,12 +5,13 @@ import {
   CommentInput,
   CustomerInfoInput,
 } from "../../CardProduct/fields";
+import { maxSymbols } from "../constants";
 import style from "../styles/index.module.scss";
 
 const PersonalInformation: React.FC = () => {
   const [commentValue, setCommentValue] = useState("");
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.value.length < 221) {
+    if (event.target.value.length < maxSymbols + 1) {
       setCommentValue(event.target.value);
     }
   };
@@ -53,7 +54,7 @@ const PersonalInformation: React.FC = () => {
         <p
           className={
             style["character-count"]
-          }>{`${commentValue.length}/220`}</p>
+          }>{`${commentValue.length}/${maxSymbols}`}</p>
       </div>
       <FormControlLabel
         control={<DataProcessingCheckbox name="dataProcessing" />}

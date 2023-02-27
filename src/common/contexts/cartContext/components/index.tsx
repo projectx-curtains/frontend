@@ -1,13 +1,11 @@
 import { createContext, SetStateAction, Dispatch } from "react";
 
+type CartContextType = { countQuantity: number; priceProduct: number };
+
 interface DefaultCartContext {
-  cartContextValue: {
-    countQuantity: number;
-    priceProduct: number;
-  };
-  setCartContextValue: Dispatch<
-    SetStateAction<{ countQuantity: number; priceProduct: number }>
-  >;
+  cartContextValue: CartContextType;
+
+  setCartContextValue: Dispatch<SetStateAction<CartContextType>>;
 }
 
 export const cartContext = createContext<DefaultCartContext>({

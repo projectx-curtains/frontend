@@ -1,12 +1,13 @@
 import Image from "next/future/image";
 import Button from "@mui/material/Button";
-import { useCallback } from "react";
+// import { useCallback } from "react";
 import { WindowInput } from "../fields";
 import { sizeImage } from "../../../constants";
 import { ICardProductProps } from "../interfaces";
 import CartIcon from "@assets/svg/cart-icon.svg";
 import srcImage from "../mocks/img-product.png";
 import style from "../styles/index.module.scss";
+// import { useField } from "formik";
 
 const CardProduct: React.FC<ICardProductProps> = ({
   nameProduct,
@@ -19,9 +20,13 @@ const CardProduct: React.FC<ICardProductProps> = ({
   onAdd,
   onReduct,
 }) => {
-  const CountQuantity = useCallback(() => {
-    return <p className={style["quantity"]}>{countQuantity}</p>;
-  }, [countQuantity]);
+  // const [field] = useField(props);
+
+  // const CountQuantity = useCallback(() => {
+  // return <p className={style["quantity"]}>{countQuantity}</p>;
+  //   return <input type="text" {...field}
+  //   {...countQuantity} className={style["quantity"]}></input>
+  // }, [countQuantity]);
 
   return (
     <div className={style["card-product"]}>
@@ -65,7 +70,13 @@ const CardProduct: React.FC<ICardProductProps> = ({
           onClick={() => onReduct()}>
           -
         </Button>
-        <CountQuantity />
+        {/* <CountQuantity /> */}
+        <input
+          type="text"
+          // {...field}
+          className={style["quantity"]}
+          value={countQuantity}
+          disabled={true}></input>
         <Button
           className={style["button"]}
           onClick={() => onAdd()}>

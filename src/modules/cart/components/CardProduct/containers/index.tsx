@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { ICardProductContainerProps } from "../interfaces";
-
 import CardProduct from "../components";
+import { ICardProductContainerProps } from "../interfaces";
 
 const CardProductContainer: React.FC<ICardProductContainerProps> = ({
   nameProduct,

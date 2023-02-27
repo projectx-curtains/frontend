@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components";
-import { cartContext } from "@common/contexts/cartContext/components";
 import { IHeaderContainerProps } from "../interfaces";
 import { HEADER_THEME } from "../constants";
 
@@ -11,9 +10,6 @@ const HeaderContainer: React.FC<IHeaderContainerProps> = ({
   const colorSwitchPosition = 10;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [headerTheme, setHeaderTheme] = useState(defaultTheme);
-  const cartData = useContext(cartContext);
-
-  console.log(cartData.cartContextValue);
 
   const menuToggleHandler = () => {
     setIsMenuOpen(!isMenuOpen);
