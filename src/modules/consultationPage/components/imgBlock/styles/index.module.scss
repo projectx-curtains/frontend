@@ -1,0 +1,32 @@
+@import "@styles/App";
+
+.img-block {
+  @include display(flex, column, unset, unset);
+  &__title {
+    @include heading-48-medium;
+    font-size: 32px;
+    line-height: 130%;
+    color: $gray-500;
+  }
+  &__subtitle {
+    @include body-18-regular;
+    color: $gray-500;
+    margin-top: 32px;
+    margin-bottom: 24px;
+  }
+  .img-block__wrapper-imgs {
+    @include display(flex, row, space-between, unset);
+    flex-wrap: wrap;
+    .wrapper-img {
+      @include display(flex, column, flex-start, unset);
+      max-width: 342px;
+      &__text {
+        @include body-18-light;
+        line-height: 140%;
+        color: $gray-500;
+        margin-top: 12px;
+        margin-bottom: 48px;
+      }
+    }
+  }
+}
