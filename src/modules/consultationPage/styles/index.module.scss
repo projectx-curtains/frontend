@@ -1,40 +1,13 @@
 @import "../../../../styles/App";
 
-// .button-scroll-up {
-//   position: fixed;
-//   bottom: 433px;
-//   right: 80px;
-//   z-index: 999;
-//   animation: 0.5s move-left;
-// }
-// .hidden {
-//   bottom: 16px;
-//   right: -60px;
-//   animation: 0.5s move-right;
-// }
-// .only-mobile {
-//   bottom: 16px;
-//   right: 16px;
-//   display: none;
-//   @media (max-width: $screen-md) {
-//     display: block;
-//   }
-// }
-
-// @keyframes move-left {
-//   from {
-//     right: -16px;
-//   }
-//   to {
-//     right: 16px;
-//   }
-// }
-
-// @keyframes move-right {
-//   from {
-//     right: 16px;
-//   }
-//   to {
-//     right: -60px;
-//   }
-// }
+.consultation-page {
+  margin-top: 36px;
+  margin-left: 80px;
+  .wrapper-list-blocks {
+    @include display(flex, row, space-between, flex-start);
+    margin-top: 52px;
+  }
+  .wrapper-blocks {
+    @include display(flex, column, unset, unset);
+  }
+}

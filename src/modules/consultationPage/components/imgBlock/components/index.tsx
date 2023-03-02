@@ -21,6 +21,7 @@ const ImgBlock: React.FC = () => {
               key={img.id}
               className={style["wrapper-img"]}>
               <Image
+                className={style["wrapper-img__img"]}
                 src={require(`@assets/img/ConsultationPage/${img.image}`)}
                 alt="curtains"
                 width={img.width}

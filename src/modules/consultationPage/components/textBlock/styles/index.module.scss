@@ -1,32 +1,46 @@
 @import "@styles/App";
 
-.img-block {
-  @include display(flex, column, unset, unset);
+.block {
+  margin-top: 96px;
   &__title {
     @include heading-48-medium;
     font-size: 32px;
     line-height: 130%;
     color: $gray-500;
+    margin-bottom: 32px;
   }
   &__subtitle {
-    @include body-18-regular;
+    @include body-18-medium;
     color: $gray-500;
-    margin-top: 32px;
-    margin-bottom: 24px;
   }
-  .img-block__wrapper-imgs {
-    @include display(flex, row, space-between, unset);
-    flex-wrap: wrap;
-    .wrapper-img {
-      @include display(flex, column, flex-start, unset);
-      max-width: 342px;
-      &__text {
-        @include body-18-light;
-        line-height: 140%;
-        color: $gray-500;
-        margin-top: 12px;
-        margin-bottom: 48px;
-      }
-    }
+  &__text {
+    @include body-18-light;
+    line-height: 140%;
+    color: $gray-500;
+  }
+  .margin-top {
+    margin-top: 24px;
+  }
+  .link {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+    margin-top: 24px;
+  }
+  .ol li:first-child {
+    margin-top: 24px;
+  }
+  .ul {
+    margin-top: 32px;
+    list-style-type: none;
+  }
+  .ul li:first-child {
+    margin-top: 12px;
+  }
+  .bold {
+    font-weight: bold;
   }
 }
