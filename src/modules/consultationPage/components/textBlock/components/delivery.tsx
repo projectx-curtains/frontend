@@ -5,7 +5,9 @@ import style from "../styles/index.module.scss";
 
 const Delivery: React.FC = () => {
   return (
-    <div className={style["block"]}>
+    <div
+      id="delivery"
+      className={style["block"]}>
       <h1 className={style["block__title"]}>Доставка и самовывоз товара</h1>
       {INSTRUCTIONS_DELIVERY.map((instruction) => {
         return (

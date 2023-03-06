@@ -3,6 +3,7 @@
 .consultation-page {
   margin-top: 36px;
   margin-left: 80px;
+  margin-bottom: 128px;
   .wrapper-list-blocks {
     @include display(flex, row, space-between, flex-start);
     margin-top: 52px;

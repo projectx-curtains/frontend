@@ -5,7 +5,7 @@ import style from "../styles/index.module.scss";
 const Payment: React.FC = () => {
   return (
     <div
-      id="test"
+      id="payment"
       className={style["block"]}>
       <h1 className={style["block__title"]}>Оплата</h1>
       <p className={style["block__text"]}>

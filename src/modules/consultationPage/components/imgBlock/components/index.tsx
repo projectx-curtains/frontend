@@ -6,7 +6,9 @@ import style from "../styles/index.module.scss";
 
 const ImgBlock: React.FC = () => {
   return (
-    <div className={style["img-block"]}>
+    <div
+      id="сhoosingСurtains"
+      className={style["img-block"]}>
       <h1 className={style["img-block__title"]}>
         {TITLES_PAGE_SECTIONS.сhoosingСurtains}
       </h1>

@@ -4,7 +4,9 @@ import style from "../styles/index.module.scss";
 
 const Replacement: React.FC = () => {
   return (
-    <div className={style["block"]}>
+    <div
+      id="replacement"
+      className={style["block"]}>
       <h1 className={style["block__title"]}>Замена и возврат товара</h1>
       <p className={style["block__text"]}>
         При наличии претензии по качеству или комплектности приобретенной

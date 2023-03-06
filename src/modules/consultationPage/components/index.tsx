@@ -1,6 +1,7 @@
 import ImgBlock from "./imgBlock/";
 import TextBlock from "./textBlock";
 import ListTitle from "./listTitle";
+import FeedbackForm from "./feedbackForm";
 import CustomBreadcrumbs from "@modules/catalogue/components/CustomBreadcrumbs";
 import style from "../styles/index.module.scss";
 
@@ -13,6 +14,7 @@ const ConsultationPage: React.FC = () => {
         <div className={style["wrapper-blocks"]}>
           <ImgBlock />
           <TextBlock />
+          <FeedbackForm />
         </div>
       </div>
     </div>

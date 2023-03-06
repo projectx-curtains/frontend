@@ -5,7 +5,9 @@ import style from "../styles/index.module.scss";
 
 const MakeOrder: React.FC = () => {
   return (
-    <div className={style["block"]}>
+    <div
+      id="makeOrder"
+      className={style["block"]}>
       <h1 className={style["block__title"]}>Как сделать заказ?</h1>
       <p className={style["block__text"]}>
         Чтобы найти и заказать любой товар на нашем ресурсе, для начала
