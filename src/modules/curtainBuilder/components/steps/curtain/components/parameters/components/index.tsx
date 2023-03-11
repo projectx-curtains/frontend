@@ -9,6 +9,7 @@ import style from "../../../../../../styles/builder.module.scss";
 
 const Parameters: React.FC<IParameters> = ({
   isTypeEmpty,
+  isQuantityDisabled,
   handleSelectOptionsType,
 }) => {
   return (
@@ -44,11 +45,17 @@ const Parameters: React.FC<IParameters> = ({
         <div className={style["sidebar__block-sizing"]}>
           <FormControl>
             <p className={style.sidebar__label}>Ширина, см</p>
-            <InputField name="widthCurtain" disabled={isTypeEmpty} />
+            <InputField
+              name="widthCurtain"
+              disabled={isTypeEmpty}
+            />
           </FormControl>
           <FormControl>
             <p className={style.sidebar__label}>Высота, см</p>
-            <InputField name="heightCurtain" disabled={isTypeEmpty} />
+            <InputField
+              name="heightCurtain"
+              disabled={isTypeEmpty}
+            />
           </FormControl>
           <FormControl>
             <p className={style.sidebar__label}>Количество</p>
@@ -57,7 +64,7 @@ const Parameters: React.FC<IParameters> = ({
               type="number"
               min="1"
               max="2"
-              disabled={isTypeEmpty}
+              disabled={isTypeEmpty || isQuantityDisabled}
             />
           </FormControl>
         </div>

@@ -2,7 +2,7 @@ export const COLORS = [
   {
     title: "Красный/розовый",
     tints: [
-      { title: "Пастель светлая", color: "#F2DBE0" },
+      { title: "Роза мисти", color: "#F2DBE0" },
       { title: "Пастель розовая", color: "#E9ADB0" },
       { title: "Розовый", color: "#EB757A" },
       { title: "Красный", color: "#E61710" },
@@ -13,7 +13,7 @@ export const COLORS = [
   {
     title: "Оранжевый",
     tints: [
-      { title: "Пастель светлая", color: "#F6E6C2" },
+      { title: "Бисквит", color: "#F6E6C2" },
       { title: "Пастель персик", color: "#F4CD63" },
       { title: "Яркий персик", color: "#EFA839" },
       { title: "Оранжевый", color: "#EC6718" },
@@ -24,7 +24,7 @@ export const COLORS = [
   {
     title: "Желтый/хаки",
     tints: [
-      { title: "Пастель светлая", color: "#F8F4DB" },
+      { title: "Лен", color: "#F8F4DB" },
       { title: "Пастель желтая", color: "#FEF88F" },
       { title: "Светло-желтый", color: "#F4EE47" },
       { title: "Желтый", color: "#F6BE1A" },
@@ -35,7 +35,7 @@ export const COLORS = [
   {
     title: "Зеленый/салатовый",
     tints: [
-      { title: "Пастель светлая", color: "#D7ECD9" },
+      { title: "Ментоловый", color: "#D7ECD9" },
       { title: "Пастель салатовая", color: "#ADDEA9" },
       { title: "Салатовый", color: "#45C264" },
       { title: "Зеленый", color: "#00982E" },
@@ -46,7 +46,7 @@ export const COLORS = [
   {
     title: "Синий/голубой",
     tints: [
-      { title: "Пастель светлая", color: "#E5EFF3" },
+      { title: "Светло-голубой", color: "#E5EFF3" },
       { title: "Пастель голубая", color: "#A4D8E9" },
       { title: "Голубой", color: "#0079D1" },
       { title: "Синий", color: "#282683" },
@@ -57,7 +57,7 @@ export const COLORS = [
   {
     title: "Фиолетовый/сирень",
     tints: [
-      { title: "Пастель светлая", color: "#E7D7E7" },
+      { title: "Лавандовый", color: "#E7D7E7" },
       { title: "Пастель сереневая", color: "#D69AC9" },
       { title: "Сиреневый", color: "#AD4D9F" },
       { title: "Фиолетовый", color: "#A03276" },

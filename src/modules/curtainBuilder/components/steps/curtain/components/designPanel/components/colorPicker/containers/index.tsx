@@ -1,14 +1,16 @@
+import { useState } from "react";
 import ColorPicker from "../components";
 import { IColorPickerContainer } from "../interfaces";
 import { TooltipPlacement } from "../types";
-import { COLORS } from "../constants";
 import { TabsEnum } from "@modules/curtainBuilder/components/steps/curtain/types";
+import { COLORS } from "../constants";
 
 const ColorPickerContainer: React.FC<IColorPickerContainer> = ({
   setChosenTab,
   setChosenColors,
   colorIndex,
 }) => {
+  const [itemOpened, setItemOpened] = useState<string>("");
   const centerY = COLORS.length / 2;
   const centerX = COLORS[0].tints.length / 2;
 
@@ -27,9 +29,16 @@ const ColorPickerContainer: React.FC<IColorPickerContainer> = ({
     }
   };
 
-  const handleColorButton = (color: string) => {
+  const handleTooltipOnOpen = (e: React.SyntheticEvent) => {
+    setItemOpened(e.target.ariaLabel);
+    setTimeout(() => {
+      setItemOpened("");
+    }, 1000);
+  };
+
+  const handleColorButton = (color: string, title: string) => {
     setChosenColors((chosenColors) => {
-      chosenColors[colorIndex] = color;
+      chosenColors[colorIndex] = { color, title };
       return [...chosenColors];
     });
     setChosenTab((chosenTab) => (chosenTab = TabsEnum.design));
@@ -37,8 +46,10 @@ const ColorPickerContainer: React.FC<IColorPickerContainer> = ({
 
   return (
     <ColorPicker
-      handleColorButton={handleColorButton}
       getTooltipPlacement={getTooltipPlacement}
+      itemOpened={itemOpened}
+      handleTooltipOnOpen={handleTooltipOnOpen}
+      handleColorButton={handleColorButton}
     />
   );
 };

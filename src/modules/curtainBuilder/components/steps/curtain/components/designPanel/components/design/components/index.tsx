@@ -1,12 +1,10 @@
 import classNames from "classnames";
 import FormControl from "@mui/material/FormControl";
 import Button from "@mui/material/Button";
-import AddIcon from "@mui/icons-material/Add";
 import { SelectField } from "@common/formUI/components/select";
 import { TooltipField } from "@common/formUI/components/tooltip";
 import TooltipDesignText from "./tooltipText";
 import { IDesign } from "../interfaces";
-import { TabsEnum } from "../../../../../types";
 import {
   CURTAIN_DESIGN,
   SECTION_DIRECTION,
@@ -21,11 +19,15 @@ const Design: React.FC<IDesign> = ({
   handleSelectDesign,
   handleSelectSectionQuantity,
   isCombined,
+  isDesignNotEmpty,
 }) => {
   return (
-    <>
+    <div className={designStyle.design}>
       <FormControl className={style.sidebar__block}>
-        <TooltipField title="Дизайн" text={TooltipDesignText} />
+        <TooltipField
+          title="Дизайн"
+          text={TooltipDesignText}
+        />
 
         <SelectField
           name="designCurtain"
@@ -38,8 +40,7 @@ const Design: React.FC<IDesign> = ({
       <FormControl
         className={classNames(style.sidebar__block, {
           [style["sidebar__block--hidden"]]: !isCombined,
-        })}
-      >
+        })}>
         <p className={style.sidebar__text}>Направление сечения</p>
 
         <SelectField
@@ -53,8 +54,7 @@ const Design: React.FC<IDesign> = ({
       <FormControl
         className={classNames(style.sidebar__block, {
           [style["sidebar__block--hidden"]]: !isCombined,
-        })}
-      >
+        })}>
         <p className={style.sidebar__text}>Количество сечения</p>
 
         <SelectField
@@ -65,37 +65,28 @@ const Design: React.FC<IDesign> = ({
         />
       </FormControl>
 
-      <div className={style.sidebar__block}>
+      <div
+        className={classNames(style.sidebar__block, {
+          [style["sidebar__block--hidden"]]: !isDesignNotEmpty,
+        })}>
         <p className={style.sidebar__text}>Цвет</p>
-        {chosenColors.map((chosenColor, colorIndex) => (
-          <div key={chosenColor}>
-            <Button
-              className={designStyle.design__button}
-              onClick={() => handleColorEdit(colorIndex)}
-              style={{ backgroundColor: chosenColor }}
-            ></Button>
-            <span className={designStyle.design__text}>
-              Цвет #{colorIndex + 1}
-            </span>
-          </div>
-        ))}
 
-        {/* {(sectionQuantity || chosenColors.length < sectionQuantity) && (
-          <>
-            <Button
-              className={designStyle.design__button}
-              onClick={() => {
-                setChosenTab((chosenTab) => (chosenTab = TabsEnum.colorPicker));
-                setIsColorEdit(false);
-              }}
-            >
-              <AddIcon className={designStyle.design__icon} />
-            </Button>
-            <span className={designStyle.design__text}>Добавить цвет</span>
-          </>
-        )} */}
+        {chosenColors.length > 0 &&
+          chosenColors.map(({ color, title }, colorIndex) => (
+            <div
+              key={color}
+              className={designStyle.design__colorslot}>
+              <Button
+                className={designStyle.design__button}
+                onClick={() => handleColorEdit(colorIndex)}
+                style={{ backgroundColor: color }}></Button>
+              <span className={designStyle.design__text}>
+                Цвет #{colorIndex + 1} - {title}
+              </span>
+            </div>
+          ))}
       </div>
-    </>
+    </div>
   );
 };
 

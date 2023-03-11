@@ -31,25 +31,6 @@ export const getCurtainImageWidth: UseCurtainImageWidthType = (
   typeWindow,
   quantityWindow
 ) => {
-  switch (curtainName) {
-    case (CurtainTypeEnum.austrian,
-    CurtainTypeEnum.english,
-    CurtainTypeEnum.french,
-    CurtainTypeEnum.imperial):
-      return width;
-    case CurtainTypeEnum.classic:
-      return isSingleCurtain ? width / 2 : width;
-    case (CurtainTypeEnum.crossed, CurtainTypeEnum.italian):
-      typeWindow === WindowTypeEnum.doubleLeaf &&
-      quantityWindow === WindowQuantityEnum.double &&
-      isSingleCurtain
-        ? width / 2
-        : width;
-    case CurtainTypeEnum.romian:
-      quantityWindow === WindowQuantityEnum.double && isSingleCurtain
-        ? width / 2
-        : width;
-    default:
-      return width;
-  }
+  if (CurtainTypeEnum.classic) return isSingleCurtain ? width / 2 : width;
+  else return width;
 };

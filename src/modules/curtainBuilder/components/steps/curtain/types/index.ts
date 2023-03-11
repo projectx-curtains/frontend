@@ -16,7 +16,7 @@ export enum TabsEnum {
   colorPicker = 2,
 }
 
-export type CurtainWithoutSections =
-  | CurtainTypeEnum.austrian
-  | CurtainTypeEnum.english
-  | CurtainTypeEnum.french;
+export type ChosenColorsType = {
+  title: string;
+  color: string;
+};

@@ -1,3 +1,4 @@
+import { ChosenColorsType } from "./../types/index";
 import { CurtainTypeEnum } from "../types";
 
 export const CURTAIN_TYPE = [
@@ -93,3 +94,8 @@ export const CURTAIN_MATERIAL = [
     value: "Шелк",
   },
 ];
+
+export const INITIAL_COLORSLOT_VALUE: ChosenColorsType = {
+  title: "Белый",
+  color: "white",
+};

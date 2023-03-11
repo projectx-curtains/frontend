@@ -1,10 +1,10 @@
-import { TabsEnum } from "../../../types";
+import { ChosenColorsType, TabsEnum } from "../../../types";
 
 export interface IDesignPanel {
   chosenTab: number;
   setChosenTab: React.Dispatch<React.SetStateAction<TabsEnum>>;
-  chosenColors: Array<string>;
-  setChosenColors: React.Dispatch<React.SetStateAction<string[]>>;
+  chosenColors: Array<ChosenColorsType>;
+  setChosenColors: React.Dispatch<React.SetStateAction<ChosenColorsType[]>>;
   colorIndex: number;
   setColorIndex: React.Dispatch<React.SetStateAction<number>>;
 }
@@ -12,6 +12,6 @@ export interface IDesignPanel {
 export interface IDesignPanelContainer {
   chosenTab: number;
   setChosenTab: React.Dispatch<React.SetStateAction<TabsEnum>>;
-  chosenColors: Array<string>;
-  setChosenColors: React.Dispatch<React.SetStateAction<string[]>>;
+  chosenColors: Array<ChosenColorsType>;
+  setChosenColors: React.Dispatch<React.SetStateAction<ChosenColorsType[]>>;
 }

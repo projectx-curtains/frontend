@@ -1,4 +1,4 @@
-import { TabsEnum } from "../types";
+import { ChosenColorsType, TabsEnum } from "../types";
 
 export interface ICurtainStep {
   chosenTab: number;
@@ -6,8 +6,10 @@ export interface ICurtainStep {
   curtain: string;
   setCurtain: React.Dispatch<React.SetStateAction<string>>;
   isParametersPanelValid: boolean;
-  chosenColors: Array<string>;
-  setChosenColors: React.Dispatch<React.SetStateAction<string[]>>;
+  chosenColors: Array<ChosenColorsType>;
+  setChosenColors: React.Dispatch<
+    React.SetStateAction<Array<ChosenColorsType>>
+  >;
 }
 
 export interface ITabPanel {

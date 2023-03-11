@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FormikValues, useFormikContext } from "formik";
 import CurtainStep from "../components";
-import { TabsEnum } from "../types";
+import { ChosenColorsType, TabsEnum } from "../types";
 
 const CurtainStepContainer = () => {
   const formik = useFormikContext<FormikValues>();
@@ -20,9 +20,9 @@ const CurtainStepContainer = () => {
     !!materialCurtain
   );
 
-  const [chosenColors, setChosenColors] = useState<string[]>(["white"]);
-  const [chosenTab, setChosenTab] = useState(TabsEnum.parameters);
-  const [curtain, setCurtain] = useState("");
+  const [chosenColors, setChosenColors] = useState<Array<ChosenColorsType>>([]);
+  const [chosenTab, setChosenTab] = useState<number>(TabsEnum.parameters);
+  const [curtain, setCurtain] = useState<string>("");
 
   return (
     <CurtainStep

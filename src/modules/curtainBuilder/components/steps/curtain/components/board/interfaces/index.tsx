@@ -1,6 +1,9 @@
+import { ChosenColorsType } from "../../../types";
+
 export interface IBoard {
   svgRef?: React.LegacyRef<SVGSVGElement>;
   curtain: string;
+  ceilingCornice: string;
   sectionQuantity: number;
   isSingleCurtain: boolean;
   getBackgroungPath: () => string;
@@ -13,7 +16,7 @@ export interface IBoard {
 
 export interface IBoardContainer {
   curtain: string;
-  chosenColors: Array<string>;
+  chosenColors: Array<ChosenColorsType>;
 }
 
 export interface ICurtainPart {
@@ -36,3 +39,5 @@ export type UseCurtainImageWidthType = (
   typeWindow: string,
   quantityWindow: string
 ) => number;
+
+export type CorniceWidthType = { [propKey: string]: number };

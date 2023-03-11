@@ -3,6 +3,7 @@ import { useFormikContext, FormikValues } from "formik";
 import Board from "../components";
 import { loadImage } from "../utils";
 import { IBoardContainer, ImageDimensionsType } from "../interfaces";
+import { CorniceTypeEnum } from "@modules/curtainBuilder/components/steps/cornice/types";
 
 const BoardContainer: React.FC<IBoardContainer> = ({
   curtain,
@@ -38,26 +39,43 @@ const BoardContainer: React.FC<IBoardContainer> = ({
     }
   };
 
+  const getCorniceImageName = (): string => {
+    if (values.typeCornice === CorniceTypeEnum.ceiling) {
+      return `${values.typeWindow + values.quantityWindow}`;
+    }
+    return "";
+  };
+
   useEffect(() => {
     let imageUrl = `/img/Builder/Curtains/${getCurtainPath()}/curtain.svg`;
     loadImage(setImageDimensions, imageUrl);
   }, [getCurtainPath]);
 
   useEffect(() => {
-    if (svgRef && svgRef.current && values.sectionQuantityCurtain) {
+    if (svgRef && svgRef.current && chosenColors.length > 0) {
       const paths = svgRef.current.querySelectorAll("use");
-
-      for (let i = 0; i < paths.length / 2; i++) {
-        paths[i].setAttribute("style", `fill:${chosenColors[i] || "white"}`);
-        paths[paths.length / 2 + i].setAttribute(
-          "style",
-          `fill:${chosenColors[i] || "white"}`
-        );
+      console.log(chosenColors);
+      //if curtain consists of 2 parts
+      if (paths.length / 2) {
+        for (let i = 0; i < paths.length / 2; i++) {
+          paths[i].setAttribute(
+            "style",
+            `fill:${chosenColors[i].color || "white"}`
+          );
+          paths[paths.length / 2 + i].setAttribute(
+            "style",
+            `fill:${chosenColors[i].color || "white"}`
+          );
+        }
+      } else {
+        //if curtain has only 1 part
+        for (let i = 0; i < paths.length; i++) {
+          paths[i].setAttribute(
+            "style",
+            `fill:${chosenColors[i].color || "white"}`
+          );
+        }
       }
-
-      // for (let i = paths.length - 1; i >= paths.length / 2; i--) {
-      //   paths[i].setAttribute("style", `fill:${chosenColors[i] || "white"}`);
-      // }
     }
   }, [values, chosenColors]);
 
@@ -65,6 +83,7 @@ const BoardContainer: React.FC<IBoardContainer> = ({
     <Board
       svgRef={svgRef}
       curtain={curtain}
+      ceilingCornice={getCorniceImageName()}
       sectionQuantity={values.sectionQuantityCurtain}
       isSingleCurtain={!(values.quantityCurtain > 1)}
       getBackgroungPath={getBackgroungPath}
@@ -76,5 +95,7 @@ const BoardContainer: React.FC<IBoardContainer> = ({
     />
   );
 };
+
+//todo: get rid of typeWindow and quantityWindow
 
 export default BoardContainer;

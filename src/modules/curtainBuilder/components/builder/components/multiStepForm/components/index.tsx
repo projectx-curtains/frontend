@@ -26,7 +26,7 @@ const MultiStepForm: React.FC<IMultiStepForm> = ({
             activeStep={stepNumber}
             steps={steps}
           />
-
+          {console.log(formik)}
           {step}
 
           <FormNavigation
