@@ -4,6 +4,8 @@ export const IMGS_DATA = [
     image: "curtains1.jpg",
     width: 342,
     height: 342,
+    widthMobile: 300,
+    heightMobile: 300,
     text: "Выигрышное решение при текстильном оформлении помещения – приобрести ткань на тон или два темнее / светлее покрытия стен.",
   },
   {

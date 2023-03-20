@@ -4,11 +4,21 @@
   margin-top: 36px;
   margin-left: 80px;
   margin-bottom: 128px;
+  @media (max-width: $screen-md) {
+    margin-top: 16px;
+    margin-left: 16px;
+    margin-bottom: 72px;
+  }
   .wrapper-list-blocks {
     @include display(flex, row, space-between, flex-start);
     margin-top: 52px;
+    @media (max-width: $screen-md) {
+      @include display(flex, column, unset, unset);
+      margin-top: 24px;
+    }
   }
   .wrapper-blocks {
     @include display(flex, column, unset, unset);
+    // margin-left: 366px;
   }
 }

@@ -7,6 +7,10 @@
     font-size: 32px;
     line-height: 130%;
     color: $gray-500;
+    @media (max-width: $screen-md) {
+      font-size: 24px;
+      line-height: 100%;
+    }
   }
   &__subtitle {
     @include body-18-regular;
@@ -17,9 +21,15 @@
   .img-block__wrapper-imgs {
     @include display(flex, row, space-between, unset);
     flex-wrap: wrap;
+    @media (max-width: $screen-md) {
+      display: none;
+    }
     .wrapper-img {
       @include display(flex, column, flex-start, unset);
       max-width: 342px;
+      @media (max-width: $screen-md) {
+        display: none;
+      }
       &__img {
         max-width: 342px;
         width: 100%;
@@ -31,6 +41,21 @@
         margin-top: 12px;
         margin-bottom: 48px;
       }
+    }
+  }
+  .mobile-wrapper-img {
+    display: none;
+    max-width: 300px;
+    width: 100%;
+    // height: 300px;
+    @media (max-width: $screen-md) {
+      display: block;
+    }
+    &__text-img {
+      @include body-18-light;
+      font-size: 16px;
+      line-height: 140%;
+      color: $gray-500;
     }
   }
 }

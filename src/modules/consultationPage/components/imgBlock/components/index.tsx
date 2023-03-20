@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/future/image";
+// import Slider from "react-slick";
 import { TITLES_PAGE_SECTIONS } from "@modules/consultationPage/constants";
 import { IMGS_DATA } from "../mocks";
 import style from "../styles/index.module.scss";
+import MobileSlider from "./mobileSlider";
 
 const ImgBlock: React.FC = () => {
   return (
@@ -16,6 +18,42 @@ const ImgBlock: React.FC = () => {
         Должны ли шторы касаться пола, какие шторы подойдут в маленькую комнату,
         а какие помогут скрыть недостатки помещения и сделают уютной большую?
       </p>
+      <MobileSlider />
+
+      {/* <div className={style["mobile-wrapper-img"]}>
+        <Slider
+          speed={500}
+          rows={1}
+          // slidesPerRow={1}
+          infinite={true}
+          slidesToShow={1}
+          slidesToScroll={1}>
+          {
+            <>
+              {IMGS_DATA.map((img) => {
+                return (
+                  <div
+                    key={img.id}
+                    className={style["mobile-wrapper-img__wrapper-img"]}>
+                    <Image
+                      key={img.id}
+                      // className={style["wrapper-img__img"]}
+                      src={require(`@assets/img/ConsultationPage/${img.image}`)}
+                      alt="curtains"
+                      width={img.widthMobile}
+                      height={img.heightMobile}
+                    />
+                    <p className={style["mobile-wrapper-img__text-img"]}>
+                      {img.text}
+                    </p>
+                  </div>
+                );
+              })}
+            </>
+          }
+        </Slider>
+      </div> */}
+
       <div className={style["img-block__wrapper-imgs"]}>
         {IMGS_DATA.map((img) => {
           return (

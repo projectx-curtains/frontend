@@ -1,6 +1,7 @@
 @import "@styles/App";
 
 .list-title {
+  // position: fixed;
   @include display(flex, column, unset, unset);
   margin-right: 96px;
   max-width: 270px;
@@ -9,6 +10,13 @@
     @include body-18-regular;
     color: $gray-500;
     margin-bottom: 32px;
+    @media (max-width: $screen-md) {
+      font-size: 14px;
+      padding-left: 8px;
+    }
+  }
+  @media (max-width: $screen-md) {
+    max-width: 343px;
   }
 }
 .list-title:last-child {
@@ -16,4 +24,10 @@
 }
 .active {
   text-decoration: underline;
+  @media (max-width: $screen-md) {
+    text-decoration: none;
+    color: $white;
+    background-color: $brown-600;
+    padding: 11px 0 11px 8px;
+  }
 }

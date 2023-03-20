@@ -1,13 +1,25 @@
 @import "@styles/App";
 
-.block {
+.wrapper-block {
   margin-top: 96px;
+}
+
+.block {
+  @media (max-width: $screen-md) {
+    max-height: 400px;
+    overflow: hidden;
+    position: relative;
+  }
   &__title {
     @include heading-48-medium;
     font-size: 32px;
     line-height: 130%;
     color: $gray-500;
     margin-bottom: 32px;
+    @media (max-width: $screen-md) {
+      font-size: 24px;
+      line-height: 100%;
+    }
   }
   &__subtitle {
     @include body-18-medium;
@@ -42,5 +54,45 @@
   }
   .bold {
     font-weight: bold;
+  }
+}
+.wrapper-button-show {
+  display: none;
+  @media (max-width: $screen-md) {
+    @include display(flex, row, flex-end, center);
+    cursor: pointer;
+  }
+  .button-show {
+    @include body-16-regular;
+    color: $gray-500;
+    background: none;
+    text-decoration: underline;
+  }
+}
+
+.text-show-all {
+  @media (max-width: $screen-md) {
+    max-height: none;
+  }
+}
+.text-show-part {
+  @media (max-width: $screen-md) {
+    max-height: 400px;
+    transition: max-height 0.5s ease-in-out;
+  }
+}
+.text-show-part::after {
+  @media (max-width: $screen-md) {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 4em;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      $background 80%
+    );
   }
 }
