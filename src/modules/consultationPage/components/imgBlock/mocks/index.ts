@@ -13,6 +13,8 @@ export const IMGS_DATA = [
     image: "curtains2.jpg",
     width: 342,
     height: 342,
+    widthMobile: 300,
+    heightMobile: 300,
     text: "Длинные светлые портьеры скорректируют объем небольших помещений. Темные шторы вешайте в большую комнату – пространство сразу станет уютнее.",
   },
   {
@@ -20,6 +22,8 @@ export const IMGS_DATA = [
     image: "curtains3.jpg",
     width: 342,
     height: 342,
+    widthMobile: 300,
+    heightMobile: 300,
     text: "Сочетайте шторы с диванными подушками и покрывалом – можно сшить их из той же ткани, что и портьеры, разбавив тканью иного оттенка и текстуры.",
   },
   {
@@ -27,6 +31,8 @@ export const IMGS_DATA = [
     image: "curtains4.jpg",
     width: 342,
     height: 342,
+    widthMobile: 300,
+    heightMobile: 300,
     text: "В комнате с обоями с множеством цветов ориентируйтесь на их вспомогательный цвет и выбирайте в противовес им однотонный цвет штор ",
   },
   {
@@ -34,6 +40,8 @@ export const IMGS_DATA = [
     image: "curtains5.jpg",
     width: 342,
     height: 342,
+    widthMobile: 300,
+    heightMobile: 300,
     text: "Со шторами блэкаут вас не потревожат свет уличного фонаря, фары проезжающих автомобилей и яркие солнечные лучи ранним утром.",
   },
   {
@@ -41,6 +49,8 @@ export const IMGS_DATA = [
     image: "curtains6.jpg",
     width: 342,
     height: 342,
+    widthMobile: 300,
+    heightMobile: 300,
     text: "Для комнат с низкими потолками выбирайте шторы из легких тканей светлых оттенков.",
   },
 ];
