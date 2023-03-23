@@ -1,0 +1,83 @@
+@import "../../../../../../styles/App";
+
+// -- itemsInAccordion --
+.parameters {
+  @include display(flex, row, space-between, center);
+  flex-wrap: wrap;
+  &__item {
+    @include display(flex, row, space-between, unset);
+    max-width: 338px;
+    width: 100%;
+    margin-top: 12px;
+    .parameter {
+      @include body-16-regular;
+      color: $gray-500;
+    }
+    .description {
+      @include body-16-light;
+      color: $gray-450;
+    }
+  }
+  &__item:nth-child(1),
+  &__item:nth-child(2) {
+    margin-top: 0;
+  }
+}
+
+.item {
+  @include body-16-light;
+  color: $gray-500;
+}
+.bold {
+  font-weight: bold;
+}
+.wrapper-logo-box {
+  @include display(flex, row, space-between, center);
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.logo-box {
+  @include display(flex, row, flex-start, center);
+  max-width: 388px;
+  width: 100%;
+  margin-bottom: 24px;
+  &__text {
+    @include body-16-regular;
+    color: $gray-500;
+    margin-left: 12px;
+  }
+}
+.logo-box:nth-child(5),
+.logo-box:nth-child(6) {
+  margin-bottom: 0px;
+}
+
+.text-indent {
+  text-indent: 20px;
+}
+.li {
+  margin-left: 23px;
+}
+.li:first-child {
+  margin-top: 24px;
+}
+.li::marker {
+  font-size: 10px;
+}
+// ---
+
+.accordion-item {
+  background-color: $gray-100;
+}
+
+.summary {
+  @include body-18-regular;
+  color: $gray-500;
+}
+
+.details-accordion {
+  margin-top: 48px;
+  @media (max-width: $screen-md) {
+    margin-top: 58px;
+  }
+}
