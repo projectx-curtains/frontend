@@ -1,0 +1,10 @@
+@import "../../../../styles/App";
+
+.data-processin-text {
+  @include body-14-regular;
+  color: $gray-500;
+  .link {
+    color: #726158;
+    text-decoration: underline;
+  }
+}

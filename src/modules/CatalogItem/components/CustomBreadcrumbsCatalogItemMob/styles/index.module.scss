@@ -1,0 +1,21 @@
+@import "../../../../../../styles/App";
+
+.link-structure-mobile {
+  display: none;
+  @media (max-width: $screen-md) {
+    @include display(flex, row, flex-start, center);
+    margin-top: 16px;
+    margin-left: 16px;
+  }
+
+  &__home {
+    @include body-14-regular;
+    text-decoration-line: underline;
+  }
+  &__dots {
+    @include body-14-regular;
+  }
+  &__current {
+    @include body-14-regular;
+  }
+}

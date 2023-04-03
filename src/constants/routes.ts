@@ -15,6 +15,7 @@ export const ROUTES = {
   consultation: "/consultation",
   shoppingCart: "/shoppingCart",
   privacyPolicy: "/privacyPolicyPage",
+  cardPage: "/catalogue/cardPage",
 };
 
 export const ROUTES_MAP: IROUTES_MAP = {
@@ -42,6 +43,34 @@ export const ROUTES_MAP: IROUTES_MAP = {
     {
       title: "Политика конфиденциальности",
       link: ROUTES.privacyPolicy,
+    },
+  ],
+  [ROUTES.shoppingCart]: [
+    {
+      title: "Главная",
+      link: ROUTES.home,
+    },
+    {
+      title: "Корзина",
+      link: ROUTES.shoppingCart,
+    },
+  ],
+  [ROUTES.cardPage]: [
+    {
+      title: "Главная",
+      link: ROUTES.home,
+    },
+    {
+      title: "Каталог",
+      link: ROUTES.catalogueFabrics,
+    },
+    {
+      title: "Шторы",
+      link: ROUTES.catalogueFabrics,
+    },
+    {
+      title: "Комплект Кармен",
+      link: ROUTES.catalogueFabrics,
     },
   ],
 };

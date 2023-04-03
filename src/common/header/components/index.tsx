@@ -12,6 +12,7 @@ import { CONTACTS } from "@constants/contacts";
 import { IHeaderProps } from "../interfaces";
 import { Category } from "src/types/category.type";
 
+import ShoppingCartActiveIcon from "@assets/svg/shopping-cart-active-icon.svg";
 import InstagramIcon from "@assets/svg/insta.svg";
 import PhoneIcon from "@assets/svg/phone.svg";
 import CloseIcon from "@mui/icons-material/Close";
@@ -23,6 +24,7 @@ const Header: React.FC<IHeaderProps> = ({
   isMenuOpen,
   headerTheme,
   menuToggleHandler,
+  isChoiceProduct,
 }) => {
   return (
     <header
@@ -177,7 +179,11 @@ const Header: React.FC<IHeaderProps> = ({
         )}
         <Link href={ROUTES.shoppingCart}>
           <a className={style.header__basket}>
-            <LocalMallOutlinedIcon />
+            {isChoiceProduct ? (
+              <ShoppingCartActiveIcon />
+            ) : (
+              <LocalMallOutlinedIcon />
+            )}
           </a>
         </Link>
       </div>
