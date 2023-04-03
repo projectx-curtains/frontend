@@ -43,16 +43,16 @@
       }
     }
   }
+
   .mobile-wrapper-img {
     display: none;
-    max-width: 400px;
-    width: 100%;
-
     @media (max-width: $screen-md) {
       display: contents;
+      max-width: 400px;
+      width: 100%;
     }
-    // .slider {
-    //   overflow: hidden;
+    // &__wrapper-img {
+    //   display: inline-block;
     // }
     &__text-img {
       @include body-18-light;
