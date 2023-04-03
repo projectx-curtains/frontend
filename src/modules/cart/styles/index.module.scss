@@ -1,0 +1,25 @@
+@import "../../../../styles/App";
+
+.cart {
+  @include display(flex, column, flex-start, unset);
+  margin-left: 80px;
+  margin-top: 41px;
+  margin-bottom: 64px;
+  @media (max-width: $screen-md) {
+    margin: 16px 16px 60px 16px;
+  }
+  .wrapper {
+    @include display(flex, row, space-between, flex-start);
+    @media (max-width: $screen-md) {
+      @include display(flex, column, center, center);
+    }
+  }
+  .wrapper-cards-deliv-info {
+    @include display(flex, column, flex-start, unset);
+    max-width: 955px;
+    width: 100%;
+    @media (max-width: $screen-md) {
+      min-width: 343px;
+    }
+  }
+}

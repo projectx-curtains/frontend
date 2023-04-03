@@ -72,6 +72,14 @@
   line-height: 100%;
 }
 
+@mixin body-16-medium {
+  font-family: "Noto Sans Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+}
+
 @mixin body-18-regular {
   font-family: "Noto Sans Regular";
   font-style: normal;
@@ -102,6 +110,14 @@
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
+  line-height: 140%;
+}
+
+@mixin body-14-light {
+  font-family: "Noto Sans Light";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
   line-height: 140%;
 }
 

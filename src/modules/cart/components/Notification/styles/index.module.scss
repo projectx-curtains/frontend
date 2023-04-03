@@ -1,0 +1,90 @@
+@import "../../../../../../styles/App";
+
+.notification {
+  @include display(flex, column, center, center);
+  max-width: 852px;
+  width: 100%;
+  background-color: $white;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  @media (max-width: $screen-md) {
+    max-width: 343px;
+  }
+  &__title {
+    @include heading-40-medium;
+    color: $gray-500;
+    margin-top: 64px;
+    @media (max-width: $screen-md) {
+      font-size: 24px;
+      margin-top: 32px;
+    }
+  }
+  &__wrapper-subtitle {
+    @include display(flex, row, center, center);
+    margin-top: 11px;
+    .subtitle {
+      @include body-24-regular;
+      color: $green;
+      margin-right: 7px;
+      @media (max-width: $screen-md) {
+        @include body-18-medium;
+      }
+    }
+    .icon {
+      @media (max-width: $screen-md) {
+        display: none;
+      }
+    }
+    .icon-mobile {
+      display: none;
+      @media (max-width: $screen-md) {
+        display: inline;
+      }
+    }
+  }
+  &__info {
+    @include body-18-regular;
+    color: $gray-500;
+    margin-top: 19px;
+    @media (max-width: $screen-md) {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+  &__wrapper-button {
+    @include display(flex, row, space-between, unset);
+    margin-top: 56px;
+    margin-bottom: 64px;
+    @media (max-width: $screen-md) {
+      @include display(flex, column-reverse, center, center);
+      margin-bottom: 32px;
+    }
+    .catalogue {
+      @include body-18-medium;
+      width: 252px;
+      background-color: $white;
+      color: $gray-500;
+      border: 1px solid $brown-500;
+      padding: 15px 0;
+      margin-right: 26px;
+      @media (max-width: $screen-md) {
+        padding: 13px 0;
+        max-width: 311px;
+        margin: 0;
+        margin-top: 16px;
+      }
+    }
+    .main {
+      @include body-18-medium;
+      width: 252px;
+      background-color: $brown-500;
+      color: $white;
+      padding: 15px 0;
+      @media (max-width: $screen-md) {
+        padding: 13px 0;
+        max-width: 311px;
+      }
+    }
+  }
+}
