@@ -11,13 +11,13 @@
     @include body-18-regular;
     text-decoration-line: underline;
     @media (max-width: $screen-md) {
-      font-size: 14px;
+      @include body-14-regular;
     }
   }
   &__current {
     @include body-18-regular;
     @media (max-width: $screen-md) {
-      font-size: 14px;
+      @include body-14-regular;
     }
   }
 }
