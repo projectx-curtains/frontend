@@ -1,6 +1,7 @@
 import { FormikProvider } from "formik";
 import Button from "@mui/material/Button";
 import { CommentInput, CustomerInput } from "../fields";
+import DataProcessing from "@common/dataProcessing/components";
 import { IFeedbackFormProps } from "../interfaces";
 import { maxSymbols } from "../constatns";
 import style from "../styles/index.module.scss";
@@ -48,7 +49,7 @@ const FeedbackForm: React.FC<IFeedbackFormProps> = ({
                 style["character-count"]
               }>{`${commentValue.length}/${maxSymbols}`}</p>
           </div>
-          {/* <DataProcessing />       */}
+          <DataProcessing />
           <Button
             className={style["feedback-form__submit-button"]}
             variant="contained"

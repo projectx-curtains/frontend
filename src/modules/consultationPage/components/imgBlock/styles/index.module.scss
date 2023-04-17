@@ -43,17 +43,21 @@
       }
     }
   }
+  .mobile-wrapper-img .slick-track {
+    @include display(flex, row, unset, unset);
+  }
 
   .mobile-wrapper-img {
     display: none;
     @media (max-width: $screen-md) {
       display: contents;
-      max-width: 400px;
+      // max-width: 400px;
+      // width: 100%;
+    }
+    &__wrapper-img {
+      max-width: 300px;
       width: 100%;
     }
-    // &__wrapper-img {
-    //   display: inline-block;
-    // }
     &__text-img {
       @include body-18-light;
       font-size: 16px;

@@ -1,0 +1,8 @@
+@import "../../../../styles/App";
+
+.privacy-policy-page {
+  margin: 32px 0 128px 80px;
+  @media (max-width: $screen-md) {
+    margin: 16px 0 72px 16px;
+  }
+}

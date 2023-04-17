@@ -1,20 +1,25 @@
 import React from "react";
 import Image from "next/future/image";
 import Slider from "react-slick";
+import Box from "@mui/material/Box";
 import { IMGS_DATA } from "../mocks";
 import style from "../styles/index.module.scss";
 
 const MobileSlider: React.FC = () => {
   return (
-    <div className={style["mobile-wrapper-img"]}>
+    <Box
+      className={style["mobile-wrapper-img"]}
+      sx={{
+        ".slick-track": {
+          display: "flex",
+          flexDirection: "row",
+        },
+      }}>
       <Slider
-        // className={style["slider"]}
         centerMode={true}
         infinite={false}
+        arrows={false}
         speed={500}
-        // arrows={false}
-        // vertical={true}
-        // verticalSwiping={true}
         slidesToShow={1}
         slidesToScroll={1}>
         {IMGS_DATA.map((img) => {
@@ -36,7 +41,7 @@ const MobileSlider: React.FC = () => {
           );
         })}
       </Slider>
-    </div>
+    </Box>
   );
 };
 
