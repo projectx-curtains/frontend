@@ -35,6 +35,16 @@ export const ROUTES_MAP: IROUTES_MAP = {
       link: ROUTES.catalogueFabrics,
     },
   ],
+  [ROUTES.consultation]: [
+    {
+      title: "Главная",
+      link: ROUTES.home,
+    },
+    {
+      title: "Консультация",
+      link: ROUTES.consultation,
+    },
+  ],
   [ROUTES.privacyPolicy]: [
     {
       title: "Главная",
